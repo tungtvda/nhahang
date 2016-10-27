@@ -52,9 +52,9 @@
                                 <a href="index.html"
                                    title="Echion &#8211; Restaurant/Wine/Freshfood WordPress Theme - Just another WordPress site"
                                    rel="home" class="no-sticky-logo"><img
-                                        src="themes/wp-content/uploads/2016/07/logo.png"
+                                        src="themes/images/logo.png"
                                         alt="Echion &#8211; Restaurant/Wine/Freshfood WordPress Theme"
-                                        width="191" height="40"/></a><a
+                                        width="191" /></a><a
                                     href="index.html"
                                     title="Echion &#8211; Restaurant/Wine/Freshfood WordPress Theme - Just another WordPress site"
                                     rel="home" class="sticky-logo">
