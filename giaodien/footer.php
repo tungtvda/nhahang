@@ -185,6 +185,20 @@
 <script type='text/javascript'
         src='themes/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min72e6.js?ver=2.6.4'></script>
 <script type='text/javascript'
+        src='themes/wp-content/plugins/woocommerce/assets/js/prettyPhoto/jquery.prettyPhoto.min005e.js?ver=3.1.6'></script>
+<script type='text/javascript'
+        src='themes/wp-content/plugins/woocommerce/assets/js/prettyPhoto/jquery.prettyPhoto.init.min72e6.js?ver=2.6.4'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var wc_single_product_params = {
+        "i18n_required_rating_text": "Please select a rating",
+        "review_rating_required": "yes"
+    };
+    /* ]]> */
+</script>
+<script type='text/javascript'
+        src='themes/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min72e6.js?ver=2.6.4'></script>
+<script type='text/javascript'
         src='themes/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min44fd.js?ver=2.70'></script>
 <script type='text/javascript'>
     /* <![CDATA[ */
@@ -229,10 +243,6 @@
 <script type='text/javascript'
         src='themes/wp-content/plugins/yith-woocommerce-compare/assets/js/jquery.colorbox-min13ac.js?ver=1.4.21'></script>
 <script type='text/javascript'
-        src='themes/wp-content/plugins/woocommerce/assets/js/prettyPhoto/jquery.prettyPhoto.minc6bd.js?ver=3.1.5'></script>
-<script type='text/javascript'
-        src='themes/wp-content/plugins/woocommerce/assets/js/prettyPhoto/jquery.prettyPhoto.init.min72e6.js?ver=2.6.4'></script>
-<script type='text/javascript'
         src='themes/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.selectBox.min7359.js?ver=1.2.0'></script>
 <script type='text/javascript'>
     /* <![CDATA[ */
@@ -259,10 +269,15 @@
 </script>
 <script type='text/javascript'
         src='themes/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.yith-wcwl9c6b.js?ver=2.0.16'></script>
-<script type='text/javascript' src='themes/wp-content/themes/echion/assets/js/jquery.unveil.mina578.js?ver=3022016'></script>
+<script type='text/javascript'
+        src='themes/wp-content/themes/echion/assets/js/jquery.unveil.mina578.js?ver=3022016'></script>
+<script type='text/javascript'
+        src='themes/wp-content/themes/echion/assets/js/jquery.magnify.mine7f0.js?ver=1.3.1'></script>
+<script type='text/javascript' src='themes/wp-includes/js/comment-reply.min1c9b.js?ver=4.6.1'></script>
 <script type='text/javascript'
         src='themes/wp-content/themes/echion/assets/js/jquery.mb-comingsoon.mina578.js?ver=3022016'></script>
-<script type='text/javascript' src='themes/wp-content/themes/echion/assets/js/library-jquery.min1c9b.js?ver=4.6.1'></script>
+<script type='text/javascript'
+        src='themes/wp-content/themes/echion/assets/js/library-jquery.min1c9b.js?ver=4.6.1'></script>
 <script type='text/javascript' src='themes/wp-content/themes/echion/assets/js/sideNav.min1c9b.js?ver=4.6.1'></script>
 <script type='text/javascript' src='themes/wp-content/themes/echion/assets/js/theme.min1c9b.js?ver=4.6.1'></script>
 <script type='text/javascript' src='themes/wp-includes/js/jquery/ui/core.mine899.js?ver=1.11.4'></script>
@@ -291,10 +306,6 @@
 <script type='text/javascript'
         src='themes/wp-content/plugins/kingcomposer/assets/frontend/js/kingcomposer355d.js?ver=2.5.7'></script>
 <script type='text/javascript' src='themes/wp-includes/js/wp-embed.min1c9b.js?ver=4.6.1'></script>
-<script type='text/javascript'
-        src='themes/wp-content/plugins/master-slider-pro/public/assets/js/jquery.easing.min459e.js?ver=3.0.4'></script>
-<script type='text/javascript'
-        src='themes/wp-content/plugins/master-slider-pro/public/assets/js/masterslider.min459e.js?ver=3.0.4'></script>
 <script type='text/javascript'>
     /* <![CDATA[ */
     var mc4wp_forms_config = [];
@@ -308,5 +319,5 @@
 <![endif]-->
 </body>
 
-<!-- Mirrored from new2new.com/echion/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Oct 2016 03:37:13 GMT -->
+<!-- Mirrored from new2new.com/echion/menu/semperduis-fusce/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Oct 2016 03:59:58 GMT -->
 </html>

@@ -410,4 +410,6 @@
                 padding-top: 60px;
             }
         }</style>
+    <link rel='stylesheet'
+          href='themes/css/style.css' type='text/css' media='all'/>
 </head>
