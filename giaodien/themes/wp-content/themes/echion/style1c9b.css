@@ -443,7 +443,7 @@ Main Menu
 .table-cell {
   display: table-cell;
   vertical-align: middle;
-  float: none;
+  float: left;
 }
 .affix-top .sticky-logo {
   display: none;
