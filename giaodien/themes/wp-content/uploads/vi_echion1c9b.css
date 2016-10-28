@@ -127,7 +127,8 @@ h6 {
 
 .vi-heading.style2 .description, .top_site_main .page-title-wrapper .banner-wrapper .heading__primary {
     font-family: Parfumerie Script Decorative, Helvetica, Arial, sans-serif;
-    font-size: 36px;
+    font-size: 40px;
+    font-weight: 600;
 }
 
 .woocommerce .wrapper-related-product .upsells-products .before-title, .woocommerce .wrapper-related-product .related-products .before-title, .woocommerce-page .wrapper-related-product .upsells-products .before-title, .woocommerce-page .wrapper-related-product .related-products .before-title {

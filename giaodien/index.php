@@ -20,7 +20,7 @@
                                 <div class="kc-col-container">
                                     <div class="vi-heading style2">
                                         <div class="description">Restaurant</div>
-                                        <h2 style="font-weight:bold;color:#26292D" class="title">ABOUT ECHION</h2>
+                                        <h2 style="font-weight:bold;color:#ee2b2a" class="title">ABOUT ECHION</h2>
                                         <div class="icon-heading"><img
                                                 src="themes/wp-content/uploads/2016/07/icon-title-table.png"
                                                 alt="ABOUT ECHION"/></div>
@@ -44,7 +44,7 @@
                                     <div class="link-black">
                                         <div class="vi-heading style2">
                                             <div class="description">Massage</div>
-                                            <h2 style="font-weight:bold;color:#26292D" class="title">OUR CHEFS</h2>
+                                            <h2 style="font-weight:bold;color:#ee2b2a" class="title">OUR CHEFS</h2>
                                             <div class="desc">Vestibulum ultricies dolor sed convallis. Donec
                                                 sollicitudin enim sit amet neque lacinia, suscipit nunc fringilla.
                                                 Quinibus at eros eget rhoncus mattis neque justo.
@@ -73,8 +73,8 @@
                                 <div class="kc-col-container">
                                     <div class="wrapper-list-menu">
                                         <div class="vi-heading style2  " style="background-color:#FFFFFF">
-                                            <div class="description" style="color:#26292D">Find Our</div>
-                                            <h2 style="font-weight:bold;color:#FFB606" class="title">FOR LUNCH</h2>
+                                            <div class="description" >Find Our</div>
+                                            <h2 style="font-weight:bold;color:#ee2b2a" class="title">FOR LUNCH</h2>
                                         </div><!--end heading-->
                                         <div class="list-menu"
                                              style="background-image:url(themes/wp-content/uploads/2016/07/bg-cackes.jpg)">
@@ -98,8 +98,8 @@
                                 <div class="kc-col-container">
                                     <div class="wrapper-list-menu">
                                         <div class="vi-heading style2  " style="background-color:#FFFFFF">
-                                            <div class="description" style="color:#26292D">Specials</div>
-                                            <h2 style="font-weight:bold;color:#FFB606" class="title">DRINKS</h2></div>
+                                            <div class="description">Specials</div>
+                                            <h2 style="font-weight:bold;color:#ee2b2a" class="title">DRINKS</h2></div>
                                         <!--end heading-->
                                         <div class="list-menu"
                                              style="background-image:url(themes/wp-content/uploads/2016/07/bg-drinks.jpg)">
@@ -123,8 +123,8 @@
                                 <div class="kc-col-container">
                                     <div class="wrapper-list-menu">
                                         <div class="vi-heading style2  " style="background-color:#FFFFFF">
-                                            <div class="description" style="color:#26292D">The Best</div>
-                                            <h2 style="font-weight:bold;color:#FFB606" class="title">FOR DINNER</h2>
+                                            <div class="description" >The Best</div>
+                                            <h2 style="font-weight:bold;color:#ee2b2a" class="title">FOR DINNER</h2>
                                         </div><!--end heading-->
                                         <div class="list-menu"
                                              style="background-image:url(themes/wp-content/uploads/2016/07/bg-dinner.jpg)">
@@ -156,7 +156,7 @@
                                          style="height: 120px; clear: both; width:100%;"></div>
                                     <div class="vi-heading style2">
                                         <div class="description">Recommended</div>
-                                        <h2 style="font-weight:bold" class="title">CHEF SELECTION</h2>
+                                        <h2 style="font-weight:bold; color: #ee2b2a" class="title">CHEF SELECTION</h2>
                                         <div class="icon-heading"><img
                                                 src="themes/wp-content/uploads/2016/07/icon-title-table.png"
                                                 alt="CHEF SELECTION"/></div>
@@ -1015,7 +1015,7 @@
                                          style="height: 40px; clear: both; width:100%;"></div>
                                     <div class="vi-heading style2">
                                         <div class="description">News</div>
-                                        <h2 style="font-weight:bold;color:#26292d" class="title">LATEST BLOG</h2>
+                                        <h2 style="font-weight:bold;color:#ee2b2a" class="title">LATEST BLOG</h2>
                                         <div class="icon-heading"><img
                                                 src="wp-content/uploads/2016/07/icon-title-table.png"
                                                 alt="LATEST BLOG"/></div>
