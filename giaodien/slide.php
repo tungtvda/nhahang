@@ -16,9 +16,9 @@
                 <img class="ms-layer ms-hover-active slide_img_2"  src="http://new2new.com/echion/wp-content/uploads/2016/07/slide_icon_4.png" alt=""></br>
                 <img class="ms-layer ms-hover-active slide_img_3" src="http://new2new.com/echion/wp-content/uploads/2016/07/slide_icon_5.png" alt="" >
                 <div class=""style="">
-                    <a href="" target="_self" class="ms-layer ms-btn ms-btn-round ms-btn-n msp-preset-btn-159"
+                    <a href="" target="_self" class="ms-layer ms-btn ms-btn-round ms-btn-n msp-preset-btn-159 slide_book_now"
                        style="">
-                        DISCOVER</a></div>
+                        Book Now</a></div>
             </div>
         </div>
     </div>

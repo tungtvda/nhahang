@@ -140,7 +140,7 @@
         }
 
         body.kc-css-system .kc-css-657219 {
-            padding-bottom: 80px;
+            padding-bottom: 0px;
         }
 
         body.kc-css-system .kc-css-747092 {
