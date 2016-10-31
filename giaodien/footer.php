@@ -49,7 +49,7 @@
                 <aside id="echion_widget_single_image-6"
                        class="col-sm-12 text-center widget echion_Widget_Single_Image_class">
                     <div class="vi-single-image">
-                        <img class="vi-single-image" src="wp-content/uploads/2016/07/logo-footer.png" alt="">
+                        <img class="vi-single-image" src="themes/images/logo.png" alt="" style="width: 100px">
                     </div>
                 </aside>
                 <aside id="text-6" class="col-sm-12 text-center widget widget_text">

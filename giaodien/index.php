@@ -8,7 +8,7 @@
                                 <div class="kc-col-container">
                                     <div class="kc-elm kc-css-457258 kc_shortcode kc_single_image border-right-bottom">
 
-                                        <figure><img src="themes/wp-content/uploads/2016/07/image-border-lr.jpg"
+                                        <figure><img src="themes/images/about.jpg"
                                                      class=""
                                                      alt=""/></figure>
                                     </div>
@@ -20,14 +20,12 @@
                                 <div class="kc-col-container">
                                     <div class="vi-heading style2">
                                         <div class="description">Restaurant</div>
-                                        <h2 style="font-weight:bold;color:#ee2b2a" class="title">ABOUT ECHION</h2>
+                                        <h2 style="font-weight:bold;color:#ee2b2a" class="title">ABOUT VIET GARDENS</h2>
                                         <div class="icon-heading"><img
                                                 src="themes/wp-content/uploads/2016/07/icon-title-table.png"
                                                 alt="ABOUT ECHION"/></div>
-                                        <div class="desc"><p>Lorem ipsum dolor amet, consectet adipiscing ultricies
-                                                convallis. Donec sollicitudin amet neque lacinia, suscipit fringilla.
-                                                Quinibus rhoncus mattis neque justo ultricies amet sagittis cursus mauris
-                                                varius diam</p></div>
+                                        <div class="desc"><p>VIETGARDEN - VƯỜN ẨM THỰC XANH ĐẬM ĐÀ HƯƠNG VỊ VIỆT
+                                                Tọa lạc trên một vị trí đắc địa tại đường Vũ Phạm Hàm, Phường Yên Hòa, Quận Cầu Giấy, VietGardens phủ sắc xanh tươi mát lên một góc phố phường nhộn nhịp. Thiết kế ấm cúng, chan hòa với thiên nhiên mang đến không gian trong lành với cây và hoa cùng một màu xanh nổi bật không pha trộn.</p></div>
                                         <p class="read-more"><a href="#" title="">READ MORE</a></p></div>
                                 </div>
                             </div>
@@ -45,9 +43,7 @@
                                         <div class="vi-heading style2">
                                             <div class="description">Massage</div>
                                             <h2 style="font-weight:bold;color:#ee2b2a" class="title">OUR CHEFS</h2>
-                                            <div class="desc">Vestibulum ultricies dolor sed convallis. Donec
-                                                sollicitudin enim sit amet neque lacinia, suscipit nunc fringilla.
-                                                Quinibus at eros eget rhoncus mattis neque justo.
+                                            <div class="desc">Chúng tôi tin tưởng với sự phục vụ nhiệt tình, chu đáo, ân cần và giá cả hợp lí cũng như sự khéo léo trong cách thể hiện hương vị ẩm thực Việt và tâm huyết đối với món ăn Việt Nam sẽ là kim chỉ nam cho việc hướng đến trái tim khách hàng của VietGardens.
                                             </div>
                                             <p class="read-more"><a href="#" title="">MEET OUR CHEFS</a></p></div>
                                     </div>
@@ -911,7 +907,7 @@
                                             <div class="description">Open Hours</div>
                                             <h2 style="font-weight:bold;color:#FFFFFF" class="title">BOOK A TABLE</h2>
                                             <div class="icon-heading"><img
-                                                    src="wp-content/uploads/2016/07/icon-title-1.png"
+                                                    src="themes/wp-content/uploads/2016/07/icon-title-1.png"
                                                     alt="BOOK A TABLE"/></div>
                                             <div class="desc"><p><em>Monday to Friday </em> <em>9:00 am to 11:00 pm</em>
                                                 </p>
@@ -1017,7 +1013,7 @@
                                         <div class="description">News</div>
                                         <h2 style="font-weight:bold;color:#ee2b2a" class="title">LATEST BLOG</h2>
                                         <div class="icon-heading"><img
-                                                src="wp-content/uploads/2016/07/icon-title-table.png"
+                                                src="themes/wp-content/uploads/2016/07/icon-title-table.png"
                                                 alt="LATEST BLOG"/></div>
                                     </div>
                                     <div class="list-posts row style_03 background_gray vi-product-plain">

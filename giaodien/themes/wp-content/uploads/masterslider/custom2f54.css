@@ -1061,17 +1061,17 @@
 }
 
 .msp-preset-btn-159 {
-    background-color: #ffb606;
-    border: 1px solid #ffb606;
+    background-color: #a3c638;
+    border: 1px solid #a3c638;
     color: #fff;
     font-family: Playfair Display, Helvetica, Arial, sans-serif;
     font-size: 20px;
-    padding: 15px 45px
+    padding: 7px 33px;
 }
 
 .msp-preset-btn-159:hover {
     background-color: transparent;
-    color: #ffb606;
+    color:#ffffff;
 }
 
 .msp-preset-btn-159:active {
