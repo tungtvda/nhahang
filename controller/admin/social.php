@@ -1,7 +1,7 @@
 <?php
 require_once '../../config.php';
-require_once DIR.'/model/slideService.php';
-require_once DIR.'/view/admin/slide.php';
+require_once DIR.'/model/socialService.php';
+require_once DIR.'/view/admin/social.php';
 require_once DIR.'/common/messenger.php';
 $data=array();
 $insert=true;
@@ -11,14 +11,14 @@ if(isset($_SESSION["Admin"]))
     {
         if($_GET["action"]=="delete")
         {
-            $new_obj= new slide();
+            $new_obj= new social();
             $new_obj->id=$_GET["id"];
-            slide_delete($new_obj);
-            header('Location: '.SITE_NAME.'/controller/admin/slide.php');
+            social_delete($new_obj);
+            header('Location: '.SITE_NAME.'/controller/admin/social.php');
         }
         else if($_GET["action"]=="edit")
         {
-            $new_obj=slide_getById($_GET["id"]);
+            $new_obj=social_getById($_GET["id"]);
             if($new_obj!=false)
             {
                 $data['form']=$new_obj[0];
@@ -26,7 +26,7 @@ if(isset($_SESSION["Admin"]))
                 $data['tab1_class']=' ';
                 $insert=false;
             }
-            else header('Location: '.SITE_NAME.'/controller/admin/slide.php');
+            else header('Location: '.SITE_NAME.'/controller/admin/social.php');
         }
         else
         {
@@ -46,47 +46,49 @@ if(isset($_SESSION["Admin"]))
         }
         else
         {
-            $List_slide=slide_getByAll();
-            foreach($List_slide as $slide)
+            $List_social=social_getByAll();
+            foreach($List_social as $social)
             {
-                if(isset($_GET["check_".$slide->id])) slide_delete($slide);
+                if(isset($_GET["check_".$social->id])) social_delete($social);
             }
-            header('Location: '.SITE_NAME.'/controller/admin/slide.php');
+            header('Location: '.SITE_NAME.'/controller/admin/social.php');
         }
     }
-    if(isset($_POST["name"])&&isset($_POST["img"])&&isset($_POST["link"])&&isset($_POST["position"]))
+    if(isset($_POST["facebook"])&&isset($_POST["twitter"])&&isset($_POST["youtube"])&&isset($_POST["google"])&&isset($_POST["rss"]))
     {
        $array=$_POST;
        if(!isset($array['id']))
        $array['id']='0';
-       if(!isset($array['name']))
-       $array['name']='0';
-       if(!isset($array['img']))
-       $array['img']='0';
-       if(!isset($array['link']))
-       $array['link']='0';
-       if(!isset($array['position']))
-       $array['position']='0';
-      $new_obj=new slide($array);
+       if(!isset($array['facebook']))
+       $array['facebook']='0';
+       if(!isset($array['twitter']))
+       $array['twitter']='0';
+       if(!isset($array['youtube']))
+       $array['youtube']='0';
+       if(!isset($array['google']))
+       $array['google']='0';
+       if(!isset($array['rss']))
+       $array['rss']='0';
+      $new_obj=new social($array);
         if($insert)
         {
-            slide_insert($new_obj);
-            header('Location: '.SITE_NAME.'/controller/admin/slide.php');
+            social_insert($new_obj);
+            header('Location: '.SITE_NAME.'/controller/admin/social.php');
         }
         else
         {
             $new_obj->id=$_GET["id"];
-            slide_update($new_obj);
+            social_update($new_obj);
             $insert=false;
-            header('Location: '.SITE_NAME.'/controller/admin/slide.php');
+            header('Location: '.SITE_NAME.'/controller/admin/social.php');
         }
     }
     $data['username']=isset($_SESSION["UserName"])?$_SESSION["UserName"]:'quản trị viên';
-    $data['count_paging']=slide_count('');
+    $data['count_paging']=social_count('');
     $data['page']=isset($_GET['page'])?$_GET['page']:'1';
-    $data['table_body']=slide_getByPagingReplace($data['page'],20,'id DESC','');
+    $data['table_body']=social_getByPagingReplace($data['page'],20,'id DESC','');
     // gọi phương thức trong tầng view để hiển thị
-    view_slide($data);
+    view_social($data);
 }
 else
 {

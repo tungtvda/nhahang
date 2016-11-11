@@ -1,7 +1,7 @@
 <?php
 require_once '../../config.php';
-require_once DIR.'/model/slideService.php';
-require_once DIR.'/view/admin/slide.php';
+require_once DIR.'/model/danhmuc_tintucService.php';
+require_once DIR.'/view/admin/danhmuc_tintuc.php';
 require_once DIR.'/common/messenger.php';
 $data=array();
 $insert=true;
@@ -11,14 +11,14 @@ if(isset($_SESSION["Admin"]))
     {
         if($_GET["action"]=="delete")
         {
-            $new_obj= new slide();
+            $new_obj= new danhmuc_tintuc();
             $new_obj->id=$_GET["id"];
-            slide_delete($new_obj);
-            header('Location: '.SITE_NAME.'/controller/admin/slide.php');
+            danhmuc_tintuc_delete($new_obj);
+            header('Location: '.SITE_NAME.'/controller/admin/danhmuc_tintuc.php');
         }
         else if($_GET["action"]=="edit")
         {
-            $new_obj=slide_getById($_GET["id"]);
+            $new_obj=danhmuc_tintuc_getById($_GET["id"]);
             if($new_obj!=false)
             {
                 $data['form']=$new_obj[0];
@@ -26,7 +26,7 @@ if(isset($_SESSION["Admin"]))
                 $data['tab1_class']=' ';
                 $insert=false;
             }
-            else header('Location: '.SITE_NAME.'/controller/admin/slide.php');
+            else header('Location: '.SITE_NAME.'/controller/admin/danhmuc_tintuc.php');
         }
         else
         {
@@ -46,47 +46,53 @@ if(isset($_SESSION["Admin"]))
         }
         else
         {
-            $List_slide=slide_getByAll();
-            foreach($List_slide as $slide)
+            $List_danhmuc_tintuc=danhmuc_tintuc_getByAll();
+            foreach($List_danhmuc_tintuc as $danhmuc_tintuc)
             {
-                if(isset($_GET["check_".$slide->id])) slide_delete($slide);
+                if(isset($_GET["check_".$danhmuc_tintuc->id])) danhmuc_tintuc_delete($danhmuc_tintuc);
             }
-            header('Location: '.SITE_NAME.'/controller/admin/slide.php');
+            header('Location: '.SITE_NAME.'/controller/admin/danhmuc_tintuc.php');
         }
     }
-    if(isset($_POST["name"])&&isset($_POST["img"])&&isset($_POST["link"])&&isset($_POST["position"]))
+    if(isset($_POST["name"])&&isset($_POST["name_url"])&&isset($_POST["img"])&&isset($_POST["title"])&&isset($_POST["keyword"])&&isset($_POST["description"])&&isset($_POST["position"]))
     {
        $array=$_POST;
        if(!isset($array['id']))
        $array['id']='0';
        if(!isset($array['name']))
        $array['name']='0';
+       if(!isset($array['name_url']))
+       $array['name_url']='0';
        if(!isset($array['img']))
        $array['img']='0';
-       if(!isset($array['link']))
-       $array['link']='0';
+       if(!isset($array['title']))
+       $array['title']='0';
+       if(!isset($array['keyword']))
+       $array['keyword']='0';
+       if(!isset($array['description']))
+       $array['description']='0';
        if(!isset($array['position']))
        $array['position']='0';
-      $new_obj=new slide($array);
+      $new_obj=new danhmuc_tintuc($array);
         if($insert)
         {
-            slide_insert($new_obj);
-            header('Location: '.SITE_NAME.'/controller/admin/slide.php');
+            danhmuc_tintuc_insert($new_obj);
+            header('Location: '.SITE_NAME.'/controller/admin/danhmuc_tintuc.php');
         }
         else
         {
             $new_obj->id=$_GET["id"];
-            slide_update($new_obj);
+            danhmuc_tintuc_update($new_obj);
             $insert=false;
-            header('Location: '.SITE_NAME.'/controller/admin/slide.php');
+            header('Location: '.SITE_NAME.'/controller/admin/danhmuc_tintuc.php');
         }
     }
     $data['username']=isset($_SESSION["UserName"])?$_SESSION["UserName"]:'quản trị viên';
-    $data['count_paging']=slide_count('');
+    $data['count_paging']=danhmuc_tintuc_count('');
     $data['page']=isset($_GET['page'])?$_GET['page']:'1';
-    $data['table_body']=slide_getByPagingReplace($data['page'],20,'id DESC','');
+    $data['table_body']=danhmuc_tintuc_getByPagingReplace($data['page'],20,'id DESC','');
     // gọi phương thức trong tầng view để hiển thị
-    view_slide($data);
+    view_danhmuc_tintuc($data);
 }
 else
 {
