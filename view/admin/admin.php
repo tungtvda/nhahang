@@ -4,6 +4,9 @@ require_once DIR.'/common/cls_fast_template.php';
 function view_admin($data)
 {
     $ft=new FastTemplate(DIR.'/view/admin/templates');
+    $ft->assign('count_contact',$_SESSION['contact']);
+    $ft->assign('count_request',$_SESSION['request']);
+    $ft->assign('count_booking',$_SESSION['booking']);
     $ft->define('header','header.tpl');
     $ft->define('body','body.tpl');
     $ft->define('footer','footer.tpl');
@@ -20,6 +23,7 @@ function view_admin($data)
     $ft->assign('CONTENT-BOX-RIGHT',isset($data['content_box_right'])?$data['content_box_right']:' ');
     $ft->assign('NOTIFICATION',isset($data['notification'])?$data['notification']:' ');
     $ft->assign('SITE-NAME',isset($data['sitename'])?$data['sitename']:SITE_NAME);
+    $ft->assign('kichhoat_admin', 'active');
     $ft->assign('FORM',showFrom(isset($data['form'])?$data['form']:'',isset($data['listfkey'])?$data['listfkey']:array()));
     //
     print $ft->parse_and_return('header');
@@ -54,6 +58,6 @@ function showFrom($form,$ListKey=array())
     $str_from='';
     $str_from.='<p><label>TenDangNhap</label><input class="text-input small-input" type="text"  name="TenDangNhap" value="'.(($form!=false)?$form->TenDangNhap:'').'" /></p>';
     $str_from.='<p><label>Full_name</label><input class="text-input small-input" type="text"  name="Full_name" value="'.(($form!=false)?$form->Full_name:'').'" /></p>';
-    $str_from.='<p><label>MatKhau</label><input class="text-input small-input" type="text"  name="MatKhau" value="'.(($form!=false)?$form->MatKhau:'').'" /></p>';
+    $str_from.='<p><label>MatKhau</label><input class="text-input small-input" type="password"  name="MatKhau" value="'.(($form!=false)?$form->MatKhau:'').'" /></p>';
     return $str_from;
 }
