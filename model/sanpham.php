@@ -1,0 +1,63 @@
+<?php
+class sanpham
+{
+    public $id,$danhmuc1_id,$danhmuc2_id,$highlights,$name,$code,$img,$img1,$img2,$price,$price_sale,$price_percent,$start,$num_like,$description_short,$description;
+    public function sanpham($data=array())
+    {
+    $this->id=isset($data['id'])?$data['id']:'';
+    $this->danhmuc1_id=isset($data['danhmuc1_id'])?$data['danhmuc1_id']:'';
+    $this->danhmuc2_id=isset($data['danhmuc2_id'])?$data['danhmuc2_id']:'';
+    $this->highlights=isset($data['highlights'])?$data['highlights']:'';
+    $this->name=isset($data['name'])?$data['name']:'';
+    $this->code=isset($data['code'])?$data['code']:'';
+    $this->img=isset($data['img'])?$data['img']:'';
+    $this->img1=isset($data['img1'])?$data['img1']:'';
+    $this->img2=isset($data['img2'])?$data['img2']:'';
+    $this->price=isset($data['price'])?$data['price']:'';
+    $this->price_sale=isset($data['price_sale'])?$data['price_sale']:'';
+    $this->price_percent=isset($data['price_percent'])?$data['price_percent']:'';
+    $this->start=isset($data['start'])?$data['start']:'';
+    $this->num_like=isset($data['num_like'])?$data['num_like']:'';
+    $this->description_short=isset($data['description_short'])?$data['description_short']:'';
+    $this->description=isset($data['description'])?$data['description']:'';
+          $this->encode();
+    }
+    public function encode()
+        {
+            $this->id=addslashes($this->id);
+            $this->danhmuc1_id=addslashes($this->danhmuc1_id);
+            $this->danhmuc2_id=addslashes($this->danhmuc2_id);
+            $this->highlights=addslashes($this->highlights);
+            $this->name=addslashes($this->name);
+            $this->code=addslashes($this->code);
+            $this->img=addslashes($this->img);
+            $this->img1=addslashes($this->img1);
+            $this->img2=addslashes($this->img2);
+            $this->price=addslashes($this->price);
+            $this->price_sale=addslashes($this->price_sale);
+            $this->price_percent=addslashes($this->price_percent);
+            $this->start=addslashes($this->start);
+            $this->num_like=addslashes($this->num_like);
+            $this->description_short=addslashes($this->description_short);
+            $this->description=addslashes($this->description);
+        }
+    public function decode()
+        {
+            $this->id=stripslashes($this->id);
+            $this->danhmuc1_id=stripslashes($this->danhmuc1_id);
+            $this->danhmuc2_id=stripslashes($this->danhmuc2_id);
+            $this->highlights=stripslashes($this->highlights);
+            $this->name=stripslashes($this->name);
+            $this->code=stripslashes($this->code);
+            $this->img=stripslashes($this->img);
+            $this->img1=stripslashes($this->img1);
+            $this->img2=stripslashes($this->img2);
+            $this->price=stripslashes($this->price);
+            $this->price_sale=stripslashes($this->price_sale);
+            $this->price_percent=stripslashes($this->price_percent);
+            $this->start=stripslashes($this->start);
+            $this->num_like=stripslashes($this->num_like);
+            $this->description_short=stripslashes($this->description_short);
+            $this->description=stripslashes($this->description);
+        }
+}

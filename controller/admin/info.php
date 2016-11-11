@@ -1,7 +1,7 @@
 <?php
 require_once '../../config.php';
-require_once DIR.'/model/slideService.php';
-require_once DIR.'/view/admin/slide.php';
+require_once DIR.'/model/infoService.php';
+require_once DIR.'/view/admin/info.php';
 require_once DIR.'/common/messenger.php';
 $data=array();
 $insert=true;
@@ -11,14 +11,14 @@ if(isset($_SESSION["Admin"]))
     {
         if($_GET["action"]=="delete")
         {
-            $new_obj= new slide();
+            $new_obj= new info();
             $new_obj->id=$_GET["id"];
-            slide_delete($new_obj);
-            header('Location: '.SITE_NAME.'/controller/admin/slide.php');
+            info_delete($new_obj);
+            header('Location: '.SITE_NAME.'/controller/admin/info.php');
         }
         else if($_GET["action"]=="edit")
         {
-            $new_obj=slide_getById($_GET["id"]);
+            $new_obj=info_getById($_GET["id"]);
             if($new_obj!=false)
             {
                 $data['form']=$new_obj[0];
@@ -26,7 +26,7 @@ if(isset($_SESSION["Admin"]))
                 $data['tab1_class']=' ';
                 $insert=false;
             }
-            else header('Location: '.SITE_NAME.'/controller/admin/slide.php');
+            else header('Location: '.SITE_NAME.'/controller/admin/info.php');
         }
         else
         {
@@ -46,15 +46,15 @@ if(isset($_SESSION["Admin"]))
         }
         else
         {
-            $List_slide=slide_getByAll();
-            foreach($List_slide as $slide)
+            $List_info=info_getByAll();
+            foreach($List_info as $info)
             {
-                if(isset($_GET["check_".$slide->id])) slide_delete($slide);
+                if(isset($_GET["check_".$info->id])) info_delete($info);
             }
-            header('Location: '.SITE_NAME.'/controller/admin/slide.php');
+            header('Location: '.SITE_NAME.'/controller/admin/info.php');
         }
     }
-    if(isset($_POST["name"])&&isset($_POST["img"])&&isset($_POST["link"])&&isset($_POST["position"]))
+    if(isset($_POST["name"])&&isset($_POST["img"])&&isset($_POST["content"])&&isset($_POST["contents_short"])&&isset($_POST["title"])&&isset($_POST["keyword"])&&isset($_POST["description"]))
     {
        $array=$_POST;
        if(!isset($array['id']))
@@ -63,30 +63,36 @@ if(isset($_SESSION["Admin"]))
        $array['name']='0';
        if(!isset($array['img']))
        $array['img']='0';
-       if(!isset($array['link']))
-       $array['link']='0';
-       if(!isset($array['position']))
-       $array['position']='0';
-      $new_obj=new slide($array);
+       if(!isset($array['content']))
+       $array['content']='0';
+       if(!isset($array['contents_short']))
+       $array['contents_short']='0';
+       if(!isset($array['title']))
+       $array['title']='0';
+       if(!isset($array['keyword']))
+       $array['keyword']='0';
+       if(!isset($array['description']))
+       $array['description']='0';
+      $new_obj=new info($array);
         if($insert)
         {
-            slide_insert($new_obj);
-            header('Location: '.SITE_NAME.'/controller/admin/slide.php');
+            info_insert($new_obj);
+            header('Location: '.SITE_NAME.'/controller/admin/info.php');
         }
         else
         {
             $new_obj->id=$_GET["id"];
-            slide_update($new_obj);
+            info_update($new_obj);
             $insert=false;
-            header('Location: '.SITE_NAME.'/controller/admin/slide.php');
+            header('Location: '.SITE_NAME.'/controller/admin/info.php');
         }
     }
     $data['username']=isset($_SESSION["UserName"])?$_SESSION["UserName"]:'quản trị viên';
-    $data['count_paging']=slide_count('');
+    $data['count_paging']=info_count('');
     $data['page']=isset($_GET['page'])?$_GET['page']:'1';
-    $data['table_body']=slide_getByPagingReplace($data['page'],20,'id DESC','');
+    $data['table_body']=info_getByPagingReplace($data['page'],20,'id DESC','');
     // gọi phương thức trong tầng view để hiển thị
-    view_slide($data);
+    view_info($data);
 }
 else
 {
