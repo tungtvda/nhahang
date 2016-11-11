@@ -86,36 +86,25 @@
                 <li class="{kichhoat}"><a href="{SITE-NAME}/admin"><span class="icon-align-justify"></span> Dashboard</a></li>
                 <li class="{kichhoat_admin}" ><a href="{SITE-NAME}/controller/admin/admin.php"><span class="icon-user"></span> Tài khoản quản trị</a></li>
                 <li class="{kichhoat_config}"><a href="{SITE-NAME}/controller/admin/config.php"><span class=" icon-wrench"></span> Cấu hình hệ thống</a></li>
-                <li class="{kichhoat_dathang}"><a href="{SITE-NAME}/controller/admin/booking_tour.php"><span class="icon-shopping-cart"></span> Đặt tour <span style="color: red; float: right">{count_booking}</span></a></li>
+                <li class="{kichhoat_dathang}"><a href="{SITE-NAME}/controller/admin/booking_table.php"><span class="icon-shopping-cart"></span> Đặt tour <span style="color: red; float: right">{count_booking}</span></a></li>
                 <li class="{kichhoat_lienhe}"><a href="{SITE-NAME}/controller/admin/contact.php"><span class="icon-envelope"></span> Liên hệ <span style="color: red; float: right">{count_contact}</span></a></li>
-                <li class="{kichhoat_request}"><a href="{SITE-NAME}/controller/admin/request.php"><span class="icon-envelope"></span> Request form <span style="color: red; float: right">{count_request}</span></a></li>
-                <li class="dropdown {kichhoat_tour}" ><a href="#"><span class=" icon-plane"></span> Tour du lịch</a>
+                <li class="dropdown {kichhoat_thucdon}" ><a href="#"><span class=" icon-plane"></span> Thực đơn</a>
                     <ul>
-                        <li><a href="{SITE-NAME}/controller/admin/danhmuc_2.php">Danh mục</a></li>
-                        <li><a href="{SITE-NAME}/controller/admin/tour.php">Danh sách </a></li>
+                        <li><a href="{SITE-NAME}/controller/admin/danhmuc1.php">Danh mục 1</a></li>
+                        <li><a href="{SITE-NAME}/controller/admin/danhmuc2.php">Danh mục 2</a></li>
+                        <li><a href="{SITE-NAME}/controller/admin/sanpham.php">Danh sách thực đơn </a></li>
                     </ul>
                 </li>
-                <li class="dropdown {kichhoat_tintuc}"><a href="#"><span class=" icon-edit"></span> Tin tức</a>
+                <li class="dropdown {kichhoat_tintuc}"><a href="#"><span class=" icon-edit"></span> Cẩm nang</a>
                     <ul>
                         <li><a href="{SITE-NAME}/controller/admin/danhmuc_tintuc.php">Danh mục</a></li>
                         <li><a href="{SITE-NAME}/controller/admin/news.php">Danh sách </a></li>
                     </ul>
                 </li>
-
-
-
-                <li class="{kichhoat_gioithieu}"><a href="{SITE-NAME}/controller/admin/info_mix.php"><span class="icon-facetime-video"></span> Giới thiệu</a></li>
-                <li class="dropdown {kichhoat_hotro}"><a href="#"><span class="icon-question-sign"></span> Hỗ trợ trực tuyến</a>
-                    <ul>
-                        <li><a href="{SITE-NAME}/controller/admin/danhmuc_subport.php">Danh mục</a></li>
-                        <li><a href="{SITE-NAME}/controller/admin/subport.php">Danh sách </a></li>
-                    </ul>
-                </li>
-                <li class="{kichhoat_video}"><a href="{SITE-NAME}/controller/admin/video.php"><span class="icon-facetime-video"></span> Video</a></li>
+                <li class="{kichhoat_gioithieu}"><a href="{SITE-NAME}/controller/admin/info.php"><span class="icon-facetime-video"></span> Giới thiệu</a></li>
                 <li class="{kichhoat_slide}"><a href="{SITE-NAME}/controller/admin/slide.php"><span class="icon-film"></span> Slide</a></li>
                 <li class="{kichhoat_menu}"><a href="{SITE-NAME}/controller/admin/menu.php"><span class="icon-th-list"></span> Cấu hình menu</a></li>
                 <li class="{kichhoat_mangxahoi}"><a href="{SITE-NAME}/controller/admin/social.php"><span class=" iconfa-facebook"></span> Mạng xã hội</a></li>
-                <li class="{kichhoat_link}"><a href="{SITE-NAME}/controller/admin/link.php"><span class="iconfa-link"></span> Link footer</a></li>
                 <!--<li class="{kichhoat_tieuchi}"><a href="{SITE-NAME}/controller/admin/tag.php"><span class="icon-tag"></span> Tag</a></li>-->
             </ul>
         </div>
