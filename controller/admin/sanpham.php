@@ -5,6 +5,7 @@ require_once DIR.'/model/danhmuc1Service.php';
 require_once DIR.'/model/danhmuc2Service.php';
 require_once DIR.'/view/admin/sanpham.php';
 require_once DIR.'/common/messenger.php';
+require_once DIR.'/common/locdautiengviet.php';
 $data=array();
 $insert=true;
 if(isset($_SESSION["Admin"]))
@@ -40,7 +41,12 @@ if(isset($_SESSION["Admin"]))
         $data['tab1_class']='default-tab current';
     }
     $data['listfkey']['danhmuc1_id']=danhmuc1_getByAll();
-    $data['listfkey']['danhmuc2_id']=danhmuc2_getByAll();
+    $dk='';
+    if(isset($_GET['id']))
+    {
+        $dk='danhmuc_id='.$new_obj[0]->danhmuc1_id;
+    }
+    $data['listfkey']['danhmuc2_id']=danhmuc2_getByTop('',$dk,'name asc');
     if(isset($_GET["action_all"]))
     {
         if($_GET["action_all"]=="ThemMoi")
