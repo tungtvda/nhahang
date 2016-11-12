@@ -64,7 +64,7 @@ if(isset($_SESSION["Admin"]))
             header('Location: '.SITE_NAME.'/controller/admin/sanpham.php');
         }
     }
-    if(isset($_POST["danhmuc1_id"])&&isset($_POST["danhmuc2_id"])&&isset($_POST["name"])&&isset($_POST["code"])&&isset($_POST["img"])&&isset($_POST["img1"])&&isset($_POST["img2"])&&isset($_POST["price"])&&isset($_POST["price_sale"])&&isset($_POST["price_percent"])&&isset($_POST["start"])&&isset($_POST["num_like"])&&isset($_POST["description_short"])&&isset($_POST["description"]))
+    if(isset($_POST["danhmuc1_id"])&&isset($_POST["danhmuc2_id"])&&isset($_POST["name"])&&isset($_POST["name_url"])&&isset($_POST["code"])&&isset($_POST["img"])&&isset($_POST["img1"])&&isset($_POST["img2"])&&isset($_POST["price"])&&isset($_POST["price_sale"])&&isset($_POST["price_percent"])&&isset($_POST["start"])&&isset($_POST["num_like"])&&isset($_POST["description_short"])&&isset($_POST["description"]))
     {
        $array=$_POST;
        if(!isset($array['id']))
@@ -77,6 +77,9 @@ if(isset($_SESSION["Admin"]))
        $array['highlights']='0';
        if(!isset($array['name']))
        $array['name']='0';
+       if(!isset($array['name_url']))
+       $array['name_url']='0';
+        $array['name_url']=LocDau($array['name']);
        if(!isset($array['code']))
        $array['code']='0';
        if(!isset($array['img']))

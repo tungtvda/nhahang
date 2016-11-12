@@ -29,7 +29,7 @@ function view_sanpham($data)
 //
 function showTableHeader()
 {
-    return '<th>id</th><th>danhmuc1_id</th><th>danhmuc2_id</th><th>highlights</th><th>name</th><th>code</th><th>img</th><th>price</th><th>start</th><th>num_like</th>';
+    return '<th>danhmuc1_id</th><th>danhmuc2_id</th><th>highlights</th><th>name</th><th>code</th><th>img</th><th>img1</th><th>img2</th><th>price</th><th>start</th><th>num_like</th>';
 }
 //
 function showTableBody($data)
@@ -38,13 +38,14 @@ function showTableBody($data)
     if(count($data)>0) foreach($data as $obj)
     {
         $TableBody.="<tr><td><input type=\"checkbox\" name=\"check_".$obj->id."\"/></td>";
-        $TableBody.="<td>".$obj->id."</td>";
         $TableBody.="<td>".$obj->danhmuc1_id."</td>";
         $TableBody.="<td>".$obj->danhmuc2_id."</td>";
         $TableBody.="<td>".$obj->highlights."</td>";
         $TableBody.="<td>".$obj->name."</td>";
         $TableBody.="<td>".$obj->code."</td>";
         $TableBody.="<td><img src=\"".$obj->img."\" width=\"50px\" height=\"50px\"/> </td>";
+        $TableBody.="<td><img src=\"".$obj->img1."\" width=\"50px\" height=\"50px\"/> </td>";
+        $TableBody.="<td><img src=\"".$obj->img2."\" width=\"50px\" height=\"50px\"/> </td>";
         $TableBody.="<td>".$obj->price."</td>";
         $TableBody.="<td>".$obj->start."</td>";
         $TableBody.="<td>".$obj->num_like."</td>";
@@ -58,27 +59,6 @@ function showTableBody($data)
 //
 function showFrom($form,$ListKey=array())
 {
-//    $str_from='';
-//    $str_from.='<p><label>danhmuc1_id</label>';
-//    $str_from.='<select name="danhmuc1_id">';
-//    if(isset($ListKey['danhmuc1_id']))
-//    {
-//        foreach($ListKey['danhmuc1_id'] as $key)
-//        {
-//            $str_from.='<option value="'.$key->id.'" '.(($form!=false)?(($form->danhmuc1_id==$key->id)?'selected':''):'').'>'.$key->name.'</option>';
-//        }
-//    }
-//    $str_from.='</select></p>';
-//    $str_from.='<p><label>danhmuc2_id</label>';
-//    $str_from.='<select name="danhmuc2_id">';
-//    if(isset($ListKey['danhmuc2_id']))
-//    {
-//        foreach($ListKey['danhmuc2_id'] as $key)
-//        {
-//            $str_from.='<option value="'.$key->id.'" '.(($form!=false)?(($form->danhmuc2_id==$key->id)?'selected':''):'').'>'.$key->name.'</option>';
-//        }
-//    }
-//    $str_from.='</select></p>';
     $str_from='';
     $str_from.='<p><label>Chọn danh mục cấp 1</label>';
     $str_from.='<select name="danhmuc1_id" id="DanhMuc1Id">';
@@ -123,6 +103,7 @@ function showFrom($form,$ListKey=array())
     $str_from.='</select></p>';
     $str_from.='<p><label>highlights</label><input  type="checkbox"  name="highlights" value="1" '.(($form!=false)?(($form->highlights=='1')?'checked':''):'').' /></p>';
     $str_from.='<p><label>name</label><input class="text-input small-input" type="text"  name="name" value="'.(($form!=false)?$form->name:'').'" /></p>';
+    $str_from.='<p><label>name_url</label><input class="text-input small-input" type="text"  name="name_url" value="'.(($form!=false)?$form->name_url:'').'" /></p>';
     $str_from.='<p><label>code</label><input class="text-input small-input" type="text"  name="code" value="'.(($form!=false)?$form->code:'').'" /></p>';
     $str_from.='<p><label>img</label><input class="text-input small-input" type="text"  name="img" value="'.(($form!=false)?$form->img:'').'"/><a class="button" onclick="openKcEditor(\'img\');">Upload ảnh</a></p>';
     $str_from.='<p><label>img1</label><input class="text-input small-input" type="text"  name="img1" value="'.(($form!=false)?$form->img1:'').'"/><a class="button" onclick="openKcEditor(\'img1\');">Upload ảnh</a></p>';
