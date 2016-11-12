@@ -20,12 +20,16 @@
 }
 @font-face {
   font-family: 'FontAwesome';
-  src: url('fonts/fontawesome-webfont4c82.html?-i3a2kk');
-  src: url('fonts/fontawesome-webfontd41d.html?#iefix&-i3a2kk') format('embedded-opentype'),
-  	   url('fonts/fontawesome-webfont4c82-2.html?-i3a2kk') format('woff'),
-  	   url('fonts/fontawesome-webfont4c82-3.html?-i3a2kk') format('woff2'),
-  	   url('fonts/fontawesome-webfont4c82-4.html?-i3a2kk') format('truetype'),
-  	   url('fonts/fontawesome-webfont4c82.svg?-i3a2kk#fontawesomeregular') format('svg');
+	src: url('fonts/fonts/fontawesome-webfont.eot');
+	src: url('fonts/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+	url('fonts/fonts/fontawesome-webfont.woff') format('woff'),
+	url('fonts/fonts/fontawesome-webfont.ttf') format('truetype');
+  /*src: url('fonts/fontawesome-webfont4c82.html?');*/
+  /*src: url('fonts/fontawesome-webfontd41d.html?#iefix&-i3a2kk') format('embedded-opentype'),*/
+  	   /*url('fonts/fontawesome-webfont4c82-2.html?-i3a2kk') format('woff'),*/
+  	   /*url('fonts/fontawesome-webfont4c82-3.html?-i3a2kk') format('woff2'),*/
+  	   /*url('fonts/fontawesome-webfont4c82-4.html?-i3a2kk') format('truetype'),*/
+  	   /*url('fonts/fontawesome-webfont4c82.svg?-i3a2kk#fontawesomeregular') format('svg');*/
   font-weight: normal;
   font-style: normal;
 }
