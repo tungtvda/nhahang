@@ -96,7 +96,7 @@ if(isset($_SESSION["Admin"]))
     $data['username']=isset($_SESSION["UserName"])?$_SESSION["UserName"]:'quản trị viên';
     $data['count_paging']=danhmuc2_count('');
     $data['page']=isset($_GET['page'])?$_GET['page']:'1';
-    $data['table_body']=danhmuc2_getByPagingReplace($data['page'],20,'id DESC','');
+    $data['table_body']=danhmuc2_getByPagingReplace($data['page'],20,'danhmuc_id DESC','');
     // gọi phương thức trong tầng view để hiển thị
     view_danhmuc2($data);
 }

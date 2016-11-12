@@ -58,25 +58,67 @@ function showTableBody($data)
 //
 function showFrom($form,$ListKey=array())
 {
+//    $str_from='';
+//    $str_from.='<p><label>danhmuc1_id</label>';
+//    $str_from.='<select name="danhmuc1_id">';
+//    if(isset($ListKey['danhmuc1_id']))
+//    {
+//        foreach($ListKey['danhmuc1_id'] as $key)
+//        {
+//            $str_from.='<option value="'.$key->id.'" '.(($form!=false)?(($form->danhmuc1_id==$key->id)?'selected':''):'').'>'.$key->name.'</option>';
+//        }
+//    }
+//    $str_from.='</select></p>';
+//    $str_from.='<p><label>danhmuc2_id</label>';
+//    $str_from.='<select name="danhmuc2_id">';
+//    if(isset($ListKey['danhmuc2_id']))
+//    {
+//        foreach($ListKey['danhmuc2_id'] as $key)
+//        {
+//            $str_from.='<option value="'.$key->id.'" '.(($form!=false)?(($form->danhmuc2_id==$key->id)?'selected':''):'').'>'.$key->name.'</option>';
+//        }
+//    }
+//    $str_from.='</select></p>';
     $str_from='';
-    $str_from.='<p><label>danhmuc1_id</label>';
-    $str_from.='<select name="danhmuc1_id">';
-    if(isset($ListKey['danhmuc1_id']))
+    $str_from.='<p><label>Chọn danh mục cấp 1</label>';
+    $str_from.='<select name="danhmuc1_id" id="DanhMuc1Id">';
+    if($form!=false)
     {
-        foreach($ListKey['danhmuc1_id'] as $key)
+        if(isset($ListKey['danhmuc1_id']))
         {
-            $str_from.='<option value="'.$key->id.'" '.(($form!=false)?(($form->danhmuc1_id==$key->id)?'selected':''):'').'>'.$key->name.'</option>';
+            foreach($ListKey['danhmuc1_id'] as $key)
+            {
+                $str_from.='<option value="'.$key->id.'" '.(($form!=false)?(($form->danhmuc1_id==$key->id)?'selected':''):'').'>'.$key->name.'</option>';
+            }
+        }
+    }
+    else
+    {
+
+        if(isset($ListKey['danhmuc1_id']))
+        {
+            foreach($ListKey['danhmuc1_id'] as $key)
+            {
+                $str_from.='<option value="'.$key->id.'" '.(($form!=false)?(($form->danhmuc1_id==$key->id)?'selected':''):'').'>'.$key->name.'</option>';
+            }
         }
     }
     $str_from.='</select></p>';
-    $str_from.='<p><label>danhmuc2_id</label>';
-    $str_from.='<select name="danhmuc2_id">';
-    if(isset($ListKey['danhmuc2_id']))
+    $str_from.='<p><label>Chọn danh mục cấp 2</label>';
+    $str_from.='<select name="danhmuc2_id" id="DanhMuc2Id">';
+    if($form!=false)
     {
-        foreach($ListKey['danhmuc2_id'] as $key)
+        if(isset($ListKey['danhmuc2_id']))
         {
-            $str_from.='<option value="'.$key->id.'" '.(($form!=false)?(($form->danhmuc2_id==$key->id)?'selected':''):'').'>'.$key->name.'</option>';
+            foreach($ListKey['danhmuc2_id'] as $key)
+            {
+                $str_from.='<option value="'.$key->id.'" '.(($form!=false)?(($form->danhmuc2_id==$key->id)?'selected':''):'').'>'.$key->name.'</option>';
+            }
         }
+    }
+    else
+    {
+        $str_from .= '<option value="1">Chọn danh mục cấp 2</option>';
     }
     $str_from.='</select></p>';
     $str_from.='<p><label>highlights</label><input  type="checkbox"  name="highlights" value="1" '.(($form!=false)?(($form->highlights=='1')?'checked':''):'').' /></p>';
