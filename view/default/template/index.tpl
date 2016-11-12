@@ -19,14 +19,14 @@
             <div class="kc-elm kc-css-87662 kc_col-sm-7 kc-animated kc-animate-eff-fadeInRight kc_column kc_col-sm-7">
                 <div class="kc-col-container">
                     <div class="vi-heading style2">
-                        <div class="description">Restaurant</div>
-                        <h2 style="font-weight:bold;color:#ee2b2a" class="title">ABOUT VIET GARDENS</h2>
+                        <div class="description">Chúng tôi</div>
+                        <h2 style="font-weight:bold;color:#ee2b2a" class="title">VIET GARDENS</h2>
                         <div class="icon-heading"><img
                                     src="{SITE-NAME}/view/default/themes/wp-content/uploads/2016/07/icon-title-table.png"
                                     alt="ABOUT ECHION"/></div>
                         <div class="desc"><p>VIETGARDEN - VƯỜN ẨM THỰC XANH ĐẬM ĐÀ HƯƠNG VỊ VIỆT
                                 Tọa lạc trên một vị trí đắc địa tại đường Vũ Phạm Hàm, Phường Yên Hòa, Quận Cầu Giấy, VietGardens phủ sắc xanh tươi mát lên một góc phố phường nhộn nhịp. Thiết kế ấm cúng, chan hòa với thiên nhiên mang đến không gian trong lành với cây và hoa cùng một màu xanh nổi bật không pha trộn.</p></div>
-                        <p class="read-more"><a href="#" title="">READ MORE</a></p></div>
+                        <p class="read-more"><a href="#" title="">Chi tiết <i class="fa fa-hand-o-up"></i></a></p></div>
                 </div>
             </div>
         </div>
@@ -41,11 +41,11 @@
                          style="height: 60px; clear: both; width:100%;"></div>
                     <div class="link-black">
                         <div class="vi-heading style2">
-                            <div class="description">Massage</div>
-                            <h2 style="font-weight:bold;color:#ee2b2a" class="title">OUR CHEFS</h2>
+                            <div class="description">Chế biến món ăn</div>
+                            <h2 style="font-weight:bold;color:#ee2b2a" class="title">ĐẦU BẾP</h2>
                             <div class="desc">Chúng tôi tin tưởng với sự phục vụ nhiệt tình, chu đáo, ân cần và giá cả hợp lí cũng như sự khéo léo trong cách thể hiện hương vị ẩm thực Việt và tâm huyết đối với món ăn Việt Nam sẽ là kim chỉ nam cho việc hướng đến trái tim khách hàng của VietGardens.
                             </div>
-                            <p class="read-more"><a href="#" title="">MEET OUR CHEFS</a></p></div>
+                            <p class="read-more"><a href="#" title="">Chi tiết <i class="fa fa-hand-o-up"></i></a></p></div>
                     </div>
                 </div>
             </div>
@@ -65,12 +65,14 @@
 <div data-kc-parallax="true" class="kc-elm kc-css-463651 kc_row menu-overlay">
     <div class="kc-row-container  kc-container">
         <div class="kc-wrap-columns">
-            <div class="kc-elm  kc_col-sm-3 kc-animated kc-animate-eff-fadeInLeft kc_column kc_col-sm-3 kc_column_end">
+            <div class="kc-elm kc-css-433689 kc_col-sm-4 kc-animated kc-animate-eff-fadeInLeft kc_column kc_col-sm-4">
                 <div class="kc-col-container">
                     <div class="wrapper-list-menu">
                         <div class="vi-heading style2  " style="background-color:#FFFFFF">
-                            <div class="description" >Find Our</div>
-                            <h2 style="font-weight:bold;color:#ee2b2a" class="title">FOR LUNCH</h2>
+                            <div class="description" >Món ăn</div>
+                            <h2 style="font-weight:bold;color:#ee2b2a;" class="title">
+                                YÊU THÍCH NHẤT
+                            </h2>
                         </div><!--end heading-->
                         <div class="list-menu"
                              style="background-image:url({SITE-NAME}/view/default/themes/wp-content/uploads/2016/07/bg-cackes.jpg)">
@@ -87,15 +89,15 @@
                                     <li><h6><a href="product-category/rice/index.html"
                                                title="Rice">Rice</a></h6></li>
                                 </ul>
-                                <p class="read-more"><a href="#" title="">DISCOVER NOW</a></p></div>
+                                <p class="read-more"><a href="#" title="">Chi tiết <i class="fa fa-hand-o-up"></i></a></p></div>
                         </div><!--list menu--></div><!--wrapper-list-menu--></div>
             </div>
-            <div class="kc-elm  kc_col-sm-3 kc-animated kc-animate-eff-fadeInUp kc_column kc_col-sm-3 kc_column_end">
+            <div class="kc-elm kc-css-225413 kc_col-sm-4 kc-animated kc-animate-eff-fadeInUp kc_column kc_col-sm-4">
                 <div class="kc-col-container">
                     <div class="wrapper-list-menu">
                         <div class="vi-heading style2  " style="background-color:#FFFFFF">
-                            <div class="description">Specials</div>
-                            <h2 style="font-weight:bold;color:#ee2b2a" class="title">DRINKS</h2></div>
+                            <div class="description">Món ăn</div>
+                            <h2 style="font-weight:bold;color:#ee2b2a" class="title">GIẢM GIÁ</h2></div>
                         <!--end heading-->
                         <div class="list-menu"
                              style="background-image:url({SITE-NAME}/view/default/themes/wp-content/uploads/2016/07/bg-drinks.jpg)">
@@ -112,15 +114,15 @@
                                     <li><h6><a href="product-category/rice/index.html"
                                                title="Rice">Rice</a></h6></li>
                                 </ul>
-                                <p class="read-more"><a href="#" title="">DISCOVER NOW</a></p></div>
+                                <p class="read-more"><a href="#" title="">Chi tiết <i class="fa fa-hand-o-up"></i></a></p></div>
                         </div><!--list menu--></div><!--wrapper-list-menu--></div>
             </div>
-            <div class="kc-elm  kc_col-sm-3 kc-animated kc-animate-eff-fadeInRight kc_column kc_col-sm-3 kc_column_end">
+            <div class="kc-elm kc-css-681913 kc_col-sm-4 kc-animated kc-animate-eff-fadeInRight kc_column kc_col-sm-4">
                 <div class="kc-col-container">
                     <div class="wrapper-list-menu">
                         <div class="vi-heading style2  " style="background-color:#FFFFFF">
-                            <div class="description" >The Best</div>
-                            <h2 style="font-weight:bold;color:#ee2b2a" class="title">FOR DINNER</h2>
+                            <div class="description" >Món ăn</div>
+                            <h2 style="font-weight:bold;color:#ee2b2a" class="title">NỔI BẬT NHẤT</h2>
                         </div><!--end heading-->
                         <div class="list-menu"
                              style="background-image:url({SITE-NAME}/view/default/themes/wp-content/uploads/2016/07/bg-dinner.jpg)">
@@ -137,34 +139,10 @@
                                     <li><h6><a href="product-category/rice/index.html"
                                                title="Rice">Rice</a></h6></li>
                                 </ul>
-                                <p class="read-more"><a href="#" title="">DISCOVER NOW</a></p></div>
+                                <p class="read-more"><a href="#" title="">Chi tiết <i class="fa fa-hand-o-up"></i></a></p></div>
                         </div><!--list menu--></div><!--wrapper-list-menu--></div>
             </div>
-            <div class="kc-elm  kc_col-sm-3 kc-animated kc-animate-eff-fadeInUp kc_column kc_col-sm-3 kc_column_end">
-                <div class="kc-col-container">
-                    <div class="wrapper-list-menu">
-                        <div class="vi-heading style2  " style="background-color:#FFFFFF">
-                            <div class="description">Specials</div>
-                            <h2 style="font-weight:bold;color:#ee2b2a" class="title">DRINKS</h2></div>
-                        <!--end heading-->
-                        <div class="list-menu"
-                             style="background-image:url({SITE-NAME}/view/default/themes/wp-content/uploads/2016/07/bg-drinks.jpg)">
-                            <div class="inner-list-menu"><h3 class="title-menu"><span>Menu</span></h3>
-                                <ul class="list-category">
-                                    <li><h6><a href="product-category/food/index.html"
-                                               title="Food">Food</a></h6></li>
-                                    <li><h6><a href="product-category/dinner/index.html" title="Dinner">Dinner</a>
-                                        </h6></li>
-                                    <li><h6><a href="product-category/lunch/index.html" title="Lunch">Lunch</a>
-                                        </h6></li>
-                                    <li><h6><a href="product-category/cook/index.html"
-                                               title="Cook">Cook</a></h6></li>
-                                    <li><h6><a href="product-category/rice/index.html"
-                                               title="Rice">Rice</a></h6></li>
-                                </ul>
-                                <p class="read-more"><a href="#" title="">DISCOVER NOW</a></p></div>
-                        </div><!--list menu--></div><!--wrapper-list-menu--></div>
-            </div>
+
         </div>
     </div>
 </div>
@@ -176,8 +154,8 @@
                     <div class="kc-elm kc-css-426929 hidden-xs"
                          style="height: 120px; clear: both; width:100%;"></div>
                     <div class="vi-heading style2">
-                        <div class="description">Recommended</div>
-                        <h2 style="font-weight:bold; color: #ee2b2a" class="title">CHEF SELECTION</h2>
+                        <div class="description">Món ngon</div>
+                        <h2 style="font-weight:bold; color: #ee2b2a" class="title">TỐI NAY ĂN GÌ</h2>
                         <div class="icon-heading"><img
                                     src="{SITE-NAME}/view/default/themes/wp-content/uploads/2016/07/icon-title-table.png"
                                     alt="CHEF SELECTION"/></div>
@@ -911,7 +889,7 @@
                             </li>
                         </ul>
                         <div class="view-more">
-                            <a href="#" class="btn btn-primary">VIEW FULL MENU</a>
+                            <a href="#" class="btn btn-primary">XEM THÊM <i class="fa fa-hand-o-up"></i></a>
                         </div>
                     </div>
                 </div>
@@ -930,21 +908,22 @@
                     <div class="time-open-hours text-white">
                         <div class="vi-heading style2">
                             <div class="description">Open Hours</div>
-                            <h2 style="font-weight:bold;color:#FFFFFF" class="title">BOOK A TABLE</h2>
+                            <h2 style="font-weight:bold;color:#FFFFFF" class="title">ĐẶT BÀN</h2>
                             <div class="icon-heading"><img
                                         src="{SITE-NAME}/view/default/themes/wp-content/uploads/2016/07/icon-title-1.png"
                                         alt="BOOK A TABLE"/></div>
-                            <div class="desc"><p><em>Monday to Friday </em> <em>9:00 am to 11:00 pm</em>
+                            <div class="desc"><p><em>
+                                        Monday to Sunday <i class="fa fa-arrows-h"></i> 7:30 am to 11:00 pm</em>
                                 </p>
-                                <p><em>Saturday and Sunday </em> <em>9:00 am to 4:00 pm</em></p></div>
-                            <p class="read-more"><span>Reservation - 00 1 2345 678</span></p></div>
+                                </div>
+                            <p class="read-more"><span>Gọi ngay - 00 1 2345 678</span></p></div>
                     </div>
                     <div class="vi-otreservations style_white">
                         <form method="get" class="vi-otreservations-form"
                               action="http://www.opentable.com/restaurant-search.aspx" target="_blank">
                             <div class="vi-wrapper row">
                                 <div class="vi-date-wrap col-sm-4">
-                                    <label for="date-otreservations">Select Day</label>
+                                    <label for="date-otreservations">Chọn ngày</label>
                                     <div class="wrapper-input">
                                         <input id="date-otreservations" name="startDate"
                                                class="vi-reservation-date" type="text"
@@ -952,7 +931,7 @@
                                     </div>
                                 </div>
                                 <div class="vi-time-wrap col-sm-4">
-                                    <label for="time-otreservations">Select Hour</label>
+                                    <label for="time-otreservations">Chọn giờ</label>
                                     <div class="wrapper-input">
                                         <select id="time-otreservations" name="ResTime"
                                                 class="vi-reservation-time">
@@ -989,38 +968,58 @@
                                     </div>
                                 </div>
                                 <div class="vi-party-size-wrap col-sm-4">
-                                    <label for="party-otreservations">Select Persons</label>
+                                    <label for="party-otreservations">Số người</label>
                                     <div class="wrapper-input">
                                         <select id="party-otreservations" name="partySize"
                                                 class="vi-party-size-select">
-                                            <option value="1">1 Person</option>
-                                            <option value="2" selected="selected">2 People</option>
-                                            <option value="3">3 People</option>
-                                            <option value="4">4 People</option>
-                                            <option value="5">5 People</option>
-                                            <option value="6">6 People</option>
-                                            <option value="7">7 People</option>
-                                            <option value="8">8 People</option>
-                                            <option value="9">9 People</option>
-                                            <option value="10">10 People</option>
+                                            <option value="1">1 Người</option>
+                                            <option value="2" selected="selected">2 Người</option>
+                                            <option value="3">3 Người</option>
+                                            <option value="4">4 Người</option>
+                                            <option value="5">5 Người</option>
+                                            <option value="6">6 Người</option>
+                                            <option value="7">7 Người</option>
+                                            <option value="8">8 Người</option>
+                                            <option value="9">9 Người</option>
+                                            <option value="10">10 Người</option>
                                         </select>
+                                    </div>
+                                </div>
+                                <div class=" col-sm-4">
+                                    <label for="date-otreservations" style="margin-top: 10px">Họ tên</label>
+                                    <div class="wrapper-input">
+                                        <input  required name=""
+                                               class="input_book" type="text"
+                                               value="">
+                                    </div>
+                                </div>
+                                <div class=" col-sm-4">
+                                    <label for="date-otreservations" style="margin-top: 10px">Email</label>
+                                    <div class="wrapper-input">
+                                        <input  required name=""
+                                                class="input_book" type="email"
+                                                value="">
+                                    </div>
+                                </div>
+                                <div class=" col-sm-4">
+                                    <label for="date-otreservations" style="margin-top: 10px">Điện thoại</label>
+                                    <div class="wrapper-input">
+                                        <input required name="" class="input_book" type="text" value="">
+                                    </div>
+                                </div>
+                                <div class=" col-sm-12">
+                                    <label for="date-otreservations" style="margin-top: 10px">Yêu cầu</label>
+                                    <div class="wrapper-input">
+                                        <textarea class="input_book"></textarea>
                                     </div>
                                 </div>
                                 <div class="vi-button-wrap col-sm-12">
                                     <input type="submit" class="otreservations-submit btn-primary btn"
-                                           value="BOOK A TABLE"/>
+                                           value="ĐẶT BÀN"/>
                                 </div>
-                                <input type="hidden" name="RestaurantID" class="RestaurantID"
-                                       value="80221">
-                                <input type="hidden" name="rid" class="rid" value="80221">
-                                <input type="hidden" name="GeoID" class="GeoID" value="15">
-                                <input type="hidden" name="txtDateFormat" class="txtDateFormat"
-                                       value="DD/MM/YYYY">
-                                <input type="hidden" name="RestaurantReferralID"
-                                       class="RestaurantReferralID" value="80221">
                             </div>
                         </form>
-                        <span class="otreservations-subtitle">Powered by OpenTable</span>
+
                     </div>
                 </div>
             </div>
@@ -1035,8 +1034,8 @@
                     <div class="kc-elm kc-css-14576"
                          style="height: 40px; clear: both; width:100%;"></div>
                     <div class="vi-heading style2">
-                        <div class="description">News</div>
-                        <h2 style="font-weight:bold;color:#ee2b2a" class="title">LATEST BLOG</h2>
+                        <div class="description">Cẩm nang</div>
+                        <h2 style="font-weight:bold;color:#ee2b2a" class="title">SỨC KHỎE</h2>
                         <div class="icon-heading"><img
                                     src="{SITE-NAME}/view/default/themes/wp-content/uploads/2016/07/icon-title-table.png"
                                     alt="LATEST BLOG"/></div>

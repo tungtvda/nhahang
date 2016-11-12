@@ -1,5 +1,6 @@
 body {
-    font-family: Tahoma, Helvetica, Arial, sans-serif;
+    /*font-family: Tahoma, Helvetica, Arial, sans-serif;*/
+    font-family: 'Open Sans', sans-serif !important;
     background-color: #fff;
     color: #797979;
     font-weight: 400;
@@ -85,20 +86,21 @@ h6 {
 }
 
 .vi-heading .read-more a, .event-html .read-more a {
-    font-family: Playfair Display, Helvetica, Arial, sans-serif;
+    /*font-family: Playfair Display, Helvetica, Arial, sans-serif;*/
     color: #a3c638;
+    /*font-weight: bold;*/
 }
 
 .vi-heading .read-more a:hover, .event-html .read-more a:hover {
-    color: #797979;
+    color: #ee2b2a;
 }
 
-.link-black .vi-heading .read-more a {
-    color: #26292d;
-}
+/*.link-black .vi-heading .read-more a {*/
+    /*color: #26292d;*/
+/*}*/
 
 .link-black .vi-heading .read-more a:hover {
-    color: #797979;
+    /*color: #797979;*/
 }
 
 .font_heading_1 {
@@ -267,6 +269,7 @@ h6 {
 
 .time-open-hours .desc em {
     font-family: Great Vibes, Helvetica, Arial, sans-serif;
+    /*font-family: Parfumerie Script Decorative, Helvetica, Arial, sans-serif;*/
     font-size: 33px;
 }
 
@@ -283,7 +286,7 @@ h6 {
 }
 
 .inner-list-menu .read-more a {
-    font-family: Playfair Display, Helvetica, Arial, sans-serif;
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
     color: #a3c638;
 }
 
@@ -742,7 +745,7 @@ blockquote {
 }
 
 .vi-otreservations .vi-wrapper .otreservations-submit {
-    font-family: Playfair Display, Helvetica, Arial, sans-serif;
+    /*font-family: Playfair Display, Helvetica, Arial, sans-serif;*/
 }
 
 .btn-second {
@@ -961,7 +964,7 @@ footer .info li {
 }
 
 .button-black .view-more .btn-primary {
-    background: #26292e;
+    /*background: #26292e;*/
 }
 
 .button-black .view-more .btn-primary:hover {

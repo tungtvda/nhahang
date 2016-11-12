@@ -58,6 +58,6 @@ function showFrom($form,$ListKey=array())
     $str_from.='<p><label>contents_short</label><textarea name="contents_short">'.(($form!=false)?$form->contents_short:'').'</textarea><script type="text/javascript">CKEDITOR.replace(\'contents_short\'); </script></p>';
     $str_from.='<p><label>title</label><input class="text-input small-input" type="text"  name="title" value="'.(($form!=false)?$form->title:'').'" /></p>';
     $str_from.='<p><label>keyword</label><input class="text-input small-input" type="text"  name="keyword" value="'.(($form!=false)?$form->keyword:'').'" /></p>';
-    $str_from.='<p><label>description</label><textarea name="description">'.(($form!=false)?$form->description:'').'</textarea><script type="text/javascript">CKEDITOR.replace(\'description\'); </script></p>';
+    $str_from.='<p><label>description</label><input class="text-input small-input" type="text"  name="description" value="'.(($form!=false)?$form->description:'').'" /></p>';
     return $str_from;
 }

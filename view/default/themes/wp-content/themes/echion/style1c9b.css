@@ -1790,9 +1790,9 @@ Shortcode
   padding-right: 30px;
 }
 .vi-heading .read-more {
-  padding-top: 50px;
+  padding-top: 20px;
   padding-bottom: 5px;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 .vi-heading .read-more a {
   border-bottom: 1px solid;
@@ -3626,7 +3626,7 @@ Product
   letter-spacing: 1px;
 }
 .wrapper-list-menu .list-menu .inner-list-menu .read-more a {
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   margin-top: 30px;
   display: inline-block;
 }
