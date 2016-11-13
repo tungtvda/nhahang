@@ -34,6 +34,14 @@ function show_index($data = array())
     {
         $asign['noibat'] = print_item('menu_item_index', $data['noibat']);
     }
+
+    $asign['noibat_2'] ="";
+    if(count($data['noibat_2'])>0)
+    {
+        $asign['noibat_2'] = print_item('danhmuc_noirbat_index', $data['noibat_2']);
+    }
+
+
     print_template($asign, 'index');
 }
 

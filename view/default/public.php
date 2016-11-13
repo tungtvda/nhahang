@@ -92,7 +92,17 @@ function print_item($file,$ListItem,$LocDau=false,$LocDauAssign=false,$numberfor
                 } else {
                     $ft->assign('content',strip_tags($content));
                 }
+                $sales='';
+                $price_sales='';
+                if($item->price_sale!=''){
+                    $sales='<span class="onsale">Sale!</span>';
+                    $price_sales='<span class="woocommerce-Price-currencySymbol"></span>'.number_format($item->price_sale,0,",",".").' vnđ</span>';
+                }
+                $ft->assign('price_format',number_format($item->price,0,",","."));
+                $ft->assign('price_sales_format',$price_sales);
+                $ft->assign('sales',$sales);
                 $ft->assign('link',link_sanphamdetail($item));
+                $ft->assign('start',sao($item->start));
             }
             if(get_class($item)=='danhmuc_tintuc') {
 //                $ft->assign('link',link_news($item));
@@ -100,20 +110,20 @@ function print_item($file,$ListItem,$LocDau=false,$LocDauAssign=false,$numberfor
             }
             if(get_class($item)=='news')
             {
-                $ft->assign('name',returnLanguageField('name', $item));
-                $content=returnLanguageField('content', $item);
-                if (strlen($content) > 210) {
-                    $ten1=strip_tags($content);
-
-                    $ten = substr($ten1, 0, 210);
-                    $name = substr($ten, 0, strrpos($ten, ' ')) . "...";
-                    $ft->assign('content',$name);
-                } else {
-                    $ft->assign('content',strip_tags($content));
-                }
-                $ft->assign('detail',returnLanguage('detail','DETAIL'));
-                $ft->assign('news',returnLanguage('news','News'));
-                $ft->assign('link',link_newsdetail($item));
+//                $ft->assign('name',returnLanguageField('name', $item));
+//                $content=returnLanguageField('content', $item);
+//                if (strlen($content) > 210) {
+//                    $ten1=strip_tags($content);
+//
+//                    $ten = substr($ten1, 0, 210);
+//                    $name = substr($ten, 0, strrpos($ten, ' ')) . "...";
+//                    $ft->assign('content',$name);
+//                } else {
+//                    $ft->assign('content',strip_tags($content));
+//                }
+//                $ft->assign('detail',returnLanguage('detail','DETAIL'));
+//                $ft->assign('news',returnLanguage('news','News'));
+//                $ft->assign('link',link_newsdetail($item));
             }
 
 
@@ -192,33 +202,40 @@ function link_ykien($app)
     return SITE_NAME.'/'.LocDau($app->Name).'-l5'.$app->Id.'.html';
 }
 
-function sao($app)
+function sao($start)
 {
-    $sao = "";
-    if ($app == 0) {
-        $sao = '<i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>';
-    } else {
-
-
-        if ($app == 1) {
-            $sao = '<i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>';
-        } else {
-            if ($app == 2) {
-                $sao = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>';
-            } else {
-                if ($app == 3) {
-                    $sao = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>';
-                } else {
-                    if ($app == 4) {
-                        $sao = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>';
-                    } else {
-                        $sao = '<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>';
-                    }
-
-                }
-
-            }
-        }
+    $sao='<span style="width:0%"> <strong class="rating">0</strong></span>';
+    switch($start){
+        case 0.5:
+            $sao='<span style="width:10%"> <strong class="rating">0.5</strong></span>';
+            break;
+        case 1:
+            $sao='<span style="width:20%"> <strong class="rating">1</strong></span>';
+            break;
+        case 1.5:
+            $sao='<span style="width:30%"> <strong class="rating">1.5</strong></span>';
+            break;
+        case 2:
+            $sao='<span style="width:38%"> <strong class="rating">2</strong></span>';
+            break;
+        case 2.5:
+            $sao='<span style="width:45%"> <strong class="rating">2.5</strong></span>';
+            break;
+        case 3:
+            $sao='<span style="width:55%"> <strong class="rating">3</strong></span>';
+            break;
+        case 3.5:
+            $sao='<span style="width:65%"> <strong class="rating">3.5</strong></span>';
+            break;
+        case 4:
+            $sao='<span style="width:70%"> <strong class="rating">4</strong></span>';
+            break;
+        case 4.5:
+            $sao='<span style="width:80%"> <strong class="rating">4.5</strong></span>';
+            break;
+        case 5:
+            $sao='<span style="width:100%"> <strong class="rating">5</strong></span>';
+            break;
     }
     return $sao;
 }
