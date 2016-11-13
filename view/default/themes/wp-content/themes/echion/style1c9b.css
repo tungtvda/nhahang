@@ -2534,7 +2534,7 @@ Product
   margin: 0;
 }
 .bg-desc-white .category-product-list .item-product .product-desc .price span.amount {
-  color: #26292d;
+  /*color: #ee2b2a;*/
 }
 .twitter-feed {
   text-align: center;
@@ -5122,6 +5122,7 @@ Content Product
 .category-product-list .item-product .product-desc .price ins {
   text-decoration: none;
   margin: 0 0 0 20px;
+  float: right;
 }
 .category-product-list .item-product .product-desc .add_to_cart_button {
   opacity: 1;
