@@ -62,17 +62,17 @@ function social_getByPaging($CurrentPage, $PageSize,$Order,$where)
 //
 function social_getByPagingReplace($CurrentPage, $PageSize,$Order,$where)
 {
-   return social_Get("SELECT social.id, social.facebook, social.twitter, social.youtube, social.google, social.rss FROM  social ".(($where!='')?(' where '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
+   return social_Get("SELECT social.id, social.facebook, social.twitter, social.youtube, social.google, social.linkedin, social.instagram FROM  social ".(($where!='')?(' where '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
 }
 //
 function social_insert($obj)
 {
-    return exe_query("insert into social (facebook,twitter,youtube,google,rss) values ('$obj->facebook','$obj->twitter','$obj->youtube','$obj->google','$obj->rss')",'social');
+    return exe_query("insert into social (facebook,twitter,youtube,google,linkedin,instagram) values ('$obj->facebook','$obj->twitter','$obj->youtube','$obj->google','$obj->linkedin','$obj->instagram')",'social');
 }
 //
 function social_update($obj)
 {
-    return exe_query("update social set facebook='$obj->facebook',twitter='$obj->twitter',youtube='$obj->youtube',google='$obj->google',rss='$obj->rss' where id=$obj->id",'social');
+    return exe_query("update social set facebook='$obj->facebook',twitter='$obj->twitter',youtube='$obj->youtube',google='$obj->google',linkedin='$obj->linkedin',instagram='$obj->instagram' where id=$obj->id",'social');
 }
 //
 function social_delete($obj)

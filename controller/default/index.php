@@ -19,11 +19,16 @@ $data['config']=config_getByTop(1,'','');
 //$data['thuexe_index']=thuexe_getByTop('','NoiBat=1','Id desc');
 //$data['ykien_index']=ykien_getByTop('6','','View desc');
 
-//$data['khachsan_noibat_1']=khachsan_getByTop('1','NoiBat=1','ViTri asc');
-$title=$data['menu'][0];
-$description= $data['menu'][0];
-$keyword=$data['menu'][0];
-$title=($title)?$title:'Viet Gardens ';
+$data['about']=info_getByTop('','','id desc');
+
+$data['yeuthich']=sanpham_getByTop(5,'','num_like desc');
+$data['giamgia']=sanpham_getByTop(5,'price_sale!=""','id desc');
+$data['noibat']=sanpham_getByTop(5,'highlights=1','id desc');
+
+$title=$data['menu'][0]->title;
+$description= $data['menu'][0]->keyword;
+$keyword=$data['menu'][0]->description;
+$title=($title)?$title:'Viet Gardens';
 $description=($description)?$description:'Viet Gardens ';
 $keywords=($keyword)?$keyword:'Viet Gardens ';
 

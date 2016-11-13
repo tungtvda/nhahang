@@ -10,9 +10,9 @@ function view_slide($data=array())
 {
     $asign=array();
     $asign['slide'] ="";
-//    if(count($data['slide'])>0)
-//    {
-//        $asign['slide'] = print_item('slide', $data['slide']);
-//    }
+    if(count($data['slide'])>0)
+    {
+        $asign['slide'] = print_item('slide', $data['slide']);
+    }
     print_template($asign,'slide');
 }

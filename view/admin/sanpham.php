@@ -29,7 +29,7 @@ function view_sanpham($data)
 //
 function showTableHeader()
 {
-    return '<th>danhmuc1_id</th><th>danhmuc2_id</th><th>highlights</th><th>name</th><th>code</th><th>img</th><th>img1</th><th>img2</th><th>price</th><th>start</th><th>num_like</th>';
+    return '<th>danhmuc1_id</th><th>danhmuc2_id</th><th>highlights</th><th>name</th><th>code</th><th>img</th><th>price</th><th>start</th><th>num_like</th>';
 }
 //
 function showTableBody($data)
@@ -44,8 +44,6 @@ function showTableBody($data)
         $TableBody.="<td>".$obj->name."</td>";
         $TableBody.="<td>".$obj->code."</td>";
         $TableBody.="<td><img src=\"".$obj->img."\" width=\"50px\" height=\"50px\"/> </td>";
-        $TableBody.="<td><img src=\"".$obj->img1."\" width=\"50px\" height=\"50px\"/> </td>";
-        $TableBody.="<td><img src=\"".$obj->img2."\" width=\"50px\" height=\"50px\"/> </td>";
         $TableBody.="<td>".$obj->price."</td>";
         $TableBody.="<td>".$obj->start."</td>";
         $TableBody.="<td>".$obj->num_like."</td>";
@@ -113,7 +111,10 @@ function showFrom($form,$ListKey=array())
     $str_from.='<p><label>price_percent</label><input class="text-input small-input" type="text"  name="price_percent" value="'.(($form!=false)?$form->price_percent:'').'" /></p>';
     $str_from.='<p><label>start</label><input class="text-input small-input" type="text"  name="start" value="'.(($form!=false)?$form->start:'').'" /></p>';
     $str_from.='<p><label>num_like</label><input class="text-input small-input" type="text"  name="num_like" value="'.(($form!=false)?$form->num_like:'').'" /></p>';
-    $str_from.='<p><label>description_short</label><textarea name="description_short">'.(($form!=false)?$form->description_short:'').'</textarea><script type="text/javascript">CKEDITOR.replace(\'description_short\'); </script></p>';
-    $str_from.='<p><label>description</label><textarea name="description">'.(($form!=false)?$form->description:'').'</textarea><script type="text/javascript">CKEDITOR.replace(\'description\'); </script></p>';
+    $str_from.='<p><label>content_short</label><textarea name="content_short">'.(($form!=false)?$form->content_short:'').'</textarea><script type="text/javascript">CKEDITOR.replace(\'content_short\'); </script></p>';
+    $str_from.='<p><label>content</label><textarea name="content">'.(($form!=false)?$form->content:'').'</textarea><script type="text/javascript">CKEDITOR.replace(\'content\'); </script></p>';
+    $str_from.='<p><label>title</label><input class="text-input small-input" type="text"  name="title" value="'.(($form!=false)?$form->title:'').'" /></p>';
+    $str_from.='<p><label>keyword</label><input class="text-input small-input" type="text"  name="keyword" value="'.(($form!=false)?$form->keyword:'').'" /></p>';
+    $str_from.='<p><label>description</label><input class="text-input small-input" type="text"  name="description" value="'.(($form!=false)?$form->description:'').'" /></p>';
     return $str_from;
 }

@@ -80,17 +80,9 @@ function print_item($file,$ListItem,$LocDau=false,$LocDauAssign=false,$numberfor
             {
                 $ft->assign('name',returnLanguageField('name', $item));
             }
-            if(get_class($item)=='slide')
+            if(get_class($item)=='sanpham')
             {
-                $ft->assign('name',returnLanguageField('name', $item));
-            }
-            if(get_class($item)=='tour')
-            {
-
-                $ft->assign('name',returnLanguageField('name', $item));
-                $ft->assign('price',returnLanguageField('price', $item));
-                $ft->assign('durations',returnLanguageField('durations', $item));
-                $content=returnLanguageField('content', $item);
+                $content=$item->content;
                 if (strlen($content) > 200) {
                     $ten1=strip_tags($content);
 
@@ -100,17 +92,11 @@ function print_item($file,$ListItem,$LocDau=false,$LocDauAssign=false,$numberfor
                 } else {
                     $ft->assign('content',strip_tags($content));
                 }
-                $ft->assign('link',link_tourdetail($item));
-                $ft->assign('currency',returnLanguage('currency','$'));
-                $ft->assign('detail',returnLanguage('detail','DETAIL'));
-                $ft->assign('booking',returnLanguage('booking','BOOKING'));
-                $ft->assign('vehicle',returnLanguage('vehicle',''));
-
+                $ft->assign('link',link_sanphamdetail($item));
             }
             if(get_class($item)=='danhmuc_tintuc') {
-                $ft->assign('name', returnLanguageField('name', $item));
-                $ft->assign('link',link_news($item));
-                $ft->assign('view_all', returnLanguage('view_all', 'VIEW ALL'));
+//                $ft->assign('link',link_news($item));
+//                $ft->assign('view_all', returnLanguage('view_all', 'VIEW ALL'));
             }
             if(get_class($item)=='news')
             {
@@ -142,15 +128,11 @@ function print_item($file,$ListItem,$LocDau=false,$LocDauAssign=false,$numberfor
     }
 
 }
-function link_tour($app)
+function link_sanpham($app)
 {
-    return SITE_NAME.'/tour/'.$app->name_url.'/';
+    return SITE_NAME.'/thuc-don/'.$app->name_url.'/';
 }
-function link_tour_2($app)
-{
-    return SITE_NAME.'/destinations/'.$app->name_url.'/';
-}
-function link_tourdetail($app)
+function link_sanphamdetail($app)
 {
     return SITE_NAME.'/'.$app->name_url.'.html';
 }
