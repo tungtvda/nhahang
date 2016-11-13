@@ -1,7 +1,7 @@
 <?php
 class sanpham
 {
-    public $id,$danhmuc1_id,$danhmuc2_id,$highlights,$name,$name_url,$code,$img,$img1,$img2,$price,$price_sale,$price_percent,$start,$num_like,$description_short,$description;
+    public $id,$danhmuc1_id,$danhmuc2_id,$highlights,$name,$name_url,$code,$img,$img1,$img2,$price,$price_sale,$price_percent,$start,$num_like,$content_short,$content,$title,$keyword,$description;
     public function sanpham($data=array())
     {
     $this->id=isset($data['id'])?$data['id']:'';
@@ -19,7 +19,10 @@ class sanpham
     $this->price_percent=isset($data['price_percent'])?$data['price_percent']:'';
     $this->start=isset($data['start'])?$data['start']:'';
     $this->num_like=isset($data['num_like'])?$data['num_like']:'';
-    $this->description_short=isset($data['description_short'])?$data['description_short']:'';
+    $this->content_short=isset($data['content_short'])?$data['content_short']:'';
+    $this->content=isset($data['content'])?$data['content']:'';
+    $this->title=isset($data['title'])?$data['title']:'';
+    $this->keyword=isset($data['keyword'])?$data['keyword']:'';
     $this->description=isset($data['description'])?$data['description']:'';
           $this->encode();
     }
@@ -40,7 +43,10 @@ class sanpham
             $this->price_percent=addslashes($this->price_percent);
             $this->start=addslashes($this->start);
             $this->num_like=addslashes($this->num_like);
-            $this->description_short=addslashes($this->description_short);
+            $this->content_short=addslashes($this->content_short);
+            $this->content=addslashes($this->content);
+            $this->title=addslashes($this->title);
+            $this->keyword=addslashes($this->keyword);
             $this->description=addslashes($this->description);
         }
     public function decode()
@@ -60,7 +66,10 @@ class sanpham
             $this->price_percent=stripslashes($this->price_percent);
             $this->start=stripslashes($this->start);
             $this->num_like=stripslashes($this->num_like);
-            $this->description_short=stripslashes($this->description_short);
+            $this->content_short=stripslashes($this->content_short);
+            $this->content=stripslashes($this->content);
+            $this->title=stripslashes($this->title);
+            $this->keyword=stripslashes($this->keyword);
             $this->description=stripslashes($this->description);
         }
 }

@@ -5,15 +5,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="http://gmpg.org/xfn/11">
-    <link rel="pingback" href="xmlrpc.php">
-    <script type="text/javascript">document.documentElement.className = document.documentElement.className + ' yes-js js_active js'</script>
-    <script type="text/javascript">
-        /* <![CDATA[ */
-        var ajaxurl = "wp-admin/admin-ajax.html";
-        /* ]]> */
-    </script>
-    <title>Echion &#8211; Restaurant/Wine/Freshfood WordPress Theme &#8211; Just another WordPress site</title>
+    <title>{Title}</title>
+    <meta name="description" content="{description}"/>
+    <meta name="keywords" content="{keyword}"/>
+    <link rel="shortcut icon" href="{icon}">
+    <link rel="apple-touch-icon" href="{icon}">
+    <link rel="apple-touch-icon" sizes="72x72"
+          href="{icon}">
+    <link rel="apple-touch-icon" sizes="114x114"
+          href="{icon}">
+    <meta property='og:image' content='{link_anh}'>
+    <meta itemprop='image' content='{link_anh}'>
     <style>
         .wishlist_table .add_to_cart, a.add_to_wishlist.button.alt {
             border-radius: 16px;
@@ -21,51 +23,64 @@
             -webkit-border-radius: 16px;
         }            </style>
     <link rel='stylesheet' id='contact-form-7-css'
-          href='{SITE-NAME}/view/default/themes/wp-content/plugins/contact-form-7/includes/css/styles8686.css?ver=4.5.1' type='text/css'
+          href='{SITE-NAME}/view/default/themes/wp-content/plugins/contact-form-7/includes/css/styles8686.css?ver=4.5.1'
+          type='text/css'
           media='all'/>
     <link rel='stylesheet' id='woo-notification-css'
-          href='{SITE-NAME}/view/default/themes/wp-content/plugins/woo-notification/css/woo-notificationf269.css?ver=1.0.1' type='text/css'
+          href='{SITE-NAME}/view/default/themes/wp-content/plugins/woo-notification/css/woo-notificationf269.css?ver=1.0.1'
+          type='text/css'
           media='all'/>
     <link rel='stylesheet' id='woocommerce-layout-css'
-          href='{SITE-NAME}/view/default/themes/wp-content/plugins/woocommerce/assets/css/woocommerce-layout72e6.css?ver=2.6.4' type='text/css'
+          href='{SITE-NAME}/view/default/themes/wp-content/plugins/woocommerce/assets/css/woocommerce-layout72e6.css?ver=2.6.4'
+          type='text/css'
           media='all'/>
     <link rel='stylesheet' id='woocommerce-general-css'
-          href='{SITE-NAME}/view/default/themes/wp-content/plugins/woocommerce/assets/css/woocommerce72e6.css?ver=2.6.4' type='text/css'
+          href='{SITE-NAME}/view/default/themes/wp-content/plugins/woocommerce/assets/css/woocommerce72e6.css?ver=2.6.4'
+          type='text/css'
           media='all'/>
     <link rel='stylesheet' id='jquery-colorbox-css'
           href='{SITE-NAME}/view/default/themes/wp-content/plugins/yith-woocommerce-compare/assets/css/colorbox1c9b.css?ver=4.6.1'
           type='text/css' media='all'/>
     <link rel='stylesheet' id='woocommerce_prettyPhoto_css-css'
-          href='{SITE-NAME}/view/default/themes/wp-content/plugins/woocommerce/assets/css/prettyPhoto005e.css?ver=3.1.6' type='text/css'
+          href='{SITE-NAME}/view/default/themes/wp-content/plugins/woocommerce/assets/css/prettyPhoto005e.css?ver=3.1.6'
+          type='text/css'
           media='all'/>
     <link rel='stylesheet' id='jquery-selectBox-css'
           href='{SITE-NAME}/view/default/themes/wp-content/plugins/yith-woocommerce-wishlist/assets/css/jquery.selectBox7359.css?ver=1.2.0'
           type='text/css' media='all'/>
     <link rel='stylesheet' id='yith-wcwl-main-css'
-          href='{SITE-NAME}/view/default/themes/wp-content/plugins/yith-woocommerce-wishlist/assets/css/style9c6b.css?ver=2.0.16' type='text/css'
+          href='{SITE-NAME}/view/default/themes/wp-content/plugins/yith-woocommerce-wishlist/assets/css/style9c6b.css?ver=2.0.16'
+          type='text/css'
           media='all'/>
     <link rel='stylesheet' id='echion-google-fonts-css'
           href='https://fonts.googleapis.com/css?family=Cabin%3A400%2C400italic%2C600%2C700%2C800%2C900%7CPlayfair+Display%3A400%2C400italic%2C600%2C700%2C800%2C900%7CGreat+Vibes%3A400%2C400italic%2C600%2C700%2C800%2C900&amp;subset=latin'
           type='text/css' media='all'/>
     <link rel='stylesheet' id='bootstrap-css'
-          href='{SITE-NAME}/view/default/themes/wp-content/themes/echion/assets/css/bootstrap.min7984.css?ver=3.3.4' type='text/css'
+          href='{SITE-NAME}/view/default/themes/wp-content/themes/echion/assets/css/bootstrap.min7984.css?ver=3.3.4'
+          type='text/css'
           media='all'/>
     <link rel='stylesheet' id='font-awesome-css'
-          href='{SITE-NAME}/view/default/themes/wp-content/themes/echion/assets/css/font-awesome.min83b6.css?ver=4.6.2' type='text/css'
+          href='{SITE-NAME}/view/default/themes/wp-content/themes/echion/assets/css/font-awesome.min83b6.css?ver=4.6.2'
+          type='text/css'
           media='all'/>
     <link rel='stylesheet' id='linearicons-css'
-          href='{SITE-NAME}/view/default/themes/wp-content/themes/echion/assets/css/font-linearicons11b8.css?ver=4.5' type='text/css'
+          href='{SITE-NAME}/view/default/themes/wp-content/themes/echion/assets/css/font-linearicons11b8.css?ver=4.5'
+          type='text/css'
           media='all'/>
-    <link rel='stylesheet' id='echion-style-css' href='{SITE-NAME}/view/default/themes/wp-content/themes/echion/style1c9b.css?ver=4.6.1'
+    <link rel='stylesheet' id='echion-style-css'
+          href='{SITE-NAME}/view/default/themes/wp-content/themes/echion/style1c9b.css?ver=4.6.1'
           type='text/css' media='all'/>
     <link rel='stylesheet' id='magnify-css'
-          href='{SITE-NAME}/view/default/themes/wp-content/themes/echion/assets/css/magnify.min1c9b.css?ver=4.6.1' type='text/css' media='all'/>
-    <link rel='stylesheet' id='echion-echion-css' href='{SITE-NAME}/view/default/themes/wp-content/uploads/vi_echion1c9b.css?ver=4.6.1'
+          href='{SITE-NAME}/view/default/themes/wp-content/themes/echion/assets/css/magnify.min1c9b.css?ver=4.6.1'
+          type='text/css' media='all'/>
+    <link rel='stylesheet' id='echion-echion-css'
+          href='{SITE-NAME}/view/default/themes/wp-content/uploads/vi_echion1c9b.css?ver=4.6.1'
           type='text/css' media='all'/>
     <link rel='stylesheet' id='ms-main-css'
           href='{SITE-NAME}/view/default/themes/wp-content/plugins/master-slider-pro/public/assets/css/masterslider.main459e.css?ver=3.0.4'
           type='text/css' media='all'/>
-    <link rel='stylesheet' id='ms-custom-css' href='{SITE-NAME}/view/default/themes/wp-content/uploads/masterslider/custom2f54.css?ver=4.1'
+    <link rel='stylesheet' id='ms-custom-css'
+          href='{SITE-NAME}/view/default/themes/wp-content/uploads/masterslider/custom2f54.css?ver=4.1'
           type='text/css' media='all'/>
     <link rel='stylesheet' id='jquery-ui-smoothness-css'
           href='{SITE-NAME}/view/default/themes/wp-content/plugins/contact-form-7/includes/js/jquery-ui/themes/smoothness/jquery-ui.mindb08.css?ver=1.10.3'
@@ -74,15 +89,20 @@
           href='{SITE-NAME}/view/default/themes/wp-content/plugins/kingcomposer/assets/frontend/css/kingcomposer355d.css?ver=2.5.7'
           type='text/css' media='all'/>
     <link rel='stylesheet' id='kc-shortcodes-css'
-          href='{SITE-NAME}/view/default/themes/wp-content/plugins/kingcomposer/assets/frontend/css/shortcodes355d.css?ver=2.5.7' type='text/css'
+          href='{SITE-NAME}/view/default/themes/wp-content/plugins/kingcomposer/assets/frontend/css/shortcodes355d.css?ver=2.5.7'
+          type='text/css'
           media='all'/>
     <link rel='stylesheet' id='kc-animate-css'
-          href='{SITE-NAME}/view/default/themes/wp-content/plugins/kingcomposer/assets/css/animate355d.css?ver=2.5.7' type='text/css'
+          href='{SITE-NAME}/view/default/themes/wp-content/plugins/kingcomposer/assets/css/animate355d.css?ver=2.5.7'
+          type='text/css'
           media='all'/>
     <link rel='stylesheet' id='kc-icon-1-css'
-          href='{SITE-NAME}/view/default/themes/wp-content/plugins/kingcomposer/assets/css/icons355d.css?ver=2.5.7' type='text/css' media='all'/>
-    <script type='text/javascript' src='{SITE-NAME}/view/default/themes/wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
-    <script type='text/javascript' src='{SITE-NAME}/view/default/themes/wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
+          href='{SITE-NAME}/view/default/themes/wp-content/plugins/kingcomposer/assets/css/icons355d.css?ver=2.5.7'
+          type='text/css' media='all'/>
+    <script type='text/javascript'
+            src='{SITE-NAME}/view/default/themes/wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
+    <script type='text/javascript'
+            src='{SITE-NAME}/view/default/themes/wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
     <script type='text/javascript'
             src='{SITE-NAME}/view/default/themes/wp-content/plugins/woo-notification/js/woo-notificationf269.js?ver=1.0.1'></script>
     <link rel='https://api.w.org/' href='{SITE-NAME}/view/default/themes/wp-json/index.html'/>
@@ -393,7 +413,8 @@
             body.kc-css-system .kc-css-681913 {
                 margin-bottom: 30px;
             }
-            body.kc-css-system .kc_column_end{
+
+            body.kc-css-system .kc_column_end {
                 margin-bottom: 30px;
             }
 

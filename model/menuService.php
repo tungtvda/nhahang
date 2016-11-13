@@ -62,17 +62,17 @@ function menu_getByPaging($CurrentPage, $PageSize,$Order,$where)
 //
 function menu_getByPagingReplace($CurrentPage, $PageSize,$Order,$where)
 {
-   return menu_Get("SELECT menu.id, menu.img, menu.name, menu.name_cn, menu.title, menu.title_cn, menu.keyword, menu.keyword_cn, menu.description, menu.description_cn FROM  menu ".(($where!='')?(' where '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
+   return menu_Get("SELECT menu.id, menu.img, menu.name, menu.title, menu.keyword, menu.description FROM  menu ".(($where!='')?(' where '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
 }
 //
 function menu_insert($obj)
 {
-    return exe_query("insert into menu (img,name,name_cn,title,title_cn,keyword,keyword_cn,description,description_cn) values ('$obj->img','$obj->name','$obj->name_cn','$obj->title','$obj->title_cn','$obj->keyword','$obj->keyword_cn','$obj->description','$obj->description_cn')",'menu');
+    return exe_query("insert into menu (img,name,title,keyword,description) values ('$obj->img','$obj->name','$obj->title','$obj->keyword','$obj->description')",'menu');
 }
 //
 function menu_update($obj)
 {
-    return exe_query("update menu set img='$obj->img',name='$obj->name',name_cn='$obj->name_cn',title='$obj->title',title_cn='$obj->title_cn',keyword='$obj->keyword',keyword_cn='$obj->keyword_cn',description='$obj->description',description_cn='$obj->description_cn' where id=$obj->id",'menu');
+    return exe_query("update menu set img='$obj->img',name='$obj->name',title='$obj->title',keyword='$obj->keyword',description='$obj->description' where id=$obj->id",'menu');
 }
 //
 function menu_delete($obj)

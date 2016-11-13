@@ -1,7 +1,7 @@
 <?php
 require_once DIR.'/common/paging.php';
 require_once DIR.'/common/cls_fast_template.php';
-function view_social($data)
+function view_tuyendung($data)
 {
     $ft=new FastTemplate(DIR.'/view/admin/templates');
     $ft->define('header','header.tpl');
@@ -15,7 +15,7 @@ function view_social($data)
     $ft->assign('TABLE-HEADER',showTableHeader());
     $ft->assign('PAGING',showPaging($data['count_paging'],20,$data['page']));
     $ft->assign('TABLE-BODY',showTableBody($data['table_body']));
-    $ft->assign('TABLE-NAME','social');
+    $ft->assign('TABLE-NAME','tuyendung');
     $ft->assign('CONTENT-BOX-LEFT',isset($data['content_box_left'])?$data['content_box_left']:'');
     $ft->assign('CONTENT-BOX-RIGHT',isset($data['content_box_right'])?$data['content_box_right']:' ');
     $ft->assign('NOTIFICATION',isset($data['notification'])?$data['notification']:' ');
@@ -29,7 +29,7 @@ function view_social($data)
 //
 function showTableHeader()
 {
-    return '<th>facebook</th><th>twitter</th><th>youtube</th><th>google</th><th>linkedin</th><th>instagram</th>';
+    return '<th>id</th><th>name</th><th>img</th><th>created</th>';
 }
 //
 function showTableBody($data)
@@ -38,12 +38,10 @@ function showTableBody($data)
     if(count($data)>0) foreach($data as $obj)
     {
         $TableBody.="<tr><td><input type=\"checkbox\" name=\"check_".$obj->id."\"/></td>";
-        $TableBody.="<td>".$obj->facebook."</td>";
-        $TableBody.="<td>".$obj->twitter."</td>";
-        $TableBody.="<td>".$obj->youtube."</td>";
-        $TableBody.="<td>".$obj->google."</td>";
-        $TableBody.="<td>".$obj->linkedin."</td>";
-        $TableBody.="<td>".$obj->instagram."</td>";
+        $TableBody.="<td>".$obj->id."</td>";
+        $TableBody.="<td>".$obj->name."</td>";
+        $TableBody.="<td><img src=\"".$obj->img."\" width=\"50px\" height=\"50px\"/> </td>";
+        $TableBody.="<td>".$obj->created."</td>";
         $TableBody.="<td><a href=\"?action=edit&id=".$obj->id."\" title=\"Edit\"><img src=\"".SITE_NAME."/view/admin/Themes/images/pencil.png\" alt=\"Edit\"></a>";
         $TableBody.="<a href=\"?action=delete&id=".$obj->id."\" title=\"Delete\" onClick=\"return confirm('Bạn có chắc chắc muốn xóa?')\"><img src=\"".SITE_NAME."/view/admin/Themes/images/cross.png\" alt=\"Delete\"></a> ";
         $TableBody.="</td>";
@@ -55,11 +53,12 @@ function showTableBody($data)
 function showFrom($form,$ListKey=array())
 {
     $str_from='';
-    $str_from.='<p><label>facebook</label><input class="text-input small-input" type="text"  name="facebook" value="'.(($form!=false)?$form->facebook:'').'" /></p>';
-    $str_from.='<p><label>twitter</label><input class="text-input small-input" type="text"  name="twitter" value="'.(($form!=false)?$form->twitter:'').'" /></p>';
-    $str_from.='<p><label>youtube</label><input class="text-input small-input" type="text"  name="youtube" value="'.(($form!=false)?$form->youtube:'').'" /></p>';
-    $str_from.='<p><label>google</label><input class="text-input small-input" type="text"  name="google" value="'.(($form!=false)?$form->google:'').'" /></p>';
-    $str_from.='<p><label>linkedin</label><input class="text-input small-input" type="text"  name="linkedin" value="'.(($form!=false)?$form->linkedin:'').'" /></p>';
-    $str_from.='<p><label>instagram</label><input class="text-input small-input" type="text"  name="instagram" value="'.(($form!=false)?$form->instagram:'').'" /></p>';
+    $str_from.='<p><label>name</label><input class="text-input small-input" type="text"  name="name" value="'.(($form!=false)?$form->name:'').'" /></p>';
+    $str_from.='<p><label>img</label><input class="text-input small-input" type="text"  name="img" value="'.(($form!=false)?$form->img:'').'"/><a class="button" onclick="openKcEditor(\'img\');">Upload ảnh</a></p>';
+    $str_from.='<p><label>content</label><textarea name="content">'.(($form!=false)?$form->content:'').'</textarea><script type="text/javascript">CKEDITOR.replace(\'content\'); </script></p>';
+    $str_from.='<p><label>title</label><input class="text-input small-input" type="text"  name="title" value="'.(($form!=false)?$form->title:'').'" /></p>';
+    $str_from.='<p><label>keyword</label><input class="text-input small-input" type="text"  name="keyword" value="'.(($form!=false)?$form->keyword:'').'" /></p>';
+    $str_from.='<p><label>description</label><input class="text-input small-input" type="text"  name="description" value="'.(($form!=false)?$form->description:'').'" /></p>';
+    $str_from.='<p><label>created</label><input class="text-input small-input" type="text"  name="created" value="'.(($form!=false)?$form->created:'').'" /></p>';
     return $str_from;
 }

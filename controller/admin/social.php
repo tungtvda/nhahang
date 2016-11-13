@@ -54,7 +54,7 @@ if(isset($_SESSION["Admin"]))
             header('Location: '.SITE_NAME.'/controller/admin/social.php');
         }
     }
-    if(isset($_POST["facebook"])&&isset($_POST["twitter"])&&isset($_POST["youtube"])&&isset($_POST["google"])&&isset($_POST["rss"]))
+    if(isset($_POST["facebook"])&&isset($_POST["twitter"])&&isset($_POST["youtube"])&&isset($_POST["google"])&&isset($_POST["linkedin"])&&isset($_POST["instagram"]))
     {
        $array=$_POST;
        if(!isset($array['id']))
@@ -67,8 +67,10 @@ if(isset($_SESSION["Admin"]))
        $array['youtube']='0';
        if(!isset($array['google']))
        $array['google']='0';
-       if(!isset($array['rss']))
-       $array['rss']='0';
+       if(!isset($array['linkedin']))
+       $array['linkedin']='0';
+       if(!isset($array['instagram']))
+       $array['instagram']='0';
       $new_obj=new social($array);
         if($insert)
         {

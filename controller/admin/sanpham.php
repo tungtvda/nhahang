@@ -64,7 +64,7 @@ if(isset($_SESSION["Admin"]))
             header('Location: '.SITE_NAME.'/controller/admin/sanpham.php');
         }
     }
-    if(isset($_POST["danhmuc1_id"])&&isset($_POST["danhmuc2_id"])&&isset($_POST["name"])&&isset($_POST["name_url"])&&isset($_POST["code"])&&isset($_POST["img"])&&isset($_POST["img1"])&&isset($_POST["img2"])&&isset($_POST["price"])&&isset($_POST["price_sale"])&&isset($_POST["price_percent"])&&isset($_POST["start"])&&isset($_POST["num_like"])&&isset($_POST["description_short"])&&isset($_POST["description"]))
+    if(isset($_POST["danhmuc1_id"])&&isset($_POST["danhmuc2_id"])&&isset($_POST["name"])&&isset($_POST["name_url"])&&isset($_POST["code"])&&isset($_POST["img"])&&isset($_POST["img1"])&&isset($_POST["img2"])&&isset($_POST["price"])&&isset($_POST["price_sale"])&&isset($_POST["price_percent"])&&isset($_POST["start"])&&isset($_POST["num_like"])&&isset($_POST["content_short"])&&isset($_POST["content"])&&isset($_POST["title"])&&isset($_POST["keyword"])&&isset($_POST["description"]))
     {
        $array=$_POST;
        if(!isset($array['id']))
@@ -79,7 +79,6 @@ if(isset($_SESSION["Admin"]))
        $array['name']='0';
        if(!isset($array['name_url']))
        $array['name_url']='0';
-        $array['name_url']=LocDau($array['name']);
        if(!isset($array['code']))
        $array['code']='0';
        if(!isset($array['img']))
@@ -98,8 +97,14 @@ if(isset($_SESSION["Admin"]))
        $array['start']='0';
        if(!isset($array['num_like']))
        $array['num_like']='0';
-       if(!isset($array['description_short']))
-       $array['description_short']='0';
+       if(!isset($array['content_short']))
+       $array['content_short']='0';
+       if(!isset($array['content']))
+       $array['content']='0';
+       if(!isset($array['title']))
+       $array['title']='0';
+       if(!isset($array['keyword']))
+       $array['keyword']='0';
        if(!isset($array['description']))
        $array['description']='0';
       $new_obj=new sanpham($array);

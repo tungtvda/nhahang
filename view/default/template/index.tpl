@@ -1,6 +1,4 @@
-<?php include 'header.php'?>
-<?php include 'menu.php'?>
-<?php include 'slide.php'?>
+
 <div class="kc-elm kc-css-657219 kc_row">
     <div class="kc-row-container  kc-container">
         <div class="kc-wrap-columns">
@@ -8,9 +6,9 @@
                 <div class="kc-col-container">
                     <div class="kc-elm kc-css-457258 kc_shortcode kc_single_image border-right-bottom">
 
-                        <figure><img src="{SITE-NAME}/view/default/themes/images/about.jpg"
+                        <figure><img src="{about_img}"
                                      class=""
-                                     alt=""/></figure>
+                                     alt="{about_name}"/></figure>
                     </div>
                     <div class="kc-elm kc-css-121087"
                          style="height: 40px; clear: both; width:100%;"></div>
@@ -23,10 +21,9 @@
                         <h2 style="font-weight:bold;color:#ee2b2a" class="title">VIET GARDENS</h2>
                         <div class="icon-heading"><img
                                     src="{SITE-NAME}/view/default/themes/wp-content/uploads/2016/07/icon-title-table.png"
-                                    alt="ABOUT ECHION"/></div>
-                        <div class="desc"><p>VIETGARDEN - VƯỜN ẨM THỰC XANH ĐẬM ĐÀ HƯƠNG VỊ VIỆT
-                                Tọa lạc trên một vị trí đắc địa tại đường Vũ Phạm Hàm, Phường Yên Hòa, Quận Cầu Giấy, VietGardens phủ sắc xanh tươi mát lên một góc phố phường nhộn nhịp. Thiết kế ấm cúng, chan hòa với thiên nhiên mang đến không gian trong lành với cây và hoa cùng một màu xanh nổi bật không pha trộn.</p></div>
-                        <p class="read-more"><a href="#" title="">Chi tiết <i class="fa fa-hand-o-up"></i></a></p></div>
+                                    alt="{about_name}"/></div>
+                        <div class="desc"><p>{about_contents_short}</p></div>
+                        <p class="read-more"><a href="{SITE-NAME}/gioi-thieu/" title="">Chi tiết <i class="fa fa-hand-o-up"></i></a></p></div>
                 </div>
             </div>
         </div>
@@ -43,18 +40,17 @@
                         <div class="vi-heading style2">
                             <div class="description">Chế biến món ăn</div>
                             <h2 style="font-weight:bold;color:#ee2b2a" class="title">ĐẦU BẾP</h2>
-                            <div class="desc">Chúng tôi tin tưởng với sự phục vụ nhiệt tình, chu đáo, ân cần và giá cả hợp lí cũng như sự khéo léo trong cách thể hiện hương vị ẩm thực Việt và tâm huyết đối với món ăn Việt Nam sẽ là kim chỉ nam cho việc hướng đến trái tim khách hàng của VietGardens.
+                            <div class="desc">{daubep_contents_short}
                             </div>
-                            <p class="read-more"><a href="#" title="">Chi tiết <i class="fa fa-hand-o-up"></i></a></p></div>
+                            <p class="read-more"><a href="{SITE-NAME}/dau-bep/" title="">Chi tiết <i class="fa fa-hand-o-up"></i></a></p></div>
                     </div>
                 </div>
             </div>
             <div class="kc-elm kc-css-655905 kc_col-sm-5 kc-animated kc-animate-eff-fadeInRight kc_column kc_col-sm-5">
                 <div class="kc-col-container">
                     <div class="kc-elm kc-css-151632 kc_shortcode kc_single_image">
-
-                        <figure><img src="{SITE-NAME}/view/default/themes/wp-content/uploads/2016/07/image-chefs.png" class=""
-                                     alt=""/>
+                        <figure><img src="{daubep_img}" class="" title="{daubep_name}"
+                                     alt="{daubep_name}"/>
                         </figure>
                     </div>
                 </div>
@@ -78,18 +74,9 @@
                              style="background-image:url({SITE-NAME}/view/default/themes/wp-content/uploads/2016/07/bg-cackes.jpg)">
                             <div class="inner-list-menu"><h3 class="title-menu"><span>Menu</span></h3>
                                 <ul class="list-category">
-                                    <li><h6><a href="product-category/food/index.html"
-                                               title="Food">Food</a></h6></li>
-                                    <li><h6><a href="product-category/dinner/index.html" title="Dinner">Dinner</a>
-                                        </h6></li>
-                                    <li><h6><a href="product-category/lunch/index.html" title="Lunch">Lunch</a>
-                                        </h6></li>
-                                    <li><h6><a href="product-category/cook/index.html"
-                                               title="Cook">Cook</a></h6></li>
-                                    <li><h6><a href="product-category/rice/index.html"
-                                               title="Rice">Rice</a></h6></li>
+                                   {yeuthich}
                                 </ul>
-                                <p class="read-more"><a href="#" title="">Chi tiết <i class="fa fa-hand-o-up"></i></a></p></div>
+                                <p class="read-more"><a href="{SITE-NAME}/yeu-thich/" title="">Chi tiết <i class="fa fa-hand-o-up"></i></a></p></div>
                         </div><!--list menu--></div><!--wrapper-list-menu--></div>
             </div>
             <div class="kc-elm kc-css-225413 kc_col-sm-4 kc-animated kc-animate-eff-fadeInUp kc_column kc_col-sm-4">
@@ -103,18 +90,9 @@
                              style="background-image:url({SITE-NAME}/view/default/themes/wp-content/uploads/2016/07/bg-drinks.jpg)">
                             <div class="inner-list-menu"><h3 class="title-menu"><span>Menu</span></h3>
                                 <ul class="list-category">
-                                    <li><h6><a href="product-category/food/index.html"
-                                               title="Food">Food</a></h6></li>
-                                    <li><h6><a href="product-category/dinner/index.html" title="Dinner">Dinner</a>
-                                        </h6></li>
-                                    <li><h6><a href="product-category/lunch/index.html" title="Lunch">Lunch</a>
-                                        </h6></li>
-                                    <li><h6><a href="product-category/cook/index.html"
-                                               title="Cook">Cook</a></h6></li>
-                                    <li><h6><a href="product-category/rice/index.html"
-                                               title="Rice">Rice</a></h6></li>
+                                   {giamgia}
                                 </ul>
-                                <p class="read-more"><a href="#" title="">Chi tiết <i class="fa fa-hand-o-up"></i></a></p></div>
+                                <p class="read-more"><a href="{SITE-NAME}/giam-gia/" title="">Chi tiết <i class="fa fa-hand-o-up"></i></a></p></div>
                         </div><!--list menu--></div><!--wrapper-list-menu--></div>
             </div>
             <div class="kc-elm kc-css-681913 kc_col-sm-4 kc-animated kc-animate-eff-fadeInRight kc_column kc_col-sm-4">
@@ -128,18 +106,9 @@
                              style="background-image:url({SITE-NAME}/view/default/themes/wp-content/uploads/2016/07/bg-dinner.jpg)">
                             <div class="inner-list-menu"><h3 class="title-menu"><span>Menu</span></h3>
                                 <ul class="list-category">
-                                    <li><h6><a href="product-category/food/index.html"
-                                               title="Food">Food</a></h6></li>
-                                    <li><h6><a href="product-category/dinner/index.html" title="Dinner">Dinner</a>
-                                        </h6></li>
-                                    <li><h6><a href="product-category/lunch/index.html" title="Lunch">Lunch</a>
-                                        </h6></li>
-                                    <li><h6><a href="product-category/cook/index.html"
-                                               title="Cook">Cook</a></h6></li>
-                                    <li><h6><a href="product-category/rice/index.html"
-                                               title="Rice">Rice</a></h6></li>
+                                  {noibat}
                                 </ul>
-                                <p class="read-more"><a href="#" title="">Chi tiết <i class="fa fa-hand-o-up"></i></a></p></div>
+                                <p class="read-more"><a href="{SITE-NAME}/noi-bat/" title="">Chi tiết <i class="fa fa-hand-o-up"></i></a></p></div>
                         </div><!--list menu--></div><!--wrapper-list-menu--></div>
             </div>
 
@@ -1248,4 +1217,3 @@
         </div>
     </div>
 </div>
-<?php include 'footer.php'?>
