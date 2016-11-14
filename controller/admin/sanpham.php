@@ -79,6 +79,7 @@ if(isset($_SESSION["Admin"]))
        $array['name']='0';
        if(!isset($array['name_url']))
        $array['name_url']='0';
+        $array['name_url']=LocDau($array['name']);
        if(!isset($array['code']))
        $array['code']='0';
        if(!isset($array['img']))
