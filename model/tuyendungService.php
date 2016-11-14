@@ -62,17 +62,17 @@ function tuyendung_getByPaging($CurrentPage, $PageSize,$Order,$where)
 //
 function tuyendung_getByPagingReplace($CurrentPage, $PageSize,$Order,$where)
 {
-   return tuyendung_Get("SELECT tuyendung.id, tuyendung.name, tuyendung.img, tuyendung.content, tuyendung.title, tuyendung.keyword, tuyendung.description, tuyendung.created FROM  tuyendung ".(($where!='')?(' where '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
+   return tuyendung_Get("SELECT tuyendung.id, tuyendung.name, tuyendung.name_url, tuyendung.img, tuyendung.content, tuyendung.title, tuyendung.keyword, tuyendung.description, tuyendung.created FROM  tuyendung ".(($where!='')?(' where '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
 }
 //
 function tuyendung_insert($obj)
 {
-    return exe_query("insert into tuyendung (name,img,content,title,keyword,description,created) values ('$obj->name','$obj->img','$obj->content','$obj->title','$obj->keyword','$obj->description','$obj->created')",'tuyendung');
+    return exe_query("insert into tuyendung (name,name_url,img,content,title,keyword,description,created) values ('$obj->name','$obj->name_url','$obj->img','$obj->content','$obj->title','$obj->keyword','$obj->description','$obj->created')",'tuyendung');
 }
 //
 function tuyendung_update($obj)
 {
-    return exe_query("update tuyendung set name='$obj->name',img='$obj->img',content='$obj->content',title='$obj->title',keyword='$obj->keyword',description='$obj->description',created='$obj->created' where id=$obj->id",'tuyendung');
+    return exe_query("update tuyendung set name='$obj->name',name_url='$obj->name_url',img='$obj->img',content='$obj->content',title='$obj->title',keyword='$obj->keyword',description='$obj->description',created='$obj->created' where id=$obj->id",'tuyendung');
 }
 //
 function tuyendung_delete($obj)
