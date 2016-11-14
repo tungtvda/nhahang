@@ -8,28 +8,11 @@ RewriteRule ^(.*)$ http://radio.kzone.vn/$1 [R=permanent,L]
 RewriteRule ^admin controller/admin/index.php
 RewriteRule ^login controller/admin/login.php
 
-RewriteRule ^tour/([a-zA-Z0-9_-]+)/$ controller/default/chitietdanhmuc.php?Id=$1
-RewriteRule ^tour/([a-zA-Z0-9_-]+)/page-([0-9]+)$ controller/default/chitietdanhmuc.php?Id=$1&page=$2
-RewriteRule ^destinations/([a-zA-Z0-9_-]+)/$ controller/default/chitietdestinations.php?Id=$1
-RewriteRule ^destinations/([a-zA-Z0-9_-]+)/page-([0-9]+)$ controller/default/chitietdestinations.php?Id=$1&page=$2
-
-RewriteRule ^excursion-tours/$ controller/default/danhmuctour.php
-RewriteRule ^excursion-tours/page-([0-9]+)$ controller/default/danhmuctour.php?page=$1
-
-RewriteRule ^vacation-packages/$ controller/default/danhmuctour.php
-RewriteRule ^vacation-packages/page-([0-9]+)$ controller/default/danhmuctour.php?page=$1
-
-RewriteRule ^cruise-tours/$ controller/default/danhmuctour.php
-RewriteRule ^cruise-tours/page-([0-9]+)$ controller/default/danhmuctour.php?page=$1
-
-RewriteRule ^multi-country/$ controller/default/danhmuctour.php
-RewriteRule ^multi-country/page-([0-9]+)$ controller/default/danhmuctour.php?page=$1
-
-RewriteRule ^excursion-tours/$ controller/default/danhmuctour.php
-RewriteRule ^excursion-tours/page-([0-9]+)$ controller/default/danhmuctour.php?page=$1
-
-RewriteRule ^destinations/$ controller/default/danhmuctour.php
-RewriteRule ^destinations/page-([0-9]+)$ controller/default/danhmuctour.php?page=$1
+RewriteRule ^combo/$ controller/default/danhmucthucdon.php
+RewriteRule ^alacarte/$ controller/default/danhmucthucdon.php
+RewriteRule ^set-menu/$ controller/default/danhmucthucdon.php
+RewriteRule ^drink/$ controller/default/danhmucthucdon.php
+RewriteRule ^thuc-don/$ controller/default/danhmucthucdon.php
 
 RewriteRule ^(.*).html$ controller/default/chitiettour.php?Id=$1
 

@@ -25,6 +25,7 @@ $data['yeuthich']=sanpham_getByTop(5,'','num_like desc');
 $data['giamgia']=sanpham_getByTop(5,'price_sale!=""','id desc');
 $data['noibat']=sanpham_getByTop(5,'highlights=1','id desc');
 $data['noibat_2']=sanpham_getByTop(8,'highlights=1','id desc');
+$data['camnang_index']=news_getByTop(4,'','created desc');
 
 $title=$data['menu'][0]->title;
 $description= $data['menu'][0]->keyword;

@@ -32,6 +32,9 @@
 .vi-wrapper label{
     margin-top: 10px;
 }
+.item_left{
+    font-size: 14px;
+}
 @media only screen and (min-width: 1250px) and (max-width: 1500px) {
     .slide_div_1{
         text-align: center;

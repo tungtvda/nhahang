@@ -1,36 +1,31 @@
-<li class="item-product col-sm-3 ">
+<li class="item-product col-md-4 col-sm-6 first  post-101 product type-product status-publish has-post-thumbnail product_cat-cook instock shipping-taxable purchasable product-type-simple">
+
     <div class="product-top">
         <a href="{link}" class="product-image">
-
             {sales}
-            <img width="370" height="370"
-                 src="{img}"
-                 class="primary-image vi-load wp-post-image" alt="31"
+            <img width="370" height="370" src="{img}"
+                 class="primary-image vi-load wp-post-image" alt="57"
                  srcset="{img} 370w, {img} 150w, {img} 768w, {img} 124w, {img} 570w, {img} 780w"
                  sizes="(max-width: 370px) 100vw, 370px"/> </a>
-        <div class="quick-view" data-prod="501"><a href="{link}"><i
+        <div class="quick-view" data-prod="101"><a href="javascript:;"><i
                         class="fa fa-hand-o-up"></i></a></div>
     </div>
     <div class="product-desc">
         <div class="category_ratting"><span class="posted_in"> <a
-                        href="{link}"
-                        rel="tag">
-                    <i class="fa fa-thumbs-up"></i> {num_like}</a></span>
-
-            <div class="star-rating" title="">
+                        href="{link}" rel="tag"><i class="fa fa-thumbs-up"></i> {num_like}</a></span>
+            <div class="star-rating" title="{name}">
                 {start}
             </div>
         </div>
         <a class="product-title" href="{link}">{name}</a>
 
-		<span class="price">
-
-		<del>
+			<span class="price">
+<del>
             <span class="woocommerce-Price-amount amount">
                {price_sales_format}
-        </del>
-            <ins><span class="woocommerce-Price-amount amount"><span
-                            class="woocommerce-Price-currencySymbol"></span>{price_format}</span> vnđ</ins>	</span>
+</del>
+                  <ins><span class="woocommerce-Price-amount amount"><span
+                                  class="woocommerce-Price-currencySymbol"></span>{price_format}</span> vnđ</ins>	</span>
 
         <div class="controls">
             <ul class="icon-links">
@@ -41,9 +36,9 @@
                        class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add
                         to cart</a></li>
                 <li>
-                    <div class="yith-wcwl-add-to-wishlist add-to-wishlist-501">
-                        <div class="yith-wcwl-add-button show"
-                             style="display:block">
+                    <div class="yith-wcwl-add-to-wishlist add-to-wishlist-101">
+                        <div class="yith-wcwl-add-button show" style="display:block">
+
 
                             <a href="javascript:void(0)"
                                rel="nofollow" data-product-id="501"
@@ -51,7 +46,6 @@
                                class="add_to_wishlist">
                                 Add to Wishlist</a>
                         </div>
-
                         <div style="clear:both"></div>
                         <div class="yith-wcwl-wishlistaddresponse"></div>
 
@@ -68,8 +62,8 @@
 
         </div>
         <div class="description">
-            <p>Duis mollis, est non commodo luctus, nisi erat ligula, eget
-                lacinia odio sem nec elit.</p>
+            <p>Duis mollis, est non commodo luctus, nisi erat ligula, eget lacinia odio sem
+                nec elit.</p>
         </div>
     </div>
 </li>
