@@ -111,8 +111,8 @@
 
     <link rel="icon" href="{SITE-NAME}/view/default/themes/wp-content/uploads/2016/07/favicon.png" sizes="32x32"/>
     <link rel="icon" href="{SITE-NAME}/view/default/themes/wp-content/uploads/2016/07/favicon.png" sizes="192x192"/>
-    <link rel="apple-touch-icon-precomposed" href="{SITE-NAME}/view/default/wp-content/uploads/2016/07/favicon.png"/>
-    <meta name="msapplication-TileImage" content="http://new2new.com/echion/wp-content/uploads/2016/07/favicon.png"/>
+    <link rel="apple-touch-icon-precomposed" href="{icon}"/>
+    <meta name="msapplication-TileImage" content="{icon}"/>
     <script type="text/javascript"></script>
     <style type="text/css" id="kc-css-render">@media only screen and (min-width: 1000px) and (max-width: 5000px) {
             body.kc-css-system .kc-css-696688 {
@@ -173,13 +173,13 @@
         }
 
         body.kc-css-system .kc-css-496206 {
-            background: transparent url(http://new2new.com/echion/wp-content/uploads/2016/07/Restaurant-2_02-370x260.jpg) 0% 0%/auto repeat scroll;
+            background: transparent url({SITE-NAME}/view/default/themes/images/Restaurant-2_02-370x260.jpg) 0% 0%/auto repeat scroll;
             padding-top: 40px;
             padding-bottom: 20px;
         }
 
         body.kc-css-system .kc-css-79502 {
-            background: transparent url(http://new2new.com/echion/wp-content/uploads/2016/07/quote.jpg) 0% 0%/auto repeat fixed;
+            background: transparent url({SITE-NAME}/view/default/themes/images/quote.jpg) 0% 0%/auto repeat fixed;
             padding-top: 40px;
             padding-bottom: 20px;
         }

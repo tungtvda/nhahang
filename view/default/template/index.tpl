@@ -170,15 +170,15 @@
                                 <div class="vi-date-wrap col-sm-4">
                                     <label for="date-otreservations">Chọn ngày</label>
                                     <div class="wrapper-input">
-                                        <input id="date-otreservations" name="startDate"
+                                        <input id="date-otreservations" name="date_book" required
                                                class="vi-reservation-date" type="text"
-                                               value="17/10/2016">
+                                               value="">
                                     </div>
                                 </div>
                                 <div class="vi-time-wrap col-sm-4">
                                     <label for="time-otreservations">Chọn giờ</label>
                                     <div class="wrapper-input">
-                                        <select id="time-otreservations" name="ResTime"
+                                        <select id="time-otreservations" name="time_book" required
                                                 class="vi-reservation-time">
                                             <option value="8:00am">8:00 am</option>
                                             <option value="8:30am">8:30 am</option>
@@ -202,7 +202,7 @@
                                             <option value="5:30pm">5:30 pm</option>
                                             <option value="6:00pm">6:00 pm</option>
                                             <option value="6:30pm">6:30 pm</option>
-                                            <option value="7:00pm" selected="selected">7:00 pm</option>
+                                            <option value="7:00pm">7:00 pm</option>
                                             <option value="7:30pm">7:30 pm</option>
                                             <option value="8:00pm">8:00 pm</option>
                                             <option value="8:30pm">8:30 pm</option>
@@ -215,10 +215,10 @@
                                 <div class="vi-party-size-wrap col-sm-4">
                                     <label for="party-otreservations">Số người</label>
                                     <div class="wrapper-input">
-                                        <select id="party-otreservations" name="partySize"
+                                        <select id="party-otreservations" name="member_book" required
                                                 class="vi-party-size-select">
                                             <option value="1">1 Người</option>
-                                            <option value="2" selected="selected">2 Người</option>
+                                            <option value="2">2 Người</option>
                                             <option value="3">3 Người</option>
                                             <option value="4">4 Người</option>
                                             <option value="5">5 Người</option>
@@ -227,13 +227,24 @@
                                             <option value="8">8 Người</option>
                                             <option value="9">9 Người</option>
                                             <option value="10">10 Người</option>
+                                            <option value="11">11 Người</option>
+                                            <option value="12">12 Người</option>
+                                            <option value="13">13 Người</option>
+                                            <option value="14">14 Người</option>
+                                            <option value="15">15 Người</option>
+                                            <option value="16">16 Người</option>
+                                            <option value="17">17 Người</option>
+                                            <option value="18">18 Người</option>
+                                            <option value="19">19 Người</option>
+                                            <option value="20">20 Người</option>
+                                            <option value="Trên 20 người">Trên 20 Người</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class=" col-sm-4">
                                     <label for="date-otreservations" style="margin-top: 10px">Họ tên</label>
                                     <div class="wrapper-input">
-                                        <input  required name=""
+                                        <input  required name="name_book"
                                                class="input_book" type="text"
                                                value="">
                                     </div>
@@ -241,7 +252,7 @@
                                 <div class=" col-sm-4">
                                     <label for="date-otreservations" style="margin-top: 10px">Email</label>
                                     <div class="wrapper-input">
-                                        <input  required name=""
+                                        <input  required name="email_book"
                                                 class="input_book" type="email"
                                                 value="">
                                     </div>
@@ -249,17 +260,17 @@
                                 <div class=" col-sm-4">
                                     <label for="date-otreservations" style="margin-top: 10px">Điện thoại</label>
                                     <div class="wrapper-input">
-                                        <input required name="" class="input_book" type="text" value="">
+                                        <input required name="phone" class="input_book" type="text" value="">
                                     </div>
                                 </div>
                                 <div class=" col-sm-12">
                                     <label for="date-otreservations" style="margin-top: 10px">Yêu cầu</label>
                                     <div class="wrapper-input">
-                                        <textarea class="input_book"></textarea>
+                                        <textarea class="input_book" name="yeucau_book"></textarea>
                                     </div>
                                 </div>
                                 <div class="vi-button-wrap col-sm-12">
-                                    <input type="submit" class="otreservations-submit btn-primary btn"
+                                    <input type="submit" class="otreservations-submit btn-primary btn" name="datban_book"
                                            value="ĐẶT BÀN"/>
                                 </div>
                             </div>
@@ -286,118 +297,8 @@
                                     alt="LATEST BLOG"/></div>
                     </div>
                     <div class="list-posts row style_03 background_gray vi-product-plain">
-                        <article class="shortcode-blog col-sm-6">
-                            <div class="content-inner">
-                                <div class="post-formats-wrapper"><a class="post-image"
-                                                                     href="blog/2015/08/11/single-post-default/index.html"><img
-                                                width="370" height="370"
-                                                src="{SITE-NAME}/view/default/wp-content/uploads/2015/08/1-370x370.jpg"
-                                                class="attachment-shop_catalog size-shop_catalog wp-post-image"
-                                                alt="1"
-                                                srcset="http://new2new.com/echion/wp-content/uploads/2015/08/1-370x370.jpg 370w, http://new2new.com/echion/wp-content/uploads/2015/08/1-150x150.jpg 150w, http://new2new.com/echion/wp-content/uploads/2015/08/1-124x124.jpg 124w, http://new2new.com/echion/wp-content/uploads/2015/08/1-570x570.jpg 570w"
-                                                sizes="(max-width: 370px) 100vw, 370px"/></a></div>
-                                <div class="entry-content">
-                                    <div class="entry-meta"><span class="article-date">
-				 August 11, 2015
-			</span><span class="comments-link"><a href="blog/2015/08/11/single-post-default/index.html#respond">0
-                                                Comment</a></span></div>
-                                    <h3 class="blog_title"><a
-                                                href="blog/2015/08/11/single-post-default/index.html"
-                                                rel="bookmark">Single Post Default</a></h3>
-                                    <div class="entry-meta">
-                                        <div class="author"><span>By:</span>
-                                            <a class="author" href="blog/author/villatheme/index.html">villatheme</a>
-                                        </div>
-                                        <p class="read-more"><a
-                                                    href="blog/2015/08/11/single-post-default/index.html">Read
-                                                More</a></p></div>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="shortcode-blog col-sm-6">
-                            <div class="content-inner">
-                                <div class="post-formats-wrapper"><a class="post-image"
-                                                                     href="blog/2015/04/07/tellus-cras-dictu/index.html"><img
-                                                width="370" height="370"
-                                                src="wp-content/uploads/2015/08/14-370x370.jpg"
-                                                class="attachment-shop_catalog size-shop_catalog wp-post-image"
-                                                alt="14"
-                                                srcset="http://new2new.com/echion/wp-content/uploads/2015/08/14-370x370.jpg 370w, http://new2new.com/echion/wp-content/uploads/2015/08/14-150x150.jpg 150w, http://new2new.com/echion/wp-content/uploads/2015/08/14-124x124.jpg 124w, http://new2new.com/echion/wp-content/uploads/2015/08/14-570x570.jpg 570w"
-                                                sizes="(max-width: 370px) 100vw, 370px"/></a></div>
-                                <div class="entry-content">
-                                    <div class="entry-meta"><span class="article-date">
-				 April 7, 2015
-			</span><span class="comments-link"><a href="blog/2015/04/07/tellus-cras-dictu/index.html#respond">0
-                                                Comment</a></span></div>
-                                    <h3 class="blog_title"><a
-                                                href="blog/2015/04/07/tellus-cras-dictu/index.html"
-                                                rel="bookmark">Tellus cras dictu</a></h3>
-                                    <div class="entry-meta">
-                                        <div class="author"><span>By:</span>
-                                            <a class="author" href="blog/author/villatheme/index.html">villatheme</a>
-                                        </div>
-                                        <p class="read-more"><a
-                                                    href="blog/2015/04/07/tellus-cras-dictu/index.html">Read
-                                                More</a></p></div>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="shortcode-blog col-sm-6">
-                            <div class="content-inner">
-                                <div class="post-formats-wrapper"><a class="post-image"
-                                                                     href="blog/2015/07/23/title-name-goes-here/index.html"><img
-                                                width="370" height="370"
-                                                src="wp-content/uploads/2015/08/13-370x370.jpg"
-                                                class="attachment-shop_catalog size-shop_catalog wp-post-image"
-                                                alt="13"
-                                                srcset="http://new2new.com/echion/wp-content/uploads/2015/08/13-370x370.jpg 370w, http://new2new.com/echion/wp-content/uploads/2015/08/13-150x150.jpg 150w, http://new2new.com/echion/wp-content/uploads/2015/08/13-124x124.jpg 124w, http://new2new.com/echion/wp-content/uploads/2015/08/13-570x570.jpg 570w"
-                                                sizes="(max-width: 370px) 100vw, 370px"/></a></div>
-                                <div class="entry-content">
-                                    <div class="entry-meta"><span class="article-date">
-				 July 23, 2015
-			</span><span class="comments-link"><a href="blog/2015/07/23/title-name-goes-here/index.html#respond">0
-                                                Comment</a></span></div>
-                                    <h3 class="blog_title"><a
-                                                href="blog/2015/07/23/title-name-goes-here/index.html"
-                                                rel="bookmark">Title Name Goes</a></h3>
-                                    <div class="entry-meta">
-                                        <div class="author"><span>By:</span>
-                                            <a class="author" href="blog/author/villatheme/index.html">villatheme</a>
-                                        </div>
-                                        <p class="read-more"><a
-                                                    href="blog/2015/07/23/title-name-goes-here/index.html">Read
-                                                More</a></p></div>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="shortcode-blog col-sm-6">
-                            <div class="content-inner">
-                                <div class="post-formats-wrapper"><a class="post-image"
-                                                                     href="blog/2015/07/23/title-name-goes-here-2/index.html"><img
-                                                width="370" height="370"
-                                                src="wp-content/uploads/2015/08/7-370x370.jpg"
-                                                class="attachment-shop_catalog size-shop_catalog wp-post-image"
-                                                alt="7"
-                                                srcset="http://new2new.com/echion/wp-content/uploads/2015/08/7-370x370.jpg 370w, http://new2new.com/echion/wp-content/uploads/2015/08/7-150x150.jpg 150w, http://new2new.com/echion/wp-content/uploads/2015/08/7-124x124.jpg 124w, http://new2new.com/echion/wp-content/uploads/2015/08/7-570x570.jpg 570w"
-                                                sizes="(max-width: 370px) 100vw, 370px"/></a></div>
-                                <div class="entry-content">
-                                    <div class="entry-meta"><span class="article-date">
-				 July 23, 2015
-			</span><span class="comments-link"><a href="blog/2015/07/23/title-name-goes-here-2/index.html#respond">0
-                                                Comment</a></span></div>
-                                    <h3 class="blog_title"><a
-                                                href="blog/2015/07/23/title-name-goes-here-2/index.html"
-                                                rel="bookmark">Nullam quis ante</a></h3>
-                                    <div class="entry-meta">
-                                        <div class="author"><span>By:</span>
-                                            <a class="author" href="blog/author/villatheme/index.html">villatheme</a>
-                                        </div>
-                                        <p class="read-more"><a
-                                                    href="blog/2015/07/23/title-name-goes-here-2/index.html">Read
-                                                More</a></p></div>
-                                </div>
-                            </div>
-                        </article>
+
+                        {camnang_index}
                     </div>
                     <div class="kc-elm kc-css-473617 hidden-xs"
                          style="height: 40px; clear: both; width:100%;"></div>
@@ -407,7 +308,7 @@
     </div>
 </div>
 <div data-kc-parallax="true" class="kc-elm kc-css-529895 kc_row"
-     style="background-image:url(http://new2new.com/echion/wp-content/uploads/2016/07/bg-testimonial.jpg);">
+     style="background-image:url({SITE-NAME}/view/default/themes/images/bg-testimonial.jpg);">
     <div class="kc-row-container  kc-container">
         <div class="kc-wrap-columns">
             <div class="kc-elm kc-css-323012 kc_col-sm-12 kc-animated kc-animate-eff-slideInRight kc_column kc_col-sm-12">

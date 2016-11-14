@@ -8,6 +8,7 @@
  */
 require_once DIR.'/common/cls_fast_template.php';
 require_once DIR.'/common/locdautiengviet.php';
+require_once DIR.'/model/danhmuc_tintucService.php';
 function print_template($data=array(),$tem)
 {
     $ft=new FastTemplate(DIR.'/view/default/template');
@@ -110,20 +111,19 @@ function print_item($file,$ListItem,$LocDau=false,$LocDauAssign=false,$numberfor
             }
             if(get_class($item)=='news')
             {
-//                $ft->assign('name',returnLanguageField('name', $item));
-//                $content=returnLanguageField('content', $item);
-//                if (strlen($content) > 210) {
-//                    $ten1=strip_tags($content);
-//
-//                    $ten = substr($ten1, 0, 210);
-//                    $name = substr($ten, 0, strrpos($ten, ' ')) . "...";
-//                    $ft->assign('content',$name);
-//                } else {
-//                    $ft->assign('content',strip_tags($content));
-//                }
-//                $ft->assign('detail',returnLanguage('detail','DETAIL'));
-//                $ft->assign('news',returnLanguage('news','News'));
-//                $ft->assign('link',link_newsdetail($item));
+                $name_danhmuc='Cẩm nang';
+                $link_danhmuc=SITE_NAME.'/cam-nang/';
+                if($item->danhmuc_id!=0)
+                {
+                    $data_danhmuc_camnang=danhmuc_tintuc_getByTop('1','id='.$item->danhmuc_id,'id desc');
+                    if(count($data_danhmuc_camnang)>0){
+                        $name_danhmuc=$data_danhmuc_camnang[0]->name;
+                        $link_danhmuc=SITE_NAME.'/cam-nang/'.$data_danhmuc_camnang[0]->name_url;
+                    }
+                }
+                $ft->assign('name_danhmuc',$name_danhmuc);
+                $ft->assign('link_danhmuc',$link_danhmuc);
+                $ft->assign('link',link_newsdetail($item));
             }
 
 
@@ -151,9 +151,13 @@ function link_news($app)
 {
     return SITE_NAME.'/news/'.$app->name_url.'/';
 }
+function link_camnang($app)
+{
+    return SITE_NAME.'/cam-nang/'.$app->name_url.'/';
+}
 function link_newsdetail($app)
 {
-    return SITE_NAME.'/news/'.$app->name_url.'.html';
+    return SITE_NAME.'/cam-nang/'.$app->name_url.'.html';
 }
 
 

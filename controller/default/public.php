@@ -56,12 +56,8 @@ function  show_slide($data1=array())
 function  show_left($data1=array(),$active='trangchu')
 {
     $data=array();
-//    $data['danhmuctour_left']=danhmuctour_getByTop('','','ViTri asc');
-//    $data['tieude_13']=tieude_getById(13);
-//    $data['tin_moinhat']=tintuc_getByTop(10,'','Id desc');
-//    $data['quangcao_left']=quangcao_getByTop('','TrangThai=1','Id asc');
-    $data['danhmuc_subport']=danhmuc_subport_getByTop('','','id desc');
-    $data['news_list']=news_getByTop(4,'','id desc');
+    $data['danhmuc_left']=danhmuc1_getByTop('','id!=1','position asc');
+    $data['noibat_left']=sanpham_getByTop(5,'highlights=1','id desc');
     view_left($data);
 }
 
@@ -128,6 +124,7 @@ function show_footer($data1=array())
     $data=array();
     $data['config']=$data1['config'];
     $data['mangxahoi']=social_getByTop(1,'','');
+    $data['noibat_footer']=sanpham_getByTop(20,'highlights=1','id desc');
     view_footer($data);
 }
 

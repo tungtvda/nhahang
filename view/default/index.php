@@ -40,6 +40,11 @@ function show_index($data = array())
     {
         $asign['noibat_2'] = print_item('danhmuc_noirbat_index', $data['noibat_2']);
     }
+    $asign['camnang_index'] ="";
+    if(count($data['camnang_index'])>0)
+    {
+        $asign['camnang_index'] = print_item('camnang_index', $data['camnang_index']);
+    }
 
 
     print_template($asign, 'index');

@@ -14,12 +14,12 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     color: #26292d;
-    font-family: Cabin, Helvetica, Arial, sans-serif;
+    /*font-family: Cabin, Helvetica, Arial, sans-serif;*/
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     color: #26292d;
-    font-family: Cabin, Helvetica, Arial, sans-serif;
+    /*font-family: Cabin, Helvetica, Arial, sans-serif;*/
 }
 
 h1 {
@@ -202,11 +202,11 @@ h6 {
 }
 
 .footer .container a {
-    color: #b5b5b5;
+    color: #a3c638;
 }
 
 .footer .container a:hover {
-    color: #26292d;
+    color: #a3c638;
 }
 
 .footer .container a.btn-primary {
