@@ -28,9 +28,8 @@ RewriteRule ^thuc-don/([a-zA-Z0-9_-]+)/$ controller/default/danhmucthucdon.php?I
 RewriteRule ^thuc-don/([a-zA-Z0-9_-]+)/orderby-([a-zA-Z0-9_-]+)$ controller/default/danhmucthucdon.php?Id=$1&orderby=$2
 RewriteRule ^thuc-don/([a-zA-Z0-9_-]+)/orderby-([a-zA-Z0-9_-]+)/page-([0-9]+)$ controller/default/danhmucthucdon.php?Id=$1&orderby=$2&page=$3
 
+RewriteRule ^(.*).html$ controller/default/chitietsanpham.php?Id=$1
 
-
-RewriteRule ^(.*).html$ controller/default/chitiettour.php?Id=$1
 
 RewriteRule ^news/$ controller/default/danhmuctintuc.php
 RewriteRule ^news/page-([0-9]+)$ controller/default/danhmuctintuc.php?page=$1

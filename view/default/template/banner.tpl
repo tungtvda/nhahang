@@ -1,6 +1,6 @@
 
 <div class="top_site_main"
-     style="color: #ffffff;background-color: #000;background-image:url( {banner_img});"
+     style="color: #ffffff;background-color: #000;background-image:url( {banner_img});padding-top: 163px;"
      data-kc-parallax="true" data-speed="-1">
     <div class="page-title-wrapper">
         <div class="banner-wrapper container article_heading">

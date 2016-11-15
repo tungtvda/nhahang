@@ -19,7 +19,6 @@ $data['config']=config_getByTop(1,'','');
 $sub_string_oder='';
 $order='id desc';
 $order_pag='orderby-id';
-$order_pag='';
 $val_order='id';
 if(isset($_GET['orderby']))
 {
@@ -31,6 +30,7 @@ if(isset($_GET['orderby']))
     }
     $order_pag='orderby-'.$val_order;
 }
+
 if(isset($_GET['Id']))
 {
     $actual_link= addslashes(strip_tags($_GET['Id']));
@@ -52,7 +52,7 @@ if(isset($_GET['Id']))
     $data['banner']=array(
         'banner_img'=>$danhmuc_2[0]->img,
         'name'=>$name,
-        'url'=>'<li><a href="'.SITE_NAME.'">'.$data['menu'][0]->name.'</a></li> ~ <li><a href="'.SITE_NAME.'/'.$danhmuc_2[0]->name_url.'/">'.$danhmuc_1[0]->name.'</a></li> ~ <li>'.$name.'</li>'
+        'url'=>'<li><a href="'.SITE_NAME.'">'.$data['menu'][0]->name.'</a></li> ~ <li><a href="'.SITE_NAME.'/'.$danhmuc_1[0]->name_url.'/">'.$danhmuc_1[0]->name.'</a></li> ~ <li>'.$name.'</li>'
     );
     $img_banner=$danhmuc_2[0]->img;
     $title=$danhmuc_2[0]->title;
@@ -79,7 +79,7 @@ else{
             }
             $dk="danhmuc1_id=5";
             $data['current']=isset($_GET['page'])?$_GET['page']:'1';
-            $data['pagesize']=9;
+            $data['pagesize']=12;
             $data['count']=sanpham_count($dk);
             $data['danhsach']=sanpham_getByPaging($data['current'],$data['pagesize'],$order,$dk);
             $data['PAGING'] = showPagingAtLink($data['count'], $data['pagesize'], $data['current'], '' . SITE_NAME . '/combo/',$order_pag);
@@ -103,7 +103,7 @@ else{
             }
             $dk="danhmuc1_id=2";
             $data['current']=isset($_GET['page'])?$_GET['page']:'1';
-            $data['pagesize']=9;
+            $data['pagesize']=12;
             $data['count']=sanpham_count($dk);
             $data['danhsach']=sanpham_getByPaging($data['current'],$data['pagesize'],$order,$dk);
             $data['PAGING'] = showPagingAtLink($data['count'], $data['pagesize'], $data['current'], '' . SITE_NAME . '/alacarte/',$order_pag);
@@ -127,7 +127,7 @@ else{
             }
             $dk="danhmuc1_id=3";
             $data['current']=isset($_GET['page'])?$_GET['page']:'1';
-            $data['pagesize']=9;
+            $data['pagesize']=12;
             $data['count']=sanpham_count($dk);
             $data['danhsach']=sanpham_getByPaging($data['current'],$data['pagesize'],$order,$dk);
             $data['PAGING'] = showPagingAtLink($data['count'], $data['pagesize'], $data['current'], '' . SITE_NAME . '/set-menu/',$order_pag);
@@ -151,7 +151,7 @@ else{
             }
             $dk="danhmuc1_id=4";
             $data['current']=isset($_GET['page'])?$_GET['page']:'1';
-            $data['pagesize']=9;
+            $data['pagesize']=12;
             $data['count']=sanpham_count($dk);
             $data['danhsach']=sanpham_getByPaging($data['current'],$data['pagesize'],$order,$dk);
             $data['PAGING'] = showPagingAtLink($data['count'], $data['pagesize'], $data['current'], '' . SITE_NAME . '/drink/',$order_pag);
@@ -175,7 +175,7 @@ else{
             }
             $dk="";
             $data['current']=isset($_GET['page'])?$_GET['page']:'1';
-            $data['pagesize']=3;
+            $data['pagesize']=12;
             $data['count']=sanpham_count($dk);
             $data['danhsach']=sanpham_getByPaging($data['current'],$data['pagesize'],$order,$dk);
             $data['PAGING'] = showPagingAtLink($data['count'], $data['pagesize'], $data['current'], '' . SITE_NAME . '/thuc-don/',$order_pag);
@@ -196,12 +196,13 @@ else{
 
 $data['link_anh']=$img_banner;
 $data['val_order']=$val_order;
-$title=($title)?$title:'Mixtourist.com | Vietnam travel agent|Vietnam travel company|Indochina';
-$description=($description)?$description:'Mixtourist.com | Vietnam travel agent|Vietnam travel company|Indochina';
-$keywords=($keyword)?$keyword:'Mixtourist.com | Vietnam travel agent|Vietnam travel company|Indochina';
+$title=($title)?$title:'Viet Gardens';
+$description=($description)?$description:'Viet Gardens ';
+$keywords=($keyword)?$keyword:'Viet Gardens ';
 show_header($title,$description,$keywords,$data);
 show_menu($data,'thucdon');
 show_banner($data);
 show_danhmucthucdon($data);
 show_left($data);
 show_footer($data);
+show_link_js($data);
