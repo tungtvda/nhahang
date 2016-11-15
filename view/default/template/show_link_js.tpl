@@ -86,8 +86,8 @@
         src='{SITE-NAME}/view/default/themes/wp-content/plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.min330a.js?ver=1.4.1'></script>
 <!--<script type='text/javascript'
         src='{SITE-NAME}/view/default/themes/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min72e6.js?ver=2.6.4'></script>-->
-<script type='text/javascript'
-        src='{SITE-NAME}/view/default/themes/wp-content/plugins/yith-woocommerce-compare/assets/js/woocompareffdc.js?ver=2.0.9'></script>
+<!--<script type='text/javascript'
+        src='{SITE-NAME}/view/default/themes/wp-content/plugins/yith-woocommerce-compare/assets/js/woocompareffdc.js?ver=2.0.9'></script>-->
 <script type='text/javascript'
         src='{SITE-NAME}/view/default/themes/wp-content/plugins/yith-woocommerce-compare/assets/js/jquery.colorbox-min13ac.js?ver=1.4.21'></script>
 <script type='text/javascript'

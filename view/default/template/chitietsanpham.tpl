@@ -11,29 +11,29 @@
                         <div id="slider">
                             <ul class="slides">
                                 <li><a href="{img}"
-                                       class="woocommerce-main-image zoom" title=""
+                                       class="woocommerce-main-image zoom" title="{name}"
                                        data-rel="prettyPhoto[product-gallery]"><img width="570" height="570"
                                                                                     src="{img}"
                                                                                     class="attachment-shop_single size-shop_single wp-post-image"
-                                                                                    alt="6" title="6"
+                                                                                    alt="{name}" title="{name}"
                                                                                     srcset="{img} 570w, {img} 150w, {img} 768w, {img} 124w, {img} 370w, {img} 780w"
                                                                                     sizes="(max-width: 570px) 100vw, 570px"/></a>
                                 </li>
                                 <li><a href="{img1}"
-                                       class="woocommerce-main-image zoom" title="6"
+                                       class="woocommerce-main-image zoom" title="{name}"
                                        data-rel="prettyPhoto[product-gallery]"><img width="570" height="570"
                                                                                     src="{img1}"
                                                                                     class="attachment-shop_single size-shop_single"
-                                                                                    alt="6"
+                                                                                    alt="{name}"
                                                                                     srcset="{img1} 570w, {img1} 150w, {img1} 768w, {img1} 124w, {img1} 370w, {img1} 780w"
                                                                                     sizes="(max-width: 570px) 100vw, 570px"/></a>
                                 </li>
                                 <li><a href="{img2}"
-                                       class="woocommerce-main-image zoom" title="7"
+                                       class="woocommerce-main-image zoom" title="{name}"
                                        data-rel="prettyPhoto[product-gallery]"><img width="570" height="570"
                                                                                     src="{img2}"
                                                                                     class="attachment-shop_single size-shop_single"
-                                                                                    alt="7"
+                                                                                    alt="{name}"
                                                                                     srcset="{img2} 570w, {img2} 150w, {img2} 768w, {img2} 124w, {img2} 370w, {img2} 780w"
                                                                                     sizes="(max-width: 570px) 100vw, 570px"/></a>
                                 </li>
@@ -42,19 +42,19 @@
                         <div id="carousel" class="thumbnail_product">
                             <ul class="slides">
                                 <li><img width="124" height="124"
-                                         src="{img}"
+                                         src="{img}" title="{name}"
                                          class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image"
-                                         alt="6"
+                                         alt="{name}"
                                          srcset="{img} 124w, {img} 150w, {img} 768w, {img} 370w, {img} 570w, {img} 780w"
                                          sizes="(max-width: 124px) 100vw, 124px"/></li>
                                 <li><img width="124" height="124"
                                          src="{img1}"
-                                         class="attachment-shop_thumbnail size-shop_thumbnail" alt="6" title="6"
+                                         class="attachment-shop_thumbnail size-shop_thumbnail" alt="{name}" title="{name}"
                                          srcset="{img1}, {img1} 150w, {img1} 768w, {img1} 370w, {img1} 570w, {img1} 780w"
                                          sizes="(max-width: 124px) 100vw, 124px"/></li>
                                 <li><img width="124" height="124"
                                          src="{img2}"
-                                         class="attachment-shop_thumbnail size-shop_thumbnail" alt="7" title="7"
+                                         class="attachment-shop_thumbnail size-shop_thumbnail" alt="{name}" title="{name}"
                                          srcset="{img2} 124w, {img2} 150w, {img2} 768w, {img2} 370w, {img2} 570w, {img2} 780w"
                                          sizes="(max-width: 124px) 100vw, 124px"/></li>
                             </ul>
@@ -75,8 +75,8 @@
             <span class="woocommerce-Price-amount amount">
                {price_sales_format}
         </del>
-            <ins style="color: #ee2b2a;font-size: 30px"><span class="woocommerce-Price-amount amount"><span
-                            class="woocommerce-Price-currencySymbol"></span>{price_format}</span> vnđ
+            <ins style="color: #ee2b2a;font-size: 30px;text-decoration: none;"><span class="woocommerce-Price-amount amount"><span
+                            class="woocommerce-Price-currencySymbol"></span> {price_format}</span> vnđ
             </ins>	</span>
 
                         </div>
@@ -87,7 +87,7 @@
                             </div>
                             <a style="text-align: center" href="#reviews" class="woocommerce-review-link"
                                rel="nofollow">(<span
-                                        itemprop="reviewCount" class="count">2</span> đánh giá)</a>
+                                        itemprop="reviewCount" class="count">{count_danhgia}</span> đánh giá)</a>
                             <a style="margin-left: 30px" class="woocommerce-review-link"><span
                                         itemprop="reviewCount" class="count"><i class="fa fa-thumbs-up"></i> {num_like}</span>
                             </a>
@@ -180,20 +180,18 @@
                                 <a href="#tab-description">Mô tả</a>
                             </li>
                             <li class="reviews_tab">
-                                <a href="#tab-reviews">Đánh giá (2)</a>
+                                <a href="#tab-reviews">Đánh giá ({count_danhgia})</a>
                             </li>
                         </ul>
                         <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab"
                              id="tab-description">
                             {content}
                         </div>
-                        <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab"
+                        <div  class="woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab"
                              id="tab-reviews">
+
                             <div id="reviews">
                                 <div id="comments">
-                                    <h2>2 reviews for Semperduis fusce</h2>
-
-
                                     <ol class="commentlist">
                                         <li itemprop="review" itemscope itemtype="http://schema.org/Review"
                                             class="comment byuser comment-author-villatheme bypostauthor even thread-even depth-1"
@@ -270,70 +268,66 @@
                                             </div>
                                         </li><!-- #comment-## -->
                                     </ol>
-
-
                                 </div>
-
-
                                 <div id="review_form_wrapper">
                                     <div id="review_form">
                                         <div id="respond" class="comment-respond">
-                                            <h3 id="reply-title" class="comment-reply-title">Add a review
-                                                <small><a rel="nofollow" id="cancel-comment-reply-link"
-                                                          href="index.html#respond" style="display:none;">Cancel
-                                                        reply</a></small>
+                                            <h3 id="reply-title" class="comment-reply-title">Cho chúng tôi biết cảm nghĩ của bạn
                                             </h3>
-                                            <form action="http://new2new.com/echion/wp-comments-post.php"
-                                                  method="post" id="commentform" class="comment-form"
-                                                  novalidate>
+                                            <form action="" method="post" id="commentform" class="comment-form" >
                                                 <div class="row">
-                                                    <div class="col-sm-4 comment-form-author"><input id="author"
-                                                                                                     name="author"
+                                                    <div class="col-sm-4 comment-form-author"><input id=""
+                                                                                                     name="name_ct"
                                                                                                      type="text"
                                                                                                      value=""
                                                                                                      size="30"
+                                                                                                     required
                                                                                                      aria-required="true"
-                                                                                                     placeholder="Name*"/>
+                                                                                                     placeholder="Họ tên*"/>
                                                     </div>
-                                                    <div class="col-sm-4 comment-form-email"><input id="email"
-                                                                                                    name="email"
-                                                                                                    type="text"
+                                                    <div class="col-sm-4 comment-form-email"><input style="padding: 6px 15px;
+    border: 2px solid #ddd;
+    width: 100%;
+    background: #f9f9f9;" id="email"
+                                                                                                    name="email_ct"
+                                                                                                    type="email"
                                                                                                     value=""
                                                                                                     size="30"
+                                                                                                    required
                                                                                                     aria-required="true"
                                                                                                     placeholder="Email*"/>
                                                     </div>
+                                                    <div class="col-sm-4 comment-form-author">
+                                                        <select name="start_ct" style="padding: 11px 15px; required
+    border: 2px solid #ddd;
+    width: 100%;
+    background: #f9f9f9;">
+                                                            <option value="0">Chọn thứ hạng</option>
+                                                            <option value="1">1 sao</option>
+                                                            <option value="2">2 sao</option>
+                                                            <option value="3">3 sao</option>
+                                                            <option value="4">4 sao</option>
+                                                            <option value="5">5 sao</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
-                                                <p class="comment-form-comment"><textarea id="comment"
-                                                                                          name="comment"
+                                                <p class="comment-form-comment"><textarea id="comment" required
+                                                                                          name="content_ct"
                                                                                           cols="45" rows="10"
                                                                                           aria-required="true"
-                                                                                          placeholder="Your Review"></textarea>
+                                                                                          placeholder="Cảm nhận của bạn"></textarea>
                                                 </p>
-                                                <p class="comment-form-rating"><label for="rating">Your
-                                                        Rating</label><select name="rating" id="rating">
-                                                        <option value="">Rate&hellip;</option>
-                                                        <option value="5">Perfect</option>
-                                                        <option value="4">Good</option>
-                                                        <option value="3">Average</option>
-                                                        <option value="2">Not that bad</option>
-                                                        <option value="1">Very Poor</option>
-                                                    </select></p>
-                                                <p class="form-submit"><input name="submit" type="submit"
+                                                <p class="form-submit"><input name="danhgia_ct" type="submit"
                                                                               id="submit" class="submit"
-                                                                              value="Submit"/> <input
-                                                            type='hidden' name='comment_post_ID' value='503'
-                                                            id='comment_post_ID'/>
-                                                    <input type='hidden' name='comment_parent'
-                                                           id='comment_parent' value='0'/>
-                                                </p></form>
+                                                                              value="Đánh giá"/> <input
+                                                </p>
+                                            </form>
                                         </div><!-- #respond -->
                                     </div>
                                 </div>
-
-
                                 <div class="clear"></div>
                             </div>
+
                         </div>
                     </div>
 

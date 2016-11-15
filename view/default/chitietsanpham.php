@@ -22,7 +22,7 @@ function show_chitietsanpham($data = array())
     $asign['content']=$data['tour'][0]->content;
     $asign['link']=link_sanphamdetail($data['tour'][0]);
     $asign['start']=sao_detail($data['tour'][0]->start);
-
+    $asign['count_danhgia']=$data['count_danhgia'];
     $asign['cate']=$data['cate'];
     $asign['price_sales_format']='';
     if($data['tour'][0]->price_sale!=''){

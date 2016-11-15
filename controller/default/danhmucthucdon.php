@@ -44,7 +44,7 @@ if(isset($_GET['Id']))
     }
     $dk="danhmuc2_id=".$danhmuc_2[0]->id;
     $data['current']=isset($_GET['page'])?$_GET['page']:'1';
-    $data['pagesize']=3;
+    $data['pagesize']=12;
     $data['count']=sanpham_count($dk);
     $data['danhsach']=sanpham_getByPaging($data['current'],$data['pagesize'],$order,$dk);
     $data['PAGING'] = showPagingAtLink($data['count'], $data['pagesize'], $data['current'], '' . SITE_NAME . '/thuc-don/'.$danhmuc_2[0]->name_url.'/',$order_pag);
