@@ -341,7 +341,7 @@
                 <div class="related-products">
                     <div class="vi-heading">
                         <h3 class="before-title lienquan_item">Danh sách</h3>
-                        <h4 class="title_lienquan">Related Products</h4>
+                        <h4 class="title_lienquan">Thực đơn khác</h4>
                     </div>
                     <ul class="product-grid category-product-list row archive_switch">
                         {sanpham_lienquan}
