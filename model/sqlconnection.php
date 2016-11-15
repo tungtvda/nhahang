@@ -36,9 +36,9 @@ function ConnectCache()
 }
 function backup($command,$table)
 {
-    $source=fopen(DIR.'/backup/'.$table.'.sql','a+');
-    fwrite($source,$command."\n");
-    fclose($source);
+//    $source=fopen(DIR.'/backup/'.$table.'.sql','a+');
+//    fwrite($source,$command."\n");
+//    fclose($source);
 }
 function exe_query($command,$table)
 {

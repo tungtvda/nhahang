@@ -60,7 +60,7 @@
                     <div class="clear"></div>
                 </li>
                 <li>
-                    <a href="{link}#danhgia"
+                    <a href="{link}#reviews"
                        class="compare button" data-product_id="501"
                        title="Đánh giá">
                     </a></li>
