@@ -7425,10 +7425,11 @@ blockquote {
   margin-bottom: 0;
 }
 .widget-area .woocommerce ul.product_list_widget li .thumb-image {
-  width: 90px;
-  float: left;
-  border-radius: 5px;
-  overflow: hidden;
+  /*width: 90px;*/
+  /*float: left;*/
+  /*border-radius: 5px;*/
+  /*overflow: hidden;*/
+  padding: 0px;
 }
 .widget-area .woocommerce ul.product_list_widget li .thumb-image img {
   width: auto;

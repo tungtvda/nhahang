@@ -96,7 +96,7 @@
                 <li class="{kichhoat_slide}"><a href="{SITE-NAME}/controller/admin/slide.php"><span class="icon-film"></span> Slide</a></li>
                 <li class="{kichhoat_menu}"><a href="{SITE-NAME}/controller/admin/menu.php"><span class="icon-th-list"></span> Cấu hình menu</a></li>
                 <li class="{kichhoat_mangxahoi}"><a href="{SITE-NAME}/controller/admin/social.php"><span class=" iconfa-facebook"></span> Mạng xã hội</a></li>
-                <!--<li class="{kichhoat_tieuchi}"><a href="{SITE-NAME}/controller/admin/tag.php"><span class="icon-tag"></span> Tag</a></li>-->
+                <li class="{kichhoat_ykien}"><a href="{SITE-NAME}/controller/admin/ykien.php"><span class="icon-comment"></span> Ý kiến khách hàng</a></li>
             </ul>
         </div>
         <!--leftmenu-->

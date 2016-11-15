@@ -152,13 +152,13 @@
                          style="height: 40px; clear: both; width:100%;"></div>
                     <div class="time-open-hours text-white">
                         <div class="vi-heading style2">
-                            <div class="description">Open Hours</div>
+                            <div class="description">Giờ mở cửa</div>
                             <h2 style="font-weight:bold;color:#FFFFFF" class="title">ĐẶT BÀN</h2>
                             <div class="icon-heading"><img
                                         src="{SITE-NAME}/view/default/themes/wp-content/uploads/2016/07/icon-title-1.png"
                                         alt="BOOK A TABLE"/></div>
                             <div class="desc"><p><em>
-                                        Monday to Sunday <i class="fa fa-arrows-h"></i> 7:30 am to 11:00 pm</em>
+                                        Thứ hai đến Chủ nhật <i class="fa fa-arrows-h"></i> 7:30 sáng đến 11:00 tối</em>
                                 </p>
                                 </div>
                             <p class="read-more"><span>Gọi ngay - 00 1 2345 678</span></p></div>
@@ -317,74 +317,7 @@
                          style="height: 40px; clear: both; width:100%;"></div>
                     <div class="vi-testimonials">
                         <div class="vi-inner-testimonials" style="color:#FFFFFF">
-                            <div class="item_testimonial">
-                                <div class="testimonial_content">
-                                    <div class="testimonial-image"><img width="150" height="150"
-                                                                        src="wp-content/uploads/2016/07/chef_4-150x150.jpg"
-                                                                        class="attachment-thumbnail size-thumbnail wp-post-image"
-                                                                        alt="chef_4"
-                                                                        srcset="http://new2new.com/echion/wp-content/uploads/2016/07/chef_4-150x150.jpg 150w, http://new2new.com/echion/wp-content/uploads/2016/07/chef_4-124x124.jpg 124w, http://new2new.com/echion/wp-content/uploads/2016/07/chef_4-370x370.jpg 370w"
-                                                                        sizes="(max-width: 150px) 100vw, 150px"/>
-                                    </div>
-                                    Aenean sit amet rutrum est. Sed vitae nulla eu risus tincidunt
-                                    consectetur sed quis felis. Sed sodales orci metus, nec dignissim
-                                    nunc mollis at. Donec urna sem, sagittis et efficitur et, accumsan
-                                    vel ligula. Nam pellentesque ipsum tortor, sed ultricies urna
-                                    tincidunt vel.
-                                </div>
-                                <div class="testimonial-footer">
-                                    <div class="title-regency"><h5><a href="#"> Mark Anwar </a></h5>
-                                        <div class="regency" style="color:#bfb8b9">CEO, Bdpark Market
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item_testimonial">
-                                <div class="testimonial_content">
-                                    <div class="testimonial-image"><img width="150" height="150"
-                                                                        src="wp-content/uploads/2016/07/chef_2-150x150.jpg"
-                                                                        class="attachment-thumbnail size-thumbnail wp-post-image"
-                                                                        alt="chef_2"
-                                                                        srcset="http://new2new.com/echion/wp-content/uploads/2016/07/chef_2-150x150.jpg 150w, http://new2new.com/echion/wp-content/uploads/2016/07/chef_2-124x124.jpg 124w, http://new2new.com/echion/wp-content/uploads/2016/07/chef_2-370x370.jpg 370w"
-                                                                        sizes="(max-width: 150px) 100vw, 150px"/>
-                                    </div>
-                                    Aenean sit amet rutrum est. Sed vitae nulla eu risus tincidunt
-                                    consectetur sed quis felis. Sed sodales orci metus, nec dignissim
-                                    nunc mollis at. Donec urna sem, sagittis et efficitur et, accumsan
-                                    vel ligula. Nam pellentesque ipsum tortor, sed ultricies urna
-                                    tincidunt vel.
-                                </div>
-                                <div class="testimonial-footer">
-                                    <div class="title-regency"><h5><a href="#"> Rayhan </a></h5>
-                                        <div class="regency" style="color:#bfb8b9">Creative Director of
-                                            DeviserWeb
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item_testimonial">
-                                <div class="testimonial_content">
-                                    <div class="testimonial-image"><img width="150" height="150"
-                                                                        src="wp-content/uploads/2016/07/chef_5-150x150.jpg"
-                                                                        class="attachment-thumbnail size-thumbnail wp-post-image"
-                                                                        alt="chef_5"
-                                                                        srcset="http://new2new.com/echion/wp-content/uploads/2016/07/chef_5-150x150.jpg 150w, http://new2new.com/echion/wp-content/uploads/2016/07/chef_5-124x124.jpg 124w, http://new2new.com/echion/wp-content/uploads/2016/07/chef_5-370x370.jpg 370w"
-                                                                        sizes="(max-width: 150px) 100vw, 150px"/>
-                                    </div>
-                                    Aenean sit amet rutrum est. Sed vitae nulla eu risus tincidunt
-                                    consectetur sed quis felis. Sed sodales orci metus, nec dignissim
-                                    nunc mollis at. Donec urna sem, sagittis et efficitur et, accumsan
-                                    vel ligula. Nam pellentesque ipsum tortor, sed ultricies urna
-                                    tincidunt vel.
-                                </div>
-                                <div class="testimonial-footer">
-                                    <div class="title-regency"><h5><a href="#"> Jhon Doe </a></h5>
-                                        <div class="regency" style="color:#bfb8b9">CEO, Creative
-                                            Market
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {ykien}
                         </div>
                     </div>
                     <div class="kc-elm kc-css-76325 hidden-xs"
