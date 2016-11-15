@@ -66,21 +66,6 @@ function print_item($file,$ListItem,$LocDau=false,$LocDauAssign=false,$numberfor
                 }
             }
 
-            if(get_class($item)=='danhmuc_2')
-            {
-                    $ft->assign('name',returnLanguageField('name', $item));
-                $ft->assign('view_all',returnLanguage('view_all','VIEW ALL'));
-                $ft->assign('link',link_tour($item));
-                $ft->assign('link_2',link_tour_2($item));
-            }
-            if(get_class($item)=='video')
-            {
-                $ft->assign('name',returnLanguageField('name', $item));
-            }
-            if(get_class($item)=='link')
-            {
-                $ft->assign('name',returnLanguageField('name', $item));
-            }
             if(get_class($item)=='sanpham')
             {
                 $content=$item->content;
@@ -161,51 +146,6 @@ function link_newsdetail($app)
 }
 
 
-
-
-
-
-function link_album($app)
-{
-    return SITE_NAME.'/anh-cuoi/'.$app->Name_url.'/';
-}
-function link_anhcuoi($app)
-{
-    return SITE_NAME.'/'.LocDau($app->Name).'-l6'.$app->Id.'.html';
-}
-function link_danhmuckhachsan($app)
-{
-    return SITE_NAME.'/khach-san/'.LocDau($app->Name).'/';
-}
-function link_danhmuctourtrongnuoc($app)
-{
-    return SITE_NAME.'/'.$app->Name_url.'/';
-}
-function link_danhmuctourquocte($app)
-{
-    return SITE_NAME.'/'.$app->Name_url.'/';
-}
-
-function link_tourtrongnuoc($app)
-{
-    return SITE_NAME.'/'.LocDau($app->Name).'-l1'.$app->Id.'.html';
-}
-
-
-
-function link_khachsan($app)
-{
-    return SITE_NAME.'/'.LocDau($app->Name).'-l3'.$app->Id.'.html';
-}
-function link_thuexe($app)
-{
-    return SITE_NAME.'/'.LocDau($app->Name).'-l4'.$app->Id.'.html';
-}
-function link_ykien($app)
-{
-    return SITE_NAME.'/'.LocDau($app->Name).'-l5'.$app->Id.'.html';
-}
-
 function sao($start)
 {
     $sao='<span style="width:0%"> <strong class="rating">0</strong></span>';
@@ -239,6 +179,43 @@ function sao($start)
             break;
         case 5:
             $sao='<span style="width:100%"> <strong class="rating">5</strong></span>';
+            break;
+    }
+    return $sao;
+}
+function sao_detail($start)
+{
+    $sao='<span style="width:0%"> <strong class="rating">0</strong></span>';
+    switch($start){
+        case 0.5:
+            $sao='<span style="width:6%"> <strong class="rating">0.5</strong></span>';
+            break;
+        case 1:
+            $sao='<span style="width:12%"> <strong class="rating">1</strong></span>';
+            break;
+        case 1.5:
+            $sao='<span style="width:20%"> <strong class="rating">1.5</strong></span>';
+            break;
+        case 2:
+            $sao='<span style="width:27%"> <strong class="rating">2</strong></span>';
+            break;
+        case 2.5:
+            $sao='<span style="width:33%"> <strong class="rating">2.5</strong></span>';
+            break;
+        case 3:
+            $sao='<span style="width:39%"> <strong class="rating">3</strong></span>';
+            break;
+        case 3.5:
+            $sao='<span style="width:46%"> <strong class="rating">3.5</strong></span>';
+            break;
+        case 4:
+            $sao='<span style="width:51%"> <strong class="rating">4</strong></span>';
+            break;
+        case 4.5:
+            $sao='<span style="width:57%"> <strong class="rating">4.5</strong></span>';
+            break;
+        case 5:
+            $sao='<span style="width:63%"> <strong class="rating">5</strong></span>';
             break;
     }
     return $sao;

@@ -9,39 +9,39 @@
 */
 
 var kc_front = ( function($){
-	
+
 	jQuery.extend( jQuery.easing, {
 		easeInOutQuart: function (x, t, b, c, d) {
 			if ((t/=d/2) < 1) return c/2*t*t*t*t + b;
 			return -c/2 * ((t-=2)*t*t*t - 2) + b;
 		},
 	});
-	
+
 	var $window = $(window);
     var windowHeight = $window.height();
-    
+
     $window.resize(function() {
         windowHeight = $window.height()
     });
-    
+
     $.fn.kc_parallax = function() {
-        
+
         var $this = $(this), el_top;
         $this.each(function() { el_top = $this.offset().top; });
         function update() {
             var pos = $window.scrollTop();
             $this.each(function() {
                 var $el = $(this), top = $el.offset().top, height = $el.outerHeight(true);
-                if (top + height < pos || top > pos + windowHeight || $this.data('kc-parallax') !== true ) 
+                if (top + height < pos || top > pos + windowHeight || $this.data('kc-parallax') !== true )
                 	return;
                 $this.css('backgroundPosition', "50% " + Math.round((el_top - pos) * 0.4) + "px");
             })
         }
-        
+
         $window.on('scroll resize', update).trigger('update');
-        
+
     }
-    
+
     $.fn.viewportChecker = function(useroptions){
         // Define options and extend with user
         var options = {
@@ -90,37 +90,37 @@ var kc_front = ( function($){
         $(window).resize(function(e){
             windowHeight = e.currentTarget.innerHeight;
         });
-        
+
     };
-    
-	$( document ).ready(function($){ 
-		
+
+	$( document ).ready(function($){
+
 		// load js when document is ready
 		kc_front.init($);
-		
-		
+
+
 	});
-	
+
 	return {
 
 		win_height : 0,
 
 		win_width : 0,
-		
+
 		body : $('body'),
 
 		init : function(){
-			
+
 			$('div[data-kc-parallax="true"]').each(function(){
-				$(this).kc_parallax();	
+				$(this).kc_parallax();
 			});
-			
+
 			this.accordion();
 
 			this.tabs();
 
 			this.youtube_row_background.init();
-		
+
 			if( window.location.href.indexOf('#') > -1 ){
 				$('a[href="#'+window.location.href.split('#')[1]+'"]').trigger('click');
 			}
@@ -148,7 +148,7 @@ var kc_front = ( function($){
 			this.progress_bar.run();
 
 			this.ajax_action();
-			
+
 			this.pretty_photo();
 
 			this.tooltips();
@@ -156,7 +156,7 @@ var kc_front = ( function($){
 			this.image_fade();
 
 			this.smooth_scroll();
-			
+
 			this.animate();
 
 		},
@@ -164,7 +164,7 @@ var kc_front = ( function($){
 		refresh: function( el ){
 
 			setTimeout( function( el){
-				
+
 				kc_front.piechar.update( el );
 				kc_front.progress_bar.update( el );
 				kc_front.image_gallery.masonry( el );
@@ -172,19 +172,19 @@ var kc_front = ( function($){
 				if($('.kc_video_play').length > 0){
 					kc_video_play.refresh( el );
 				}
-				
+
 			}, 100, el );
 
 		},
 
 		google_maps: function( wrp ){
-			
+
 			$('.kc_google_maps').each( function(){
-			
+
 				if( $(this).data('loaded') === true )
 					return;
 				else $(this).data({ 'loaded' : true });
-				
+
 				var $_this = $( this );
 
 				$_this.find('.close').on('click', function(){
@@ -202,36 +202,36 @@ var kc_front = ( function($){
 		accordion: function( wrp ){
 
 			$('.kc_accordion_wrapper').each(function(){
-				
+
 				if( $(this).data('loaded') === true )
 					return;
 				else $(this).data({ 'loaded' : true });
-				
+
 				var active = $(this).data('tab-active')!==undefined?($(this).data('tab-active')-1):0;
-				
+
 				$ (this).find('>div.kc_accordion_section>h3.kc_accordion_header>a')
 					.off('click')
 					.on('click', function(e)
 					{
-	
+
 						var wrp = $(this).closest('.kc_accordion_wrapper'),
 							section = $(this).closest('.kc_accordion_section'),
 							allowopenall = (true === wrp.data('allowopenall')) ? true : false,
 							changed = section.find('>h3.kc_accordion_header').hasClass('ui-state-active');
-	
+
 						if( allowopenall === false ){
-	
+
 							wrp.find( '>.kc_accordion_section>.kc_accordion_content' ).slideUp();
-	
+
 							wrp.find('>h3.kc_accordion_header').removeClass('ui-state-active');
 							wrp.find('>.kc-section-active').removeClass('kc-section-active');
-							
+
 							section.find('>.kc_accordion_content').stop().slideDown( 'normal', function(){ $(this).css({height:''}) } );
 							section.find('>h3.kc_accordion_header').addClass('ui-state-active');
 							section.addClass('kc-section-active');
-							
+
 						}else{
-	
+
 							if( section.find('>h3.kc_accordion_header').hasClass('ui-state-active') ){
 								section.find('>.kc_accordion_content').stop().slideUp();
 								section.find('>h3.kc_accordion_header').removeClass('ui-state-active');
@@ -241,33 +241,33 @@ var kc_front = ( function($){
 								section.find('>h3.kc_accordion_header').addClass('ui-state-active');
 								section.addClass('kc-section-active');
 							}
-	
+
 						}
-						
+
 						if( changed != section.find('>h3.kc_accordion_header').hasClass('ui-state-active') )
 							kc_front.refresh( section.find('>.kc_accordion_content') );
-						
+
 						e.preventDefault();
-						
+
 						var index = $(this).closest('.kc_accordion_section');
 							index = index.parent().find('>.kc_accordion_section').index( index.get(0) );
-							
+
 						$(this).closest('.kc_accordion_wrapper').data({'tab-active':(index+1)});
-						
+
 					}).eq(active).trigger('click');
 
 			});
-			
+
 		},
 
 		tabs: function( wrp ){
 
 			$('.kc_tabs > .kc_wrapper').each( function( index ){
-				
+
 				if( $(this).data('loaded') === true )
 					return;
 				else $(this).data({ 'loaded' : true });
-				
+
 				var $_this = $(this),
 					tab_group = $_this.parent('.kc_tabs.group'),
 					tab_event = ('yes' === tab_group.data('open-on-mouseover')) ? 'mouseover' : 'click',
@@ -281,40 +281,40 @@ var kc_front = ( function($){
 						} )
 						.off( tab_event )
 						.on( tab_event, function(e){
-		
+
 							if( $(this).hasClass('ui-tabs-active') ){
 								e.preventDefault();
 								return;
 							}
-		
+
 							var labels = $(this).closest('.kc_tabs_nav,.ui-tabs-nav').find('>li'),
 								index = labels.index( this ),
 								tab_list = $(this).closest('.kc_wrapper').find('>.kc_tab'),
 								new_panel = tab_list.eq( index );
-		
+
 							labels.removeClass('ui-tabs-active');
 							$(this).addClass('ui-tabs-active');
-		
+
 							tab_list.removeClass('ui-tabs-body-active').removeClass('kc-section-active');
 							new_panel.addClass('ui-tabs-body-active').addClass('kc-section-active');
-		
+
 							if( effect_option === true)
 								new_panel.css({'opacity':0}).animate({opacity:1});
-		
+
 							e.preventDefault();
-							
+
 							$(this).closest('.kc_tabs').data({'tab-active':(index+1)});
-		
+
 						}).eq( active_section ).trigger( tab_event );
 
 			});
-			
+
 			$('.kc_tabs.kc-tabs-slider .kc-tabs-slider-nav li').each(function( index ){
-				
+
 				if( $(this).data('loaded') === true )
 					return;
 				else $(this).data({ 'loaded' : true });
-				
+
 				$( this ).on( 'click', index, function( e ){
 					$(this).parent().find('.kc-title-active').removeClass('kc-title-active');
 					$(this).addClass('kc-title-active');
@@ -357,7 +357,7 @@ var kc_front = ( function($){
 						youtubeId;
 
 					if ( $row.data( 'kc-video-bg' ) ) {
-						
+
 						youtubeUrl = $row.data( 'kc-video-bg' );
 						youtubeId = kc_front.youtube_row_background.getID( youtubeUrl );
 
@@ -472,9 +472,9 @@ var kc_front = ( function($){
 		single_img : {
 
 			refresh : function ( wrp ) {
-				
+
 				kc_front.pretty_photo();
-				
+
 			}
 
 		},
@@ -484,16 +484,16 @@ var kc_front = ( function($){
 			masonry : function(){
 
 				$('.kc_blog_masonry').each(function(){
-					
+
 					if( $(this).data('loaded') === true )
 						return;
 					else $(this).data({ 'loaded' : true });
-						
+
 					var wrp 	= $(this),
 						imgs 	= wrp.find('img'),
 						total 	= imgs.length,
 						ready 	= 0;
-					
+
 					if( total > 0 )
 					{
 
@@ -502,10 +502,10 @@ var kc_front = ( function($){
 							var tmpImg = new Image();
 
 							tmpImg.onload = function(){
-	
+
 								ready++;
 								if(  ready ==  total ){
-	
+
 									new Masonry( wrp.get( 0 ), {
 										itemSelector: '.post-grid',
 										columnWidth: '.post-grid',
@@ -514,7 +514,7 @@ var kc_front = ( function($){
 							};
 							tmpImg.src = $(this).attr('src') ;
 						});
-						
+
 					}
 					else
 					{
@@ -525,7 +525,7 @@ var kc_front = ( function($){
 						});
 
 					}
-				
+
 				});
 
 			},
@@ -535,13 +535,13 @@ var kc_front = ( function($){
 		image_gallery : {
 
 			masonry : function(){
-				
+
 				$('.kc_image_gallery').each(function(){
-					
+
 					if( $(this).data('loaded') === true )
 						return;
 					else $(this).data({ 'loaded' : true });
-					
+
 					if(( 'yes' === $( this ).data('image_masonry')) ){
 
 						//find all image in gallery
@@ -576,9 +576,9 @@ var kc_front = ( function($){
 					}
 
 				});
-				
+
 				kc_front.pretty_photo();
-				
+
 			},
 
 		},
@@ -621,11 +621,11 @@ var kc_front = ( function($){
 			 */
 
 			$( '.kc-carousel-images' ).each( function( index ){
-				
+
 				if( $(this).data('loaded') === true )
 					return;
 				else $(this).data({ 'loaded' : true });
-				
+
 				var options 		= $( this ).data('owl-i-options'),
 					_auto_play 		= ( 'yes' === options.autoplay ) ? true : false,
 					_delay	 		= ( options.delay !== undefined ) ? options.delay : 8,
@@ -646,13 +646,13 @@ var kc_front = ( function($){
 
 				if( true === _auto_height || true === _progress_bar || true === _show_thumb )
 					_singleItem = true;
-				
-				if(_auto_play) 
+
+				if(_auto_play)
 					_auto_play = parseInt( _delay )*1000;
-					
+
 				if( true === _progress_bar )
 				{
-					
+
 					var time = _delay; // time in seconds
 
 					var $progressBar,
@@ -833,13 +833,13 @@ var kc_front = ( function($){
 				}
 
 			});
-			
+
 			kc_front.pretty_photo();
 
 		},
 
         update_option : function ( data_options ){
-	        
+
             $.post( top.kc_ajax_url, {
                 'security': top.kc_ajax_nonce,
                 'action' : 'kc_update_option',
@@ -851,9 +851,9 @@ var kc_front = ( function($){
         },
 
 		carousel_post : function( wrp ){
-				
+
 			kc_front.owl_slider( '.kc-owl-post-carousel' );
-		
+
 		},
 
 		tooltips : function(){
@@ -888,7 +888,7 @@ var kc_front = ( function($){
 					$( this ).viewportChecker({
 
 						callbackFunction: function( elm ){
-							
+
 							kc_front.piechar.load( elm );
 
 						},
@@ -901,10 +901,10 @@ var kc_front = ( function($){
 			},
 
 			load : function( el ){
-				
+
 				if( el.parent('div').width() < 10 )
 					return 0;
-					
+
 				var _size 		= el.data( 'size' ),
 					_linecap 	= ( 'yes' === el.data( 'linecap' )) ? 'round' : 'square',
 					_barColor 	= el.data( 'barcolor' ),
@@ -947,11 +947,11 @@ var kc_front = ( function($){
 			update: function( el ){
 
 				$('.kc_piechart').each( function(){
-					
+
 					if( $(this).data('loaded') === true )
 						return;
 					else $(this).data({ 'loaded' : true });
-				
+
 					kc_front.piechar.load( $( this ) );
 
 				});
@@ -981,18 +981,18 @@ var kc_front = ( function($){
 
 			update: function( el ){
 
-				$('.kc-progress-bar .kc-ui-progress').each(function(){	
-					
+				$('.kc-progress-bar .kc-ui-progress').each(function(){
+
 					if( $(this).data('loaded') === true )
 						return;
 					else $(this).data({ 'loaded' : true });
-					
+
 					$( this ).css({ width: '5%' }).
 							  stop().
-							  animate({ 
-								 		width: this.getAttribute('data-value')+'%' 
-								 	},{ 
-							  			duration: parseInt( this.getAttribute('data-speed') ), 
+							  animate({
+								 		width: this.getAttribute('data-value')+'%'
+								 	},{
+							  			duration: parseInt( this.getAttribute('data-speed') ),
 							  			easing : 'easeInOutQuart',
 							  			step : function( st, tl ){
 								  			if( tl.now/tl.end > 0.3 )
@@ -1000,7 +1000,7 @@ var kc_front = ( function($){
 							  			}
 							  		}
 							  ).find('.ui-label').css({opacity:0});
-				    
+
 				});
 
 			}
@@ -1009,20 +1009,20 @@ var kc_front = ( function($){
 		ajax_action : function(){
 
 			$('.kc_facebook_recent_post').each(function(){
-				
-				if( this.getAttribute('data-cfg') === null || 
-					this.getAttribute('data-cfg') === undefined || 
+
+				if( this.getAttribute('data-cfg') === null ||
+					this.getAttribute('data-cfg') === undefined ||
 					this.getAttribute('data-cfg') === '' )
 						return;
-					
+
 				var $_this = $( this ),
 					data_send = {
 						action: 'kc_facebook_recent_post',
 						cfg: $( this ).data( 'cfg' )
 					};
-				
+
 				this.removeAttribute('data-cfg');
-				
+
 				$.ajax({
 					url: kc_script_data.ajax_url,
 					method: 'POST',
@@ -1040,20 +1040,20 @@ var kc_front = ( function($){
 			 * Send data to shortcode
 			 */
 			$('.kc_wrap_instagram').each(function(index){
-				
-				if( this.getAttribute('data-cfg') === null || 
-					this.getAttribute('data-cfg') === undefined || 
+
+				if( this.getAttribute('data-cfg') === null ||
+					this.getAttribute('data-cfg') === undefined ||
 					this.getAttribute('data-cfg') === '' )
 						return;
-				
+
 				var $_this = $( this ),
 					data_send = {
 						action: 'kc_instagrams_feed',
 						cfg: $( this ).data( 'cfg' )
 					};
-				
+
 				this.removeAttribute('data-cfg');
-				
+
 				$.ajax({
 					url: kc_script_data.ajax_url,
 					method: 'POST',
@@ -1070,20 +1070,20 @@ var kc_front = ( function($){
 			 * For each item Twitter feed sider
 			 */
 			$( '.kc_twitter_feed' ).each( function( index ) {
-				
-				if( this.getAttribute('data-cfg') === null || 
-					this.getAttribute('data-cfg') === undefined || 
+
+				if( this.getAttribute('data-cfg') === null ||
+					this.getAttribute('data-cfg') === undefined ||
 					this.getAttribute('data-cfg') === '' )
 						return;
-				
+
 				var $_this = $( this ),
 					atts_data = {
 						action: 'kc_twitter_timeline',
 						cfg: $( this ).data( 'cfg' )
 					};
-				
+
 				this.removeAttribute('data-cfg');
-				 	
+
 				var owl_option = $( this ).data( 'owl_option' );
 
 				$.ajax({
@@ -1118,25 +1118,25 @@ var kc_front = ( function($){
 
 			});
 		},
-		
+
 		owl_slider : function(){
-			
+
 			if( typeof $().owlCarousel != 'function' )
 				return;
-				
+
 			$('[data-owl-options]').each( function( index ){
-				
+
 				var options = $( this ).data('owl-options');
-				
+
 				if( typeof options !== 'object' )
 					return;
-					
+
 				if( $(this).data('loaded') === true )
 					return;
 				else $(this).data({ 'loaded' : true });
-				
+
 				$( this ).attr({'data-owl-options':null});
-				
+
 				var	_autoplay 			= ( 'yes' === options.autoplay ) ? true : false,
 					_navigation 		= ( 'yes' === options.navigation ) ? true : false,
 					_pagination 		= ( 'yes' === options.pagination ) ? true : false,
@@ -1147,12 +1147,12 @@ var kc_front = ( function($){
 					_autoheight 		= ( 'yes' === options.autoheight ) ? true : false,
 					_showthumb 			= ( 'yes' === options.showthumb ) ? true : false,
 					_singleItem 		= false;
-				
+
 				if(_autoheight === true){
 					_singleItem = true;
 					_items = 1;
 				}
-				
+
 				$( this ).owlCarousel({
 					autoPlay		: _autoplay,
 					navigation 		: _navigation,
@@ -1172,17 +1172,17 @@ var kc_front = ( function($){
 				});
 
 			});
-			
+
 			kc_front.pretty_photo();
-	
+
 		},
-		
+
 		pretty_photo : function(){
-			
+
 			if (typeof( $.prettyPhoto ) == 'object') {
-				
+
 				$("a.kc-pretty-photo:not(.kc-pt-loaded)").addClass('kc-pt-loaded').off('click').prettyPhoto({
-					
+
 					theme: 'dark_rounded',
 		            allow_resize: true,
 		            allow_expand: true,
@@ -1222,77 +1222,77 @@ var kc_front = ( function($){
 		              </div> \
 		              <div class="pp_overlay"></div>'
 				});
-				
+
 			}
 		},
-		
+
 		smooth_scroll : function(){
-			
+
 			$('a[href^=#]').on( 'click', function(e) {
-					
-				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+
+				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
 					&& location.hostname == this.hostname
 					&& this.hash.indexOf('#!') === 0
 				){
 					var target = $(this.hash.replace('!', ''));
-						
-					if (target.length) 
+
+					if (target.length)
 					{
 						$('html,body').stop().animate({
 							scrollTop: target.offset().top-80
 						}, 500);
 					}
 				}
-				
+
 			});
-			
+
 		},
-		
+
 		animate : function(){
-			
+
 			$('.kc-animated').each(function(index){
 
 				$( this ).viewportChecker({
 
 					callbackFunction: function( el ){
-						
+
 						var clazz = el.get(0).className, delay = 0, speed = '2s', timeout = 0;
-						
+
 						if (clazz.indexOf('kc-animate-delay-') > -1)
 						{
 							delay = clazz.split('kc-animate-delay-')[1].split(' ')[0];
-							
+
 							el.css({'animation-delay': delay+'ms'});
 							el.removeClass('kc-animate-delay-'+delay);
-							
+
 							timeout += parseInt(delay);
-						
+
 						}
-						
+
 						if (clazz.indexOf('kc-animate-speed-') > -1)
 						{
 							speed = clazz.split('kc-animate-speed-')[1].split(' ')[0];
-							
+
 							el.css({'animation-duration': speed});
 							el.removeClass('kc-animate-speed-'+speed);
-						
+
 						}
-						
+
 						if (clazz.indexOf('kc-animate-eff-') > -1)
 						{
 							var eff = clazz.split('kc-animate-eff-')[1].split(' ')[0];
-							
+
 							timeout += parseFloat(speed)*1000;
-							
+
 							el.removeClass('kc-animated').addClass('animated '+eff);
-							
+
 							setTimeout(function(el, eff){
-								
+
 								el.removeClass('animated kc-animated kc-animate-eff-'+eff+' '+eff);
 								el.css({'animation-delay': '', 'animation-duration': ''});
-								
+
 							}, timeout, el, eff);
-						
+
 						}
 
 					},
@@ -1302,11 +1302,11 @@ var kc_front = ( function($){
 				});
 
 			});
-			
+
 		}
 
 	};
-	
+
 }(jQuery));
 
 

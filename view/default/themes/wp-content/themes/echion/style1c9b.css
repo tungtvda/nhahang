@@ -4383,9 +4383,10 @@ Single Product
 .woocommerce div.product .woocommerce-product-rating,
 .woocommerce-page div.product .woocommerce-product-rating {
   display: block;
-  margin: 15px 0 0;
-  padding: 0 0 20px;
+  margin: 7px 0 0;
+  padding: 0 0 9px;
   border-bottom: 1px solid #e5e5e5;
+
 }
 .woocommerce div.product .woocommerce-product-rating .star-rating span,
 .woocommerce-page div.product .woocommerce-product-rating .star-rating span {

@@ -108,9 +108,6 @@
     <link rel='https://api.w.org/' href='{SITE-NAME}/view/default/themes/wp-json/index.html'/>
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd"/>
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml"/>
-
-    <link rel="icon" href="{SITE-NAME}/view/default/themes/wp-content/uploads/2016/07/favicon.png" sizes="32x32"/>
-    <link rel="icon" href="{SITE-NAME}/view/default/themes/wp-content/uploads/2016/07/favicon.png" sizes="192x192"/>
     <link rel="apple-touch-icon-precomposed" href="{icon}"/>
     <meta name="msapplication-TileImage" content="{icon}"/>
     <script type="text/javascript"></script>

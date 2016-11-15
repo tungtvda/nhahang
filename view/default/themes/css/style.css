@@ -43,6 +43,24 @@
     float: left;
     width: 100%;
 }
+.lienquan_item{
+    font-family: Parfumerie Script Decorative, Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    font-weight: 600;color: #a3c638;
+}
+.title_lienquan{
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 600;
+}
+.title_lienquan:after {
+    display: block;
+    margin: 15px auto 0 auto;
+    content: "";
+    width: 195px;
+    height: 22px;
+    background: url(../wp-content/uploads/2016/07/icon-title-table.png);
+}
 @media only screen and (min-width: 1250px) and (max-width: 1500px) {
     .slide_div_1{
         text-align: center;
