@@ -7,7 +7,7 @@
                  class="primary-image vi-load wp-post-image" alt="57"
                  srcset="{img} 370w, {img} 150w, {img} 768w, {img} 124w, {img} 570w, {img} 780w"
                  sizes="(max-width: 370px) 100vw, 370px"/> </a>
-        <div class="quick-view" data-prod="101"><a href="javascript:;"><i
+        <div class="quick-view" data-prod="101"><a href="{link}"><i
                         class="fa fa-hand-o-up"></i></a></div>
     </div>
     <div class="product-desc">
@@ -17,7 +17,7 @@
                 {start}
             </div>
         </div>
-        <a class="product-title" href="{link}">{name}</a>
+        <a class="product-title name_left" title="{name}" href="{link}">{name}</a>
 
 			<span class="price">
 <del>

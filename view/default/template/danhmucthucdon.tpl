@@ -11,15 +11,24 @@
                             <li class="switchToGrid active"><span><i class="fa fa-th"></i></span></li>
                             <li class="switchToList"><span><i class="fa fa-list"></i></span></li>
                         </ul>
+                        <input hidden id="url_link" value="{url}">
                         <form class="woocommerce-ordering" method="get">
                             <select name="orderby" class="orderby">
-                                <option value="id" selected='selected'>Mới nhất</option>
-                                <option value="name">Sắp xếp theo tên</option>
-                                <option value="price">Sắp xếp theo giá</option>
-                                <option value="start">Sắp xếp theo sao</option>
-                                <option value="num_like">Sắp xếp theo lượt thích</option>
+                               {order}
                             </select>
                         </form>
+                        <script>
+                            jQuery(function (a) {
+                                a(".woocommerce-ordering").on("change", "select.orderby", function () {
+                                    var utl=a('#url_link').val();
+                                    var select=a(this).val()
+                                    window.location=utl+"orderby-"+select;
+                                }), a("input.qty:not(.product-quantity input.qty)").each(function () {
+                                    var b = parseFloat(a(this).attr("min"));
+                                    b >= 0 && parseFloat(a(this).val()) < b && a(this).val(b)
+                                })
+                            });
+                        </script>
                     </div>
                     <div class="wrapper-pagination">
                         <div class="pagination loop-pagination">

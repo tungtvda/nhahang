@@ -20,12 +20,42 @@ function show_danhmucthucdon($data = array())
     else{
         $asign['danhsach']=' <li class="item-product col-md-4 col-sm-6 first  post-101 product type-product status-publish has-post-thumbnail product_cat-cook instock shipping-taxable purchasable product-type-simple"><div class="product-top"> Hệ thống đang cập nhật dữ liệu </div></li>';
     }
-//
-//    $asign['name_dm']=$data['banner']['name'];
+    $asign['val_order'] = $data['val_order'];
+    $array_order=array(
+        '1'=>array(
+            'val'=>'id',
+            'key'=>'Mới nhất'
+        ),
+        '2'=>array(
+            'val'=>'name',
+            'key'=>'Sắp xếp theo tên'
+        ),
+        '3'=>array(
+            'val'=>'price',
+            'key'=>'Sắp xếp theo giá'
+        ),
+        '4'=>array(
+            'val'=>'start',
+            'key'=>'Sắp xếp theo sao'
+        ),
+        '5'=>array(
+            'val'=>'num_like',
+            'key'=>'Sắp xếp theo lượt thích'
+        ),
+    );
+    $asign['order']='';
+    foreach($array_order as $row){
+        if($data['val_order']==$row['val'])
+        {
+            $asign['order'].=' <option value="'.$row['val'].'" selected="selected">'.$row['key'].'</option>';
+        }
+        else{
+            $asign['order'].=' <option value="'.$row['val'].'" >'.$row['key'].'</option>';
+        }
+
+    }
+    $asign['url']=$data['url'];
     $asign['PAGING']=$data['PAGING'];
-//    $asign['view_as']=returnLanguage('view_as','VIEW AS');
-//    $asign['gird']=returnLanguage('gird','GRID');
-//    $asign['list']=returnLanguage('list','LIST');
     print_template($asign, 'danhmucthucdon');
 }
 

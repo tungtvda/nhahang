@@ -46,6 +46,12 @@ function show_index($data = array())
         $asign['camnang_index'] = print_item('camnang_index', $data['camnang_index']);
     }
 
+    $asign['ykien'] ="";
+    if(count($data['ykien'])>0)
+    {
+        $asign['ykien'] = print_item('ykien', $data['ykien']);
+    }
+
 
     print_template($asign, 'index');
 }

@@ -9,10 +9,26 @@ RewriteRule ^admin controller/admin/index.php
 RewriteRule ^login controller/admin/login.php
 
 RewriteRule ^combo/$ controller/default/danhmucthucdon.php
+RewriteRule ^combo/orderby-([a-zA-Z0-9_-]+)$ controller/default/danhmucthucdon.php?orderby=$1
+RewriteRule ^combo/orderby-([a-zA-Z0-9_-]+)/page-([0-9]+)$ controller/default/danhmucthucdon.php?orderby=$1&page=$2
 RewriteRule ^alacarte/$ controller/default/danhmucthucdon.php
+RewriteRule ^alacarte/orderby-([a-zA-Z0-9_-]+)$ controller/default/danhmucthucdon.php?orderby=$1
+RewriteRule ^alacarte/orderby-([a-zA-Z0-9_-]+)/page-([0-9]+)$ controller/default/danhmucthucdon.php?orderby=$1&page=$2
 RewriteRule ^set-menu/$ controller/default/danhmucthucdon.php
+RewriteRule ^set-menu/orderby-([a-zA-Z0-9_-]+)$ controller/default/danhmucthucdon.php?orderby=$1
+RewriteRule ^set-menu/orderby-([a-zA-Z0-9_-]+)/page-([0-9]+)$ controller/default/danhmucthucdon.php?orderby=$1&page=$2
 RewriteRule ^drink/$ controller/default/danhmucthucdon.php
+RewriteRule ^drink/orderby-([a-zA-Z0-9_-]+)$ controller/default/danhmucthucdon.php?orderby=$1
+RewriteRule ^drink/orderby-([a-zA-Z0-9_-]+)/page-([0-9]+)$ controller/default/danhmucthucdon.php?orderby=$1&page=$2
 RewriteRule ^thuc-don/$ controller/default/danhmucthucdon.php
+RewriteRule ^thuc-don/orderby-([a-zA-Z0-9_-]+)$ controller/default/danhmucthucdon.php?orderby=$1
+RewriteRule ^thuc-don/orderby-([a-zA-Z0-9_-]+)/page-([0-9]+)$ controller/default/danhmucthucdon.php?orderby=$1&page=$2
+
+RewriteRule ^thuc-don/([a-zA-Z0-9_-]+)/$ controller/default/danhmucthucdon.php?Id=$1
+RewriteRule ^thuc-don/([a-zA-Z0-9_-]+)/orderby-([a-zA-Z0-9_-]+)$ controller/default/danhmucthucdon.php?Id=$1&orderby=$2
+RewriteRule ^thuc-don/([a-zA-Z0-9_-]+)/orderby-([a-zA-Z0-9_-]+)/page-([0-9]+)$ controller/default/danhmucthucdon.php?Id=$1&orderby=$2&page=$3
+
+
 
 RewriteRule ^(.*).html$ controller/default/chitiettour.php?Id=$1
 

@@ -56,6 +56,6 @@ function showFrom($form,$ListKey=array())
     $str_from.='<p><label>name</label><input class="text-input small-input" type="text"  name="name" value="'.(($form!=false)?$form->name:'').'" /></p>';
     $str_from.='<p><label>img</label><input class="text-input small-input" type="text"  name="img" value="'.(($form!=false)?$form->img:'').'"/><a class="button" onclick="openKcEditor(\'img\');">Upload ảnh</a></p>';
     $str_from.='<p><label>job</label><input class="text-input small-input" type="text"  name="job" value="'.(($form!=false)?$form->job:'').'" /></p>';
-    $str_from.='<p><label>content</label><textarea name="content">'.(($form!=false)?$form->content:'').'</textarea><script type="text/javascript">CKEDITOR.replace(\'content\'); </script></p>';
+    $str_from.='<p><label>content</label><textarea name="content" style="width: 100%">'.(($form!=false)?$form->content:'').'</textarea></p>';
     return $str_from;
 }
