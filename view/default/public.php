@@ -116,6 +116,16 @@ function print_item($file,$ListItem,$LocDau=false,$LocDauAssign=false,$numberfor
                 $ft->assign('name_danhmuc',$name_danhmuc);
                 $ft->assign('link_danhmuc',$link_danhmuc);
                 $ft->assign('link',link_newsdetail($item));
+                $content=$item->content;
+                if (strlen($content) > 400) {
+                    $ten1=strip_tags($content);
+
+                    $ten = substr($ten1, 0, 400);
+                    $name = substr($ten, 0, strrpos($ten, ' ')) . "...";
+                    $ft->assign('content',$name);
+                } else {
+                    $ft->assign('content',strip_tags($content));
+                }
             }
 
 

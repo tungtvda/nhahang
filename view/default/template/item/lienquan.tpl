@@ -14,7 +14,7 @@
         <div class="category_ratting"><span class="posted_in"> <a
                         href="{link}"
                         rel="tag">
-                    <i class="fa fa-thumbs-up"></i> {num_like}</a></span>
+                    <i class="fa fa-thumbs-up"></i> <span  id="num_like_{id}">{num_like}</span></a></span>
             <div class="star-rating" title="">
                 {start}
             </div>
@@ -44,10 +44,10 @@
                              style="display:block">
 
                             <a href="javascript:void(0)"
-                               rel="nofollow" data-product-id="501"
+                               rel="nofollow" data-product-id-like="{id}"
                                data-product-type="simple" title="Like"
                                class="add_to_wishlist">
-                                Add to Wishlist</a>
+                                Like</a>
                         </div>
 
                         <div style="clear:both"></div>

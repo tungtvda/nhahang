@@ -94,3 +94,7 @@ function sanpham_update_start($obj)
 {
     return exe_query("update sanpham set start='$obj->start' where id=$obj->id",'sanpham');
 }
+function sanpham_update_num_like($obj)
+{
+    return exe_query("update sanpham set num_like='$obj->num_like' where id=$obj->id",'sanpham');
+}

@@ -19,13 +19,12 @@ $data['config']=config_getByTop(1,'','');
 //
 
  $link_action=$_SERVER['REQUEST_URI'];
-$string_check= strchr($link_action,"/cam-nang/");
+ $string_check= strchr($link_action,"/cam-nang/");
 if($string_check!='')
 {
-
     if(isset($_GET['Id']))
     {
-        $name_url=addslashes(str_replace('news/','',$_GET['Id']));
+        $name_url=addslashes(str_replace('cam-nang/','',$_GET['Id']));
         $data['news']=news_getByTop('','name_url="'.$name_url.'"','');
         if(count($data['news'])==0){
             redict(SITE_NAME);
@@ -34,34 +33,43 @@ if($string_check!='')
     else{
         redict(SITE_NAME);
     }
-    $title=returnLanguageField('title', $data['news'][0]);
-    $description=returnLanguageField('keyword', $data['news'][0]);
-    $keyword=returnLanguageField('keyword', $data['news'][0]);
-    $url='';
+    $view=$data['news'][0]->view;
+    $view++;
+    $view_update = new news();
+    $view_update->id=$data['news'][0]->id;
+    $view_update->view=$view;
+    news_update_view($view_update);
+    $name_danhmuc=$data['menu'][3]->name;
+    $link_danhmuc=SITE_NAME.'/cam-nang/';
+    $title=$data['news'][0]->title;
+    $description=$data['news'][0]->description;
+    $keyword=$data['news'][0]->keyword;
+    $url='<li><a href="'.SITE_NAME.'">'.$data['menu'][0]->name.'</a></li> ~  <li><a href="'.SITE_NAME.'/cam-nang/">'.$data['menu'][3]->name.'</a></li>';
     $danhmuc1=danhmuc_tintuc_getByTop(1,'id="'.$data['news'][0]->danhmuc_id.'"','');
     if(count($danhmuc1)){
         $banner=$danhmuc1[0]->img;
-        $name_dm1=returnLanguageField('name', $data['menu'][6]);
-        $link_dm1=SITE_NAME.'/news/';
-        $name_dm2=returnLanguageField('name', $danhmuc1[0]);
-        $link_dm2=SITE_NAME.'/news/'.$danhmuc1[0]->name_url.'/';
-        $url.='<a  href="'.SITE_NAME.'"><i class="icon-home"></i>'.returnLanguageField('name', $data['menu'][0]).'</a>';
-        $url.='<i class="icon-angle-right"></i><a  href="'.$link_dm1.'">'.$name_dm1.'</a>';
-        $url.='<i class="icon-angle-right"></i><a  href="'.$link_dm2.'">'.$name_dm2.'</a>';
+        $name_dm2= $danhmuc1[0]->name;
+        $name_danhmuc=$danhmuc1[0]->name;
+        $link_danhmuc=SITE_NAME.'/cam-nang/'.$danhmuc1[0]->name_url.'/';
+        $url.=' ~ <li><a href="'.SITE_NAME.'/cam-nang/'.$danhmuc1[0]->name_url.'/">'.$name_dm2.'</a></li>';
     }
     else{
         redict(SITE_NAME);
     }
-    $active='news';
-    $name_dm1=returnLanguageField('name', $data['news'][0]);
+    $url.=' ~ <li>'.$data['news'][0]->name.'</li>';
+    $active='camnang';
+    $name_dm1=$data['news'][0];
     $data['banner']=array(
         'banner_img'=>$banner,
-        'name'=>$name_dm1,
+        'name'=>$data['news'][0]->name,
         'url'=>$url
     );
+    $data['name_dm']=$name_danhmuc;
+    $data['link_dm']=$link_danhmuc;
 
-    $data['tour_noibat']=news_getByTop(6,'id!='.$data['news'][0]->id.' and danhmuc_id='.$data['news'][0]->danhmuc_id,'id desc');
+//    $data['tour_noibat']=news_getByTop(6,'id!='.$data['news'][0]->id.' and danhmuc_id='.$data['news'][0]->danhmuc_id,'id desc');
     $data['link_anh']=$data['news'][0]->img;
+
 }
 else{
     if(isset($_GET['Id']))
@@ -118,8 +126,7 @@ show_menu($data,$active);
 show_banner($data);
 if($string_check!='')
 {
-
-    show_chitiettintuc($data);
+    show_chitietcamnang($data);
 }
 else{
     show_chitietsanpham($data);

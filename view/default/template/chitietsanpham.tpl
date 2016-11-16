@@ -89,7 +89,7 @@
                                rel="nofollow">(<span
                                         itemprop="reviewCount" class="count">{count_danhgia}</span> đánh giá)</a>
                             <a style="margin-left: 30px" class="woocommerce-review-link"><span
-                                        itemprop="reviewCount" class="count"><i class="fa fa-thumbs-up"></i> {num_like}</span>
+                                        itemprop="reviewCount" class="count"><i class="fa fa-thumbs-up"></i> <span  id="num_like_{id}">{num_like}</span></span>
                             </a>
                         </div>
 
@@ -107,37 +107,22 @@
                                        title="Qty" class="input-text qty text" size="4" pattern="[0-9]*"
                                        inputmode="numeric"/>
                             </div>
-
-                            <input type="hidden" name="add-to-cart" value="503"/>
-
                             <button type="submit" class="single_add_to_cart_button button alt">Add to cart
                             </button>
 
                         </form>
 
 
-                        <a href="index8685.html?action=yith-woocompare-add-product&amp;id=503"
-                           class="compare button" data-product_id="503" rel="nofollow">Compare</a>
                         <div class="yith-wcwl-add-to-wishlist add-to-wishlist-503">
                             <div class="yith-wcwl-add-button show" style="display:block">
 
 
-                                <a href="indexa671.html?add_to_wishlist=503" rel="nofollow"
-                                   data-product-id="503" data-product-type="simple" class="add_to_wishlist">
-                                    Add to Wishlist</a>
+                                <a href="javascript:void(0)" rel="nofollow"
+                                   data-product-id-like="{id}" data-product-type="simple" class="add_to_wishlist">
+                                    Like</a>
                             </div>
 
-                            <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
-                                <span class="feedback">Product added!</span>
-                                <a href="themes/wishlist/view/index.html" rel="nofollow">
-                                    Browse Wishlist </a>
-                            </div>
 
-                            <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none">
-                                <span class="feedback">The product is already in the wishlist!</span>
-                                <a href="themes/wishlist/view/index.html" rel="nofollow">
-                                    Browse Wishlist </a>
-                            </div>
 
                             <div style="clear:both"></div>
                             <div class="yith-wcwl-wishlistaddresponse"></div>
@@ -191,7 +176,7 @@
                              id="tab-reviews">
 
                             <div id="reviews">
-                                <div id="comments">
+                                <div id="comments" style="{width}">
                                     <ol class="commentlist">
                                         {danhgia}
                                     </ol>
