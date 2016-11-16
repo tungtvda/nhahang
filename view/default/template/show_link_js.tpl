@@ -62,8 +62,8 @@
     };
     /* ]]> */
 </script>
-<script type='text/javascript'
-        src='{SITE-NAME}/view/default/themes/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min72e6.js?ver=2.6.4'></script>
+<!--<script type='text/javascript'
+        src='{SITE-NAME}/view/default/themes/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min72e6.js?ver=2.6.4'></script>-->
 <script type='text/javascript'
         src='{SITE-NAME}/view/default/themes/wp-content/plugins/woocommerce/assets/js/prettyPhoto/jquery.prettyPhoto.min005e.js?ver=3.1.6'></script>
 <script type='text/javascript'
@@ -92,8 +92,8 @@
         src='{SITE-NAME}/view/default/themes/wp-content/plugins/yith-woocommerce-compare/assets/js/jquery.colorbox-min13ac.js?ver=1.4.21'></script>
 <script type='text/javascript'
         src='{SITE-NAME}/view/default/themes/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.selectBox.min7359.js?ver=1.2.0'></script>
-<script type='text/javascript'
-        src='{SITE-NAME}/view/default/themes/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.yith-wcwl9c6b.js?ver=2.0.16'></script>
+<!--<script type='text/javascript'
+        src='{SITE-NAME}/view/default/themes/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.yith-wcwl9c6b.js?ver=2.0.16'></script>-->
 <script type='text/javascript'
         src='{SITE-NAME}/view/default/themes/wp-content/themes/echion/assets/js/jquery.unveil.mina578.js?ver=3022016'></script>
 <script type='text/javascript'
@@ -133,7 +133,21 @@
             jQuery(".switchToGrid").addClass(i), jQuery(".switchToList").removeClass(i), jQuery(".archive_switch").fadeOut(300, function () {
                 jQuery(this).removeClass(a).addClass(r).fadeIn(300)
             })
-        })
+        });
+        jQuery(".add_to_wishlist").click(function() {
+            idSelect = jQuery(this).attr('data-product-id-like');
+            num_like="#num_like_"+idSelect;
+            link='{SITE-NAME}/like/'+idSelect+'/';
+            jQuery.ajax({
+                method: "GET",// phương thức dữ liệu được truyền đi
+                url: link,// gọi đến file server show_data.php để xử lý
+                success : function(response){
+                if(response>0){
+                    jQuery(num_like).html(response);
+                }
+            }
+        });
+        });
     });
 </script>
 <script type='text/javascript' src='{SITE-NAME}/view/default/themes/wp-includes/js/jquery/ui/widget.mine899.js?ver=1.11.4'></script>
@@ -149,6 +163,7 @@
 </script>
 <script type='text/javascript'
         src='{SITE-NAME}/view/default/themes/wp-content/plugins/mailchimp-for-wp/assets/js/forms-api.min8603.js?ver=4.0.6'></script>
-
+<script>
+</script>
 </body>
 </html>

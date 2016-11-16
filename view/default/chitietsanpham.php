@@ -41,6 +41,30 @@ function show_chitietsanpham($data = array())
     {
         $asign['danhgia'] = print_item('danhgia', $data['danhgia']);
     }
+    if(count($data['danhgia'])==0)
+    {
+        $asign['width']='height: 0px;';
+    }
+    if(count($data['danhgia'])==1)
+    {
+        $asign['width']='height: 100px;';
+    }
+    if(count($data['danhgia'])==2)
+    {
+        $asign['width']='height: 200px;';
+    }
+    if(count($data['danhgia'])==3)
+    {
+        $asign['width']='height:350px;';
+    }
+    if(count($data['danhgia'])==4)
+    {
+        $asign['width']='height:400px;';
+    }
+    if(count($data['danhgia'])==4)
+    {
+        $asign['width']='height:550px;';
+    }
     print_template($asign, 'chitietsanpham');
 }
 
