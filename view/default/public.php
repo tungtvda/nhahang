@@ -127,6 +127,23 @@ function print_item($file,$ListItem,$LocDau=false,$LocDauAssign=false,$numberfor
                     $ft->assign('content',strip_tags($content));
                 }
             }
+            if(get_class($item)=='tuyendung')
+            {
+                $link_danhmuc=SITE_NAME.'/tuyen-dung/';
+                $ft->assign('name_danhmuc','Tuyển dụng');
+                $ft->assign('link_danhmuc',$link_danhmuc);
+                $ft->assign('link',link_tuyendung($item));
+                $content=$item->content;
+                if (strlen($content) > 400) {
+                    $ten1=strip_tags($content);
+
+                    $ten = substr($ten1, 0, 400);
+                    $name = substr($ten, 0, strrpos($ten, ' ')) . "...";
+                    $ft->assign('content',$name);
+                } else {
+                    $ft->assign('content',strip_tags($content));
+                }
+            }
 
 
                 $dem=$dem+1;
@@ -160,6 +177,10 @@ function link_camnang($app)
 function link_newsdetail($app)
 {
     return SITE_NAME.'/cam-nang/'.$app->name_url.'.html';
+}
+function link_tuyendung($app)
+{
+    return SITE_NAME.'/tuyen-dung/'.$app->name_url.'.html';
 }
 
 

@@ -37,3 +37,10 @@ RewriteRule ^cam-nang/([a-zA-Z0-9_-]+)/$ controller/default/danhmuccamnang.php?I
 RewriteRule ^cam-nang/([a-zA-Z0-9_-]+)/page-([0-9]+)$ controller/default/danhmuccamnang.php?Id=$1&page=$2
 RewriteRule ^cam-nang/(.*).html$ controller/default/chitietsanpham.php?Id=$1
 
+RewriteRule ^gioi-thieu/$ controller/default/gioithieu.php
+
+RewriteRule ^tuyen-dung/$ controller/default/tuyendung.php
+RewriteRule ^tuyen-dung/page-([0-9]+)$ controller/default/tuyendung.php?page=$1
+RewriteRule ^tuyen-dung/(.*).html$ controller/default/chitietsanpham.php?Id=$1
+
+

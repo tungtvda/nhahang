@@ -87,7 +87,7 @@
                                     <li class="{lienhe_mn} menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children drop_to_right standard">
                                         <a href="{SITE-NAME}/lien-he/">{lienhe_name}</a>
                                     </li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page drop_to_left standard">
+                                    <li class="{tuyendung_mn} menu-item menu-item-type-post_type menu-item-object-page drop_to_left standard">
                                         <a href="{SITE-NAME}/tuyen-dung/">{tuyengdung_name}</a></li>
                                     <li class="menu-right ">
                                         <ul>
