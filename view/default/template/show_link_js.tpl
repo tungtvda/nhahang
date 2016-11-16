@@ -137,6 +137,13 @@
                 }
             }
         });
+
+            jQuery('#value_timkiem3').keypress(function(event){
+                var keycode = (event.keyCode ? event.keyCode : event.which);
+                if (keycode == '13') {
+                    alert('Bạn vừa nhấn phím "enter" trong thẻ input');
+                }
+            });
         });
     });
 </script>

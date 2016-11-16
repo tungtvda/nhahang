@@ -99,12 +99,13 @@
                                                     <div class="wrapper-header-search-form">
                                                         <div class="search-popup-bg"></div>
                                                         <div class="header-search-form-input">
+
                                                             <form action="{SITE-NAME}/tim-kiem" method="get"
                                                                   class="vi_search_form">
-                                                                <input data-limit="6" value="" name="s" id="s"
+                                                                <input  name="giatri" id="value_timkiem"
                                                                        placeholder="Nhập từ khóa tìm kiếm..."
                                                                        class="form-control vi-search-input"
-                                                                       autocomplete="off" type="text">
+                                                                        type="text">
                                                                 <button type="submit"><i class="fa fa-search"></i>
                                                                 </button>
                                                                 <span class="header-search-close"><i

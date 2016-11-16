@@ -23,10 +23,10 @@
                         })();
                     </script>
                     <!-- MailChimp for WordPress v4.0.6 - https://wordpress.org/plugins/mailchimp-for-wp/ -->
-                    <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-1732" method="post" data-id="1732"
-                          data-name="Newllester">
-                        <div class="mc4wp-form-fields"><input type="email" name="EMAIL"
-                                                              placeholder="Your email address" required/><input
+                    <form  class="mc4wp-form mc4wp-form-1732" method="post"  action=""
+                          data-name="">
+                        <div class="mc4wp-form-fields"><input type="email" name="email_footer"
+                                                              placeholder="Nhập địa chỉ email" required/><input
                                     type="submit" value="Đăng ký"/>
                         </div>
                         <div class="mc4wp-response"></div>

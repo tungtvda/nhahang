@@ -44,5 +44,6 @@ RewriteRule ^tuyen-dung/page-([0-9]+)$ controller/default/tuyendung.php?page=$1
 RewriteRule ^tuyen-dung/(.*).html$ controller/default/chitietsanpham.php?Id=$1
 
 RewriteRule ^lien-he/$ controller/default/lienhe.php
+RewriteRule ^tim-kiem$ controller/default/timkiem.php
 
 
