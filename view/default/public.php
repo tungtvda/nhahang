@@ -65,7 +65,14 @@ function print_item($file,$ListItem,$LocDau=false,$LocDauAssign=false,$numberfor
                     $ft->assign($var,$item->$var);
                 }
             }
-
+            if(get_class($item)=='danhgia')
+            {
+                $data['config_logo']=config_getByTop(1,'','');
+                if(count($data['config_logo'])>0){
+                    $ft->assign('icon',$data['config_logo'][0]->Icon);
+                }
+                $ft->assign('start',sao_detail($item->start));
+            }
             if(get_class($item)=='sanpham')
             {
                 $content=$item->content;

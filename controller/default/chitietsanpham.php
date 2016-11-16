@@ -106,7 +106,8 @@ else{
     $title=$data['tour'][0]->title;
     $description=$data['tour'][0]->keyword;
     $keyword=$data['tour'][0]->description;
-    $data['count_danhgia']=danhgia_count('status=1 and sanpham_id='.$data['tour'][0]->id);
+    $data['danhgia']=danhgia_getByTop('','status=1 and sanpham_id='.$data['tour'][0]->id,'id desc');
+    $data['count_danhgia']=count($data['danhgia']);
 }
 
 $title=($title)?$title:'Viet Gardens';
@@ -154,12 +155,12 @@ if (isset($_POST['danhgia_ct'])) {
         $new->start=$start_ct;
         $new->created=date(DATETIME_FORMAT);
         danhgia_insert($new);
-        echo $start_update=round(($data['tour'][0]->start+$start_ct)/2);
+        $start_update=(round($data['tour'][0]->start)+$start_ct)/2;
         $new_update = new sanpham();
         $new_update->id=$data['tour'][0]->id;
         $new_update->start=$start_update;
-        sanpham_update($new_update);
-        echo "<script>alert('Viet Gardens cảm ơn quý khách')</script>";
+        sanpham_update_start($new_update);
+        echo "<script>alert('Viet Gardens cảm ơn quý khách đã đánh giá thực đơn của nhà hàng chúng tôi. Chúc quý khách ngon miệng!')</script>";
     }
 }
 

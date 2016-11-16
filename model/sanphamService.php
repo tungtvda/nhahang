@@ -90,3 +90,7 @@ function sanpham_count($where)
     }
    else return false;
 }
+function sanpham_update_start($obj)
+{
+    return exe_query("update sanpham set start='$obj->start' where id=$obj->id",'sanpham');
+}

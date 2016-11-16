@@ -4768,7 +4768,8 @@ Single Product
 }
 .woocommerce #reviews #comments,
 .woocommerce-page #reviews #comments {
-  height: 100px;
+  height: 550px;
+  overflow: scroll;
 }
 .woocommerce #reviews #comments h2,
 .woocommerce-page #reviews #comments h2 {
@@ -4778,9 +4779,10 @@ Single Product
 .woocommerce #reviews #comments ol.commentlist li,
 .woocommerce-page #reviews #comments ol.commentlist li {
   background: rgba(255, 255, 255, 0.3);
-  padding: 20px;
+  /* padding: 20px; */
   overflow: hidden;
   margin-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
 }
 .woocommerce #reviews #comments ol.commentlist li img.avatar,
 .woocommerce-page #reviews #comments ol.commentlist li img.avatar {
