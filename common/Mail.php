@@ -22,8 +22,8 @@ function SendMail($Sendto,$Body,$Subject)
     $mail->SMTPAuth = true;
     $mail->Username = 'qsg546.qsoft@gmail.com';
     $mail->Password = 'edbhqegduzpmwuui';
-    $mail->SetFrom('sales@mixtourist.com', 'Mixtourist.com');
-    $mail->AddReplyTo('sales@mixtourist.com', "");
+    $mail->SetFrom('sales@vietgardens.com', 'Vietgardens.com');
+    $mail->AddReplyTo('sales@vietgardens.com', "");
     $mail->AddAddress($Sendto,'test');
     $mail->Subject = "" . $Subject . "";
     $mail->MsgHTML("" . $Body . "");

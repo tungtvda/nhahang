@@ -1,4 +1,4 @@
-<div style="float: left" id="secondary" class="widget-area col-sm-3" role="complementary">
+<div style="float: left;" id="secondary" class="widget-area col-sm-3" role="complementary">
    {danhmuc_left}
     <aside id="woocommerce_products-2" class="widget woocommerce widget_products"><h3
                 class="widget-title">TOP SELLER</h3>

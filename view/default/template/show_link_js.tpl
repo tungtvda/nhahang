@@ -39,16 +39,6 @@
     })();</script>
 <script type='text/javascript'
         src='{SITE-NAME}/view/default/themes/wp-content/plugins/contact-form-7/includes/js/jquery.form.mind03d.js?ver=3.51.0-2014.06.20'></script>
-<script type='text/javascript'>
-    /* <![CDATA[ */
-    var _wpcf7 = {
-        "loaderUrl": "http:\/\/new2new.com\/echion\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif",
-        "recaptcha": {"messages": {"empty": "Please verify that you are not a robot."}},
-        "sending": "Sending ...",
-        "jqueryUi": "1"
-    };
-    /* ]]> */
-</script>
 <script type='text/javascript' src='{SITE-NAME}/view/default/themes/wp-content/plugins/contact-form-7/includes/js/scripts8686.js?ver=4.5.1'></script>
 <script type='text/javascript'>
     /* <![CDATA[ */
@@ -161,8 +151,8 @@
     var mc4wp_forms_config = [];
     /* ]]> */
 </script>
-<script type='text/javascript'
-        src='{SITE-NAME}/view/default/themes/wp-content/plugins/mailchimp-for-wp/assets/js/forms-api.min8603.js?ver=4.0.6'></script>
+<!--<script type='text/javascript'
+        src='{SITE-NAME}/view/default/themes/wp-content/plugins/mailchimp-for-wp/assets/js/forms-api.min8603.js?ver=4.0.6'></script>-->
 <script>
 </script>
 </body>

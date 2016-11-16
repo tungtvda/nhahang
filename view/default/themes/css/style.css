@@ -61,6 +61,17 @@
     height: 22px;
     background: url(../wp-content/uploads/2016/07/icon-title-table.png);
 }
+.contact-form ul {
+    list-style: none;
+    margin: 30px 0 0;
+}
+.contact-form ul LI{
+    font-size: 14px;
+}
+.title_contact{
+    font-size: 14px;
+    margin-top: 10px;
+}
 @media only screen and (min-width: 1250px) and (max-width: 1500px) {
     .slide_div_1{
         text-align: center;
