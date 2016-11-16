@@ -50,11 +50,11 @@
                     <div class="textwidget">
                         <ul class="nav-horizontal">
                             <li><a href="{SITE-NAME}">TRANG CHỦ</a></li>
-                            <li><a href="#">GIỚI THIỆU</a></li>
-                            <li><a href="#">THỰC ĐƠN</a></li>
-                            <li><a href="#">CẨM NANG</a></li>
-                            <li><a href="#">LIÊN HỆ</a></li>
-                            <li><a href="#">TUYỂN DỤNG</a></li>
+                            <li><a href="{SITE-NAME}/gioi-thieu/">GIỚI THIỆU</a></li>
+                            <li><a href="{SITE-NAME}/thuc-don/">THỰC ĐƠN</a></li>
+                            <li><a href="{SITE-NAME}/cam-nang/">CẨM NANG</a></li>
+                            <li><a href="{SITE-NAME}/lien-he/">LIÊN HỆ</a></li>
+                            <li><a href="{SITE-NAME}/tuyen-dung">TUYỂN DỤNG</a></li>
                         </ul>
                     </div>
                 </aside>
