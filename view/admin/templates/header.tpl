@@ -92,6 +92,7 @@
                         <li><a href="{SITE-NAME}/controller/admin/news.php">Danh sách </a></li>
                     </ul>
                 </li>
+                <li class="{kichhoat_tuyendung}"><a href="{SITE-NAME}/controller/admin/tuyendung.php"><span class="icon-facetime-video"></span> Tuyển dụng </a></li>
                 <li class="{kichhoat_gioithieu}"><a href="{SITE-NAME}/controller/admin/info.php"><span class="icon-facetime-video"></span> Giới thiệu</a></li>
                 <li class="{kichhoat_slide}"><a href="{SITE-NAME}/controller/admin/slide.php"><span class="icon-film"></span> Slide</a></li>
                 <li class="{kichhoat_menu}"><a href="{SITE-NAME}/controller/admin/menu.php"><span class="icon-th-list"></span> Cấu hình menu</a></li>

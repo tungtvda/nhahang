@@ -20,6 +20,7 @@ $data['config']=config_getByTop(1,'','');
 
  $link_action=$_SERVER['REQUEST_URI'];
  $string_check= strchr($link_action,"/cam-nang/");
+$string_check_tuyendung= strchr($link_action,"/tuyen-dung/");
 if($string_check!='')
 {
     if(isset($_GET['Id']))
@@ -66,56 +67,88 @@ if($string_check!='')
     );
     $data['name_dm']=$name_danhmuc;
     $data['link_dm']=$link_danhmuc;
-
-//    $data['tour_noibat']=news_getByTop(6,'id!='.$data['news'][0]->id.' and danhmuc_id='.$data['news'][0]->danhmuc_id,'id desc');
     $data['link_anh']=$data['news'][0]->img;
 
 }
 else{
-    if(isset($_GET['Id']))
+    if($string_check_tuyendung!='')
     {
-        $name_url=addslashes($_GET['Id']);
-        $data['tour']=sanpham_getByTop('','name_url="'.$name_url.'"','');
-        if(count($data['tour'])==0){
+        if(isset($_GET['Id']))
+        {
+            $name_url=addslashes(str_replace('tuyen-dung/','',$_GET['Id']));
+            $data['news']=tuyendung_getByTop('','name_url="'.$name_url.'"','');
+            if(count($data['news'])==0){
+                redict(SITE_NAME);
+            }
+        }
+        else{
             redict(SITE_NAME);
         }
+        $name_danhmuc=$data['menu'][5]->name;
+        $link_danhmuc=SITE_NAME.'/cam-nang/';
+        $title=$data['news'][0]->title;
+        $description=$data['news'][0]->description;
+        $keyword=$data['news'][0]->keyword;
+        $url='<li><a href="'.SITE_NAME.'">'.$data['menu'][0]->name.'</a></li> ~  <li><a href="'.SITE_NAME.'/tuyen-dung/">'.$data['menu'][5]->name.'</a></li>';
+        $url.=' ~ <li>'.$data['news'][0]->name.'</li>';
+        $active='tuyendung';
+        $name_dm1=$data['news'][0];
+        $data['banner']=array(
+            'banner_img'=>$data['menu'][5]->img,
+            'name'=>$data['news'][0]->name,
+            'url'=>$url
+        );
+        $data['name_dm']=$name_danhmuc;
+        $data['link_dm']=$link_danhmuc;
+        $data['link_anh']=$data['news'][0]->img;
     }
     else{
-        redict(SITE_NAME);
+        if(isset($_GET['Id']))
+        {
+            $name_url=addslashes($_GET['Id']);
+            $data['tour']=sanpham_getByTop('','name_url="'.$name_url.'"','');
+            if(count($data['tour'])==0){
+                redict(SITE_NAME);
+            }
+        }
+        else{
+            redict(SITE_NAME);
+        }
+
+        $danhmuc1=danhmuc1_getByTop(1,'id="'.$data['tour'][0]->danhmuc1_id.'" and id!=1','');
+        $danhmuc2=danhmuc2_getByTop(1,'id="'.$data['tour'][0]->	danhmuc2_id.'" and id!=1','');
+        if(count($danhmuc1)==0)
+        {
+            redict(SITE_NAME);
+        }
+        $banner=$danhmuc1[0]->img;
+        $url='<li><a href="'.SITE_NAME.'">'.$data['menu'][0]->name.'</a></li> ~ <li><a href="'.SITE_NAME.'/'.$danhmuc1[0]->name_url.'/">'.$danhmuc1[0]->name.'</a></li>';
+        $cate='<a href="'.SITE_NAME.'/'.$danhmuc1[0]->name_url.'/" rel="tag">'.$danhmuc1[0]->name.'</a>';
+        if(count($danhmuc2)>0)
+        {
+            $banner=$danhmuc2[0]->img;
+            $url.=' ~ <li><a href="'.SITE_NAME.'/thuc-don/'.$danhmuc2[0]->name_url.'/">'.$danhmuc2[0]->name.'</a></li>';
+            $cate.=', <a href="'.SITE_NAME.'/thuc-don/'.$danhmuc2[0]->name_url.'/" rel="tag">'.$danhmuc2[0]->name.'</a>';
+        }
+        $active='thucdon';
+        $name=$data['tour'][0]->name;
+        $url.=' ~ <li>'.$name.'</li>';
+        $data['banner']=array(
+            'banner_img'=>$banner,
+            'name'=>$name,
+            'url'=>$url
+        );
+        $data['cate']=$cate;
+
+        $data['sanpham_lienquan']=sanpham_getByTop(6,'id!='.$data['tour'][0]->id.' and danhmuc1_id='.$data['tour'][0]->danhmuc1_id,'id desc');
+        $data['link_anh']=$data['tour'][0]->img;
+        $title=$data['tour'][0]->title;
+        $description=$data['tour'][0]->keyword;
+        $keyword=$data['tour'][0]->description;
+        $data['danhgia']=danhgia_getByTop('','status=1 and sanpham_id='.$data['tour'][0]->id,'id desc');
+        $data['count_danhgia']=count($data['danhgia']);
     }
 
-    $danhmuc1=danhmuc1_getByTop(1,'id="'.$data['tour'][0]->danhmuc1_id.'" and id!=1','');
-    $danhmuc2=danhmuc2_getByTop(1,'id="'.$data['tour'][0]->	danhmuc2_id.'" and id!=1','');
-    if(count($danhmuc1)==0)
-    {
-        redict(SITE_NAME);
-    }
-    $banner=$danhmuc1[0]->img;
-    $url='<li><a href="'.SITE_NAME.'">'.$data['menu'][0]->name.'</a></li> ~ <li><a href="'.SITE_NAME.'/'.$danhmuc1[0]->name_url.'/">'.$danhmuc1[0]->name.'</a></li>';
-    $cate='<a href="'.SITE_NAME.'/'.$danhmuc1[0]->name_url.'/" rel="tag">'.$danhmuc1[0]->name.'</a>';
-    if(count($danhmuc2)>0)
-    {
-        $banner=$danhmuc2[0]->img;
-        $url.=' ~ <li><a href="'.SITE_NAME.'/thuc-don/'.$danhmuc2[0]->name_url.'/">'.$danhmuc2[0]->name.'</a></li>';
-        $cate.=', <a href="'.SITE_NAME.'/thuc-don/'.$danhmuc2[0]->name_url.'/" rel="tag">'.$danhmuc2[0]->name.'</a>';
-    }
-    $active='thucdon';
-    $name=$data['tour'][0]->name;
-    $url.=' ~ <li>'.$name.'</li>';
-    $data['banner']=array(
-        'banner_img'=>$banner,
-        'name'=>$name,
-        'url'=>$url
-    );
-    $data['cate']=$cate;
-
-    $data['sanpham_lienquan']=sanpham_getByTop(6,'id!='.$data['tour'][0]->id.' and danhmuc1_id='.$data['tour'][0]->danhmuc1_id,'id desc');
-    $data['link_anh']=$data['tour'][0]->img;
-    $title=$data['tour'][0]->title;
-    $description=$data['tour'][0]->keyword;
-    $keyword=$data['tour'][0]->description;
-    $data['danhgia']=danhgia_getByTop('','status=1 and sanpham_id='.$data['tour'][0]->id,'id desc');
-    $data['count_danhgia']=count($data['danhgia']);
 }
 
 $title=($title)?$title:'Viet Gardens';
@@ -129,7 +162,13 @@ if($string_check!='')
     show_chitietcamnang($data);
 }
 else{
-    show_chitietsanpham($data);
+    if($string_check_tuyendung!='')
+    {
+        show_chitiettuyendung($data);
+    }
+    else{
+        show_chitietsanpham($data);
+    }
 }
 
 show_left($data);
