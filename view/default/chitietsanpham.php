@@ -36,6 +36,11 @@ function show_chitietsanpham($data = array())
     {
         $asign['sanpham_lienquan'] = print_item('lienquan', $data['sanpham_lienquan']);
     }
+    $asign['danhgia'] ="";
+    if(count($data['danhgia'])>0)
+    {
+        $asign['danhgia'] = print_item('danhgia', $data['danhgia']);
+    }
     print_template($asign, 'chitietsanpham');
 }
 
