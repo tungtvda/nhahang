@@ -1429,7 +1429,7 @@ p.demo_store a {
 
 .woocommerce-error, .woocommerce-info, .woocommerce-message {
     padding: 1em 2em 1em 3.5em !important;
-    margin: 0 0 2em !important;
+    /*margin: 0 0 2em !important;*/
     position: relative;
     background-color: #f7f6f7;
     color: #515151;
@@ -1445,12 +1445,12 @@ p.demo_store a {
 }
 
 .woocommerce-error:before, .woocommerce-info:before, .woocommerce-message:before {
-    font-family: WooCommerce;
-    content: "\e028";
-    display: inline-block;
-    position: absolute;
-    top: 1em;
-    left: 1.5em
+    /*font-family: WooCommerce;*/
+    /*content: "\e028";*/
+    /*display: inline-block;*/
+    /*position: absolute;*/
+    /*top: 1em;*/
+    /*left: 1.5em*/
 }
 
 .woocommerce-error .button, .woocommerce-info .button, .woocommerce-message .button {
@@ -1473,11 +1473,11 @@ p.demo_store a {
 }
 
 .woocommerce-info {
-    border-top-color: #1e85be
+    border-top-color: #a3c638;
 }
 
 .woocommerce-info:before {
-    color: #1e85be
+    color: #a3c638;
 }
 
 .woocommerce-error {

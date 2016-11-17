@@ -151,7 +151,7 @@
                                                     <p class="buttons">
                                                         <a href="{SITE-NAME}/gio-hang/"
                                                            class="button wc-forward">Giỏ hàng</a>
-                                                        <a href="{SITE-NAME}/gio-hang/"
+                                                        <a href="{SITE-NAME}/checkout/"
                                                            class="button checkout wc-forward">Checkout</a>
                                                     </p>
 

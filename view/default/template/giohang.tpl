@@ -39,8 +39,8 @@
                                         <div class="wc-proceed-to-checkout">
 
 
-                                            <a href="" class="checkout-button button alt wc-forward">
-                                                Tiếp tục mua hàng</a>
+                                            <a href="{SITE-NAME}/checkout/" class="checkout-button button alt wc-forward">
+                                                Checkout</a>
 
                                         </div>
                                     </div>
