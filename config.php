@@ -18,12 +18,12 @@ require_once DIR.'/common/minifi.output.php';
 ob_start("minify_output");
 
 //require_once 'language/en.php';
-//define("SITE_NAME", "http://mixtourist.com");
+//define("SITE_NAME", "http://vietgardens.com");
 //define("DIR", dirname(__FILE__));
 //define('SERVER','localhost');
-//define('DB_USERNAME','dulichado_mixcom');
-//define('DB_PASSWORD','tAZDG1dcl');
-//define('DB_NAME','dulichado_mixcom');
+//define('DB_USERNAME','dulichado_garden');
+//define('DB_PASSWORD','iBqjKvEMY');
+//define('DB_NAME','dulichado_garden');
 //define('CACHE',false);
 //define('DATETIME_FORMAT',"y-m-d H:i:s");
 //define('PRIVATE_KEY','hoidinhnvbk');
