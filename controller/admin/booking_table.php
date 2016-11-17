@@ -54,11 +54,13 @@ if(isset($_SESSION["Admin"]))
             header('Location: '.SITE_NAME.'/controller/admin/booking_table.php');
         }
     }
-    if(isset($_POST["name"])&&isset($_POST["email"])&&isset($_POST["phone"])&&isset($_POST["address"])&&isset($_POST["member"])&&isset($_POST["booking_date"])&&isset($_POST["booking_time"])&&isset($_POST["content"])&&isset($_POST["created"]))
+    if(isset($_POST["id_chung"])&&isset($_POST["name"])&&isset($_POST["email"])&&isset($_POST["phone"])&&isset($_POST["address"])&&isset($_POST["member"])&&isset($_POST["booking_date"])&&isset($_POST["booking_time"])&&isset($_POST["content"])&&isset($_POST["created"]))
     {
        $array=$_POST;
        if(!isset($array['id']))
        $array['id']='0';
+       if(!isset($array['id_chung']))
+       $array['id_chung']='0';
        if(!isset($array['status']))
        $array['status']='0';
        if(!isset($array['name']))

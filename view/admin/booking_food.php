@@ -29,7 +29,7 @@ function view_booking_food($data)
 //
 function showTableHeader()
 {
-    return '<th>id</th><th>booking_table_id</th><th>name</th><th>quantity</th><th>price</th><th>total</th>';
+    return '<th>name</th><th>code</th><th>img</th><th>quantity</th><th>price</th><th>total</th>';
 }
 //
 function showTableBody($data)
@@ -38,9 +38,9 @@ function showTableBody($data)
     if(count($data)>0) foreach($data as $obj)
     {
         $TableBody.="<tr><td><input type=\"checkbox\" name=\"check_".$obj->id."\"/></td>";
-        $TableBody.="<td>".$obj->id."</td>";
-        $TableBody.="<td>".$obj->booking_table_id."</td>";
         $TableBody.="<td>".$obj->name."</td>";
+        $TableBody.="<td>".$obj->code."</td>";
+        $TableBody.="<td><img src=\"".$obj->img."\" width=\"50px\" height=\"50px\"/> </td>";
         $TableBody.="<td>".$obj->quantity."</td>";
         $TableBody.="<td>".$obj->price."</td>";
         $TableBody.="<td>".$obj->total."</td>";
@@ -55,17 +55,11 @@ function showTableBody($data)
 function showFrom($form,$ListKey=array())
 {
     $str_from='';
-    $str_from.='<p><label>booking_table_id</label>';
-    $str_from.='<select name="booking_table_id">';
-    if(isset($ListKey['booking_table_id']))
-    {
-        foreach($ListKey['booking_table_id'] as $key)
-        {
-            $str_from.='<option value="'.$key->id.'" '.(($form!=false)?(($form->booking_table_id==$key->id)?'selected':''):'').'>'.$key->name.'</option>';
-        }
-    }
-    $str_from.='</select></p>';
+    $str_from.='<p><label>id_chung</label><input class="text-input small-input" type="text"  name="id_chung" value="'.(($form!=false)?$form->id_chung:'').'" /></p>';
     $str_from.='<p><label>name</label><input class="text-input small-input" type="text"  name="name" value="'.(($form!=false)?$form->name:'').'" /></p>';
+    $str_from.='<p><label>code</label><input class="text-input small-input" type="text"  name="code" value="'.(($form!=false)?$form->code:'').'" /></p>';
+    $str_from.='<p><label>img</label><input class="text-input small-input" type="text"  name="img" value="'.(($form!=false)?$form->img:'').'"/><a class="button" onclick="openKcEditor(\'img\');">Upload ảnh</a></p>';
+    $str_from.='<p><label>link</label><input class="text-input small-input" type="text"  name="link" value="'.(($form!=false)?$form->link:'').'" /></p>';
     $str_from.='<p><label>quantity</label><input class="text-input small-input" type="text"  name="quantity" value="'.(($form!=false)?$form->quantity:'').'" /></p>';
     $str_from.='<p><label>price</label><input class="text-input small-input" type="text"  name="price" value="'.(($form!=false)?$form->price:'').'" /></p>';
     $str_from.='<p><label>total</label><input class="text-input small-input" type="text"  name="total" value="'.(($form!=false)?$form->total:'').'" /></p>';

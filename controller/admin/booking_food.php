@@ -1,7 +1,6 @@
 <?php
 require_once '../../config.php';
 require_once DIR.'/model/booking_foodService.php';
-require_once DIR.'/model/booking_tableService.php';
 require_once DIR.'/view/admin/booking_food.php';
 require_once DIR.'/common/messenger.php';
 $data=array();
@@ -38,7 +37,6 @@ if(isset($_SESSION["Admin"]))
     {
         $data['tab1_class']='default-tab current';
     }
-    $data['listfkey']['booking_table_id']=booking_table_getByAll();
     if(isset($_GET["action_all"]))
     {
         if($_GET["action_all"]=="ThemMoi")
@@ -56,15 +54,21 @@ if(isset($_SESSION["Admin"]))
             header('Location: '.SITE_NAME.'/controller/admin/booking_food.php');
         }
     }
-    if(isset($_POST["booking_table_id"])&&isset($_POST["name"])&&isset($_POST["quantity"])&&isset($_POST["price"])&&isset($_POST["total"]))
+    if(isset($_POST["id_chung"])&&isset($_POST["name"])&&isset($_POST["code"])&&isset($_POST["img"])&&isset($_POST["link"])&&isset($_POST["quantity"])&&isset($_POST["price"])&&isset($_POST["total"]))
     {
        $array=$_POST;
        if(!isset($array['id']))
        $array['id']='0';
-       if(!isset($array['booking_table_id']))
-       $array['booking_table_id']='0';
+       if(!isset($array['id_chung']))
+       $array['id_chung']='0';
        if(!isset($array['name']))
        $array['name']='0';
+       if(!isset($array['code']))
+       $array['code']='0';
+       if(!isset($array['img']))
+       $array['img']='0';
+       if(!isset($array['link']))
+       $array['link']='0';
        if(!isset($array['quantity']))
        $array['quantity']='0';
        if(!isset($array['price']))

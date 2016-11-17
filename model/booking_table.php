@@ -1,10 +1,11 @@
 <?php
 class booking_table
 {
-    public $id,$status,$name,$email,$phone,$address,$member,$booking_date,$booking_time,$content,$created;
+    public $id,$id_chung,$status,$name,$email,$phone,$address,$member,$booking_date,$booking_time,$content,$created;
     public function booking_table($data=array())
     {
     $this->id=isset($data['id'])?$data['id']:'';
+    $this->id_chung=isset($data['id_chung'])?$data['id_chung']:'';
     $this->status=isset($data['status'])?$data['status']:'';
     $this->name=isset($data['name'])?$data['name']:'';
     $this->email=isset($data['email'])?$data['email']:'';
@@ -20,6 +21,7 @@ class booking_table
     public function encode()
         {
             $this->id=addslashes($this->id);
+            $this->id_chung=addslashes($this->id_chung);
             $this->status=addslashes($this->status);
             $this->name=addslashes($this->name);
             $this->email=addslashes($this->email);
@@ -34,6 +36,7 @@ class booking_table
     public function decode()
         {
             $this->id=stripslashes($this->id);
+            $this->id_chung=stripslashes($this->id_chung);
             $this->status=stripslashes($this->status);
             $this->name=stripslashes($this->name);
             $this->email=stripslashes($this->email);

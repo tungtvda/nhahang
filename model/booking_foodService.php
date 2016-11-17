@@ -62,17 +62,17 @@ function booking_food_getByPaging($CurrentPage, $PageSize,$Order,$where)
 //
 function booking_food_getByPagingReplace($CurrentPage, $PageSize,$Order,$where)
 {
-   return booking_food_Get("SELECT booking_food.id, booking_table.name as booking_table_id, booking_food.name, booking_food.quantity, booking_food.price, booking_food.total FROM  booking_food, booking_table where booking_table.id=booking_food.booking_table_id  ".(($where!='')?(' and '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
+   return booking_food_Get("SELECT booking_food.id, booking_food.id_chung, booking_food.name, booking_food.code, booking_food.img, booking_food.link, booking_food.quantity, booking_food.price, booking_food.total FROM  booking_food ".(($where!='')?(' where '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
 }
 //
 function booking_food_insert($obj)
 {
-    return exe_query("insert into booking_food (booking_table_id,name,quantity,price,total) values ('$obj->booking_table_id','$obj->name','$obj->quantity','$obj->price','$obj->total')",'booking_food');
+    return exe_query("insert into booking_food (id_chung,name,code,img,link,quantity,price,total) values ('$obj->id_chung','$obj->name','$obj->code','$obj->img','$obj->link','$obj->quantity','$obj->price','$obj->total')",'booking_food');
 }
 //
 function booking_food_update($obj)
 {
-    return exe_query("update booking_food set booking_table_id='$obj->booking_table_id',name='$obj->name',quantity='$obj->quantity',price='$obj->price',total='$obj->total' where id=$obj->id",'booking_food');
+    return exe_query("update booking_food set id_chung='$obj->id_chung',name='$obj->name',code='$obj->code',img='$obj->img',link='$obj->link',quantity='$obj->quantity',price='$obj->price',total='$obj->total' where id=$obj->id",'booking_food');
 }
 //
 function booking_food_delete($obj)
