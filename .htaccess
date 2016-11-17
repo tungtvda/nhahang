@@ -47,4 +47,7 @@ RewriteRule ^tuyen-dung/(.*).html$ controller/default/chitietsanpham.php?Id=$1
 RewriteRule ^lien-he/$ controller/default/lienhe.php
 RewriteRule ^tim-kiem/orderby-([a-zA-Z0-9_-]+)/giatri-(.*)$ controller/default/timkiem.php?orderby=$1&giatri=$2
 
+RewriteRule ^gio-hang/$ controller/default/giohang.php
+RewriteRule ^xoa-gio-hang/([0-9]+)$ controller/default/delete_giohang.php?Id=$1
+
 

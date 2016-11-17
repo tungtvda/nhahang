@@ -17,7 +17,7 @@
                 {start}
             </div>
         </div>
-        <a class="product-title name_left" title="{name}" href="{link}">{name}</a>
+        <a class="product-title name_left" id="name_sp_show_{id}" title="{name}" href="{link}">{name}</a>
 
 			<span class="price">
 <del>

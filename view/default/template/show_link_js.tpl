@@ -139,19 +139,34 @@
     jQuery(document).ready(function (jQuery) {
         jQuery(".ajax_add_to_cart").click(function() {
             idSelect = jQuery(this).attr('data-product_id');
+            field="#show_loading_cart_"+idSelect;
+            field_name="#name_sp_show_"+idSelect;
+            var name=jQuery(field_name).html();
+            jQuery(field).show();
             link='{SITE-NAME}/cart/'+idSelect+'/';
             jQuery.ajax({
                 method: "GET",// phương thức dữ liệu được truyền đi
                 url: link,// gọi đến file server show_data.php để xử lý
                 success : function(response){
-                    if(response>0){
+                    if(response==11111111){
+                        alert('Thực đơn bạn vừa đặt đã có trong giỏ hàng, bạn vui lòng đi tới giở hàng để cập nhật số lượng');
+                    }
+                    else{
+                        alert('Bạn vừa thêm '+name+' vào giỏ hàng');
                         jQuery('.wrapper-items-number').html(response);
                     }
                 }
-            });
-        });
 
+            });
+            jQuery(field).hide().delay(800);
+        });
     });
+</script>
+<script type="text/javascript">
+    function ConfirmDelete()
+    {
+        confirm('Bạn có chắc chắn muốn xóa');
+    }
 </script>
 <!--<script type='text/javascript'
         src='{SITE-NAME}/view/default/themes/wp-content/plugins/mailchimp-for-wp/assets/js/forms-api.min8603.js?ver=4.0.6'></script>-->

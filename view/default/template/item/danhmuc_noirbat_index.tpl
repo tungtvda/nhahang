@@ -9,19 +9,23 @@
                  srcset="{img} 370w, {img} 150w, {img} 768w, {img} 124w, {img} 570w, {img} 780w"
                  sizes="(max-width: 370px) 100vw, 370px"/> </a>
         <div class="quick-view" data-prod="501"><a href="{link}"><i
-                        class="fa fa-hand-o-up"></i></a></div>
+                        class="fa fa-hand-o-up"></i></a>
+            <img id="show_loading_cart_{id}" class="img_loadding_cart" src="{SITE-NAME}/view/default/themes/images/loading_ani.gif">
+        </div>
     </div>
     <div class="product-desc">
-        <div class="category_ratting"><span class="posted_in"> <a
+        <div class="category_ratting">
+            <span class="posted_in"> <a
                         href="{link}"
                         rel="tag">
                     <i class="fa fa-thumbs-up"></i> <span  id="num_like_{id}">{num_like}</span></a></span>
+
 
             <div class="star-rating" title="">
                 {start}
             </div>
         </div>
-        <a class="product-title name_left" title="{name}" href="{link}">{name}</a>
+        <a class="product-title name_left" id="name_sp_show_{id}" title="{name}" href="{link}">{name}</a>
 
 		<span class="price">
 

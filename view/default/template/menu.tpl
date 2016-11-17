@@ -11,7 +11,7 @@
                             <aside id="text-2" class="widget_text">
                                 <div class="textwidget">
                                     <a href="tel:{Hotline}">
-                                    <i class="fa fa-phone fa-2 theme-color"> </i> Gọi ngay: {Hotline}
+                                        <i class="fa fa-phone fa-2 theme-color"> </i> Gọi ngay: {Hotline}
                                     </a>
                                 </div>
                             </aside>
@@ -26,13 +26,19 @@
                             </aside>-->
                             <aside id="widget_echion_social_links-2" class="echion_social_links">
                                 <ul class="echion_social_links basic">
-                                    <li><a target="_blank" class="face hasTooltip" href="{facebook}"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a target="_blank" class="twitter hasTooltip" href="{twitter}"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a target="_blank" class="google hasTooltip" href="{google}"><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a target="_blank" class="linkedin hasTooltip" href="{linkedin}"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a target="_blank" class="instagram hasTooltip" href="{instagram}"><i class="fa fa-instagram"></i></a>
+                                    <li><a target="_blank" class="face hasTooltip" href="{facebook}"><i
+                                                    class="fa fa-facebook"></i></a></li>
+                                    <li><a target="_blank" class="twitter hasTooltip" href="{twitter}"><i
+                                                    class="fa fa-twitter"></i></a></li>
+                                    <li><a target="_blank" class="google hasTooltip" href="{google}"><i
+                                                    class="fa fa-google-plus"></i></a></li>
+                                    <li><a target="_blank" class="linkedin hasTooltip" href="{linkedin}"><i
+                                                    class="fa fa-linkedin"></i></a></li>
+                                    <li><a target="_blank" class="instagram hasTooltip" href="{instagram}"><i
+                                                    class="fa fa-instagram"></i></a>
                                     </li>
-                                    <li><a class="youtube hasTooltip" href="{youtube}"><i class="fa fa-youtube"></i></a></li>
+                                    <li><a class="youtube hasTooltip" href="{youtube}"><i class="fa fa-youtube"></i></a>
+                                    </li>
                                 </ul>
                             </aside>
                         </div>
@@ -56,7 +62,7 @@
                                    rel="home" class="no-sticky-logo"><img
                                             src="{Logo}"
                                             alt="{name}"
-                                            width="191" /></a><a
+                                            width="191"/></a><a
                                         href="{SITE-NAME}"
                                         title="{name}"
                                         rel="home" class="sticky-logo">
@@ -66,7 +72,7 @@
                             <nav class="width-navigation table-cell" itemscope
                                  itemtype="">
                                 <ul class="nav navbar-nav menu-main-menu side-nav" id="mobile-demo">
-                                    <li  class=" {home_mn} menu-item menu-item-type-post_type menu-item-object-page dropdown_full_width  drop_to_left widget_area">
+                                    <li class=" {home_mn} menu-item menu-item-type-post_type menu-item-object-page dropdown_full_width  drop_to_left widget_area">
                                         <a href="{SITE-NAME}">{home_name}</a>
                                     </li>
                                     <li class=" {gioithieu_mn} menu-item menu-item-type-post_type menu-item-object-page dropdown_full_width  drop_to_left widget_area ">
@@ -81,7 +87,7 @@
                                     <li class="{camnang_mn} menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children drop_to_left standard">
                                         <a href="{SITE-NAME}/cam-nang/">{camnang_name}</a>
                                         <ul class="sub-menu">
-                                           {danhmuc_camnang}
+                                            {danhmuc_camnang}
                                         </ul>
                                     </li>
                                     <li class="{lienhe_mn} menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children drop_to_right standard">
@@ -102,13 +108,15 @@
 
                                                             <form action="{SITE-NAME}/tim-kiem" method="get"
                                                                   class="vi_search_form">
-                                                                <input id="url_tk" hidden value="{SITE-NAME}/tim-kiem/orderby-id/">
-                                                                <input  name="giatri" id="value_timkiem"
+                                                                <input id="url_tk" hidden
+                                                                       value="{SITE-NAME}/tim-kiem/orderby-id/">
+                                                                <input name="giatri" id="value_timkiem"
                                                                        placeholder="Nhập từ khóa tìm kiếm..."
                                                                        class="form-control vi-search-input"
-                                                                        type="text">
+                                                                       type="text">
 
-                                                                <button type="submit" id="timkiem-bt"><i class="fa fa-search"></i>
+                                                                <button type="submit" id="timkiem-bt"><i
+                                                                            class="fa fa-search"></i>
                                                                 </button>
                                                                 <span class="header-search-close"><i
                                                                             class="fa fa-times"></i></span>
@@ -120,12 +128,35 @@
                                             </li>
                                             <li id="woocommerce_widget_cart-2" class="woocommerce widget_shopping_cart">
                                                 <div class="minicart_hover" id="header-mini-cart"><span
-                                                            class="cart-items-number"><i
-                                                                class="fa fa-shopping-cart"></i><span
-                                                                class="wrapper-items-number">0</span></span>
+                                                            class="cart-items-number"><a href="{SITE-NAME}/gio-hang/"><i
+                                                                    class="fa fa-shopping-cart"></i><span
+                                                                    class="wrapper-items-number">{count_cart}</span></a></span>
                                                     <div class="clear"></div>
                                                 </div>
-                                                <div class="widget_shopping_cart_content" style="display: none;"></div>
+                                                <div class="widget_shopping_cart_content">
+
+                                                    <ul class="cart_list product_list_widget ">
+
+                                                        {list_cart}
+
+                                                    </ul><!-- end product list -->
+
+
+                                                    <p class="total"><strong>Tổng tiền:</strong> <span style="font-size: 16px"
+                                                                class="woocommerce-Price-amount amount"><span
+                                                                    class="woocommerce-Price-currencySymbol"></span>{total} vnđ</span>
+                                                    </p>
+
+
+                                                    <p class="buttons">
+                                                        <a href="{SITE-NAME}/gio-hang/"
+                                                           class="button wc-forward">Giỏ hàng</a>
+                                                        <a href="{SITE-NAME}/gio-hang/"
+                                                           class="button checkout wc-forward">Checkout</a>
+                                                    </p>
+
+
+                                                </div>
                                             </li>
                                         </ul>
                                     </li>

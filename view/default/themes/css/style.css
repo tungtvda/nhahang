@@ -72,6 +72,20 @@
     font-size: 14px;
     margin-top: 10px;
 }
+.img_loadding_cart{
+    position: absolute;
+    text-align: center;
+    top: 36%;
+    margin-top: -40px;
+    left: 56%;
+    margin-left: -40px;
+    cursor: pointer;
+    z-index: 99;
+    right: 0;
+    width: 50px;
+    line-height: 80px;
+    display: none;
+}
 @media only screen and (min-width: 1250px) and (max-width: 1500px) {
     .slide_div_1{
         text-align: center;
