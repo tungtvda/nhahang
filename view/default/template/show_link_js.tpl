@@ -40,18 +40,6 @@
 <script type='text/javascript'
         src='{SITE-NAME}/view/default/themes/wp-content/plugins/contact-form-7/includes/js/jquery.form.mind03d.js?ver=3.51.0-2014.06.20'></script>
 <script type='text/javascript' src='{SITE-NAME}/view/default/themes/wp-content/plugins/contact-form-7/includes/js/scripts8686.js?ver=4.5.1'></script>
-<script type='text/javascript'>
-    /* <![CDATA[ */
-    var wc_add_to_cart_params = {
-        "ajax_url": "\/echion\/wp-admin\/admin-ajax.php",
-        "wc_ajax_url": "\/echion\/?wc-ajax=%%endpoint%%",
-        "i18n_view_cart": "View Cart",
-        "cart_url": "http:\/\/new2new.com\/echion\/cart\/",
-        "is_cart": "",
-        "cart_redirect_after_add": "no"
-    };
-    /* ]]> */
-</script>
 <!--<script type='text/javascript'
         src='{SITE-NAME}/view/default/themes/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min72e6.js?ver=2.6.4'></script>-->
 <script type='text/javascript'
@@ -138,12 +126,6 @@
             }
         });
 
-            jQuery('#value_timkiem3').keypress(function(event){
-                var keycode = (event.keyCode ? event.keyCode : event.which);
-                if (keycode == '13') {
-                    alert('Bạn vừa nhấn phím "enter" trong thẻ input');
-                }
-            });
         });
     });
 </script>
@@ -154,9 +136,22 @@
         src='{SITE-NAME}/view/default/themes/wp-content/plugins/kingcomposer/assets/frontend/js/kingcomposer355d.js?ver=2.5.7'></script>
 <script type='text/javascript' src='{SITE-NAME}/view/default/themes/wp-includes/js/wp-embed.min1c9b.js?ver=4.6.1'></script>
 <script type='text/javascript'>
-    /* <![CDATA[ */
-    var mc4wp_forms_config = [];
-    /* ]]> */
+    jQuery(document).ready(function (jQuery) {
+        jQuery(".ajax_add_to_cart").click(function() {
+            idSelect = jQuery(this).attr('data-product_id');
+            link='{SITE-NAME}/cart/'+idSelect+'/';
+            jQuery.ajax({
+                method: "GET",// phương thức dữ liệu được truyền đi
+                url: link,// gọi đến file server show_data.php để xử lý
+                success : function(response){
+                    if(response>0){
+                        jQuery('.wrapper-items-number').html(response);
+                    }
+                }
+            });
+        });
+
+    });
 </script>
 <!--<script type='text/javascript'
         src='{SITE-NAME}/view/default/themes/wp-content/plugins/mailchimp-for-wp/assets/js/forms-api.min8603.js?ver=4.0.6'></script>-->
