@@ -41,3 +41,4 @@ show_slide($data);
 show_index($data);
 show_footer($data);
 show_link_js($data);
+booking_table();
