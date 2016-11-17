@@ -72,9 +72,64 @@ function contact()
 
                         </div>';
             SendMail('sales@vietgardens.com', $message, $subject);
-            echo "<script>alert('Viet Gardens cảm ơn quý khách đã gửi liên hệ đến chúng tôi, Viet Gardens sẽ liên hệ với bạn sớm nhất, xin cảm ơn')</script>";
+            echo "<script>alert('Viet Gardens cảm ơn quý khách đã gửi liên hệ đến chúng tôi, Viet Gardens sẽ liên hệ với bạn sớm nhất, xin cảm ơn!')</script>";
 
             echo "<script>window.location.href='$link_web';</script>";
+
+        }
+
+    }
+}
+
+function booking_table()
+{
+    if (isset($_POST['date_book'])) {
+
+        $date_book=addslashes(strip_tags($_POST['date_book']));
+        $time_book=addslashes(strip_tags($_POST['time_book']));
+        $member_book=addslashes(strip_tags($_POST['member_book']));
+        $name_book=addslashes(strip_tags($_POST['name_book']));
+        $email_book=addslashes(strip_tags($_POST['email_book']));
+        $phone_book=addslashes(strip_tags($_POST['phone_book']));
+        $yeucau_book=addslashes(strip_tags($_POST['yeucau_book']));
+        if($date_book==""||$time_book==""||$member_book==""||$name_book==""||$email_book==""||$phone_book=="")
+        {
+            echo "<script>alert('Bạn vui lòng điền đẩy đủ thông tin đặt bàn')</script>";
+        }
+        else
+        {
+            $new = new booking_table();
+            $new->status=0;
+            $new->name=$name_book;
+            $new->phone=$phone_book;
+            $new->email=$email_book;
+            $new->address='';
+            $new->member=$member_book;
+            $new->booking_date=$date_book;
+            $new->booking_time=$time_book;
+            $new->content=$yeucau_book;
+            $new->created=date(DATETIME_FORMAT);
+            booking_table_insert($new);
+            $subject = "Viet Gardens thông báo đặt bàn";
+            $subject1 = "Viet Gardens xác nhận đặt bàn";
+            $message='';
+            $message .='<div style="float: left; width: 100%">
+
+                            <p>Tên khách hàng: <span style="color: #132fff; font-weight: bold">'.$name_book.'</span>,</p>
+                            <p>Email: <span style="color: #132fff; font-weight: bold">'.$email_book.'</span>,</p>
+                            <p>Số điện thoại: <span style="color: #132fff; font-weight: bold">'.$phone_book.'</span>,</p>
+                            <p>Số người: <span style="color: #132fff; font-weight: bold">'.$member_book.'</span>,</p>
+                            <p>Ngày đặt: <span style="color: #132fff; font-weight: bold">'.$date_book.'</span>,</p>
+                            <p>Thời gian: <span style="color: #132fff; font-weight: bold">'.$time_book.'</span>,</p>
+
+                            <p>Ngày gửi: <span style="color: #132fff; font-weight: bold">'.date(DATETIME_FORMAT).'</span>,</p>
+                            <p>'.$yeucau_book.'</p>
+
+
+                        </div>';
+            SendMail('sales@vietgardens.com', $message, $subject);
+            SendMail($email_book, $message, $subject1);
+            echo "<script>alert('Viet Gardens cảm ơn quý khách đã đặt bàn tại nhà hàng, Viet Gardens sẽ liên hệ với bạn sớm nhất, xin cảm ơn!')</script>";
 
         }
 
