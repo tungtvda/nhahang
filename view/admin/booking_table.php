@@ -29,7 +29,7 @@ function view_booking_table($data)
 //
 function showTableHeader()
 {
-    return '<th>id</th><th>status</th><th>name</th><th>email</th><th>phone</th><th>address</th><th>member</th><th>booking_date</th><th>booking_time</th><th>created</th>';
+    return '<th>id</th><th>status</th><th>name</th><th>email</th><th>phone</th><th>member</th><th>booking_date</th><th>booking_time</th><th>created</th>';
 }
 //
 function showTableBody($data)
@@ -43,7 +43,6 @@ function showTableBody($data)
         $TableBody.="<td>".$obj->name."</td>";
         $TableBody.="<td>".$obj->email."</td>";
         $TableBody.="<td>".$obj->phone."</td>";
-        $TableBody.="<td>".$obj->address."</td>";
         $TableBody.="<td>".$obj->member."</td>";
         $TableBody.="<td>".$obj->booking_date."</td>";
         $TableBody.="<td>".$obj->booking_time."</td>";
@@ -59,6 +58,7 @@ function showTableBody($data)
 function showFrom($form,$ListKey=array())
 {
     $str_from='';
+    $str_from.='<p><label>id_chung</label><input class="text-input small-input" type="text"  name="id_chung" value="'.(($form!=false)?$form->id_chung:'').'" /></p>';
     $str_from.='<p><label>status</label><input  type="checkbox"  name="status" value="1" '.(($form!=false)?(($form->status=='1')?'checked':''):'').' /></p>';
     $str_from.='<p><label>name</label><input class="text-input small-input" type="text"  name="name" value="'.(($form!=false)?$form->name:'').'" /></p>';
     $str_from.='<p><label>email</label><input class="text-input small-input" type="text"  name="email" value="'.(($form!=false)?$form->email:'').'" /></p>';

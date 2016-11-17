@@ -98,12 +98,15 @@ function booking_table()
         }
         else
         {
+            $radom = rand(100, 100000000);
+            $id_chung = $radom . '_' . $email_book;
             $new = new booking_table();
             $new->status=0;
             $new->name=$name_book;
             $new->phone=$phone_book;
             $new->email=$email_book;
             $new->address='';
+            $new->id_chung=$id_chung;
             $new->member=$member_book;
             $new->booking_date=$date_book;
             $new->booking_time=$time_book;
@@ -127,7 +130,7 @@ function booking_table()
 
 
                         </div>';
-            $message .='<div style="float: left; width: 100%">  <thead>
+            $message .='<div style="float: left; width: 100%"> <talbe> <thead>
                                     <tr>
                                         <th class="product-name">Thực đơn</th>
                                         <th class="product-price">Giá</th>
@@ -142,12 +145,23 @@ function booking_table()
                     $data_sanpham=sanpham_getById($sp['id']);
                     if(count($data_sanpham)>0){
                         $img=$data_sanpham[0]->img;
+                        $code=$data_sanpham[0]->code;
                         $name=$data_sanpham[0]->name;
                         $price=number_format($data_sanpham[0]->price,0,",",".");
                         $num=$sp['soluong'];
                         $link=link_sanphamdetail($data_sanpham[0]);
                         $thanhtien=$data_sanpham[0]->price*$num;
                         $total+=$data_sanpham[0]->price*$num;
+                        $new_gh = new booking_food();
+                        $new_gh->id_chung=$id_chung;
+                        $new_gh->name=$name;
+                        $new_gh->code=$code;
+                        $new_gh->img=$img;
+                        $new_gh->link=$link;
+                        $new_gh->quantity=$num;
+                        $new_gh->price=$data_sanpham[0]->price;
+                        $new_gh->total=$data_sanpham[0]->price*$num;
+                        booking_food_insert($new_gh);
                         $message .='<tr class="cart_item">
                                         <td class="product-name">
                                             <div class="product-thumbnail">
@@ -166,12 +180,15 @@ function booking_table()
                                     </tr>';
                     }
                 }
+                unset($_SESSION['cart']);
+
             }
             $message .=' </tbody></table></div>';
             SendMail('sales@vietgardens.com', $message, $subject);
             SendMail($email_book, $message, $subject1);
             echo "<script>alert('Viet Gardens cảm ơn quý khách đã đặt bàn tại nhà hàng, Viet Gardens sẽ liên hệ với bạn sớm nhất, xin cảm ơn!')</script>";
-
+            $link_web=SITE_NAME;
+            echo "<script>window.location.href='$link_web';</script>";
         }
 
     }
