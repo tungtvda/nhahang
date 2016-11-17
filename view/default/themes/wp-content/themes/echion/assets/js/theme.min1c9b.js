@@ -276,28 +276,28 @@ var custom_js = {
             })
         }
     }, quick_view: function () {
-        jQuery(".quick-view").click(function (e) {
-            jQuery(".quick-view a").css("display", "none"), jQuery(this).append('<a href="javascript:;" class="loading dark"></a>');
-            var t = jQuery(this).attr("data-prod"), i = {action: "jck_quickview", product: t};
-            jQuery.post(ajaxurl, i, function (e) {
-                jQuery.magnificPopup.open({
-                    mainClass: "my-mfp-zoom-in",
-                    items: {src: '<div class="mfp-iframe-scaler">' + e + "</div>", type: "inline"}
-                }), jQuery(".quick-view a").css("display", "inline-block"), jQuery(".loading").remove(), jQuery(".product-card .wrapper").removeClass("animate"), setTimeout(function () {
-                    jQuery(".product-lightbox form").wc_variation_form()
-                }, 600), product.single_product()
-            }), e.preventDefault()
-        })
+        //jQuery(".quick-view").click(function (e) {
+        //    jQuery(".quick-view a").css("display", "none"), jQuery(this).append('<a href="javascript:;" class="loading dark"></a>');
+        //    var t = jQuery(this).attr("data-prod"), i = {action: "jck_quickview", product: t};
+        //    jQuery.post(ajaxurl, i, function (e) {
+        //        jQuery.magnificPopup.open({
+        //            mainClass: "my-mfp-zoom-in",
+        //            items: {src: '<div class="mfp-iframe-scaler">' + e + "</div>", type: "inline"}
+        //        }), jQuery(".quick-view a").css("display", "inline-block"), jQuery(".loading").remove(), jQuery(".product-card .wrapper").removeClass("animate"), setTimeout(function () {
+        //            jQuery(".product-lightbox form").wc_variation_form()
+        //        }, 600), product.single_product()
+        //    }), e.preventDefault()
+        //})
     }, mini_cart: function () {
-        jQuery(document).on("click", ".minicart_hover", function () {
-            jQuery(this).next(".widget_shopping_cart_content").slideDown()
-        }).on("mouseleave", ".minicart_hover", function () {
-            jQuery(this).next(".widget_shopping_cart_content").delay(100).stop(!0, !1).slideUp()
-        }), jQuery(document).on("mouseenter", ".widget_shopping_cart_content", function () {
-            jQuery(this).stop(!0, !1).show()
-        }).on("mouseleave", ".widget_shopping_cart_content", function () {
-            jQuery(this).delay(100).stop(!0, !1).slideUp()
-        })
+        //jQuery(document).on("click", ".minicart_hover", function () {
+        //    jQuery(this).next(".widget_shopping_cart_content").slideDown()
+        //}).on("mouseleave", ".minicart_hover", function () {
+        //    jQuery(this).next(".widget_shopping_cart_content").delay(100).stop(!0, !1).slideUp()
+        //}), jQuery(document).on("mouseenter", ".widget_shopping_cart_content", function () {
+        //    jQuery(this).stop(!0, !1).show()
+        //}).on("mouseleave", ".widget_shopping_cart_content", function () {
+        //    jQuery(this).delay(100).stop(!0, !1).slideUp()
+        //})
     },
     check_list_grid: function () {
         var e = function () {

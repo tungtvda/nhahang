@@ -100,14 +100,16 @@
                         </div>
 
 
-                        <form class="cart" method="post" enctype='multipart/form-data'>
+                        <form class="cart" action="{SITE-NAME}/gio-hang/" method="post" enctype='multipart/form-data'>
 
                             <div class="quantity">
-                                <input type="number" step="1" min="1" max="" name="quantity" value="1"
+                                <input type="number" step="1" min="1" max="" name="SoLuong" value="1"
                                        title="Qty" class="input-text qty text" size="4" pattern="[0-9]*"
                                        inputmode="numeric"/>
+                                <input hidden value="{id}" name="Idsanpham">
+                                <input hidden value="{link}" name="Linksanpham">
                             </div>
-                            <button type="submit" class="single_add_to_cart_button button alt">Add to cart
+                            <button type="submit" value="dathang" class="single_add_to_cart_button button alt">Add to cart
                             </button>
 
                         </form>

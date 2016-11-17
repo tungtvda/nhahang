@@ -3,22 +3,45 @@
 
 if(!defined('DIR')) require_once '../../config.php';
 require_once DIR.'/model/sanphamService.php';
-$num=3;
+$num=0;
 if (isset($_GET['Id']))
 {
-//    $Id = addslashes(strip_tags($_GET['Id']));
-//    if($Id>0&&$Id!='')
-//    {
-//        $districts1 = sanpham_getById($Id);
-//        if(count($districts1)>0){
-//            $num=$districts1[0]->num_like;
-//            $num++;
-//            $new_update = new sanpham();
-//            $new_update->id=$districts1[0]->id;
-//            $new_update->num_like=$num;
-//            sanpham_update_num_like($new_update);
-//        }
-//    }
+    $id=addslashes(strip_tags($_GET['Id']));
+    $data['kiemtra'] = sanpham_getById($id);
+    if(count($data['kiemtra'])>0){
+        if (isset($_SESSION['cart'])) {
+            foreach ($_SESSION['cart'] as $kt) {
+                if ($kt['id'] == $id) {
+                    $kiemtra = 1;
+                    $linkdh = SITE_NAME . '/dat-hang/';
+
+                }
+            }
+        }
+        if (isset($kiemtra)) {
+            echo 11111111;
+            exit;
+        } else {
+
+            $soluong = 1;
+            $linksp = SITE_NAME.'/'.$data['kiemtra'][0]->name_url;
+            if (!isset($_SESSION['cart'])) {
+                $_SESSION['cart'] = array();
+                $newitem = array();
+
+            }
+            $newitem['id'] = $id;
+//            $newitem['linksp'] = $linksp;
+            $newitem['soluong'] = $soluong;
+
+            array_push($_SESSION['cart'], $newitem);
+        }
+    }
 
 }
-echo $num;
+if(isset($_SESSION['cart'])){
+    echo count($_SESSION['cart']);
+}
+else{
+    echo $num;
+}
