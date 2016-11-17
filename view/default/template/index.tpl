@@ -168,15 +168,15 @@
                               action="">
                             <div class="vi-wrapper row">
                                 <div class="vi-date-wrap col-sm-4">
-                                    <label for="date-otreservations">Chọn ngày <span style="color: red">*</span></spaa></label>
-                                    <div class="wrapper-input">
+                                    <label for="date-otreservations">Chọn ngày *</label>
+                                    <div style="" class="wrapper-input">
                                         <input id="date-otreservations" name="date_book" required
                                                class="vi-reservation-date" type="text"
                                                value="">
                                     </div>
                                 </div>
                                 <div class="vi-time-wrap col-sm-4">
-                                    <label for="time-otreservations">Chọn giờ <span style="color: red">*</span></label>
+                                    <label for="time-otreservations">Chọn giờ *</label>
                                     <div class="wrapper-input">
                                         <select id="time-otreservations" name="time_book" required
                                                 class="vi-reservation-time">
@@ -213,7 +213,7 @@
                                     </div>
                                 </div>
                                 <div class="vi-party-size-wrap col-sm-4">
-                                    <label for="party-otreservations">Số người <span style="color: red">*</span></label>
+                                    <label for="party-otreservations">Số người *</label>
                                     <div class="wrapper-input">
                                         <select id="party-otreservations" name="member_book" required
                                                 class="vi-party-size-select">
@@ -242,7 +242,7 @@
                                     </div>
                                 </div>
                                 <div class=" col-sm-4">
-                                    <label for="date-otreservations" style="margin-top: 10px">Họ tên <span style="color: red">*</span></label>
+                                    <label for="date-otreservations" style="margin-top: 10px">Họ tên *</label>
                                     <div class="wrapper-input">
                                         <input  required name="name_book" required
                                                class="input_book" type="text"
@@ -250,7 +250,7 @@
                                     </div>
                                 </div>
                                 <div class=" col-sm-4">
-                                    <label for="date-otreservations" style="margin-top: 10px">Email <span style="color: red">*</span></label>
+                                    <label for="date-otreservations" style="margin-top: 10px">Email *</label>
                                     <div class="wrapper-input">
                                         <input  required name="email_book" required
                                                 class="input_book" type="email"
@@ -258,7 +258,7 @@
                                     </div>
                                 </div>
                                 <div class=" col-sm-4">
-                                    <label for="date-otreservations" style="margin-top: 10px">Điện thoại <span style="color: red">*</span></label>
+                                    <label for="date-otreservations" style="margin-top: 10px">Điện thoại *</label>
                                     <div class="wrapper-input">
                                         <input required name="phone_book" class="input_book" required type="text" value="">
                                     </div>

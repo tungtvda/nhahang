@@ -30,6 +30,7 @@ RewriteRule ^thuc-don/([a-zA-Z0-9_-]+)/orderby-([a-zA-Z0-9_-]+)/page-([0-9]+)$ c
 
 RewriteRule ^(.*).html$ controller/default/chitietsanpham.php?Id=$1
 RewriteRule ^like/([0-9]+)/$ controller/default/ajaxlike.php?Id=$1
+RewriteRule ^cart/([0-9]+)/$ controller/default/ajaxcart.php?Id=$1
 
 RewriteRule ^cam-nang/$ controller/default/danhmuccamnang.php
 RewriteRule ^cam-nang/page-([0-9]+)$ controller/default/danhmuccamnang.php?page=$1
