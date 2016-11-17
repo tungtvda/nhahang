@@ -102,11 +102,13 @@
 
                                                             <form action="{SITE-NAME}/tim-kiem" method="get"
                                                                   class="vi_search_form">
+                                                                <input id="url_tk" hidden value="{SITE-NAME}/tim-kiem/orderby-id/">
                                                                 <input  name="giatri" id="value_timkiem"
                                                                        placeholder="Nhập từ khóa tìm kiếm..."
                                                                        class="form-control vi-search-input"
                                                                         type="text">
-                                                                <button type="submit"><i class="fa fa-search"></i>
+
+                                                                <button type="submit" id="timkiem-bt"><i class="fa fa-search"></i>
                                                                 </button>
                                                                 <span class="header-search-close"><i
                                                                             class="fa fa-times"></i></span>

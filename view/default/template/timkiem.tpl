@@ -9,7 +9,7 @@
                             <li class="switchToGrid active"><span><i class="fa fa-th"></i></span></li>
                             <li class="switchToList"><span><i class="fa fa-list"></i></span></li>
                         </ul>
-                        <input hidden id="url_link" value="{url}">
+                        <input hidden id="url_link" value="{SITE-NAME}/tim-kiem/">
                         <form class="woocommerce-ordering" method="get">
                             <select name="orderby" class="orderby">
                                {order}
@@ -18,9 +18,9 @@
                         <script>
                             jQuery(function (a) {
                                 a(".woocommerce-ordering").on("change", "select.orderby", function () {
-                                    var utl=a('#url_link').val();
+                                    var url=a('#url_link').val();
                                     var select=a(this).val()
-                                    window.location=utl+"orderby-"+select;
+                                    window.location=url+'orderby-'+select+'/giatri-{giatri}';
                                 }), a("input.qty:not(.product-quantity input.qty)").each(function () {
                                     var b = parseFloat(a(this).attr("min"));
                                     b >= 0 && parseFloat(a(this).val()) < b && a(this).val(b)

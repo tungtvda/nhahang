@@ -12,14 +12,14 @@ function show_timkiem($data = array())
     $asign = array();
 
     $asign['danhsach'] = "";
-    $asign['mess']='';
     if(count($data['danhsach'])>0)
     {
         $asign['danhsach'] = print_item('danhmucthucdon', $data['danhsach']);
     }
     else{
-        $asign['danhsach']=' <li class="item-product col-md-4 col-sm-6 first  post-101 product type-product status-publish has-post-thumbnail product_cat-cook instock shipping-taxable purchasable product-type-simple"><div class="product-top"> Hệ thống đang cập nhật dữ liệu </div></li>';
+        $asign['danhsach']=' <li class="item-product col-md-12 col-sm-12 first  post-101 product type-product status-publish has-post-thumbnail product_cat-cook instock shipping-taxable purchasable product-type-simple"><div class="product-top"> Không có kết quả tìm kiếm cho từ khóa "'.$data['giatri'].'" </div></li>';
     }
+    $asign['giatri'] = $data['giatri'];
     $asign['val_order'] = $data['val_order'];
     $array_order=array(
         '1'=>array(
