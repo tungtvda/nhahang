@@ -426,21 +426,28 @@ var custom_js = {
             } else 27 == t.which ? (jQuery(".main-header-search-form-input").hide(), jQuery(".header .sm-logo,.header nav").css({opacity: 1}), jQuery(".header-search-close").html('<i class="fa fa-times"></i>'), jQuery(".vi-search-results").html(""), jQuery(this).val(""), jQuery(this).stop()) : jQuery(this).data("timer", setTimeout(e, 1e3))
         }), jQuery(".vi-search-input").on("keypress", function (e) {
             if (13 == e.keyCode) {
-                var t = jQuery(".selected");
-                if (t.length > 0) {
-                    var i = t.find("a").first().attr("href");
-                    window.location.href = i
+
+                var giatri = jQuery("#value_timkiem").val();
+                var url = jQuery("#url_tk").val();
+                if (giatri.length > 0) {
+                    window.location=url+'giatri-'+giatri;
+                }
+                else{
+                    alert('Bạn vui lòng nhập từ khóa tìm kiếm')
                 }
                 e.preventDefault()
             }
-            if (27 == e.keyCode && (jQuery(".main-header-search-form-input").hide(), jQuery(".header .sm-logo,.header nav").css({opacity: 1})), 38 == e.keyCode) {
-                var t = jQuery(".selected");
-                jQuery(".vi-search-results li").removeClass("selected"), 0 == t.prev().length ? t.siblings().last().addClass("selected") : t.prev().addClass("selected")
+        })
+            , jQuery("#timkiem-bt").on("click", function (e) {
+            var giatri = jQuery("#value_timkiem").val();
+            var url = jQuery("#url_tk").val();
+            if (giatri.length > 0) {
+                window.location=url+'giatri-'+giatri;
             }
-            if (40 == e.keyCode) {
-                var t = jQuery(".selected");
-                jQuery(".vi-search-results li").removeClass("selected"), 0 == t.next().length ? t.siblings().first().addClass("selected") : t.next().addClass("selected")
+            else{
+                alert('Bạn vui lòng nhập từ khóa tìm kiếm')
             }
+            e.preventDefault()
         })
     }
 };

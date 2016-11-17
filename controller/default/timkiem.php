@@ -20,7 +20,16 @@ $sub_string_oder='';
 $order='id desc';
 $order_pag='orderby-id';
 $val_order='id';
-
+if(isset($_GET['orderby']))
+{
+    $val_order=$_GET['orderby'];
+    $sub_string_oder='orderby='.$val_order;
+    $arr_check=array('id','name','price','start','num_like');
+    if(in_array($val_order,$arr_check)){
+        $order=addslashes(strip_tags($val_order)).' desc';
+    }
+    $order_pag='orderby-'.$val_order;
+}
 
 if(isset($_GET['giatri'])&&$_GET['giatri']!='')
 {
@@ -28,7 +37,7 @@ if(isset($_GET['giatri'])&&$_GET['giatri']!='')
     $dk='name LIKE "%' . $field . '%" or price LIKE "%' . $field . '%" or name_url LIKE "%' . $field . '%" or 	start LIKE "%' . $field . '%" or num_like LIKE "%' . $field . '%" or content LIKE "%' . $field . '%" or content_short LIKE "%' . $field . '%" or title LIKE "%' . $field . '%" or description LIKE "%' . $field . '%"   ';
     $data['current']=isset($_GET['page'])?$_GET['page']:'1';
 
-    $data['danhsach']=sanpham_getByTop('',$dk,'id desc');
+    $data['danhsach']=sanpham_getByTop('',$dk,$order);
     $name=$data['menu'][6]->name;
     $data['banner']=array(
         'banner_img'=>$data['menu'][6]->img,
@@ -39,6 +48,7 @@ if(isset($_GET['giatri'])&&$_GET['giatri']!='')
     $title=$data['menu'][6]->title;
     $description=$data['menu'][6]->description;
     $keyword=$data['menu'][6]->keyword;
+    $data['giatri']=$_GET['giatri'];
 }
 else{
     redict(SITE_NAME);

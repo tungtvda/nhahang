@@ -62,8 +62,7 @@
 
         </div>
         <div class="description">
-            <p>Duis mollis, est non commodo luctus, nisi erat ligula, eget lacinia odio sem
-                nec elit.</p>
+            <p>{content}</p>
         </div>
     </div>
 </li>
