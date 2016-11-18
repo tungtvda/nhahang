@@ -17,7 +17,6 @@ session_start();
 require_once DIR.'/common/minifi.output.php';
 ob_start("minify_output");
 
-//require_once 'language/en.php';
 //define("SITE_NAME", "http://vietgardens.com");
 //define("DIR", dirname(__FILE__));
 //define('SERVER','localhost');
@@ -27,7 +26,6 @@ ob_start("minify_output");
 //define('CACHE',false);
 //define('DATETIME_FORMAT',"y-m-d H:i:s");
 //define('PRIVATE_KEY','hoidinhnvbk');
-//define('link_chitiet_danhmuc_tour','/tour/');
 //session_start();
 //require_once DIR.'/common/minifi.output.php';
 //ob_start("minify_output");

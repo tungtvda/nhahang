@@ -13,7 +13,7 @@
 				<i class="fa fa-calculator"></i> {created}
 			</span><span class="comments-link">
                     <a href="{link}#respond">
-                        <i class="fa fa-eye"></i> 3
+                        <i class="fa fa-eye"></i> {view}
                     </a>
                 </span></div>
             <h3 class="blog_title"><a title="{name}"
