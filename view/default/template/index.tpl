@@ -163,6 +163,11 @@
                                 </div>
                             <p class="read-more"><span>Gọi ngay - 00 1 2345 678</span></p></div>
                     </div>
+                    <style>
+                        .vi-otreservations.style_white .vi-wrapper label{
+                            color: #ffffff;
+                        }
+                    </style>
                     <div class="vi-otreservations style_white">
                         <form method="post" class="vi-otreservations-form"
                               action="">

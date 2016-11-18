@@ -80,8 +80,8 @@ div.pp_woocommerce .pp_gallery ul li a:hover, div.pp_woocommerce .pp_gallery ul 
 div.pp_woocommerce .pp_next:before, div.pp_woocommerce .pp_previous:before {
     background-color: #444;
     font-size: 16px !important;
-    font-family: WooCommerce;
-    content: "\e00b";
+    font-family: 'FontAwesome';
+    content: "\f190";
     text-indent: 0;
     display: none;
     position: absolute;
@@ -104,8 +104,8 @@ div.pp_woocommerce .pp_previous:before {
 
 div.pp_woocommerce .pp_next:before {
     right: 1em;
-    font-family: WooCommerce;
-    content: "\e008"
+    font-family: 'FontAwesome';
+    content: "\f18e";
 }
 
 div.pp_woocommerce .pp_details {
@@ -138,8 +138,8 @@ div.pp_woocommerce .pp_close:hover {
 }
 
 div.pp_woocommerce .pp_close:before {
-    font-family: WooCommerce;
-    content: "\e013";
+    font-family: 'FontAwesome';
+    content: "\f00d";
     display: block;
     position: absolute;
     top: 0;
@@ -162,8 +162,8 @@ div.pp_woocommerce .pp_arrow_next:hover, div.pp_woocommerce .pp_arrow_previous:h
 }
 
 div.pp_woocommerce .pp_arrow_next:before, div.pp_woocommerce .pp_arrow_previous:before {
-    font-family: WooCommerce;
-    content: "\e00b";
+    font-family: 'FontAwesome';
+    content: "\f190";
     display: block;
     position: absolute;
     top: 0;
@@ -183,7 +183,8 @@ div.pp_woocommerce .pp_arrow_next {
 }
 
 div.pp_woocommerce .pp_arrow_next:before {
-    content: "\e008"
+    font-family: 'FontAwesome';
+    content: "\f18e";
 }
 
 div.pp_woocommerce a.pp_contract, div.pp_woocommerce a.pp_expand {
@@ -199,8 +200,8 @@ div.pp_woocommerce a.pp_contract:hover, div.pp_woocommerce a.pp_expand:hover {
 }
 
 div.pp_woocommerce a.pp_contract:before, div.pp_woocommerce a.pp_expand:before {
-    font-family: WooCommerce;
-    content: "\e005";
+    font-family: 'FontAwesome';
+    content: "\f065";
     display: block;
     position: absolute;
     top: 0;
@@ -212,7 +213,8 @@ div.pp_woocommerce a.pp_contract:before, div.pp_woocommerce a.pp_expand:before {
 }
 
 div.pp_woocommerce a.pp_contract:before {
-    content: "\e004"
+    font-family: 'FontAwesome';
+    content: "\f066";
 }
 
 div.pp_woocommerce #respond {
