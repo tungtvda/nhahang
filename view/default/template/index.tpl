@@ -157,9 +157,8 @@
                             <div class="icon-heading"><img
                                         src="{SITE-NAME}/view/default/themes/wp-content/uploads/2016/07/icon-title-1.png"
                                         alt="BOOK A TABLE"/></div>
-                            <div class="desc"><p><em>
-                                        Thứ hai đến Chủ nhật <i class="fa fa-arrows-h"></i> 7:30 sáng đến 11:00 tối</em>
-                                </p>
+                            <div class="desc">
+                                <p><em>Monday to Sunday&nbsp;</em> <em>7:30 am to 11:00 pm</em></p>
                                 </div>
                             <p class="read-more"><span>Gọi ngay - 00 1 2345 678</span></p></div>
                     </div>
