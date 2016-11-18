@@ -278,7 +278,8 @@ h6 {
 }
 
 .view-more .btn-default, .view-more .btn-primary, .description .btn-default, .description .btn-primary {
-    font-family: Playfair Display, Helvetica, Arial, sans-serif;
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
+    font-weight: bold;
 }
 
 .view-more .btn-default:hover, .view-more .btn-primary:hover, .description .btn-default:hover, .description .btn-primary:hover {

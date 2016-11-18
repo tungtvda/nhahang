@@ -13,9 +13,9 @@
                 <div class="ms-layer  msp-cn-2-8 ms-hover-active slide_div_2">
                     {name}
                 </div>
-                <p class="hidden-sm "><br></p>
+                <p class="hidden-sm " style="margin-bottom: 0px"><br></p>
                 <img class="ms-layer ms-hover-active slide_img_2"  src="{SITE-NAME}/view/default/themes/images/slide_icon_4.png" alt="">
-                <p class="hidden-sm slide_hidden"><br></p>
+                <p class="hidden-sm slide_hidden" style="margin-bottom: 0px"><br></p>
                 <img class="ms-layer ms-hover-active slide_img_3" src="{SITE-NAME}/view/default/themes/images/slide_icon_5.png" alt="" >
                 <div class=""style="">
                     <a href="{link}" target="_self" class="ms-layer ms-btn ms-btn-round ms-btn-n msp-preset-btn-159 slide_book_now"
