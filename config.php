@@ -31,6 +31,9 @@ ob_start("minify_output");
 //ob_start("minify_output");
 
 require_once DIR.'/model/contactService.php';
+require_once DIR.'/model/booking_tableService.php';
+require_once DIR.'/model/dangky_emailService.php';
+require_once DIR.'/model/danhgiaService.php';
 function contact()
 {
     if (isset($_POST['name_contact'])) {
@@ -190,4 +193,14 @@ function booking_table()
         }
 
     }
+}
+function returnCountData(){
+    $count_contact=contact_count('status=0');
+    $_SESSION['contact']=$count_contact;
+    $count_table=booking_table_count('status=0');
+    $_SESSION['booking_table']=$count_table;
+    $count_dangky=dangky_email_count('status=0');
+    $_SESSION['dangky_email']=$count_dangky;
+    $count_danhgia=danhgia_count('status=0');
+    $_SESSION['danhgia_thucdon']=$count_danhgia;
 }

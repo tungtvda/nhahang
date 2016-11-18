@@ -77,8 +77,11 @@
                 <li class="{kichhoat}"><a href="{SITE-NAME}/admin"><span class="icon-align-justify"></span> Dashboard</a></li>
                 <li class="{kichhoat_admin}" ><a href="{SITE-NAME}/controller/admin/admin.php"><span class="icon-user"></span> Tài khoản quản trị</a></li>
                 <li class="{kichhoat_config}"><a href="{SITE-NAME}/controller/admin/config.php"><span class=" icon-wrench"></span> Cấu hình hệ thống</a></li>
-                <li class="{kichhoat_dathang}"><a href="{SITE-NAME}/controller/admin/booking_table.php"><span class="icon-shopping-cart"></span> Đặt tour <span style="color: red; float: right">{count_booking}</span></a></li>
+                <li class="{kichhoat_dathang}"><a href="{SITE-NAME}/controller/admin/booking_table.php"><span class="icon-shopping-cart"></span> Đặt Bàn <span style="color: red; float: right">{count_booking}</span></a></li>
                 <li class="{kichhoat_lienhe}"><a href="{SITE-NAME}/controller/admin/contact.php"><span class="icon-envelope"></span> Liên hệ <span style="color: red; float: right">{count_contact}</span></a></li>
+                <li class="{kichhoat_dangky}"><a href="{SITE-NAME}/controller/admin/dangky_email.php"><span class="icon-envelope"></span> Đăng ký email <span style="color: red; float: right">{count_dangky}</span></a></li>
+                <li class="{kichhoat_danhgia}"><a href="{SITE-NAME}/controller/admin/danhgia.php"><span class="icon-envelope"></span> Đánh giá thực đơn <span style="color: red; float: right">{count_danhgia}</span></a></li>
+
                 <li class="dropdown {kichhoat_thucdon}" ><a href="#"><span class=" icon-plane"></span> Thực đơn</a>
                     <ul>
                         <li><a href="{SITE-NAME}/controller/admin/danhmuc1.php">Danh mục 1</a></li>
@@ -92,7 +95,7 @@
                         <li><a href="{SITE-NAME}/controller/admin/news.php">Danh sách </a></li>
                     </ul>
                 </li>
-                <li class="{kichhoat_dangky}"><a href="{SITE-NAME}/controller/admin/dangky_email.php"><span class="icon-envelope"></span> Đăng ký email </a></li>
+
                 <li class="{kichhoat_tuyendung}"><a href="{SITE-NAME}/controller/admin/tuyendung.php"><span class="icon-facetime-video"></span> Tuyển dụng </a></li>
                 <li class="{kichhoat_gioithieu}"><a href="{SITE-NAME}/controller/admin/info.php"><span class="icon-facetime-video"></span> Giới thiệu</a></li>
                 <li class="{kichhoat_slide}"><a href="{SITE-NAME}/controller/admin/slide.php"><span class="icon-film"></span> Slide</a></li>

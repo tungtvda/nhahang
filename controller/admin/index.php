@@ -5,6 +5,7 @@ require_once DIR.'/common/messenger.php';
 $data=array();
 if(isset($_SESSION["Admin"]))
 {
+    returnCountData();
     $data['username']=isset($_SESSION["UserName"])?$_SESSION["UserName"]:'quản trị viên';
     view_index($data);
 }
