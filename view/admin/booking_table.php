@@ -1,6 +1,7 @@
 <?php
 require_once DIR.'/common/paging.php';
 require_once DIR.'/common/cls_fast_template.php';
+require_once DIR.'/model/booking_foodService.php';
 function view_booking_table($data)
 {
     $ft=new FastTemplate(DIR.'/view/admin/templates');
@@ -59,7 +60,15 @@ function showTableBody($data)
         $TableBody.="<td>".$obj->booking_date."</td>";
         $TableBody.="<td>".$obj->booking_time."</td>";
         $TableBody.="<td>".$obj->created."</td>";
-        $TableBody.="<td><a href=\"?action=edit&id=".$obj->id."\" title=\"Edit\"><img src=\"".SITE_NAME."/view/admin/Themes/images/pencil.png\" alt=\"Edit\"></a>";
+        $TableBody.="<td>";
+        // count data booking food
+        $data_booking_food=booking_food_count('id_chung="'.$obj->id_chung.'"');
+        if(count($data_booking_food)>0)
+        {
+            $TableBody.="<a href=\"".SITE_NAME."/controller/admin/booking_food.php?id_chung=".$obj->id_chung."\" title=\"Danh sách thực đơn\"><img src=\"".SITE_NAME."/view/admin/Themes/images/list_detail.png\" alt=\"Danh sách chi tiết\"></a>";
+        }
+
+        $TableBody.="<a href=\"?action=edit&id=".$obj->id."\" title=\"Edit\"><img src=\"".SITE_NAME."/view/admin/Themes/images/pencil.png\" alt=\"Edit\"></a>";
         $TableBody.="<a href=\"?action=delete&id=".$obj->id."\" title=\"Delete\" onClick=\"return confirm('Bạn có chắc chắc muốn xóa?')\"><img src=\"".SITE_NAME."/view/admin/Themes/images/cross.png\" alt=\"Delete\"></a> ";
         $TableBody.="</td>";
         $TableBody.="</tr>";

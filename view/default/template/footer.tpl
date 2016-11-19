@@ -1,6 +1,6 @@
 </div>
 </div><!-- #main-content -->
-<div class="top_footer">
+<!--<div class="top_footer">
     <div class="container">
         <div class="row">
             <aside id="text-7" class="col-sm-12 text-center widget widget_text"><h3 class="widget-title">
@@ -22,7 +22,6 @@
                             }
                         })();
                     </script>
-                    <!-- MailChimp for WordPress v4.0.6 - https://wordpress.org/plugins/mailchimp-for-wp/ -->
                     <form  class="mc4wp-form mc4wp-form-1732" method="post"  action=""
                           data-name="">
                         <div class="mc4wp-form-fields"><input type="email" name="email_footer"
@@ -30,11 +29,12 @@
                                     type="submit" value="Đăng ký"/>
                         </div>
                         <div class="mc4wp-response"></div>
-                    </form><!-- / MailChimp for WordPress Plugin --></div>
+                    </form>
+                </div>
             </aside>
         </div>
     </div>
-</div>
+</div>-->
 
 <footer id="footer" class="site-footer border_bottom">
     <div class="footer">
@@ -43,7 +43,7 @@
                 <aside id="echion_widget_single_image-6"
                        class="col-sm-12 text-center widget echion_Widget_Single_Image_class">
                     <div class="vi-single-image">
-                        <img class="vi-single-image" src="{Logo}" alt="{name}" style="width: 100px">
+                        <img class="vi-single-image" src="{Logo}" alt="{name}" style="width: 130px">
                     </div>
                 </aside>
                 <aside id="text-6" class="col-sm-12 text-center widget widget_text">
@@ -58,22 +58,35 @@
                         </ul>
                     </div>
                 </aside>
-                <aside id="text-5" class="col-sm-12 text-center widget widget_text">
-                    <div class="textwidget"><p style="color:#26292d">
-                            {address} <br/>
-                            <a style="color: #ee2b2a;" href="mailto:{email}">{email}</a> / <a style="color: #ee2b2a;" href="tel:{Hotline}">{Hotline}</a>
-                        </p></div>
-                </aside>
-                <aside id="widget_echion_social_links-3"
-                       class="col-sm-12 text-center widget echion_social_links">
-                    <ul class="echion_social_links basic">
-                        <li><a target="_blank" class="face hasTooltip" href="{facebook}"><i class="fa fa-facebook"></i></a></li>
-                        <li><a target="_blank" class="twitter hasTooltip" href="{twitter}"><i class="fa fa-twitter"></i></a></li>
-                        <li><a target="_blank" class="google hasTooltip" href="{google}"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a target="_blank" class="linkedin hasTooltip" href="{linkedin}"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a target="_blank" class="instagram hasTooltip" href="{instagram}"><i class="fa fa-instagram"></i></a>
-                    </ul>
-                </aside>
+
+                    <aside id="text-5" class="col-sm-12 text-center widget widget_text">
+                        <form  class="mc4wp-form mc4wp-form-1732" method="post"  action=""
+                               data-name="">
+                            <div class="mc4wp-form-fields"><input type="email" name="email_footer"
+                                                                  placeholder="Nhập địa chỉ email" required/><input
+                                        type="submit" value="Đăng ký"/>
+                            </div>
+                            <div class="mc4wp-response"></div>
+                        </form>
+                    </aside>
+                    <aside id="text-5" class="col-sm-12 text-center widget widget_text">
+                        <div class="textwidget"><p style="color:#26292d">
+                                {address} <br/>
+                                <a style="color: #ee2b2a;" href="mailto:{email}">{email}</a> / <a style="color: #ee2b2a;" href="tel:{Hotline}">{Hotline}</a>
+                            </p></div>
+                    </aside>
+                    <aside id="widget_echion_social_links-3"
+                           class="col-sm-12 text-center widget echion_social_links">
+                        <ul class="echion_social_links basic">
+                            <li><a target="_blank" class="face hasTooltip" href="{facebook}"><i class="fa fa-facebook"></i></a></li>
+                            <li><a target="_blank" class="twitter hasTooltip" href="{twitter}"><i class="fa fa-twitter"></i></a></li>
+                            <li><a target="_blank" class="google hasTooltip" href="{google}"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a target="_blank" class="linkedin hasTooltip" href="{linkedin}"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a target="_blank" class="instagram hasTooltip" href="{instagram}"><i class="fa fa-instagram"></i></a>
+                        </ul>
+                    </aside>
+
+
             </div>
         </div>
     </div>

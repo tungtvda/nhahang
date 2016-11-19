@@ -90,12 +90,18 @@ if(isset($_SESSION["Admin"]))
             header('Location: '.SITE_NAME.'/controller/admin/booking_food.php');
         }
     }
-    $data['username']=isset($_SESSION["UserName"])?$_SESSION["UserName"]:'quản trị viên';
-    $data['count_paging']=booking_food_count('');
-    $data['page']=isset($_GET['page'])?$_GET['page']:'1';
-    $data['table_body']=booking_food_getByPagingReplace($data['page'],20,'id DESC','');
-    // gọi phương thức trong tầng view để hiển thị
-    view_booking_food($data);
+    if(isset($_GET['id_chung'])&&$_GET['id_chung']!=''){
+        $dk="booking_food.id_chung='".addslashes(strip_tags($_GET['id_chung']))."'";
+        $data['username']=isset($_SESSION["UserName"])?$_SESSION["UserName"]:'quản trị viên';
+        $data['count_paging']=booking_food_count($dk);
+        $data['page']=isset($_GET['page'])?$_GET['page']:'1';
+        $data['table_body']=booking_food_getByPagingReplace($data['page'],20,'id DESC',$dk);
+        // gọi phương thức trong tầng view để hiển thị
+        view_booking_food($data);
+    }
+    else{
+        header('Location: '.SITE_NAME.'/controller/admin/booking_table.php');
+    }
 }
 else
 {
