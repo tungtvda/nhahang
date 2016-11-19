@@ -42,7 +42,7 @@ function showTableBody($data)
     $TableBody='';
     if(count($data)>0) foreach($data as $obj)
     {
-        $TableBody.="<tr><td><input type=\"checkbox\" name=\"check_".$obj->id."\"/></td>";
+        $TableBody.="<tr><td></td>";
         $TableBody.="<td>".$obj->facebook."</td>";
         $TableBody.="<td>".$obj->twitter."</td>";
         $TableBody.="<td>".$obj->youtube."</td>";
@@ -50,7 +50,6 @@ function showTableBody($data)
         $TableBody.="<td>".$obj->linkedin."</td>";
         $TableBody.="<td>".$obj->instagram."</td>";
         $TableBody.="<td><a href=\"?action=edit&id=".$obj->id."\" title=\"Edit\"><img src=\"".SITE_NAME."/view/admin/Themes/images/pencil.png\" alt=\"Edit\"></a>";
-        $TableBody.="<a href=\"?action=delete&id=".$obj->id."\" title=\"Delete\" onClick=\"return confirm('Bạn có chắc chắc muốn xóa?')\"><img src=\"".SITE_NAME."/view/admin/Themes/images/cross.png\" alt=\"Delete\"></a> ";
         $TableBody.="</td>";
         $TableBody.="</tr>";
     }

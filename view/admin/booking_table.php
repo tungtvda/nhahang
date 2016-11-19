@@ -42,7 +42,14 @@ function showTableBody($data)
     $TableBody='';
     if(count($data)>0) foreach($data as $obj)
     {
-        $TableBody.="<tr><td><input type=\"checkbox\" name=\"check_".$obj->id."\"/></td>";
+        if($obj->status==0){
+            $font='font-weight: bold; background-color: #e6e6e6';
+        }
+        else{
+            $font='';
+        }
+        $TableBody.="<tr style='".$font."'>
+        <td><input type=\"checkbox\" name=\"check_".$obj->id."\"/></td>";
         $TableBody.="<td>".$obj->id."</td>";
         $TableBody.="<td>".$obj->status."</td>";
         $TableBody.="<td>".$obj->name."</td>";

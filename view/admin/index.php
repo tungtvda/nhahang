@@ -43,17 +43,18 @@ function showFrom($form, $ListKey = array())
     $str_from .= '<ul class="widgeticons row-fluid">';
     $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/admin.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/admin.png" alt="" class=""><span>Tài khoản quản trị</span></a></li>';
     $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/config.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/cauhinh.png" alt="" class=""><span>Cấu hình hệ thống</span></a></li>';
-    $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/booking_tour.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/cart.png" alt="" class=""><span>Đặt hàng</span></a></li>';
+    $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/booking_table.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/booking_table.png" alt="" class=""><span>Đặt bàn</span></a></li>';
     $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/contact.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/lienhe.png" alt="" class=""><span>Liên hệ</span></a></li>';
-    $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/new.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/tintuc.png" alt="" class=""><span>Tin tức</span></a></li>';
-    $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/info_mix.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/gioithieu.png" alt="" class=""><span>Giới thiệu</span></a></li>';
-    $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/subport.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/hotro.png" alt="" class=""><span>Hỗ trợ trực tuyến</span></a></li>';
-    $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/video.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/video.png" alt="" class=""><span>Video</span></a></li>';
+    $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/dangky_email.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/dangky.png" alt="" class=""><span>Đăng ký email</span></a></li>';
+    $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/danhgia.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/review.png" alt="" class=""><span>Đánh giá thực đơn</span></a></li>';
+    $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/sanpham.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/thucdon.png" alt="" class=""><span>Thực đơn</span></a></li>';
+    $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/news.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/camnang.png" alt="" class=""><span>Cẩm nang</span></a></li>';
+    $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/tuyendung.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/tuyendung.png" alt="" class=""><span>Tuyển dụng</span></a></li>';
+    $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/info.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/gioithieu.png" alt="" class=""><span>Giới thiệu</span></a></li>';
     $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/slide.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/slide.png" alt="" class=""><span>Slide</span></a></li>';
     $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/menu.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/menu.png" alt="" class=""><span>Cấu hình menu</span></a></li>';
-    $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/link.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/lienket.png" alt="" class=""><span>Liên kết website</span></a></li>';
-    $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/mangxahoi.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/mangxahoi.png" alt="" class=""><span>Mạng xã hội</span></a></li>';
-
+    $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/social.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/mangxahoi.png" alt="" class=""><span>Mạng xã hội</span></a></li>';
+    $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/ykien.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/ykien.png" alt="" class=""><span>Ý kiến khách hàng</span></a></li>';
     $str_from .= '</ul></div></div>';
     return $str_from;
 }

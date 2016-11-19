@@ -42,7 +42,14 @@ function showTableBody($data)
     $TableBody='';
     if(count($data)>0) foreach($data as $obj)
     {
-        $TableBody.="<tr><td><input type=\"checkbox\" name=\"check_".$obj->id."\"/></td>";
+        if($obj->status==0){
+            $font='font-weight: bold; background-color: #e6e6e6';
+        }
+        else{
+            $font='';
+        }
+        $TableBody.="<tr style='".$font."'>
+        <td><input type=\"checkbox\" name=\"check_".$obj->id."\"/></td>";
         $TableBody.="<td>".$obj->id."</td>";
         $TableBody.="<td>".$obj->name_kh."</td>";
         $TableBody.="<td>".$obj->address."</td>";
@@ -61,6 +68,7 @@ function showTableBody($data)
 function showFrom($form,$ListKey=array())
 {
     $str_from='';
+    $str_from.='<p><label>status</label><input  type="checkbox"  name="status" value="1" '.(($form!=false)?(($form->status=='1')?'checked':''):'').' /></p>';
     $str_from.='<p><label>name_kh</label><input class="text-input small-input" type="text"  name="name_kh" value="'.(($form!=false)?$form->name_kh:'').'" /></p>';
     $str_from.='<p><label>address</label><input class="text-input small-input" type="text"  name="address" value="'.(($form!=false)?$form->address:'').'" /></p>';
     $str_from.='<p><label>phone</label><input class="text-input small-input" type="text"  name="phone" value="'.(($form!=false)?$form->phone:'').'" /></p>';
@@ -68,6 +76,6 @@ function showFrom($form,$ListKey=array())
     $str_from.='<p><label>title</label><input class="text-input small-input" type="text"  name="title" value="'.(($form!=false)?$form->title:'').'" /></p>';
     $str_from.='<p><label>content</label><textarea name="content">'.(($form!=false)?$form->content:'').'</textarea><script type="text/javascript">CKEDITOR.replace(\'content\'); </script></p>';
     $str_from.='<p><label>created</label><input class="text-input small-input" type="text"  name="created" value="'.(($form!=false)?$form->created:'').'" /></p>';
-    $str_from.='<p><label>status</label><input  type="checkbox"  name="status" value="1" '.(($form!=false)?(($form->status=='1')?'checked':''):'').' /></p>';
+
     return $str_from;
 }
