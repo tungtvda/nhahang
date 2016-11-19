@@ -43,14 +43,13 @@ function showTableBody($data)
     if(count($data)>0) foreach($data as $obj)
     {
         if($obj->id!=1){
-            $TableBody.="<tr><td><input type=\"checkbox\" name=\"check_".$obj->id."\"/></td>";
+            $TableBody.="<tr><td></td>";
             $TableBody.="<td>".$obj->id."</td>";
             $TableBody.="<td>".$obj->position."</td>";
             $TableBody.="<td>".$obj->name."</td>";
             $TableBody.="<td>".$obj->name_url."</td>";
             $TableBody.="<td><img src=\"".$obj->img."\" width=\"50px\" height=\"50px\"/> </td>";
             $TableBody.="<td><a href=\"?action=edit&id=".$obj->id."\" title=\"Edit\"><img src=\"".SITE_NAME."/view/admin/Themes/images/pencil.png\" alt=\"Edit\"></a>";
-            $TableBody.="<a href=\"?action=delete&id=".$obj->id."\" title=\"Delete\" onClick=\"return confirm('Bạn có chắc chắc muốn xóa?')\"><img src=\"".SITE_NAME."/view/admin/Themes/images/cross.png\" alt=\"Delete\"></a> ";
             $TableBody.="</td>";
             $TableBody.="</tr>";
         }
@@ -63,7 +62,7 @@ function showFrom($form,$ListKey=array())
     $str_from='';
     $str_from.='<p><label>position</label><input class="text-input small-input" type="text"  name="position" value="'.(($form!=false)?$form->position:'').'" /></p>';
     $str_from.='<p><label>name</label><input class="text-input small-input" type="text"  name="name" value="'.(($form!=false)?$form->name:'').'" /></p>';
-    $str_from.='<p><label>name_url</label><input class="text-input small-input" type="text"  name="name_url" value="'.(($form!=false)?$form->name_url:'').'" /></p>';
+    $str_from.='<p hidden><label>name_url</label><input class="text-input small-input" type="text"  name="name_url" value="'.(($form!=false)?$form->name_url:'').'" /></p>';
     $str_from.='<p><label>img</label><input class="text-input small-input" type="text"  name="img" value="'.(($form!=false)?$form->img:'').'"/><a class="button" onclick="openKcEditor(\'img\');">Upload ảnh</a></p>';
     $str_from.='<p><label>title</label><input class="text-input small-input" type="text"  name="title" value="'.(($form!=false)?$form->title:'').'" /></p>';
     $str_from.='<p><label>keyword</label><input class="text-input small-input" type="text"  name="keyword" value="'.(($form!=false)?$form->keyword:'').'" /></p>';

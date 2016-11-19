@@ -42,14 +42,13 @@ function showTableBody($data)
     $TableBody='';
     if(count($data)>0) foreach($data as $obj)
     {
-        $TableBody.="<tr><td><input type=\"checkbox\" name=\"check_".$obj->Id."\"/></td>";
+        $TableBody.="<tr><td></td>";
         $TableBody.="<td>".$obj->Id."</td>";
         $TableBody.="<td><img src=\"".$obj->Logo."\" width=\"50px\" height=\"50px\"/> </td>";
         $TableBody.="<td><img src=\"".$obj->Icon."\" width=\"50px\" height=\"50px\"/> </td>";
         $TableBody.="<td>".$obj->Name."</td>";
         $TableBody.="<td>".$obj->Address."</td>";
         $TableBody.="<td><a href=\"?action=edit&Id=".$obj->Id."\" title=\"Edit\"><img src=\"".SITE_NAME."/view/admin/Themes/images/pencil.png\" alt=\"Edit\"></a>";
-        $TableBody.="<a href=\"?action=delete&Id=".$obj->Id."\" title=\"Delete\" onClick=\"return confirm('Bạn có chắc chắc muốn xóa?')\"><img src=\"".SITE_NAME."/view/admin/Themes/images/cross.png\" alt=\"Delete\"></a> ";
         $TableBody.="</td>";
         $TableBody.="</tr>";
     }

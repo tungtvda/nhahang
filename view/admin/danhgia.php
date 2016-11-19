@@ -42,7 +42,14 @@ function showTableBody($data)
     $TableBody='';
     if(count($data)>0) foreach($data as $obj)
     {
-        $TableBody.="<tr><td><input type=\"checkbox\" name=\"check_".$obj->id."\"/></td>";
+        if($obj->status==0){
+            $font='font-weight: bold; background-color: #e6e6e6';
+        }
+        else{
+            $font='';
+        }
+        $TableBody.="<tr style='".$font."'>
+        <td><input type=\"checkbox\" name=\"check_".$obj->id."\"/></td>";
         $TableBody.="<td>".$obj->id."</td>";
         $TableBody.="<td>".$obj->sanpham_id."</td>";
         $TableBody.="<td>".$obj->name."</td>";
@@ -62,11 +69,12 @@ function showTableBody($data)
 function showFrom($form,$ListKey=array())
 {
     $str_from='';
+    $str_from.='<p><label>status</label><input  type="checkbox"  name="status" value="1" '.(($form!=false)?(($form->status=='1')?'checked':''):'').' /></p>';
     $str_from.='<p><label>sanpham_id</label><input class="text-input small-input" type="text"  name="sanpham_id" value="'.(($form!=false)?$form->sanpham_id:'').'" /></p>';
     $str_from.='<p><label>name</label><input class="text-input small-input" type="text"  name="name" value="'.(($form!=false)?$form->name:'').'" /></p>';
     $str_from.='<p><label>email</label><input class="text-input small-input" type="text"  name="email" value="'.(($form!=false)?$form->email:'').'" /></p>';
     $str_from.='<p><label>phone</label><input class="text-input small-input" type="text"  name="phone" value="'.(($form!=false)?$form->phone:'').'" /></p>';
-    $str_from.='<p><label>status</label><input  type="checkbox"  name="status" value="1" '.(($form!=false)?(($form->status=='1')?'checked':''):'').' /></p>';
+
     $str_from.='<p><label>start</label><input class="text-input small-input" type="text"  name="start" value="'.(($form!=false)?$form->start:'').'" /></p>';
     $str_from.='<p><label>content</label><textarea name="content">'.(($form!=false)?$form->content:'').'</textarea><script type="text/javascript">CKEDITOR.replace(\'content\'); </script></p>';
     $str_from.='<p><label>created</label><input class="text-input small-input" type="text"  name="created" value="'.(($form!=false)?$form->created:'').'" /></p>';
