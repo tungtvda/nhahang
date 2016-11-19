@@ -5,7 +5,8 @@
  * Date: 11/20/14
  * Time: 11:00 AM
  */
-
+require_once DIR . '/common/class.phpmailer.php';
+require_once(DIR . "/common/Mail.php");
 $array_files=scandir(DIR.'/model');
 foreach ($array_files as $filename) {
     $path = DIR.'/model/' . $filename;
@@ -59,6 +60,7 @@ function  show_left($data1=array(),$active='trangchu')
     $data['danhmuc_left']=danhmuc1_getByTop('','id!=1','position asc');
     $data['noibat_left']=sanpham_getByTop(5,'highlights=1','id desc');
     view_left($data);
+    booking_table();
 }
 
 function  show_left2($data1=array())

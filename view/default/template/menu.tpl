@@ -11,12 +11,12 @@
                             <aside id="text-2" class="widget_text">
                                 <div class="textwidget">
                                     <a href="tel:{Hotline}">
-                                        <i class="fa fa-phone fa-2 theme-color"> </i> Gọi ngay: {Hotline}
+                                        <i style="color: #ee2b2a;" class="fa fa-phone fa-2 theme-color"> </i> Gọi ngay: {Hotline}
                                     </a>
                                 </div>
                             </aside>
                             <aside id="text-3" class="widget_text">
-                                <div class="textwidget"><i class="fa fa-envelope-o fa-2 theme-color"> </i> <a
+                                <div class="textwidget"><i style="color: #ee2b2a;" class="fa fa-envelope-o fa-2 theme-color"> </i> <a
                                             href="mailto:{email}">{email}</a></div>
                             </aside>
                         </div>

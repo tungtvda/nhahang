@@ -131,7 +131,10 @@ function booking_table()
 
 
                         </div>';
-            $message .='<div style="float: left; width: 100%"> <talbe> <thead>
+
+            $total=0;
+            if(isset($_SESSION['cart'])&&count($_SESSION['cart'])>0){
+                $message .='<div style="float: left; width: 100%"> <talbe> <thead>
                                     <tr>
                                         <th class="product-name">Thực đơn</th>
                                         <th class="product-price">Giá</th>
@@ -140,8 +143,6 @@ function booking_table()
                                     </tr>
                                     </thead>
                                     <tbody>';
-            $total=0;
-            if(isset($_SESSION['cart'])){
                 foreach ($_SESSION['cart'] as $key=>$sp) {
                     $data_sanpham=sanpham_getById($sp['id']);
                     if(count($data_sanpham)>0){

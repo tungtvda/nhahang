@@ -100,6 +100,7 @@ if(isset($_SESSION["Admin"]))
     $data['count_paging']=booking_table_count('');
     $data['page']=isset($_GET['page'])?$_GET['page']:'1';
     $data['table_body']=booking_table_getByPagingReplace($data['page'],20,'id DESC','');
+
     // gọi phương thức trong tầng view để hiển thị
     view_booking_table($data);
 }
