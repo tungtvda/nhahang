@@ -44,9 +44,11 @@ function view_menu($data = array())
     }
 //    unset($_SESSION['cart']);
     $asign['count_cart'] =0;
+    $asign['hidden_cart'] ='hidden';
     $asign['list_cart'] ='';
     $total=0;
     if(isset($_SESSION['cart'])){
+        $asign['hidden_cart'] ='';
         $asign['count_cart'] =count($_SESSION['cart']);
         foreach ($_SESSION['cart'] as $key=>$sp) {
             $data_sanpham=sanpham_getById($sp['id']);

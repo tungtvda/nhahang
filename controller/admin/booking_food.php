@@ -3,6 +3,7 @@ require_once '../../config.php';
 require_once DIR.'/model/booking_foodService.php';
 require_once DIR.'/view/admin/booking_food.php';
 require_once DIR.'/common/messenger.php';
+require_once DIR.'/model/booking_tableService.php';
 $data=array();
 $insert=true;
 returnCountData();
@@ -91,6 +92,13 @@ if(isset($_SESSION["Admin"]))
         }
     }
     if(isset($_GET['id_chung'])&&$_GET['id_chung']!=''){
+        $data_table=booking_table_getByTop('1','id_chung="'.addslashes(strip_tags($_GET['id_chung'])).'"','');
+        if(count($data_table)>0){
+            $data['data_table']=$data_table[0];
+        }
+        else{
+            header('Location: '.SITE_NAME.'/controller/admin/booking_table.php');
+        }
         $dk="booking_food.id_chung='".addslashes(strip_tags($_GET['id_chung']))."'";
         $data['username']=isset($_SESSION["UserName"])?$_SESSION["UserName"]:'quản trị viên';
         $data['count_paging']=booking_food_count($dk);

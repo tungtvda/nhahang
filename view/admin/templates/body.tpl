@@ -42,10 +42,53 @@
         <div id="dyntable_length" class="dataTables_length">
             <h1>{TABLE-NAME}</h1>
         </div>
+        <div hidden style="{show_detail}" class="dataTables_length">
+            <h3>Thông tin khách hàng</h3>
+
+                <table style="font-size: 13px">
+                    <tr>
+                        <td>Trạng thái: </td>
+                        <td><span style="color: rgb(36, 139, 245); font-size: 14px"> {status}</span></td>
+                    </tr>
+                    <tr>
+                        <td>Họ tên: </td>
+                        <td><span style="color: rgb(36, 139, 245);"> {name}</span></td>
+                    </tr>
+                    <tr>
+                        <td>Email: </td>
+                        <td><span style="color: rgb(36, 139, 245);"> {email}</span></td>
+                    </tr>
+                    <tr>
+                        <td>Điện thoại: </td>
+                        <td><span style="color: rgb(36, 139, 245);"> {phone}</span></td>
+                    </tr>
+                    <tr>
+                        <td>Số người: </td>
+                        <td><span style="color: rgb(36, 139, 245);">{member}</span></td>
+                    </tr>
+                    <tr>
+                        <td>Ngày đến: </td>
+                        <td><span style="color: rgb(36, 139, 245);"> {booking_date}</span></td>
+                    </tr>
+                    <tr>
+                        <td>Thời gian đặt: </td>
+                        <td><span style="color: rgb(36, 139, 245);"> {booking_time}</span></td>
+                    </tr>
+                    <tr>
+                        <td>Ngày đặt: </td>
+                        <td><span style="color: rgb(36, 139, 245);"> {created}</span></td>
+                    </tr>
+                    <tr>
+                        <td>Yêu cầu: </td>
+                        <td><span style="color: rgb(36, 139, 245);"> {content}</span></td>
+                    </tr>
+
+                </table>
+        </div>
         <div {an} class="dataTables_filter" id="dyntable_filter">
             <ul class="nav nav-tabs nav-justified">
                 <li id="li_tab1" class="{TAB1-CLASS}"><a id="table_ac" href="javascript:void()">Table</a></li>
-                <li id="li_tab2" class="{TAB2-CLASS}"><a id="form_ac" href="javascript:void()">Form</a></li>
+                <li  {hidden_action} id="li_tab2" class="{TAB2-CLASS}"><a id="form_ac" href="javascript:void()">Form</a></li>
             </ul>
         </div>
         <div id="tab1" class="{TAB1-CLASS}" style="display: none">
@@ -63,13 +106,13 @@
                     </colgroup>
                     <thead>
                     <tr role="row">
-                        <th><input class="checkall" type="checkbox"></th>
+                        <th ><input class="checkall" type="checkbox"></th>
                         {TABLE-HEADER}
-                        <th>Chức năng</th>
+                        <th  {hidden_action}>Chức năng</th>
                     </tr>
                     </thead>
                     <tfoot>
-                    <tr>
+                    <tr {hidden_action}>
                         <td colspan="20">
                             <div class="bulk-actions align-left">
 

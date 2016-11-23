@@ -25,6 +25,22 @@ function view_booking_food($data)
     $ft->assign('NOTIFICATION',isset($data['notification'])?$data['notification']:' ');
     $ft->assign('SITE-NAME',isset($data['sitename'])?$data['sitename']:SITE_NAME);
     $ft->assign('kichhoat_dathang', 'active');
+    $ft->assign('hidden_action', 'hidden');
+    $ft->assign('name', $data['data_table']->name);
+    $ft->assign('email', $data['data_table']->email);
+    $ft->assign('phone', $data['data_table']->phone);
+    $ft->assign('member', $data['data_table']->member);
+    $ft->assign('booking_date', $data['data_table']->booking_date);
+    $ft->assign('booking_time', $data['data_table']->booking_time);
+    $ft->assign('content', $data['data_table']->content);
+    $ft->assign('created', $data['data_table']->created);
+    if($data['data_table']->status==1){
+        $ft->assign('status', 'Đã xác nhận');
+    }
+    else{
+        $ft->assign('status', 'Chưa xác nhận');
+    }
+    $ft->assign('show_detail', 'display: block');
     $ft->assign('FORM',showFrom(isset($data['form'])?$data['form']:'',isset($data['listfkey'])?$data['listfkey']:array()));
     //
     print $ft->parse_and_return('header');
@@ -34,25 +50,28 @@ function view_booking_food($data)
 //
 function showTableHeader()
 {
-    return '<th>name</th><th>code</th><th>img</th><th>quantity</th><th>price</th><th>total</th>';
+    return '<th>name</th><th>code</th><th>img</th><th>quantity</th><th>price (vnđ)</th><th>total (vnđ)</th>';
 }
 //
 function showTableBody($data)
 {
     $TableBody='';
+    $count=1;
     if(count($data)>0) foreach($data as $obj)
     {
-        $TableBody.="<tr><td><input type=\"checkbox\" name=\"check_".$obj->id."\"/></td>";
+        $TableBody.="<tr><td>".$count."</td>";
         $TableBody.="<td>".$obj->name."</td>";
         $TableBody.="<td>".$obj->code."</td>";
         $TableBody.="<td><img src=\"".$obj->img."\" width=\"50px\" height=\"50px\"/> </td>";
         $TableBody.="<td>".$obj->quantity."</td>";
-        $TableBody.="<td>".$obj->price."</td>";
-        $TableBody.="<td>".$obj->total."</td>";
-        $TableBody.="<td><a href=\"?action=edit&id=".$obj->id."\" title=\"Edit\"><img src=\"".SITE_NAME."/view/admin/Themes/images/pencil.png\" alt=\"Edit\"></a>";
-        $TableBody.="<a href=\"?action=delete&id=".$obj->id."\" title=\"Delete\" onClick=\"return confirm('Bạn có chắc chắc muốn xóa?')\"><img src=\"".SITE_NAME."/view/admin/Themes/images/cross.png\" alt=\"Delete\"></a> ";
-        $TableBody.="</td>";
+        $TableBody.="<td>".number_format($obj->price,0,",",".")."</td>";
+        $TableBody.="<td>".number_format($obj->total,0,",",".")."</td>";
+//        $TableBody.="<td>";
+//        $TableBody.="<a href=\"?action=edit&id=".$obj->id."\" title=\"Edit\"><img src=\"".SITE_NAME."/view/admin/Themes/images/pencil.png\" alt=\"Edit\"></a>";
+//        $TableBody.="<a href=\"?action=delete&id=".$obj->id."\" title=\"Delete\" onClick=\"return confirm('Bạn có chắc chắc muốn xóa?')\"><img src=\"".SITE_NAME."/view/admin/Themes/images/cross.png\" alt=\"Delete\"></a> ";
+//        $TableBody.="</td>";
         $TableBody.="</tr>";
+        $count++;
     }
     return $TableBody;
 }
