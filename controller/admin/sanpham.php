@@ -123,10 +123,15 @@ if(isset($_SESSION["Admin"]))
             header('Location: '.SITE_NAME.'/controller/admin/sanpham.php');
         }
     }
+    $dk='';
+//    if(isset($_POST['giatri'])){
+//        $field=mb_strtolower(addslashes(strip_tags($_POST['giatri'])));
+//        $dk='sanpham.name LIKE "%' . $field . '%" or sanpham.code LIKE "%' . $field . '%" or sanpham.price LIKE "%' . $field . '%" or 	sanpham.price_sale LIKE "%' . $field . '%" or sanpham.start LIKE "%' . $field . '%" or sanpham.num_like LIKE "%' . $field . '%" or sanpham.content_short LIKE "%' . $field . '%" or sanpham.content LIKE "%' . $field . '%" or sanpham.title LIKE "%' . $field . '%"   or sanpham.keyword LIKE "%' . $field . '%" or sanpham.description LIKE "%' . $field . '%"';
+//    }
     $data['username']=isset($_SESSION["UserName"])?$_SESSION["UserName"]:'quản trị viên';
-    $data['count_paging']=sanpham_count('');
+    $data['count_paging']=sanpham_count($dk);
     $data['page']=isset($_GET['page'])?$_GET['page']:'1';
-    $data['table_body']=sanpham_getByPagingReplace($data['page'],20,'id DESC','');
+    $data['table_body']=sanpham_getByPagingReplace($data['page'],20,'id DESC',$dk);
     // gọi phương thức trong tầng view để hiển thị
     view_sanpham($data);
 }

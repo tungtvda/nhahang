@@ -133,7 +133,7 @@
                                                                     class="wrapper-items-number">{count_cart}</span></a></span>
                                                     <div class="clear"></div>
                                                 </div>
-                                                <div class="widget_shopping_cart_content">
+                                                <div {hidden_cart} class="widget_shopping_cart_content">
 
                                                     <ul class="cart_list product_list_widget ">
 

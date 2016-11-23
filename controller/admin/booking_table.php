@@ -96,10 +96,16 @@ if(isset($_SESSION["Admin"]))
             header('Location: '.SITE_NAME.'/controller/admin/booking_table.php');
         }
     }
+    $dk='';
+    if(isset($_POST['giatri'])){
+        $field=mb_strtolower(addslashes(strip_tags($_POST['giatri'])));
+        $dk='booking_table.name LIKE "%' . $field . '%" or booking_table.email LIKE "%' . $field . '%" or booking_table.phone LIKE "%' . $field . '%" or 	booking_table.address LIKE "%' . $field . '%" or booking_table.member LIKE "%' . $field . '%" or booking_table.booking_date LIKE "%' . $field . '%" or booking_table.booking_time LIKE "%' . $field . '%" or booking_table.content LIKE "%' . $field . '%" or booking_table.created LIKE "%' . $field . '%"   ';
+    }
+
     $data['username']=isset($_SESSION["UserName"])?$_SESSION["UserName"]:'quản trị viên';
-    $data['count_paging']=booking_table_count('');
+    $data['count_paging']=booking_table_count($dk);
     $data['page']=isset($_GET['page'])?$_GET['page']:'1';
-    $data['table_body']=booking_table_getByPagingReplace($data['page'],20,'id DESC','');
+    $data['table_body']=booking_table_getByPagingReplace($data['page'],20,'id DESC',$dk);
 
     // gọi phương thức trong tầng view để hiển thị
     view_booking_table($data);
