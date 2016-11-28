@@ -11,7 +11,6 @@ if(!defined('SITE_NAME'))
 }
 
 require_once DIR.'/controller/default/public.php';
-require_once DIR . '/common/redict.php';
 require_once DIR.'/model/danhgiaService.php';
 require_once DIR.'/model/sanphamService.php';
 $data['menu']=menu_getByTop('','','');

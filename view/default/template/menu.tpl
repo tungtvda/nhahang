@@ -7,20 +7,39 @@
             <div class="topbar-header">
                 <div class="container">
                     <div class="row">
-                        <div class="widget-topbar-left">
+                        <div style="float: left; width: 20%; text-align: left">
                             <aside id="text-2" class="widget_text">
                                 <div class="textwidget">
-                                    <a href="tel:{Hotline}">
+                                    <a href="{SITE-NAME}"
+                                       title="{name}"
+                                       rel="home" class="no-sticky-logo"><img
+                                                src="{Logo}"
+                                                alt="{name}"
+                                                width="191"/></a><a
+                                            href="{SITE-NAME}"
+                                            title="{name}"
+                                            rel="home" class="sticky-logo">
+                                        <img src="{Logo}"
+                                             alt="{name}" width="191"
+                                             height="40"/></a>
+                                </div>
+                            </aside>
+                        </div>
+                        <div style="width: 40%" class="widget-topbar-left">
+
+                            <aside id="text-2" class="widget_text">
+                                <div class="textwidget">
+                                    <a style="color: #ffffff !important;" href="tel:{Hotline}">
                                         <i style="color: #ee2b2a;" class="fa fa-phone fa-2 theme-color"> </i> Gọi ngay: {Hotline}
                                     </a>
                                 </div>
                             </aside>
                             <aside id="text-3" class="widget_text">
-                                <div class="textwidget"><i style="color: #ee2b2a;" class="fa fa-envelope-o fa-2 theme-color"> </i> <a
+                                <div class="textwidget"><i style="color: #ee2b2a;" class="fa fa-envelope-o fa-2 theme-color"> </i> <a style="color: #ffffff !important;"
                                             href="mailto:{email}">{email}</a></div>
                             </aside>
                         </div>
-                        <div class="widget-topbar-right">
+                        <div style="width: 40%" class="widget-topbar-right">
                             <!--<aside id="text-4" class="widget_text">
                                 <div class="textwidget"><a href="#">Login / Register</a></div>
                             </aside>-->
@@ -56,10 +75,10 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </div>
-                            <div class="width-logo table-cell sm-logo">
+                            <div class="width-logo table-cell sm-logo ">
                                 <a href="{SITE-NAME}"
                                    title="{name}"
-                                   rel="home" class="no-sticky-logo"><img
+                                   rel="home" class="no-sticky-logo hidden-desktop hidden-lg hidden-md"><img
                                             src="{Logo}"
                                             alt="{name}"
                                             width="191"/></a><a
@@ -69,7 +88,7 @@
                                     <img src="{Logo}"
                                          alt="{name}" width="191"
                                          height="40"/></a></div>
-                            <nav class="width-navigation table-cell" itemscope
+                            <nav style="float: right;" class="width-navigation table-cell" itemscope
                                  itemtype="">
                                 <ul class="nav navbar-nav menu-main-menu side-nav" id="mobile-demo">
                                     <li class=" {home_mn} menu-item menu-item-type-post_type menu-item-object-page dropdown_full_width  drop_to_left widget_area">
