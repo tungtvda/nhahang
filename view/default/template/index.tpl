@@ -160,7 +160,7 @@
                             <div class="desc">
                                 <p><em>Monday to Sunday&nbsp;</em> <em>7:30 am to 11:00 pm</em></p>
                                 </div>
-                            <p class="read-more"><span>Gọi ngay - 00 1 2345 678</span></p></div>
+                            <p class="read-more"><span>Gọi ngay - <a href="tel:{Hotline}">{Hotline}</a></span></p></div>
                     </div>
                     <style>
                         .vi-otreservations.style_white .vi-wrapper label{

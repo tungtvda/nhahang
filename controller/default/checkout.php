@@ -33,6 +33,7 @@ $data['banner']=array(
     'name'=>$data['menu'][8]->name,
     'url'=>$url
 );
+$data['checkout']='checkout';
 
 
 //    $data['tour_noibat']=news_getByTop(6,'id!='.$data['news'][0]->id.' and danhmuc_id='.$data['news'][0]->danhmuc_id,'id desc');

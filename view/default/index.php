@@ -51,8 +51,7 @@ function show_index($data = array())
     {
         $asign['ykien'] = print_item('ykien', $data['ykien']);
     }
-
-
+    $asign['Hotline']=$data['config'][0]->Hotline;
     print_template($asign, 'index');
 }
 

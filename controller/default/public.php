@@ -56,7 +56,7 @@ function  show_slide($data1=array())
 
 function  show_left($data1=array(),$active='trangchu')
 {
-    $data=array();
+    $data=$data1;
     $data['danhmuc_left']=danhmuc1_getByTop('','id!=1','position asc');
     $data['noibat_left']=sanpham_getByTop(5,'highlights=1','id desc');
     view_left($data);
