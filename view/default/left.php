@@ -39,5 +39,9 @@ function view_left($data=array())
     {
         $asign['noibat_left'] = print_item('thucdon_left', $data['noibat_left']);
     }
+    $asign['hidden_datban']='';
+    if(isset($data['checkout'])){
+        $asign['hidden_datban']='hidden';
+    }
     print_template($asign,'left');
 }

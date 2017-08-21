@@ -1,5 +1,5 @@
 <div style="float: left;" id="secondary" class="widget-area col-sm-3" role="complementary">
-    <aside id="woocommerce_products-2" class="widget woocommerce widget_products"><h3
+    <aside {hidden_datban} id="woocommerce_products-2" class="widget woocommerce widget_products"><h3
                 class="widget-title">Đặt bàn</h3>
         <div style="float: left; width: 100%; border: 1px solid #a3c638;padding: 10px;">
             <form action="" method="post">
@@ -17,7 +17,7 @@
                     <li style="margin-bottom: 13px;">
                         <!--<label for="time-otreservations">Chọn giờ <span style="color: red">*</span></label>-->
                         <div class="wrapper-input">
-                            <select id="time-otreservations" name="time_book" required  placeholder="Chọn giờ"
+                            <select id="time-otreservations" name="time_book" required placeholder="Chọn giờ"
                                     class="vi-reservation-time input_left">
                                 <option value="8:00am">8:00 am</option>
                                 <option value="8:30am">8:30 am</option>
@@ -54,7 +54,7 @@
                     <li style="margin-bottom: 13px;">
                         <!--<label for="party-otreservations">Số người <span style="color: red">*</span></label>-->
                         <div class="wrapper-input">
-                            <select id="party-otreservations" name="member_book" required  placeholder="Số người"
+                            <select id="party-otreservations" name="member_book" required placeholder="Số người"
                                     class="vi-party-size-select input_left">
                                 <option value="1">1 Người</option>
                                 <option value="2">2 Người</option>
@@ -83,23 +83,24 @@
                     <li style="margin-bottom: 13px;">
                         <!--<label for="date-otreservations" style="margin-top: 10px">Họ tên <span style="color: red">*</span></label>-->
                         <div class="wrapper-input">
-                            <input  required name="name_book" required
-                                    class=" input_left" type="text" placeholder="Họ tên (*)"
-                                    value="">
+                            <input required name="name_book" required
+                                   class=" input_left" type="text" placeholder="Họ tên (*)"
+                                   value="">
                         </div>
                     </li>
                     <li style="margin-bottom: 13px;">
                         <!--<label for="date-otreservations" style="margin-top: 10px">Email <span style="color: red">*</span></label>-->
                         <div class="wrapper-input">
-                            <input  required name="email_book" required
-                                    class="input_left" type="email"  placeholder="Email (*)"
-                                    value="">
+                            <input required name="email_book" required
+                                   class="input_left" type="email" placeholder="Email (*)"
+                                   value="">
                         </div>
                     </li>
                     <li style="margin-bottom: 13px;">
                         <!--<label for="date-otreservations" style="margin-top: 10px">Điện thoại <span style="color: red">*</span></label>-->
                         <div class="wrapper-input">
-                            <input required name="phone_book" class="input_left" required  placeholder="Điện thoại (*)" type="text" value="">
+                            <input required name="phone_book" class="input_left" required placeholder="Điện thoại (*)"
+                                   type="text" value="">
                         </div>
                     </li>
                     <li style="margin-bottom: 13px;">
@@ -108,7 +109,7 @@
                             <textarea class="input_left" name="yeucau_book" placeholder="Yêu cầu"></textarea>
                         </div>
                     </li>
-                    <li >
+                    <li>
                         <input type="submit" class="otreservations-submit btn-primary btn" name="datban_book"
                                value="ĐẶT BÀN"/>
                     </li>
@@ -117,11 +118,18 @@
         </div>
 
     </aside>
-   {danhmuc_left}
+    <aside id="woocommerce_products-2" class="widget woocommerce widget_products">
+        <div class="fb-page" data-href="https://www.facebook.com/vietgardens/" data-small-header="false"
+             data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/vietgardens/" class="fb-xfbml-parse-ignore"><a
+                        href="https://www.facebook.com/vietgardens/">Viet Gardens Restaurant</a></blockquote>
+        </div>
+    </aside>
+    {danhmuc_left}
     <aside id="woocommerce_products-2" class="widget woocommerce widget_products"><h3
                 class="widget-title">TOP SELLER</h3>
         <ul class="product_list_widget">
-         {noibat_left}
+            {noibat_left}
         </ul>
     </aside>
     <!--<aside id="echion_widget_single_image-4" class="widget echion_Widget_Single_Image_class">
