@@ -5,30 +5,27 @@
                 <article id="post-8" class="post-8 page type-page status-publish hentry">
                     <div class="entry-content">
                         <div class="woocommerce">
-                            <div class="woocommerce-info"></div>
+                            <div {hidden_cart} class="woocommerce-info"></div>
 
 
+                            <table {hidden_cart} class="shop_table cart" cellspacing="0">
+                                <thead>
+                                <tr>
+                                    <th class="product-name">Thực đơn</th>
+                                    <th class="product-price">Giá</th>
+                                    <th class="product-quantity">Số lượng</th>
+                                    <th class="product-subtotal">Thành tiền</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                {list_cart}
+
+                                </tbody>
+                            </table>
 
 
-                                <table class="shop_table cart" cellspacing="0">
-                                    <thead>
-                                    <tr>
-                                        <th class="product-name">Thực đơn</th>
-                                        <th class="product-price">Giá</th>
-                                        <th class="product-quantity">Số lượng</th>
-                                        <th class="product-subtotal">Thành tiền</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-
-                                    {list_cart}
-
-                                    </tbody>
-                                </table>
-
-
-
-                            <div class="cart-collaterals">
+                            <div {hidden_cart} class="cart-collaterals">
                                 <div class="cart_totals">
                                     <div class="row">
 
@@ -39,13 +36,13 @@
 
                                             <table cellspacing="0">
 
-                                                <tbody><tr class="cart-subtotal">
+                                                <tbody>
+                                                <tr class="cart-subtotal">
                                                     <th>Subtotal</th>
-                                                    <td><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span>{total} vnđ</span></td>
+                                                    <td><span class="woocommerce-Price-amount amount"><span
+                                                                    class="woocommerce-Price-currencySymbol"></span>{total}
+                                                            vnđ</span></td>
                                                 </tr>
-
-
-
 
 
                                                 <!--<tr class="order-total">
@@ -54,8 +51,8 @@
                                                 </tr>-->
 
 
-                                                </tbody></table>
-
+                                                </tbody>
+                                            </table>
 
 
                                         </div>
@@ -64,19 +61,18 @@
                                 </div>
                             </div>
 
-                            <div class="woocommerce-info"></div>
-                            <div class="cart-collaterals">
-                                <div class="cart_totals">
-                                    <div class="row">
+                            <div {hidden_cart} class="woocommerce-info"></div>
 
-                                        <div class="col-sm-6 ">
-                                            <h2>Thông tin đặt hàng</h2>
-                                        </div>
-
-                                    </div>
+                            <div id="comments" class="comments-area">
+                                <div class="comment-respond-area">
+                                    <div class="comment-respond">
+                                        <h3 class="comment-reply-title title_lienquan title_checkout" style="text-align: center">
+                                            Thông tin đặt bàn</h3>
+                                    </div><!-- #respond -->
                                 </div>
+                                <div class="clear"></div>
                             </div>
-                            <div class="kc-elm kc-css-3615905 kc_row contact-form">
+                            <div class="kc-elm kc-css-3615905 kc_row contact-form border_content_checkout">
                                 <div class="kc-row-container  kc-container">
                                     <div class="kc-wrap-columns">
 
@@ -89,7 +85,8 @@
                                                             <div class="vi-date-wrap col-sm-4">
                                                                 <label for="date-otreservations">Chọn ngày *</label>
                                                                 <div style="" class="wrapper-input">
-                                                                    <input id="date-otreservations" name="date_book" required
+                                                                    <input id="date-otreservations" name="date_book"
+                                                                           required
                                                                            class="vi-reservation-date" type="text"
                                                                            value="">
                                                                 </div>
@@ -97,7 +94,8 @@
                                                             <div class="vi-time-wrap col-sm-4">
                                                                 <label for="time-otreservations">Chọn giờ *</label>
                                                                 <div class="wrapper-input">
-                                                                    <select id="time-otreservations" name="time_book" required
+                                                                    <select id="time-otreservations" name="time_book"
+                                                                            required
                                                                             class="vi-reservation-time">
                                                                         <option value="8:00am">8:00 am</option>
                                                                         <option value="8:30am">8:30 am</option>
@@ -134,7 +132,8 @@
                                                             <div class="vi-party-size-wrap col-sm-4">
                                                                 <label for="party-otreservations">Số người *</label>
                                                                 <div class="wrapper-input">
-                                                                    <select id="party-otreservations" name="member_book" required
+                                                                    <select id="party-otreservations" name="member_book"
+                                                                            required
                                                                             class="vi-party-size-select">
                                                                         <option value="1">1 Người</option>
                                                                         <option value="2">2 Người</option>
@@ -156,40 +155,49 @@
                                                                         <option value="18">18 Người</option>
                                                                         <option value="19">19 Người</option>
                                                                         <option value="20">20 Người</option>
-                                                                        <option value="Trên 20 người">Trên 20 Người</option>
+                                                                        <option value="Trên 20 người">Trên 20 Người
+                                                                        </option>
                                                                     </select>
                                                                 </div>
                                                             </div>
                                                             <div class=" col-sm-4">
-                                                                <label for="date-otreservations" style="margin-top: 10px">Họ tên *</label>
+                                                                <label for="date-otreservations"
+                                                                       style="margin-top: 10px">Họ tên *</label>
                                                                 <div class="wrapper-input">
-                                                                    <input  required name="name_book" required
-                                                                            class="input_book" type="text"
-                                                                            value="">
+                                                                    <input required name="name_book" required
+                                                                           class="input_book" type="text"
+                                                                           value="">
                                                                 </div>
                                                             </div>
                                                             <div class=" col-sm-4">
-                                                                <label for="date-otreservations" style="margin-top: 10px">Email *</label>
+                                                                <label for="date-otreservations"
+                                                                       style="margin-top: 10px">Email *</label>
                                                                 <div class="wrapper-input">
-                                                                    <input  required name="email_book" required
-                                                                            class="input_book" type="email"
-                                                                            value="">
+                                                                    <input required name="email_book" required
+                                                                           class="input_book" type="email"
+                                                                           value="">
                                                                 </div>
                                                             </div>
                                                             <div class=" col-sm-4">
-                                                                <label for="date-otreservations" style="margin-top: 10px">Điện thoại *</label>
+                                                                <label for="date-otreservations"
+                                                                       style="margin-top: 10px">Điện thoại *</label>
                                                                 <div class="wrapper-input">
-                                                                    <input required name="phone_book" class="input_book" required type="text" value="">
+                                                                    <input required name="phone_book" class="input_book"
+                                                                           required type="text" value="">
                                                                 </div>
                                                             </div>
                                                             <div class=" col-sm-12">
-                                                                <label for="date-otreservations" style="margin-top: 10px">Yêu cầu</label>
+                                                                <label for="date-otreservations"
+                                                                       style="margin-top: 10px">Yêu cầu</label>
                                                                 <div class="wrapper-input">
-                                                                    <textarea class="input_book" name="yeucau_book"></textarea>
+                                                                    <textarea class="input_book"
+                                                                              name="yeucau_book"></textarea>
                                                                 </div>
                                                             </div>
                                                             <div class="vi-button-wrap col-sm-12">
-                                                                <input type="submit" class="otreservations-submit btn-primary btn" name="datban_book"
+                                                                <input type="submit"
+                                                                       class="otreservations-submit btn-primary btn"
+                                                                       name="datban_book"
                                                                        value="ĐẶT BÀN"/>
                                                             </div>
                                                         </div>
@@ -200,6 +208,85 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div id="comments" class="comments-area">
+                                <div class="comment-respond-area">
+                                    <div class="comment-respond">
+                                        <h3 class="comment-reply-title title_lienquan title_checkout" style="text-align: center">
+                                            Hình ảnh nhà hàng</h3>
+                                    </div><!-- #respond -->
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+
+                            <div class="col-xs-12 border_content_checkout" id="gallery"
+                                 style="display:none; margin-top: 15px; padding-left: 0px; padding-right: 0px; margin-bottom: 40px;     padding-bottom: 30px;">
+
+                                <a href="">
+                                    <img alt="Thỏ hấp"
+                                         src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20842167_1080973272033088_6786441811771293947_n.jpg?oh=c48f6be5787db0fba46d3b75dc36fb1f&oe=5A19C6F6"
+                                         data-image="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20842167_1080973272033088_6786441811771293947_n.jpg?oh=c48f6be5787db0fba46d3b75dc36fb1f&oe=5A19C6F6"
+                                         data-image-mobile="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20842167_1080973272033088_6786441811771293947_n.jpg?oh=c48f6be5787db0fba46d3b75dc36fb1f&oe=5A19C6F6"
+                                         data-thumb-mobile="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20842167_1080973272033088_6786441811771293947_n.jpg?oh=c48f6be5787db0fba46d3b75dc36fb1f&oe=5A19C6F6"
+                                         data-description="Thỏ hấp"
+                                         style="display:none">
+                                </a>
+
+                                <a href="">
+                                    <img alt="Thỏ xào sả ớt"
+                                         src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20770520_1080973242033091_8572254740341119727_n.jpg?oh=0d3f4c6f8c8c40d31d544599f28d2719&oe=5A3488E9"
+                                         data-image="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20770520_1080973242033091_8572254740341119727_n.jpg?oh=0d3f4c6f8c8c40d31d544599f28d2719&oe=5A3488E9"
+                                         data-image-mobile="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20770520_1080973242033091_8572254740341119727_n.jpg?oh=0d3f4c6f8c8c40d31d544599f28d2719&oe=5A3488E9"
+                                         data-thumb-mobile="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20770520_1080973242033091_8572254740341119727_n.jpg?oh=0d3f4c6f8c8c40d31d544599f28d2719&oe=5A3488E9"
+                                         data-description="Thỏ xào sả ớt"
+                                         style="display:none">
+                                </a>
+
+                                <a href="">
+                                    <img alt="Thỏ nướng ( Nướng Tây Bắc / Nướng muối tiêu ...)"
+                                         src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20799103_1080973195366429_2879725297967689529_n.jpg?oh=b08947b2514eb29c92ebb0ab09dacd59&oe=5A1B3AC1"
+                                         data-image="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20799103_1080973195366429_2879725297967689529_n.jpg?oh=b08947b2514eb29c92ebb0ab09dacd59&oe=5A1B3AC1"
+                                         data-image-mobile="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20799103_1080973195366429_2879725297967689529_n.jpg?oh=b08947b2514eb29c92ebb0ab09dacd59&oe=5A1B3AC1"
+                                         data-thumb-mobile="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20799103_1080973195366429_2879725297967689529_n.jpg?oh=b08947b2514eb29c92ebb0ab09dacd59&oe=5A1B3AC1"
+                                         data-description="Thỏ nướng ( Nướng Tây Bắc / Nướng muối tiêu ...)"
+                                         style="display:none">
+                                </a>
+                                <a href="">
+                                    <img alt="Ba ba rang muối "
+                                         src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20621972_1073113919485690_5968360325858012480_n.jpg?oh=e923f09ee58c657dfdf907f110170814&oe=5A13C37F"
+                                         data-image="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20621972_1073113919485690_5968360325858012480_n.jpg?oh=e923f09ee58c657dfdf907f110170814&oe=5A13C37F"
+                                         data-image-mobile="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20621972_1073113919485690_5968360325858012480_n.jpg?oh=e923f09ee58c657dfdf907f110170814&oe=5A13C37F"
+                                         data-thumb-mobile="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20621972_1073113919485690_5968360325858012480_n.jpg?oh=e923f09ee58c657dfdf907f110170814&oe=5A13C37F"
+                                         data-description="Ba ba rang muối "
+                                         style="display:none">
+                                </a>
+                                <a href="">
+                                    <img alt="Ba ba om chuối đậu"
+                                         src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20620834_1073113956152353_426021649928866929_n.jpg?oh=740df139ae9be492d694803e0160a4b2&oe=5A34B144"
+                                         data-image="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20620834_1073113956152353_426021649928866929_n.jpg?oh=740df139ae9be492d694803e0160a4b2&oe=5A34B144"
+                                         data-image-mobile="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20620834_1073113956152353_426021649928866929_n.jpg?oh=740df139ae9be492d694803e0160a4b2&oe=5A34B144"
+                                         data-thumb-mobile="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20620834_1073113956152353_426021649928866929_n.jpg?oh=740df139ae9be492d694803e0160a4b2&oe=5A34B144"
+                                         data-description="Ba ba om chuối đậu"
+                                         style="display:none">
+                                </a>
+
+
+                            </div>
+
+                            <div id="comments" class="comments-area ">
+                                <div class="comment-respond-area">
+                                    <div class="comment-respond">
+                                        <h3 class="comment-reply-title title_lienquan title_checkout" style="text-align: center">
+                                            Bản đồ</h3>
+                                    </div><!-- #respond -->
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+
+                            <div class="col-xs-12 map_checkout">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4428.99433431753!2d105.79927767243296!3d21.019659733038242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x20765cb9bda9c145!2sNh%C3%A0+h%C3%A0ng+Vietgardens!5e0!3m2!1svi!2s!4v1503323212830"
+                                        width="100%" height="450" frameborder="0" style="border:0"
+                                        allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>

@@ -43,5 +43,6 @@ function view_left($data=array())
     if(isset($data['checkout'])){
         $asign['hidden_datban']='hidden';
     }
+    $asign['Hotline']=$data['config'][0]->Hotline;
     print_template($asign,'left');
 }

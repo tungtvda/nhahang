@@ -97,7 +97,7 @@
             "prevText": "Previous",
             "dayNames": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
             "dayNamesShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-            "dayNamesMin": ["CN", "T2", "T3", "T4", "T5", "T6", "T7"],
+            "dayNamesMin": ["S", "M", "T", "W", "T", "F", "S"],
             "dateFormat": "MM d, yy",
             "firstDay": 1,
             "isRTL": false
@@ -135,9 +135,6 @@
 <script type='text/javascript'
         src='{SITE-NAME}/view/default/themes/wp-content/plugins/kingcomposer/assets/frontend/js/kingcomposer355d.js?ver=2.5.7'></script>
 <script type='text/javascript' src='{SITE-NAME}/view/default/themes/wp-includes/js/wp-embed.min1c9b.js?ver=4.6.1'></script>
-<script type='text/javascript' src='{SITE-NAME}/view/default/themes/js/unitegallery.min.js'></script>
-
-<script type='text/javascript' src='{SITE-NAME}/view/default/themes/js/ug-theme-tiles.js'></script>
 <script type='text/javascript'>
     jQuery(document).ready(function (jQuery) {
         jQuery(".ajax_add_to_cart").click(function() {
@@ -163,10 +160,6 @@
             });
             jQuery(field).hide().delay(800);
         });
-        if(jQuery("#gallery")){
-            jQuery("#gallery").unitegallery();
-        }
-
     });
 </script>
 <script type="text/javascript">
