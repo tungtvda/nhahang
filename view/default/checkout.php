@@ -49,6 +49,12 @@ function show_checkout($data = array())
         $asign['hidden_cart'] ='hidden';
     }
     $asign['total'] =number_format($total,0,",",".");
+    $asign['gioi_thieu']='';
+    $asign['img']='';
+    if(isset($data['info'][0]->content) && $data['info'][0]->content!=''){
+        $asign['gioi_thieu']=$data['info'][0]->content;
+        $asign['img']=$data['info'][0]->img;
+    }
     print_template($asign, 'checkout');
 }
 

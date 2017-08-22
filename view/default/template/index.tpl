@@ -301,17 +301,14 @@
                                     alt="LATEST BLOG"/></div>
                     </div>
                     <div class="list-posts row style_03 background_gray vi-product-plain">
-
                         {camnang_index}
                     </div>
-                    <div class="kc-elm kc-css-473617 hidden-xs"
-                         style="height: 40px; clear: both; width:100%;"></div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div data-kc-parallax="true" class="kc-elm kc-css-529895 kc_row"
+<!--<div data-kc-parallax="true" class="kc-elm kc-css-529895 kc_row"
      style="background-image:url({SITE-NAME}/view/default/themes/images/bg-testimonial.jpg);">
     <div class="kc-row-container  kc-container">
         <div class="kc-wrap-columns">
@@ -330,4 +327,4 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->
