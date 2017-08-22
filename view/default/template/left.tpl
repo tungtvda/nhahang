@@ -118,7 +118,17 @@
         </div>
 
     </aside>
-    <aside id="woocommerce_products-2" class="widget woocommerce widget_products">
+    <aside  class="widget woocommerce widget_products">
+        <h3 class="widget-title">Hotline trợ giúp</h3>
+            <div class="phone">
+                <a href="tel:{Hotline}">
+                    <img style="width: 50px;" src="{SITE-NAME}/view/default/themes/images/icon-phone-new.gif" alt="">
+                    <span style="    padding-left: 10px;">{Hotline}</span>
+                </a>
+
+            </div>
+    </aside>
+    <aside  class="widget woocommerce widget_products">
         <div class="fb-page" data-href="https://www.facebook.com/vietgardens/" data-small-header="false"
              data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
             <blockquote cite="https://www.facebook.com/vietgardens/" class="fb-xfbml-parse-ignore"><a

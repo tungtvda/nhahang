@@ -12,6 +12,7 @@ function show_checkout($data = array())
     $asign = array();
     $asign['list_cart'] ='';
     $total=0;
+    $asign['hidden_cart'] ='';
     if(isset($_SESSION['cart'])){
         foreach ($_SESSION['cart'] as $key=>$sp) {
             $data_sanpham=sanpham_getById($sp['id']);
@@ -44,6 +45,8 @@ function show_checkout($data = array())
                                     </tr>';
             }
         }
+    }else{
+        $asign['hidden_cart'] ='hidden';
     }
     $asign['total'] =number_format($total,0,",",".");
     print_template($asign, 'checkout');

@@ -228,3 +228,22 @@
         display: none;
     }
 }
+
+.phone {
+    color: #d02028;
+    font-size: 30px;
+    font-weight: 700;
+    /*text-align: center;*/
+}
+.image_
+.map_checkout{
+    margin-top: 15px; padding-left: 0px; padding-right: 0px; margin-bottom: 30px
+}
+.title_checkout{
+    color: #a3c638;
+    margin-bottom: 10px;
+}
+.border_content_checkout{
+    border-bottom: 1px dotted #a3c638;
+    margin-bottom: 30px;
+}
