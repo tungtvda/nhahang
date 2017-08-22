@@ -283,10 +283,28 @@
                                 <div class="clear"></div>
                             </div>
 
-                            <div class="col-xs-12 map_checkout">
+                            <div class="col-xs-12 map_checkout border_content_checkout">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4428.99433431753!2d105.79927767243296!3d21.019659733038242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x20765cb9bda9c145!2sNh%C3%A0+h%C3%A0ng+Vietgardens!5e0!3m2!1svi!2s!4v1503323212830"
                                         width="100%" height="450" frameborder="0" style="border:0"
                                         allowfullscreen></iframe>
+                            </div>
+
+                            <div id="comments" class="comments-area ">
+                                <div class="comment-respond-area">
+                                    <div class="comment-respond">
+                                        <h3 class="comment-reply-title title_lienquan title_checkout" style="text-align: center">
+                                           Giới thiệu VIETGARDEN</h3>
+                                    </div><!-- #respond -->
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="col-xs-12 border_content_checkout">
+                                <div class="post-formats-wrapper"><img width="1199" height="834"
+                                                                       src="{img}"
+                                                                       class="attachment-full size-full wp-post-image" alt="1"
+                                                                       srcset="{img} 1199w, {img} 768w, {img} 220w"
+                                                                       sizes="(max-width: 1199px) 100vw, 1199px"></div>
+                                {gioi_thieu}
                             </div>
                         </div>
                     </div>
