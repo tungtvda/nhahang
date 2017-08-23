@@ -32,9 +32,9 @@
                                         <div class="col-sm-6 ">
 
 
-                                            <h2>Tổng tiền</h2>
+                                            <h2>Tổng tiền: <span style="color: #d02028; font-weight: bold;">{total} vnđ</span></h2>
 
-                                            <table cellspacing="0">
+                                            <!--<table cellspacing="0">
 
                                                 <tbody>
                                                 <tr class="cart-subtotal">
@@ -48,11 +48,11 @@
                                                 <!--<tr class="order-total">
                                                     <th>Total</th>
                                                     <td><strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>87.24</span></strong> </td>
-                                                </tr>-->
+                                                </tr>
 
 
                                                 </tbody>
-                                            </table>
+                                            </table>-->
 
 
                                         </div>

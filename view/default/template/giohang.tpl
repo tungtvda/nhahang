@@ -50,32 +50,8 @@
                             <div class="cart-collaterals">
                                 <div class="cart_totals">
                                     <div class="row">
-
                                         <div class="col-sm-6 ">
-
-
-                                            <h2>Tổng tiền</h2>
-
-                                            <table cellspacing="0">
-
-                                                <tbody><tr class="cart-subtotal">
-                                                    <th>Subtotal</th>
-                                                    <td><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span>{total} vnđ</span></td>
-                                                </tr>
-
-
-
-
-
-                                                <!--<tr class="order-total">
-                                                    <th>Total</th>
-                                                    <td><strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>87.24</span></strong> </td>
-                                                </tr>-->
-
-
-                                                </tbody></table>
-
-
+                                            <h2>Tổng tiền: <span style="color: #d02028; font-weight: bold;">{total} vnđ</span></h2>
 
                                         </div>
 
