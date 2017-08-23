@@ -66,7 +66,8 @@
                             <div id="comments" class="comments-area">
                                 <div class="comment-respond-area">
                                     <div class="comment-respond">
-                                        <h3 class="comment-reply-title title_lienquan title_checkout" style="text-align: center">
+                                        <h3 class="comment-reply-title title_lienquan title_checkout"
+                                            style="text-align: center">
                                             Thông tin đặt bàn</h3>
                                     </div><!-- #respond -->
                                 </div>
@@ -199,7 +200,13 @@
                                                                        class="otreservations-submit btn-primary btn"
                                                                        name="datban_book"
                                                                        value="ĐẶT BÀN"/>
+
                                                             </div>
+                                                            <div class="vi-button-wrap col-sm-12 dat-cho-desktop center-block">
+                                                                Hoặc hotline trợ giúp: <a href="tel:{Hotline}"><span class="phone-number">{Hotline}</span></a>
+
+                                                            </div>
+
                                                         </div>
                                                     </form>
 
@@ -212,7 +219,8 @@
                             <div id="comments" class="comments-area">
                                 <div class="comment-respond-area">
                                     <div class="comment-respond">
-                                        <h3 class="comment-reply-title title_lienquan title_checkout" style="text-align: center">
+                                        <h3 class="comment-reply-title title_lienquan title_checkout"
+                                            style="text-align: center">
                                             Hình ảnh nhà hàng</h3>
                                     </div><!-- #respond -->
                                 </div>
@@ -222,53 +230,7 @@
                             <div class="col-xs-12 border_content_checkout" id="gallery"
                                  style="display:none; margin-top: 15px; padding-left: 0px; padding-right: 0px; margin-bottom: 40px;     padding-bottom: 30px;">
 
-                                <a href="">
-                                    <img alt="Thỏ hấp"
-                                         src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20842167_1080973272033088_6786441811771293947_n.jpg?oh=c48f6be5787db0fba46d3b75dc36fb1f&oe=5A19C6F6"
-                                         data-image="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20842167_1080973272033088_6786441811771293947_n.jpg?oh=c48f6be5787db0fba46d3b75dc36fb1f&oe=5A19C6F6"
-                                         data-image-mobile="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20842167_1080973272033088_6786441811771293947_n.jpg?oh=c48f6be5787db0fba46d3b75dc36fb1f&oe=5A19C6F6"
-                                         data-thumb-mobile="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20842167_1080973272033088_6786441811771293947_n.jpg?oh=c48f6be5787db0fba46d3b75dc36fb1f&oe=5A19C6F6"
-                                         data-description="Thỏ hấp"
-                                         style="display:none">
-                                </a>
-
-                                <a href="">
-                                    <img alt="Thỏ xào sả ớt"
-                                         src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20770520_1080973242033091_8572254740341119727_n.jpg?oh=0d3f4c6f8c8c40d31d544599f28d2719&oe=5A3488E9"
-                                         data-image="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20770520_1080973242033091_8572254740341119727_n.jpg?oh=0d3f4c6f8c8c40d31d544599f28d2719&oe=5A3488E9"
-                                         data-image-mobile="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20770520_1080973242033091_8572254740341119727_n.jpg?oh=0d3f4c6f8c8c40d31d544599f28d2719&oe=5A3488E9"
-                                         data-thumb-mobile="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20770520_1080973242033091_8572254740341119727_n.jpg?oh=0d3f4c6f8c8c40d31d544599f28d2719&oe=5A3488E9"
-                                         data-description="Thỏ xào sả ớt"
-                                         style="display:none">
-                                </a>
-
-                                <a href="">
-                                    <img alt="Thỏ nướng ( Nướng Tây Bắc / Nướng muối tiêu ...)"
-                                         src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20799103_1080973195366429_2879725297967689529_n.jpg?oh=b08947b2514eb29c92ebb0ab09dacd59&oe=5A1B3AC1"
-                                         data-image="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20799103_1080973195366429_2879725297967689529_n.jpg?oh=b08947b2514eb29c92ebb0ab09dacd59&oe=5A1B3AC1"
-                                         data-image-mobile="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20799103_1080973195366429_2879725297967689529_n.jpg?oh=b08947b2514eb29c92ebb0ab09dacd59&oe=5A1B3AC1"
-                                         data-thumb-mobile="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20799103_1080973195366429_2879725297967689529_n.jpg?oh=b08947b2514eb29c92ebb0ab09dacd59&oe=5A1B3AC1"
-                                         data-description="Thỏ nướng ( Nướng Tây Bắc / Nướng muối tiêu ...)"
-                                         style="display:none">
-                                </a>
-                                <a href="">
-                                    <img alt="Ba ba rang muối "
-                                         src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20621972_1073113919485690_5968360325858012480_n.jpg?oh=e923f09ee58c657dfdf907f110170814&oe=5A13C37F"
-                                         data-image="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20621972_1073113919485690_5968360325858012480_n.jpg?oh=e923f09ee58c657dfdf907f110170814&oe=5A13C37F"
-                                         data-image-mobile="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20621972_1073113919485690_5968360325858012480_n.jpg?oh=e923f09ee58c657dfdf907f110170814&oe=5A13C37F"
-                                         data-thumb-mobile="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20621972_1073113919485690_5968360325858012480_n.jpg?oh=e923f09ee58c657dfdf907f110170814&oe=5A13C37F"
-                                         data-description="Ba ba rang muối "
-                                         style="display:none">
-                                </a>
-                                <a href="">
-                                    <img alt="Ba ba om chuối đậu"
-                                         src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20620834_1073113956152353_426021649928866929_n.jpg?oh=740df139ae9be492d694803e0160a4b2&oe=5A34B144"
-                                         data-image="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20620834_1073113956152353_426021649928866929_n.jpg?oh=740df139ae9be492d694803e0160a4b2&oe=5A34B144"
-                                         data-image-mobile="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20620834_1073113956152353_426021649928866929_n.jpg?oh=740df139ae9be492d694803e0160a4b2&oe=5A34B144"
-                                         data-thumb-mobile="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/20620834_1073113956152353_426021649928866929_n.jpg?oh=740df139ae9be492d694803e0160a4b2&oe=5A34B144"
-                                         data-description="Ba ba om chuối đậu"
-                                         style="display:none">
-                                </a>
+                                {album}
 
 
                             </div>
@@ -276,7 +238,8 @@
                             <div id="comments" class="comments-area ">
                                 <div class="comment-respond-area">
                                     <div class="comment-respond">
-                                        <h3 class="comment-reply-title title_lienquan title_checkout" style="text-align: center">
+                                        <h3 class="comment-reply-title title_lienquan title_checkout"
+                                            style="text-align: center">
                                             Bản đồ</h3>
                                     </div><!-- #respond -->
                                 </div>
@@ -292,19 +255,40 @@
                             <div id="comments" class="comments-area ">
                                 <div class="comment-respond-area">
                                     <div class="comment-respond">
-                                        <h3 class="comment-reply-title title_lienquan title_checkout" style="text-align: center">
-                                           Giới thiệu VIETGARDEN</h3>
+                                        <h3 class="comment-reply-title title_lienquan title_checkout"
+                                            style="text-align: center">
+                                            Giới thiệu VIETGARDEN</h3>
                                     </div><!-- #respond -->
                                 </div>
                                 <div class="clear"></div>
                             </div>
                             <div class="col-xs-12 border_content_checkout">
-                                <div class="post-formats-wrapper"><img width="1199" height="834"
-                                                                       src="{img}"
-                                                                       class="attachment-full size-full wp-post-image" alt="1"
-                                                                       srcset="{img} 1199w, {img} 768w, {img} 220w"
-                                                                       sizes="(max-width: 1199px) 100vw, 1199px"></div>
+                                <div class="post-formats-wrapper" style="margin-bottom: 20px"><img width="1199"
+                                                                                                   height="834"
+                                                                                                   src="{img}"
+                                                                                                   class="attachment-full size-full wp-post-image"
+                                                                                                   alt="1"
+                                                                                                   srcset="{img} 1199w, {img} 768w, {img} 220w"
+                                                                                                   sizes="(max-width: 1199px) 100vw, 1199px">
+                                </div>
                                 {gioi_thieu}
+
+                            </div>
+                            <div id="comments" class="comments-area ">
+                                <div class="comment-respond-area">
+                                    <div class="comment-respond">
+                                        <h3 class="comment-reply-title title_lienquan title_checkout"
+                                            style="text-align: center">
+                                            Hotline đặt bàn</h3>
+                                    </div><!-- #respond -->
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div class="phone"><a href="tel:{Hotline}"><img style="width: 50px;"
+                                                                                 src="{SITE-NAME}/view/default/themes/images/icon-phone-new.gif"
+                                                                                 alt=""><span
+                                                style=" padding-left: 10px;">{Hotline}</span></a></div>
                             </div>
                         </div>
                     </div>

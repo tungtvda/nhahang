@@ -52,6 +52,7 @@ function showFrom($form, $ListKey = array())
     $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/tuyendung.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/tuyendung.png" alt="" class=""><span>Tuyển dụng</span></a></li>';
     $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/info.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/gioithieu.png" alt="" class=""><span>Giới thiệu</span></a></li>';
     $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/slide.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/slide.png" alt="" class=""><span>Slide</span></a></li>';
+    $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/album.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/album.png" alt="" class=""><span>Album</span></a></li>';
     $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/menu.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/menu.png" alt="" class=""><span>Cấu hình menu</span></a></li>';
     $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/social.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/mangxahoi.png" alt="" class=""><span>Mạng xã hội</span></a></li>';
     $str_from .= '<li class="one_fifth"><a href="'.SITE_NAME.'/controller/admin/ykien.php"><img src="'.SITE_NAME.'/view/admin/Themes/images/imgadmin/ykien.png" alt="" class=""><span>Ý kiến khách hàng</span></a></li>';
