@@ -247,3 +247,19 @@
     border-bottom: 1px dotted #a3c638;
     margin-bottom: 30px;
 }
+.dat-cho-desktop {
+    color: #888787;
+    margin-bottom: 0;
+    margin-top: 8px;
+    font-size: 13px;
+}
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.dat-cho-desktop .phone-number {
+    color: #D02028;
+    font-weight: 700;
+    font-size: 18px;
+}

@@ -99,6 +99,7 @@
                 <li class="{kichhoat_tuyendung}"><a href="{SITE-NAME}/controller/admin/tuyendung.php"><span class="icon-facetime-video"></span> Tuyển dụng </a></li>
                 <li class="{kichhoat_gioithieu}"><a href="{SITE-NAME}/controller/admin/info.php"><span class="icon-facetime-video"></span> Giới thiệu</a></li>
                 <li class="{kichhoat_slide}"><a href="{SITE-NAME}/controller/admin/slide.php"><span class="icon-film"></span> Slide</a></li>
+                <li class="{kichhoat_album}"><a href="{SITE-NAME}/controller/admin/album.php"><span class="icon-picture"></span> Album ảnh</a></li>
                 <li class="{kichhoat_menu}"><a href="{SITE-NAME}/controller/admin/menu.php"><span class="icon-th-list"></span> Cấu hình menu</a></li>
                 <li class="{kichhoat_mangxahoi}"><a href="{SITE-NAME}/controller/admin/social.php"><span class=" iconfa-facebook"></span> Mạng xã hội</a></li>
                 <li class="{kichhoat_ykien}"><a href="{SITE-NAME}/controller/admin/ykien.php"><span class="icon-comment"></span> Ý kiến khách hàng</a></li>

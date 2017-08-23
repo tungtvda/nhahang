@@ -55,6 +55,12 @@ function show_checkout($data = array())
         $asign['gioi_thieu']=$data['info'][0]->content;
         $asign['img']=$data['info'][0]->img;
     }
+    $asign['Hotline']=$data['config'][0]->Hotline;
+    $asign['album'] ="";
+    if(count($data['album'])>0)
+    {
+        $asign['album'] = print_item('album', $data['album']);
+    }
     print_template($asign, 'checkout');
 }
 

@@ -35,6 +35,7 @@ $data['banner']=array(
 );
 $data['checkout']='checkout';
 $data['info']=info_getById(1);
+$data['album']=album_getByTop('','','id desc');
 
 //    $data['tour_noibat']=news_getByTop(6,'id!='.$data['news'][0]->id.' and danhmuc_id='.$data['news'][0]->danhmuc_id,'id desc');
 $data['link_anh']=$data['menu'][8]->img;
