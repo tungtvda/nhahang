@@ -959,10 +959,10 @@ Main Menu
   .header_v3 .navbar-nav > li > a,
   .header_v2 .navbar-nav > li > span.disable_link,
   .header_v3 .navbar-nav > li > span.disable_link {
-    padding: 50px 15px;
+    padding: 30px 15px;
   }
   .header_v2 .width-navigation .menu-right {
-    padding: 47px 0 45px 0;
+    padding: 30px 0 30px 0;
     -webkit-transition: all 0.2s ease-in-out 0s;
     -moz-transition: all 0.2s ease-in-out 0s;
     -o-transition: all 0.2s ease-in-out 0s;
