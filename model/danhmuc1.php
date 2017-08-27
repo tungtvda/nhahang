@@ -1,11 +1,12 @@
 <?php
 class danhmuc1
 {
-    public $id,$position,$name,$name_url,$img,$title,$keyword,$description;
+    public $id,$position,$show_menu,$name,$name_url,$img,$title,$keyword,$description;
     public function danhmuc1($data=array())
     {
     $this->id=isset($data['id'])?$data['id']:'';
     $this->position=isset($data['position'])?$data['position']:'';
+    $this->show_menu=isset($data['show_menu'])?$data['show_menu']:'';
     $this->name=isset($data['name'])?$data['name']:'';
     $this->name_url=isset($data['name_url'])?$data['name_url']:'';
     $this->img=isset($data['img'])?$data['img']:'';
@@ -18,6 +19,7 @@ class danhmuc1
         {
             $this->id=addslashes($this->id);
             $this->position=addslashes($this->position);
+            $this->show_menu=addslashes($this->show_menu);
             $this->name=addslashes($this->name);
             $this->name_url=addslashes($this->name_url);
             $this->img=addslashes($this->img);
@@ -29,6 +31,7 @@ class danhmuc1
         {
             $this->id=stripslashes($this->id);
             $this->position=stripslashes($this->position);
+            $this->show_menu=stripslashes($this->show_menu);
             $this->name=stripslashes($this->name);
             $this->name_url=stripslashes($this->name_url);
             $this->img=stripslashes($this->img);

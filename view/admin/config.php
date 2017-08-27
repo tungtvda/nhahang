@@ -34,7 +34,7 @@ function view_config($data)
 //
 function showTableHeader()
 {
-    return '<th>Id</th><th>Logo</th><th>Icon</th><th>Tên</th><th>Địa chỉ</th>';
+    return '<th>Id</th><th>Logo</th><th>Icon</th><td>Banner slide</td><th>Tên</th><th>Địa chỉ</th>';
 }
 //
 function showTableBody($data)
@@ -46,6 +46,7 @@ function showTableBody($data)
         $TableBody.="<td>".$obj->Id."</td>";
         $TableBody.="<td><img src=\"".$obj->Logo."\" width=\"50px\" height=\"50px\"/> </td>";
         $TableBody.="<td><img src=\"".$obj->Icon."\" width=\"50px\" height=\"50px\"/> </td>";
+        $TableBody.="<td><img src=\"".$obj->bg_slide."\" width=\"50px\" height=\"50px\"/> </td>";
         $TableBody.="<td>".$obj->Name."</td>";
         $TableBody.="<td>".$obj->Address."</td>";
         $TableBody.="<td><a href=\"?action=edit&Id=".$obj->Id."\" title=\"Edit\"><img src=\"".SITE_NAME."/view/admin/Themes/images/pencil.png\" alt=\"Edit\"></a>";
@@ -60,6 +61,7 @@ function showFrom($form,$ListKey=array())
     $str_from='';
     $str_from.='<p><label>Logo</label><input class="text-input small-input" type="text"  name="Logo" value="'.(($form!=false)?$form->Logo:'').'"/><a class="button" onclick="openKcEditor(\'Logo\');">Upload ảnh</a></p>';
     $str_from.='<p><label>Icon</label><input class="text-input small-input" type="text"  name="Icon" value="'.(($form!=false)?$form->Icon:'').'"/><a class="button" onclick="openKcEditor(\'Icon\');">Upload ảnh</a></p>';
+    $str_from.='<p><label>Banner slide</label><input class="text-input small-input" type="text"  name="bg_slide" value="'.(($form!=false)?$form->bg_slide:'').'"/><a class="button" onclick="openKcEditor(\'bg_slide\');">Upload ảnh</a></p>';
     $str_from.='<p><label>Tên</label><input class="text-input small-input" type="text"  name="Name" value="'.(($form!=false)?$form->Name:'').'" /></p>';
     $str_from.='<p><label>Địa chỉ</label><input class="text-input small-input" type="text"  name="Address" value="'.(($form!=false)?$form->Address:'').'" /></p>';
     $str_from.='<p><label>Điện Thoại</label><input class="text-input small-input" type="text"  name="Phone" value="'.(($form!=false)?$form->Phone:'').'" /></p>';

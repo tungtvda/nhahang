@@ -17,18 +17,7 @@ session_start();
 require_once DIR.'/common/minifi.output.php';
 ob_start("minify_output");
 
-//define("SITE_NAME", "http://vietgardens.com");
-//define("DIR", dirname(__FILE__));
-//define('SERVER','localhost');
-//define('DB_USERNAME','dulichado_garden');
-//define('DB_PASSWORD','iBqjKvEMY');
-//define('DB_NAME','dulichado_garden');
-//define('CACHE',false);
-//define('DATETIME_FORMAT',"y-m-d H:i:s");
-//define('PRIVATE_KEY','hoidinhnvbk');
-//session_start();
-//require_once DIR.'/common/minifi.output.php';
-//ob_start("minify_output");
+
 
 require_once DIR.'/model/contactService.php';
 require_once DIR.'/model/booking_tableService.php';

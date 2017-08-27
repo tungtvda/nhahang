@@ -62,17 +62,17 @@ function config_getByPaging($CurrentPage, $PageSize,$Order,$where)
 //
 function config_getByPagingReplace($CurrentPage, $PageSize,$Order,$where)
 {
-   return config_Get("SELECT config.Id, config.Logo, config.Icon, config.Name, config.Address, config.Phone, config.fax, config.Hotline, config.Email, config.Website FROM  config ".(($where!='')?(' where '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
+   return config_Get("SELECT config.Id, config.Logo, config.Icon, config.bg_slide, config.Name, config.Address, config.Phone, config.fax, config.Hotline, config.Email, config.Website FROM  config ".(($where!='')?(' where '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
 }
 //
 function config_insert($obj)
 {
-    return exe_query("insert into config (Logo,Icon,Name,Address,Phone,fax,Hotline,Email,Website) values ('$obj->Logo','$obj->Icon','$obj->Name','$obj->Address','$obj->Phone','$obj->fax','$obj->Hotline','$obj->Email','$obj->Website')",'config');
+    return exe_query("insert into config (Logo,Icon,bg_slide,Name,Address,Phone,fax,Hotline,Email,Website) values ('$obj->Logo','$obj->Icon','$obj->bg_slide','$obj->Name','$obj->Address','$obj->Phone','$obj->fax','$obj->Hotline','$obj->Email','$obj->Website')",'config');
 }
 //
 function config_update($obj)
 {
-    return exe_query("update config set Logo='$obj->Logo',Icon='$obj->Icon',Name='$obj->Name',Address='$obj->Address',Phone='$obj->Phone',fax='$obj->fax',Hotline='$obj->Hotline',Email='$obj->Email',Website='$obj->Website' where Id=$obj->Id",'config');
+    return exe_query("update config set Logo='$obj->Logo',Icon='$obj->Icon',bg_slide='$obj->bg_slide',Name='$obj->Name',Address='$obj->Address',Phone='$obj->Phone',fax='$obj->fax',Hotline='$obj->Hotline',Email='$obj->Email',Website='$obj->Website' where Id=$obj->Id",'config');
 }
 //
 function config_delete($obj)

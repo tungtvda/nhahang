@@ -34,7 +34,7 @@ function view_danhmuc2($data)
 //
 function showTableHeader()
 {
-    return '<th>id</th><th>danhmuc_id</th><th>position</th><th>name</th><th>name_url</th><th>img</th>';
+    return '<th>id</th><th>danhmuc_id</th><th>position</th><th>show menu</th><th>name</th><th>name_url</th><th>img</th>';
 }
 //
 function showTableBody($data)
@@ -47,6 +47,7 @@ function showTableBody($data)
             $TableBody .= "<td>" . $obj->id . "</td>";
             $TableBody .= "<td>" . $obj->danhmuc_id . "</td>";
             $TableBody .= "<td>" . $obj->position . "</td>";
+            $TableBody .= "<td>" . $obj->show_menu . "</td>";
             $TableBody .= "<td>" . $obj->name . "</td>";
             $TableBody .= "<td>" . $obj->name_url . "</td>";
             $TableBody .= "<td><img src=\"" . $obj->img . "\" width=\"50px\" height=\"50px\"/> </td>";
@@ -73,6 +74,7 @@ function showFrom($form,$ListKey=array())
     }
     $str_from.='</select></p>';
     $str_from.='<p><label>position</label><input class="text-input small-input" type="text"  name="position" value="'.(($form!=false)?$form->position:'').'" /></p>';
+    $str_from.='<p><label>Show menu</label><input  type="checkbox"  name="show_menu" value="1" '.(($form!=false)?(($form->show_menu=='1')?'checked':''):'').' /></p>';
     $str_from.='<p><label>name</label><input class="text-input small-input" type="text"  name="name" value="'.(($form!=false)?$form->name:'').'" /></p>';
     $str_from.='<p><label>name_url</label><input class="text-input small-input" type="text"  name="name_url" value="'.(($form!=false)?$form->name_url:'').'" /></p>';
     $str_from.='<p><label>img</label><input class="text-input small-input" type="text"  name="img" value="'.(($form!=false)?$form->img:'').'"/><a class="button" onclick="openKcEditor(\'img\');">Upload ảnh</a></p>';

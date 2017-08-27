@@ -1,15 +1,15 @@
 <article
          class="post-493 post type-post status-publish format-standard has-post-thumbnail hentry category-blog category-blog-left-sidebar tag-coffee">
-    <div class="post-formats-wrapper"><a class="post-image"
-                                         href="{link}"><img
-                    width="370" height="260" src="{img}"
+    <div class="post-formats-wrapper">
+        <a class="post-image"
+                                         href="{link}"><img src="{img}"
                     class="attachment-medium size-medium wp-post-image" alt="{name}" title="{name}"
                     srcset="{img} 370w, {img} 220w"
-                    sizes="(max-width: 370px) 100vw, 370px"></a></div>
+                    sizes="(max-width: 370px) 100vw, 370px"></a>
+    </div>
     <div class="content-inner">
         <div class="entry-content">
             <header class="entry-header">
-
                 <h2 class="blog_title"><a href="{link}"
                                           rel="bookmark">{name}</a></h2></header>
             <div style="font-size: 14px" class="article-date"><i class="fa fa-calculator"></i> <span style="font-style: italic;">{created}</span> | <span class="comments-link">

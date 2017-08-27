@@ -1,12 +1,13 @@
 <?php
 class danhmuc2
 {
-    public $id,$danhmuc_id,$position,$name,$name_url,$img,$title,$keyword,$description;
+    public $id,$danhmuc_id,$position,$show_menu,$name,$name_url,$img,$title,$keyword,$description;
     public function danhmuc2($data=array())
     {
     $this->id=isset($data['id'])?$data['id']:'';
     $this->danhmuc_id=isset($data['danhmuc_id'])?$data['danhmuc_id']:'';
     $this->position=isset($data['position'])?$data['position']:'';
+    $this->show_menu=isset($data['show_menu'])?$data['show_menu']:'';
     $this->name=isset($data['name'])?$data['name']:'';
     $this->name_url=isset($data['name_url'])?$data['name_url']:'';
     $this->img=isset($data['img'])?$data['img']:'';
@@ -20,6 +21,7 @@ class danhmuc2
             $this->id=addslashes($this->id);
             $this->danhmuc_id=addslashes($this->danhmuc_id);
             $this->position=addslashes($this->position);
+            $this->show_menu=addslashes($this->show_menu);
             $this->name=addslashes($this->name);
             $this->name_url=addslashes($this->name_url);
             $this->img=addslashes($this->img);
@@ -32,6 +34,7 @@ class danhmuc2
             $this->id=stripslashes($this->id);
             $this->danhmuc_id=stripslashes($this->danhmuc_id);
             $this->position=stripslashes($this->position);
+            $this->show_menu=stripslashes($this->show_menu);
             $this->name=stripslashes($this->name);
             $this->name_url=stripslashes($this->name_url);
             $this->img=stripslashes($this->img);

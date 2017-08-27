@@ -43,7 +43,7 @@
                 <aside id="echion_widget_single_image-6"
                        class="col-sm-12 text-center widget echion_Widget_Single_Image_class">
                     <div class="vi-single-image">
-                        <img class="vi-single-image" src="{SITE-NAME}/view/default/themes/images/logo_footer.png" alt="{name}" style="width: 200px">
+                        <img class="vi-single-image" src="{SITE-NAME}/view/admin/Themes/kcfinder/upload/images/config/logo_footer.png" alt="{name}" style="width: 200px">
                     </div>
                 </aside>
                 <aside id="text-6" class="col-sm-12 text-center widget widget_text">
@@ -107,5 +107,6 @@
 </div>
 </div><!-- .wrapper-container -->
 <!-- .box-area -->
+
 
 {noibat_footer}

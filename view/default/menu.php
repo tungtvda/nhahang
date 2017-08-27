@@ -34,7 +34,36 @@ function view_menu($data = array())
     $asign['danhmuc1'] ="";
     if(count($data['danhmuc1'])>0)
     {
-        $asign['danhmuc1'] = print_item('danhmuc_menu', $data['danhmuc1']);
+        foreach($data['danhmuc1'] as $row_dm){
+            $data_menu_2=danhmuc2_getByTop('','danhmuc_id='.$row_dm->id.' and id!=1 and show_menu=1','position desc');
+            if($data_menu_2){
+                $asign['danhmuc1'] .=' <aside class="col-sm-3 echion_Widget_Product_Category_class">
+                                                <h3 class="widget-title"><a href="'.SITE_NAME.'/'.$row_dm->name_url.'/">'.$row_dm->name.'</a></h3>
+                                                <div class="vi-product-category-wrapper row">
+                                                    <div class="col-sm-12">
+                                                        <ul class="vi-product-list">';
+                                            foreach($data_menu_2 as $row_dm_2){
+                                                $count_td=sanpham_count('danhmuc2_id='.$row_dm_2->id);
+                                                if($count_td){
+                                                    $asign['danhmuc1'] .='<li class="vi-product-img">
+                                                                                            <a href="'.SITE_NAME.'/thuc-don/'.$row_dm_2->name_url.'/"> '.$row_dm_2->name.' </a>
+                                                                                        </li>';
+                                                }
+
+                                            }
+
+                $asign['danhmuc1'] .='</ul>
+                                                    </div>
+                                                </div>
+                                            </aside>';
+            }
+
+        }
+//        $asign['danhmuc1'] = print_item('danhmuc_menu', $data['danhmuc1']);
+    }
+    $asign['danhmuc1_hide']='';
+    if($asign['danhmuc1']==''){
+        $asign['danhmuc1_hide']='hidden';
     }
 
     $asign['danhmuc_camnang'] ="";
