@@ -1,6 +1,23 @@
 <!--<body class="home page page-id-1420 page-template page-template-page-templates page-template-homepage page-template-page-templateshomepage-php kingcomposer kc-css-system _masterslider _msp_version_3.0.4  wrapper-header_overlay wrapper-header_v2">-->
 
 <body class="archive post-type-archive post-type-archive-product kc-css-system _masterslider _msp_version_3.0.4 woocommerce woocommerce-page  wrapper-header_overlay wrapper-header_v2">
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/vi_VN/sdk.js#x...";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+<div style="position:fixed; z-index:9999999; right:0px; bottom:0px;" class="fb-page" data-tabs="messages"
+     data-href="https://www.facebook.com/vietgardens/" data-width="250"
+     data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+     data-show-facepile="true" data-show-posts="false"></div>
+
+
+
 <div id="wrapper-container" class="wrapper-container">
     <div class="content-pusher wide-area">
         <header id="masthead" class="site-header affix-top bg-custom-sticky header_overlay header_v2 menu_text_right">
@@ -30,12 +47,15 @@
                             <aside id="text-2" class="widget_text">
                                 <div class="textwidget">
                                     <a style="color: #ffffff !important;" href="tel:{Hotline}">
-                                        <i style="color: #ee2b2a;" class="fa fa-phone fa-2 theme-color"> </i> Gọi ngay: {Hotline}
+                                        <i style="color: #ee2b2a;" class="fa fa-phone fa-2 theme-color"> </i> Gọi
+                                        ngay: {Hotline}
                                     </a>
                                 </div>
                             </aside>
                             <aside id="text-3" class="widget_text">
-                                <div class="textwidget"><i style="color: #ee2b2a;" class="fa fa-envelope-o fa-2 theme-color"> </i> <a style="color: #ffffff !important;"
+                                <div class="textwidget"><i style="color: #ee2b2a;"
+                                                           class="fa fa-envelope-o fa-2 theme-color"> </i> <a
+                                            style="color: #ffffff !important;"
                                             href="mailto:{email}">{email}</a></div>
                             </aside>
                         </div>
@@ -97,11 +117,28 @@
                                     <li class=" {gioithieu_mn} menu-item menu-item-type-post_type menu-item-object-page dropdown_full_width  drop_to_left widget_area ">
                                         <a href="{SITE-NAME}/gioi-thieu/">{gioithieu_name}</a>
                                     </li>
-                                    <li class="{thucdon_mn} menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children drop_to_left standard">
+                                    <li class="{thucdon_mn} menu-item menu-item-type-post_type menu-item-object-page dropdown_full_width  drop_to_left widget_area">
                                         <a href="{SITE-NAME}/thuc-don/">{thucdon_name}</a>
-                                        <ul class="sub-menu">
-                                            {danhmuc1}
-                                        </ul>
+                                        <div {danhmuc1_hide} class="sub-menu submenu-widget megacol">
+                                           {danhmuc1}
+                                            <aside id="echion_widget_single_image-2"
+                                                   class="col-sm-6 echion_Widget_Single_Image_class">
+                                                <div class="vi-single-image">
+                                                    <img class="vi-single-image"
+                                                         src="themes/wp-content/uploads/2016/07/menu_1.jpg" alt="">
+                                                </div>
+                                            </aside>
+                                            <aside id="echion_widget_single_image-3"
+                                                   class="col-sm-6 echion_Widget_Single_Image_class">
+                                                <div class="vi-single-image">
+                                                    <img class="vi-single-image"
+                                                         src="themes/wp-content/uploads/2016/07/menu_2.jpg" alt="">
+                                                </div>
+                                            </aside>
+                                        </div>
+                                        <!--<ul class="sub-menu">
+                                            {*{danhmuc1}*}
+                                        </ul>-->
                                     </li>
                                     <li class="{camnang_mn} menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children drop_to_left standard">
                                         <a href="{SITE-NAME}/cam-nang/">{camnang_name}</a>
@@ -161,9 +198,11 @@
                                                     </ul><!-- end product list -->
 
 
-                                                    <p class="total"><strong>Tổng tiền:</strong> <span style="font-size: 16px"
+                                                    <p class="total"><strong>Tổng tiền:</strong> <span
+                                                                style="font-size: 16px"
                                                                 class="woocommerce-Price-amount amount"><span
-                                                                    class="woocommerce-Price-currencySymbol"></span>{total} vnđ</span>
+                                                                    class="woocommerce-Price-currencySymbol"></span>{total}
+                                                            vnđ</span>
                                                     </p>
 
 

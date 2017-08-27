@@ -14,5 +14,6 @@ function view_slide($data=array())
     {
         $asign['slide'] = print_item('slide', $data['slide']);
     }
+    $asign['bg_slide']=$data['config'][0]->bg_slide;
     print_template($asign,'slide');
 }

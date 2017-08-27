@@ -117,10 +117,10 @@ function print_item($file,$ListItem,$LocDau=false,$LocDauAssign=false,$numberfor
                 $ft->assign('link_danhmuc',$link_danhmuc);
                 $ft->assign('link',link_newsdetail($item));
                 $content=$item->content;
-                if (strlen($content) > 400) {
+                if (strlen($content) > 250) {
                     $ten1=strip_tags($content);
 
-                    $ten = substr($ten1, 0, 400);
+                    $ten = substr($ten1, 0,250);
                     $name = substr($ten, 0, strrpos($ten, ' ')) . "...";
                     $ft->assign('content',$name);
                 } else {

@@ -62,17 +62,17 @@ function danhmuc1_getByPaging($CurrentPage, $PageSize,$Order,$where)
 //
 function danhmuc1_getByPagingReplace($CurrentPage, $PageSize,$Order,$where)
 {
-   return danhmuc1_Get("SELECT danhmuc1.id, danhmuc1.position, danhmuc1.name, danhmuc1.name_url, danhmuc1.img, danhmuc1.title, danhmuc1.keyword, danhmuc1.description FROM  danhmuc1 ".(($where!='')?(' where '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
+   return danhmuc1_Get("SELECT danhmuc1.id, danhmuc1.position, danhmuc1.show_menu, danhmuc1.name, danhmuc1.name_url, danhmuc1.img, danhmuc1.title, danhmuc1.keyword, danhmuc1.description FROM  danhmuc1 ".(($where!='')?(' where '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
 }
 //
 function danhmuc1_insert($obj)
 {
-    return exe_query("insert into danhmuc1 (position,name,name_url,img,title,keyword,description) values ('$obj->position','$obj->name','$obj->name_url','$obj->img','$obj->title','$obj->keyword','$obj->description')",'danhmuc1');
+    return exe_query("insert into danhmuc1 (position,show_menu,name,name_url,img,title,keyword,description) values ('$obj->position','$obj->show_menu','$obj->name','$obj->name_url','$obj->img','$obj->title','$obj->keyword','$obj->description')",'danhmuc1');
 }
 //
 function danhmuc1_update($obj)
 {
-    return exe_query("update danhmuc1 set position='$obj->position',name='$obj->name',name_url='$obj->name_url',img='$obj->img',title='$obj->title',keyword='$obj->keyword',description='$obj->description' where id=$obj->id",'danhmuc1');
+    return exe_query("update danhmuc1 set position='$obj->position',show_menu='$obj->show_menu',name='$obj->name',name_url='$obj->name_url',img='$obj->img',title='$obj->title',keyword='$obj->keyword',description='$obj->description' where id=$obj->id",'danhmuc1');
 }
 //
 function danhmuc1_delete($obj)

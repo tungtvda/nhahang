@@ -62,17 +62,17 @@ function danhmuc2_getByPaging($CurrentPage, $PageSize,$Order,$where)
 //
 function danhmuc2_getByPagingReplace($CurrentPage, $PageSize,$Order,$where)
 {
-   return danhmuc2_Get("SELECT danhmuc2.id, danhmuc1.name as danhmuc_id, danhmuc2.position, danhmuc2.name, danhmuc2.name_url, danhmuc2.img, danhmuc2.title, danhmuc2.keyword, danhmuc2.description FROM  danhmuc2, danhmuc1 where danhmuc1.id=danhmuc2.danhmuc_id  ".(($where!='')?(' and '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
+   return danhmuc2_Get("SELECT danhmuc2.id, danhmuc1.name as danhmuc_id, danhmuc2.position, danhmuc2.show_menu, danhmuc2.name, danhmuc2.name_url, danhmuc2.img, danhmuc2.title, danhmuc2.keyword, danhmuc2.description FROM  danhmuc2, danhmuc1 where danhmuc1.id=danhmuc2.danhmuc_id  ".(($where!='')?(' and '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
 }
 //
 function danhmuc2_insert($obj)
 {
-    return exe_query("insert into danhmuc2 (danhmuc_id,position,name,name_url,img,title,keyword,description) values ('$obj->danhmuc_id','$obj->position','$obj->name','$obj->name_url','$obj->img','$obj->title','$obj->keyword','$obj->description')",'danhmuc2');
+    return exe_query("insert into danhmuc2 (danhmuc_id,position,show_menu,name,name_url,img,title,keyword,description) values ('$obj->danhmuc_id','$obj->position','$obj->show_menu','$obj->name','$obj->name_url','$obj->img','$obj->title','$obj->keyword','$obj->description')",'danhmuc2');
 }
 //
 function danhmuc2_update($obj)
 {
-    return exe_query("update danhmuc2 set danhmuc_id='$obj->danhmuc_id',position='$obj->position',name='$obj->name',name_url='$obj->name_url',img='$obj->img',title='$obj->title',keyword='$obj->keyword',description='$obj->description' where id=$obj->id",'danhmuc2');
+    return exe_query("update danhmuc2 set danhmuc_id='$obj->danhmuc_id',position='$obj->position',show_menu='$obj->show_menu',name='$obj->name',name_url='$obj->name_url',img='$obj->img',title='$obj->title',keyword='$obj->keyword',description='$obj->description' where id=$obj->id",'danhmuc2');
 }
 //
 function danhmuc2_delete($obj)

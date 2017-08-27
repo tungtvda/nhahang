@@ -49,7 +49,7 @@ function show_header2($title,$description,$keyword,$data1=array())
 
 function  show_slide($data1=array())
 {
-    $data=array();
+    $data=$data1;
     $data['slide']=slide_getByTop('','','position desc');
     view_slide($data);
 }
@@ -109,7 +109,7 @@ function show_menu($data1=array(),$active='trangchu')
     $data['active']=$active;
     $data['menu']=$data1['menu'];
     $data['mangxahoi']=social_getByTop(1,'','');
-    $data['danhmuc1']=danhmuc1_getByTop('','id!=1','position asc');
+    $data['danhmuc1']=danhmuc1_getByTop('','id!=1 and show_menu=1','position asc');
     $data['danhmuc_camnang']=danhmuc_tintuc_getByTop('','','position asc');
     view_menu($data);
 }

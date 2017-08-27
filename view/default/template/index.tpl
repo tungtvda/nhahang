@@ -29,7 +29,7 @@
         </div>
     </div>
 </div>
-<div data-kc-equalheight="true" data-kc-equalheight-align="middle" class="kc-elm kc-css-747092 kc_row">
+<div style="display: none !important;" data-kc-equalheight="true" data-kc-equalheight-align="middle" class="kc-elm kc-css-747092 kc_row">
     <div class="kc-row-container  kc-container">
         <div class="kc-wrap-columns">
             <div class="kc-elm kc-css-9628 kc_col-sm-7 kc-animated kc-animate-eff-fadeInLeft kc_column kc_col-sm-7">
@@ -58,7 +58,7 @@
         </div>
     </div>
 </div>
-<div data-kc-parallax="true" class="kc-elm kc-css-463651 kc_row menu-overlay">
+<div hidden data-kc-parallax="true" class="kc-elm kc-css-463651 kc_row menu-overlay">
     <div class="kc-row-container  kc-container">
         <div class="kc-wrap-columns">
             <div class="kc-elm kc-css-433689 kc_col-sm-4 kc-animated kc-animate-eff-fadeInLeft kc_column kc_col-sm-4">
@@ -120,11 +120,9 @@
         <div class="kc-wrap-columns">
             <div class="kc-elm kc-css-833839 kc_col-sm-12 kc-animated kc-animate-eff-fadeInUp kc_column kc_col-sm-12">
                 <div class="kc-col-container">
-                    <div class="kc-elm kc-css-426929 hidden-xs"
-                         style="height: 120px; clear: both; width:100%;"></div>
                     <div class="vi-heading style2">
                         <div class="description">Món ngon</div>
-                        <h2 style="font-weight:bold; color: #ee2b2a" class="title">TỐI NAY ĂN GÌ</h2>
+                        <h2 style="font-weight:bold; color: #ee2b2a" class="title">HÔM NAY ĂN GÌ</h2>
                         <div class="icon-heading"><img
                                     src="{SITE-NAME}/view/default/themes/wp-content/uploads/2016/07/icon-title-table.png"
                                     alt="CHEF SELECTION"/></div>
@@ -158,7 +156,9 @@
                                         src="{SITE-NAME}/view/default/themes/wp-content/uploads/2016/07/icon-title-1.png"
                                         alt="BOOK A TABLE"/></div>
                             <div class="desc">
-                                <p><em>Monday to Sunday&nbsp;</em> <em>7:30 am to 11:00 pm</em></p>
+                                <p><em>Monday to Sunday&nbsp;</p>
+                                <p><em>Sáng&nbsp;</em> <em>10:00 am to 14:00 pm</em></p>
+                                <p><em>Chiều&nbsp;</em> <em>05:30 pm to 22:00 pm</em></p>
                                 </div>
                             <p class="read-more"><span>Gọi ngay - <a href="tel:{Hotline}">{Hotline}</a></span></p></div>
                     </div>
