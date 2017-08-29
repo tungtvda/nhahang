@@ -34,7 +34,7 @@ function view_sanpham($data)
 //
 function showTableHeader()
 {
-    return '<th>danhmuc1_id</th><th>danhmuc2_id</th><th>highlights</th><th>name</th><th>code</th><th>img</th><th>price</th><th>start</th><th>num_like</th>';
+    return '<th>danhmuc1_id</th><th>danhmuc2_id</th><th>highlights</th><th>Thuc pham</th><th>name</th><th>code</th><th>img</th><th>price</th><th>start</th><th>num_like</th>';
 }
 //
 function showTableBody($data)
@@ -46,6 +46,7 @@ function showTableBody($data)
         $TableBody.="<td>".$obj->danhmuc1_id."</td>";
         $TableBody.="<td>".$obj->danhmuc2_id."</td>";
         $TableBody.="<td>".$obj->highlights."</td>";
+        $TableBody.="<td>".$obj->thuc_pham."</td>";
         $TableBody.="<td>".$obj->name."</td>";
         $TableBody.="<td>".$obj->code."</td>";
         $TableBody.="<td><img src=\"".$obj->img."\" width=\"50px\" height=\"50px\"/> </td>";
@@ -105,6 +106,7 @@ function showFrom($form,$ListKey=array())
     }
     $str_from.='</select></p>';
     $str_from.='<p><label>highlights</label><input  type="checkbox"  name="highlights" value="1" '.(($form!=false)?(($form->highlights=='1')?'checked':''):'').' /></p>';
+    $str_from.='<p><label>thuc_pham</label><input  type="checkbox"  name="thuc_pham" value="1" '.(($form!=false)?(($form->thuc_pham=='1')?'checked':''):'').' /></p>';
     $str_from.='<p><label>name</label><input class="text-input small-input" type="text"  name="name" value="'.(($form!=false)?$form->name:'').'" /></p>';
     $str_from.='<p><label>name_url</label><input class="text-input small-input" type="text"  name="name_url" value="'.(($form!=false)?$form->name_url:'').'" /></p>';
     $str_from.='<p><label>code</label><input class="text-input small-input" type="text"  name="code" value="'.(($form!=false)?$form->code:'').'" /></p>';
