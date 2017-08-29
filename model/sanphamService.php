@@ -62,17 +62,17 @@ function sanpham_getByPaging($CurrentPage, $PageSize,$Order,$where)
 //
 function sanpham_getByPagingReplace($CurrentPage, $PageSize,$Order,$where)
 {
-   return sanpham_Get("SELECT sanpham.id, danhmuc1.name as danhmuc1_id, danhmuc2.name as danhmuc2_id, sanpham.highlights, sanpham.name, sanpham.name_url, sanpham.code, sanpham.img, sanpham.img1, sanpham.img2, sanpham.price, sanpham.price_sale, sanpham.price_percent, sanpham.start, sanpham.num_like, sanpham.content_short, sanpham.content, sanpham.title, sanpham.keyword, sanpham.description FROM  sanpham, danhmuc1, danhmuc2 where danhmuc1.id=sanpham.danhmuc1_id and danhmuc2.id=sanpham.danhmuc2_id  ".(($where!='')?(' and '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
+   return sanpham_Get("SELECT sanpham.id, danhmuc1.name as danhmuc1_id, danhmuc2.name as danhmuc2_id, sanpham.highlights, sanpham.thuc_pham, sanpham.name, sanpham.name_url, sanpham.code, sanpham.img, sanpham.img1, sanpham.img2, sanpham.price, sanpham.price_sale, sanpham.price_percent, sanpham.start, sanpham.num_like, sanpham.content_short, sanpham.content, sanpham.title, sanpham.keyword, sanpham.description FROM  sanpham, danhmuc1, danhmuc2 where danhmuc1.id=sanpham.danhmuc1_id and danhmuc2.id=sanpham.danhmuc2_id  ".(($where!='')?(' and '.$where):'')." Order By ".$Order." Limit ".(($CurrentPage-1)*$PageSize)." , ".$PageSize);
 }
 //
 function sanpham_insert($obj)
 {
-    return exe_query("insert into sanpham (danhmuc1_id,danhmuc2_id,highlights,name,name_url,code,img,img1,img2,price,price_sale,price_percent,start,num_like,content_short,content,title,keyword,description) values ('$obj->danhmuc1_id','$obj->danhmuc2_id','$obj->highlights','$obj->name','$obj->name_url','$obj->code','$obj->img','$obj->img1','$obj->img2','$obj->price','$obj->price_sale','$obj->price_percent','$obj->start','$obj->num_like','$obj->content_short','$obj->content','$obj->title','$obj->keyword','$obj->description')",'sanpham');
+    return exe_query("insert into sanpham (danhmuc1_id,danhmuc2_id,highlights,thuc_pham,name,name_url,code,img,img1,img2,price,price_sale,price_percent,start,num_like,content_short,content,title,keyword,description) values ('$obj->danhmuc1_id','$obj->danhmuc2_id','$obj->highlights','$obj->thuc_pham','$obj->name','$obj->name_url','$obj->code','$obj->img','$obj->img1','$obj->img2','$obj->price','$obj->price_sale','$obj->price_percent','$obj->start','$obj->num_like','$obj->content_short','$obj->content','$obj->title','$obj->keyword','$obj->description')",'sanpham');
 }
 //
 function sanpham_update($obj)
 {
-    return exe_query("update sanpham set danhmuc1_id='$obj->danhmuc1_id',danhmuc2_id='$obj->danhmuc2_id',highlights='$obj->highlights',name='$obj->name',name_url='$obj->name_url',code='$obj->code',img='$obj->img',img1='$obj->img1',img2='$obj->img2',price='$obj->price',price_sale='$obj->price_sale',price_percent='$obj->price_percent',start='$obj->start',num_like='$obj->num_like',content_short='$obj->content_short',content='$obj->content',title='$obj->title',keyword='$obj->keyword',description='$obj->description' where id=$obj->id",'sanpham');
+    return exe_query("update sanpham set danhmuc1_id='$obj->danhmuc1_id',danhmuc2_id='$obj->danhmuc2_id',highlights='$obj->highlights',thuc_pham='$obj->thuc_pham',name='$obj->name',name_url='$obj->name_url',code='$obj->code',img='$obj->img',img1='$obj->img1',img2='$obj->img2',price='$obj->price',price_sale='$obj->price_sale',price_percent='$obj->price_percent',start='$obj->start',num_like='$obj->num_like',content_short='$obj->content_short',content='$obj->content',title='$obj->title',keyword='$obj->keyword',description='$obj->description' where id=$obj->id",'sanpham');
 }
 //
 function sanpham_delete($obj)

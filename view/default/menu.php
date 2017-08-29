@@ -22,6 +22,7 @@ function view_menu($data = array())
     $asign['camnang_mn'] = ($data['active'] == 'camnang') ? 'current-menu-item' : '';
     $asign['lienhe_mn'] = ($data['active'] == 'lienhe') ? 'current-menu-item' : '';
     $asign['tuyendung_mn'] = ($data['active'] == 'tuyendung') ? 'current-menu-item' : '';
+    $asign['dichvu_mn'] = ($data['active'] == 'dichvu') ? 'current-menu-item' : '';
     //menu
     $asign['home_name']=$data['menu'][0]->name;
     $asign['gioithieu_name']=$data['menu'][1]->name;
@@ -29,6 +30,7 @@ function view_menu($data = array())
     $asign['camnang_name']=$data['menu'][3]->name;
     $asign['lienhe_name']=$data['menu'][4]->name;
     $asign['tuyengdung_name']=$data['menu'][5]->name;
+    $asign['dichvu_name']=$data['menu'][9]->name;
 
     // danh mục cấp 1
     $asign['danhmuc1'] ="";

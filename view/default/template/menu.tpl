@@ -17,7 +17,6 @@
      data-show-facepile="true" data-show-posts="false"></div>
 
 
-
 <div id="wrapper-container" class="wrapper-container">
     <div class="content-pusher wide-area">
         <header id="masthead" class="site-header affix-top bg-custom-sticky header_overlay header_v2 menu_text_right">
@@ -120,8 +119,8 @@
                                     <li class="{thucdon_mn} menu-item menu-item-type-post_type menu-item-object-page dropdown_full_width  drop_to_left widget_area">
                                         <a href="{SITE-NAME}/thuc-don/">{thucdon_name}</a>
                                         <div {danhmuc1_hide} class="sub-menu submenu-widget megacol">
-                                           {danhmuc1}
-                                            <aside id="echion_widget_single_image-2"
+                                            {danhmuc1}
+                                            <!--<aside id="echion_widget_single_image-2"
                                                    class="col-sm-6 echion_Widget_Single_Image_class">
                                                 <div class="vi-single-image">
                                                     <img class="vi-single-image"
@@ -134,11 +133,21 @@
                                                     <img class="vi-single-image"
                                                          src="themes/wp-content/uploads/2016/07/menu_2.jpg" alt="">
                                                 </div>
-                                            </aside>
+                                            </aside>-->
                                         </div>
                                         <!--<ul class="sub-menu">
                                             {*{danhmuc1}*}
                                         </ul>-->
+                                    </li>
+                                    <li class="{dichvu_mn} menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children drop_to_left standard">
+                                        <a href="javascript:void(0)">{dichvu_name}</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                                        href="{SITE-NAME}/cung-cap-thuc-pham/">Cung cấp thực phẩm</a>
+                                            </li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                                        href="{SITE-NAME}/dat-tiec-luu-dong/">Đặt tiệc lưu động</a></li>
+                                        </ul>
                                     </li>
                                     <li class="{camnang_mn} menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children drop_to_left standard">
                                         <a href="{SITE-NAME}/cam-nang/">{camnang_name}</a>

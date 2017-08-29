@@ -156,7 +156,7 @@
                                         src="{SITE-NAME}/view/default/themes/wp-content/uploads/2016/07/icon-title-1.png"
                                         alt="BOOK A TABLE"/></div>
                             <div class="desc">
-                                <p><em>Monday to Sunday&nbsp;</p>
+                                <p><em>Thứ hai đến Chủ nhật&nbsp;</p>
                                 <p><em>Sáng&nbsp;</em> <em>10:00 am to 14:00 pm</em></p>
                                 <p><em>Chiều&nbsp;</em> <em>05:30 pm to 22:00 pm</em></p>
                                 </div>

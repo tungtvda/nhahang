@@ -1,13 +1,14 @@
 <?php
 class sanpham
 {
-    public $id,$danhmuc1_id,$danhmuc2_id,$highlights,$name,$name_url,$code,$img,$img1,$img2,$price,$price_sale,$price_percent,$start,$num_like,$content_short,$content,$title,$keyword,$description;
+    public $id,$danhmuc1_id,$danhmuc2_id,$highlights, $thuc_pham,$name,$name_url,$code,$img,$img1,$img2,$price,$price_sale,$price_percent,$start,$num_like,$content_short,$content,$title,$keyword,$description;
     public function sanpham($data=array())
     {
     $this->id=isset($data['id'])?$data['id']:'';
     $this->danhmuc1_id=isset($data['danhmuc1_id'])?$data['danhmuc1_id']:'';
     $this->danhmuc2_id=isset($data['danhmuc2_id'])?$data['danhmuc2_id']:'';
     $this->highlights=isset($data['highlights'])?$data['highlights']:'';
+    $this->thuc_pham=isset($data['thuc_pham'])?$data['thuc_pham']:'';
     $this->name=isset($data['name'])?$data['name']:'';
     $this->name_url=isset($data['name_url'])?$data['name_url']:'';
     $this->code=isset($data['code'])?$data['code']:'';
@@ -32,6 +33,7 @@ class sanpham
             $this->danhmuc1_id=addslashes($this->danhmuc1_id);
             $this->danhmuc2_id=addslashes($this->danhmuc2_id);
             $this->highlights=addslashes($this->highlights);
+            $this->thuc_pham=addslashes($this->thuc_pham);
             $this->name=addslashes($this->name);
             $this->name_url=addslashes($this->name_url);
             $this->code=addslashes($this->code);
@@ -55,6 +57,7 @@ class sanpham
             $this->danhmuc1_id=stripslashes($this->danhmuc1_id);
             $this->danhmuc2_id=stripslashes($this->danhmuc2_id);
             $this->highlights=stripslashes($this->highlights);
+            $this->thuc_pham=stripslashes($this->thuc_pham);
             $this->name=stripslashes($this->name);
             $this->name_url=stripslashes($this->name_url);
             $this->code=stripslashes($this->code);

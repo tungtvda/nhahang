@@ -39,6 +39,7 @@ RewriteRule ^cam-nang/([a-zA-Z0-9_-]+)/page-([0-9]+)$ controller/default/danhmuc
 RewriteRule ^cam-nang/(.*).html$ controller/default/chitietsanpham.php?Id=$1
 
 RewriteRule ^gioi-thieu/$ controller/default/gioithieu.php
+RewriteRule ^dat-tiec-luu-dong/$ controller/default/dattiec.php
 
 RewriteRule ^tuyen-dung/$ controller/default/tuyendung.php
 RewriteRule ^tuyen-dung/page-([0-9]+)$ controller/default/tuyendung.php?page=$1
@@ -51,5 +52,13 @@ RewriteRule ^gio-hang/$ controller/default/giohang.php
 RewriteRule ^checkout/$ controller/default/checkout.php
 RewriteRule ^dat-ban/$ controller/default/checkout.php
 RewriteRule ^xoa-gio-hang/([0-9]+)$ controller/default/delete_giohang.php?Id=$1
+
+RewriteRule ^cung-cap-thuc-pham/$ controller/default/thucpham.php
+RewriteRule ^cung-cap-thuc-pham/orderby-([a-zA-Z0-9_-]+)$ controller/default/thucpham.php?orderby=$1
+RewriteRule ^cung-cap-thuc-pham/orderby-([a-zA-Z0-9_-]+)/page-([0-9]+)$ controller/default/thucpham.php?orderby=$1&page=$2
+
+RewriteRule ^cung-cap-thuc-pham/([a-zA-Z0-9_-]+)/$ controller/default/thucpham.php?Id=$1
+RewriteRule ^cung-cap-thuc-pham/([a-zA-Z0-9_-]+)/orderby-([a-zA-Z0-9_-]+)$ controller/default/thucpham.php?Id=$1&orderby=$2
+RewriteRule ^cung-cap-thuc-pham/([a-zA-Z0-9_-]+)/orderby-([a-zA-Z0-9_-]+)/page-([0-9]+)$ controller/default/thucpham.php?Id=$1&orderby=$2&page=$3
 
 
