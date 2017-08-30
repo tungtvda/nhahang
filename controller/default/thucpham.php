@@ -70,17 +70,17 @@ else{
     $actual_link=str_replace('?','',$actual_link);
     $actual_link=str_replace('&','',$actual_link);
     $img_banner='';
-            $danhmuc=menu_getById(3);
+            $danhmuc=menu_getById(12);
             if(count($danhmuc)==0)
             {
                 redict(SITE_NAME);
             }
-            $dk="";
+            $dk="thuc_pham=1";
             $data['current']=isset($_GET['page'])?$_GET['page']:'1';
             $data['pagesize']=12;
             $data['count']=sanpham_count($dk);
             $data['danhsach']=sanpham_getByPaging($data['current'],$data['pagesize'],$order,$dk);
-            $data['PAGING'] = showPagingAtLink($data['count'], $data['pagesize'], $data['current'], '' . SITE_NAME . '/thuc-don/',$order_pag);
+            $data['PAGING'] = showPagingAtLink($data['count'], $data['pagesize'], $data['current'], '' . SITE_NAME . '/cung-cap-thuc-pham/',$order_pag);
             $name=$danhmuc[0]->name;
             $data['banner']=array(
                 'banner_img'=>$danhmuc[0]->img,
@@ -91,7 +91,7 @@ else{
             $title=$danhmuc[0]->title;
             $description=$danhmuc[0]->description;
             $keyword=$danhmuc[0]->keyword;
-            $data['url']=SITE_NAME.'/thuc-don/';
+            $data['url']=SITE_NAME.'/cung-cap-thuc-pham/';
 }
 
 $data['link_anh']=$img_banner;
