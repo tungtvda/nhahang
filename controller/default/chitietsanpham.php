@@ -44,7 +44,9 @@ if($string_check!='')
     $title=$data['news'][0]->title;
     $description=$data['news'][0]->description;
     $keyword=$data['news'][0]->keyword;
+
     $url='<li><a href="'.SITE_NAME.'">'.$data['menu'][0]->name.'</a></li> ~  <li><a href="'.SITE_NAME.'/cam-nang/">'.$data['menu'][3]->name.'</a></li>';
+
     $danhmuc1=danhmuc_tintuc_getByTop(1,'id="'.$data['news'][0]->danhmuc_id.'"','');
     if(count($danhmuc1)){
         $banner=$danhmuc1[0]->img;
@@ -114,21 +116,28 @@ else{
             redict(SITE_NAME);
         }
 
-        $danhmuc1=danhmuc1_getByTop(1,'id="'.$data['tour'][0]->danhmuc1_id.'" and id!=1','');
-        $danhmuc2=danhmuc2_getByTop(1,'id="'.$data['tour'][0]->	danhmuc2_id.'" and id!=1','');
-        if(count($danhmuc1)==0)
-        {
-            redict(SITE_NAME);
+        if($data['tour'][0]->thuc_pham==1){
+            $banner=$data['menu'][11]->img;
+            $url='<li><a href="'.SITE_NAME.'">'.$data['menu'][0]->name.'</a></li> ~ <li><a href="'.SITE_NAME.'/cung-cap-thuc-pham/">'.$data['menu'][11]->name.'</a></li>';
+            $cate='<a href="'.SITE_NAME.'/cung-cap-thuc-pham/" rel="tag">'.$data['menu'][11]->name.'</a>';
+        }else{
+            $danhmuc1=danhmuc1_getByTop(1,'id="'.$data['tour'][0]->danhmuc1_id.'" and id!=1','');
+            $danhmuc2=danhmuc2_getByTop(1,'id="'.$data['tour'][0]->	danhmuc2_id.'" and id!=1','');
+            if(count($danhmuc1)==0)
+            {
+                redict(SITE_NAME);
+            }
+            $banner=$danhmuc1[0]->img;
+            $url='<li><a href="'.SITE_NAME.'">'.$data['menu'][0]->name.'</a></li> ~ <li><a href="'.SITE_NAME.'/'.$danhmuc1[0]->name_url.'/">'.$danhmuc1[0]->name.'</a></li>';
+            $cate='<a href="'.SITE_NAME.'/'.$danhmuc1[0]->name_url.'/" rel="tag">'.$danhmuc1[0]->name.'</a>';
+            if(count($danhmuc2)>0)
+            {
+                $banner=$danhmuc2[0]->img;
+                $url.=' ~ <li><a href="'.SITE_NAME.'/thuc-don/'.$danhmuc2[0]->name_url.'/">'.$danhmuc2[0]->name.'</a></li>';
+                $cate.=', <a href="'.SITE_NAME.'/thuc-don/'.$danhmuc2[0]->name_url.'/" rel="tag">'.$danhmuc2[0]->name.'</a>';
+            }
         }
-        $banner=$danhmuc1[0]->img;
-        $url='<li><a href="'.SITE_NAME.'">'.$data['menu'][0]->name.'</a></li> ~ <li><a href="'.SITE_NAME.'/'.$danhmuc1[0]->name_url.'/">'.$danhmuc1[0]->name.'</a></li>';
-        $cate='<a href="'.SITE_NAME.'/'.$danhmuc1[0]->name_url.'/" rel="tag">'.$danhmuc1[0]->name.'</a>';
-        if(count($danhmuc2)>0)
-        {
-            $banner=$danhmuc2[0]->img;
-            $url.=' ~ <li><a href="'.SITE_NAME.'/thuc-don/'.$danhmuc2[0]->name_url.'/">'.$danhmuc2[0]->name.'</a></li>';
-            $cate.=', <a href="'.SITE_NAME.'/thuc-don/'.$danhmuc2[0]->name_url.'/" rel="tag">'.$danhmuc2[0]->name.'</a>';
-        }
+
         $active='thucdon';
         $name=$data['tour'][0]->name;
         $url.=' ~ <li>'.$name.'</li>';
